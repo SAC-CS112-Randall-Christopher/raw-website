@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+const contactEmail = "Chris@randallautomationworks.com";
+const contactEmailLink = `mailto:${contactEmail}`;
+const contactPhone = "(970) 787-2161";
+const contactPhoneLink = "tel:+19707872161";
+
 export const primaryNav = [
   { href: "/services", label: "Services" },
   { href: "/utilities-and-special-districts", label: "Utilities" },
@@ -51,6 +56,10 @@ export function Footer() {
             <span>Randall Automation Works</span>
           </Link>
           <p>Practical AI automation and systems integration for Western Colorado organizations.</p>
+          <div className="footer-contact">
+            <a href={contactEmailLink}>{contactEmail}</a>
+            <a href={contactPhoneLink}>{contactPhone}</a>
+          </div>
         </div>
         <div>
           <h2>Explore</h2>

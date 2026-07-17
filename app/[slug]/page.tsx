@@ -4,6 +4,11 @@ import { notFound } from "next/navigation";
 import { ContactForm } from "../../components/contact-form";
 import { pageBySlug, pages } from "../page-content";
 
+const contactEmail = "Chris@randallautomationworks.com";
+const contactEmailLink = `mailto:${contactEmail}`;
+const contactPhone = "(970) 787-2161";
+const contactPhoneLink = "tel:+19707872161";
+
 export function generateStaticParams() {
   return pages.map((page) => ({ slug: page.slug }));
 }
@@ -42,6 +47,10 @@ export default async function InteriorPage({ params }: { params: Promise<{ slug:
                 <h2>Tell us about the work—not the technology.</h2>
                 <p>Helpful context includes:</p>
                 <ul><li>What happens today</li><li>Who is involved</li><li>What regularly goes wrong or takes too long</li><li>Which tools hold the information</li><li>What a useful result would look like</li></ul>
+                <div className="contact-details">
+                  <a href={contactEmailLink}>{contactEmail}</a>
+                  <a href={contactPhoneLink}>{contactPhone}</a>
+                </div>
                 <p>{page.aside}</p>
               </aside>
               <ContactForm />

@@ -2,18 +2,44 @@
 
 import { FormEvent, useState } from "react";
 
-export function ContactForm() {
-  const [status, setStatus] = useState<"idle" | "ready">("idle");
+const contactEmail = "Chris@randallautomationworks.com";
+const contactEmailLink = `mailto:${contactEmail}`;
+const contactPhone = "(970) 787-2161";
+const contactPhoneLink = "tel:+19707872161";
+const formEndpoint = "https://formspree.io/f/mpqvpoza";
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+export function ContactForm() {
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
     if (!form.reportValidity()) return;
-    setStatus("ready");
+
+    setStatus("submitting");
+
+    try {
+      const formData = new FormData(form);
+      formData.set("_subject", "New Randall Automation Works website inquiry");
+      formData.set("_gotcha", "");
+
+      const response = await fetch(formEndpoint, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+
+      if (!response.ok) throw new Error("Submission failed");
+
+      form.reset();
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit} aria-describedby="form-note">
+    <form className="contact-form" onSubmit={handleSubmit} action={formEndpoint} method="POST" aria-describedby="form-note">
       <div className="form-row">
         <label>
           Name <span aria-hidden="true">*</span>
@@ -66,12 +92,24 @@ export function ContactForm() {
         <input name="consent" type="checkbox" required />
         <span>I agree that the information provided may be used to respond to this inquiry. Please do not include passwords, protected records or sensitive operational data.</span>
       </label>
-      <button className="button button-primary" type="submit">Request an initial conversation</button>
+      <input name="_subject" type="hidden" value="New Randall Automation Works website inquiry" />
+      <input className="honeypot" name="_gotcha" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+      <button className="button button-primary" type="submit" disabled={status === "submitting"} aria-busy={status === "submitting"}>
+        {status === "submitting" ? "Sending…" : "Request an initial conversation"}
+      </button>
       <p id="form-note" className="form-note">
-        This private-stage form does not transmit information yet. Delivery will be connected to a client-owned form service before public launch.
+        We typically respond within one business day. For urgent matters, reach out directly by email or phone.
       </p>
-      {status === "ready" && (
-        <p className="form-status" role="status">The form is working as designed. Secure delivery will be enabled before the public launch.</p>
+      {status === "submitting" && (
+        <p className="form-status form-status-submitting" role="status">Sending your message now.</p>
+      )}
+      {status === "success" && (
+        <p className="form-status form-status-success" role="status">Thanks for reaching out. We’ll follow up soon.</p>
+      )}
+      {status === "error" && (
+        <p className="form-status form-status-error" role="alert">
+          We couldn’t send the message right now. Please email <a href={contactEmailLink}>{contactEmail}</a> or call <a href={contactPhoneLink}>{contactPhone}</a>.
+        </p>
       )}
     </form>
   );
