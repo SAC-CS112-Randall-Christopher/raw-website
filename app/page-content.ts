@@ -1,10 +1,10 @@
 export type InfoCard = { title: string; text: string };
 export type ContentSection = { heading: string; intro?: string; bullets?: string[]; cards?: InfoCard[]; callout?: { title: string; text: string } };
-export type PageContent = { slug: string; navLabel: string; eyebrow: string; title: string; lead: string; metaDescription: string; aside: string; sections: ContentSection[] };
+export type PageContent = { slug: string; navLabel: string; metaTitle: string; eyebrow: string; title: string; lead: string; metaDescription: string; aside: string; sections: ContentSection[]; indexable?: boolean };
 
 export const pages: PageContent[] = [
   {
-    slug: "services", navLabel: "Services", eyebrow: "Services",
+    slug: "services", navLabel: "Services", metaTitle: "AI Automation Services | Randall Automation Works", eyebrow: "Services",
     title: "Practical support from first assessment through long-term operation.",
     lead: "Start with one defined problem, understand the risks and build only what can create useful, measurable value.",
     metaDescription: "AI assessments, workflow automation, reporting, knowledge systems, GIS integration, responsible AI training and managed support in Western Colorado.",
@@ -20,7 +20,7 @@ export const pages: PageContent[] = [
     ],
   },
   {
-    slug: "utilities-and-special-districts", navLabel: "Utilities", eyebrow: "Utilities & special districts",
+    slug: "utilities-and-special-districts", navLabel: "Utilities", metaTitle: "Utility & Special District Automation | Randall Automation Works", eyebrow: "Utilities & special districts",
     title: "Operationally grounded automation for organizations that cannot afford careless technology.",
     lead: "Support reporting, administration, GIS, maintenance information and institutional knowledge while qualified people retain operational authority.",
     metaDescription: "Responsible AI consulting and workflow automation for Colorado utilities, special districts and municipal departments.",
@@ -34,7 +34,7 @@ export const pages: PageContent[] = [
     ],
   },
   {
-    slug: "small-businesses", navLabel: "Small Businesses", eyebrow: "Small-business automation",
+    slug: "small-businesses", navLabel: "Small Businesses", metaTitle: "Small-Business AI Automation | Randall Automation Works", eyebrow: "Small-business automation",
     title: "Fewer dropped handoffs. Less repetitive administration. Better-supported employees.",
     lead: "Practical improvements for Western Colorado businesses that have outgrown informal processes but do not need an enterprise transformation project.",
     metaDescription: "AI workflow automation for Western Colorado contractors, property managers, agricultural businesses, nonprofits and professional offices.",
@@ -48,7 +48,7 @@ export const pages: PageContent[] = [
     ],
   },
   {
-    slug: "gis-and-field-operations", navLabel: "GIS & Field Operations", eyebrow: "GIS & field operations",
+    slug: "gis-and-field-operations", navLabel: "GIS & Field Operations", metaTitle: "GIS & Field Operations Automation | Randall Automation Works", eyebrow: "GIS & field operations",
     title: "Connect what happens in the field with what the office needs to know.",
     lead: "Improve field-form processing, inspection workflows, asset reporting and data-quality review without separating GIS from the people who use it.",
     metaDescription: "GIS workflow automation, field data processing, inspections, work-order support and asset information integration in Western Colorado.",
@@ -61,7 +61,7 @@ export const pages: PageContent[] = [
     ],
   },
   {
-    slug: "responsible-ai-and-security", navLabel: "Responsible AI & Security", eyebrow: "Responsible AI & security",
+    slug: "responsible-ai-and-security", navLabel: "Responsible AI & Security", metaTitle: "Responsible AI & Security | Randall Automation Works", eyebrow: "Responsible AI & security",
     title: "Adopt useful AI without giving up clarity, ownership or human judgment.",
     lead: "Security is not a paragraph added after the build. It shapes which information is used, who can access it and how outputs are reviewed.",
     metaDescription: "Responsible AI governance, employee policies, secure adoption, least-privilege integration and human-review practices for Western Colorado organizations.",
@@ -75,7 +75,7 @@ export const pages: PageContent[] = [
     ],
   },
   {
-    slug: "how-engagements-work", navLabel: "How Engagements Work", eyebrow: "How engagements work",
+    slug: "how-engagements-work", navLabel: "How Engagements Work", metaTitle: "How Engagements Work | Randall Automation Works", eyebrow: "How engagements work",
     title: "A measured path from operational problem to useful system.",
     lead: "Begin with a clear question, test the idea in a controlled scope and expand only after employees and results support it.",
     metaDescription: "How AI consulting engagements work: introductory conversation, paid assessment, roadmap, controlled pilot, measured review and managed support.",
@@ -91,7 +91,7 @@ export const pages: PageContent[] = [
     ],
   },
   {
-    slug: "about", navLabel: "About", eyebrow: "About",
+    slug: "about", navLabel: "About", metaTitle: "About Chris Randall | Randall Automation Works", eyebrow: "About",
     title: "A regional technology partner for the work between people, systems and operations.",
     lead: "The consultancy combines hands-on utility operations, IT, GIS, data, business-system and administrative experience with a practical approach to responsible automation.",
     metaDescription: "About Randall Automation Works and Chris Randall's hands-on approach to utility operations and technology, GIS, reporting, systems integration and employee-centered automation.",
@@ -104,7 +104,7 @@ export const pages: PageContent[] = [
     ],
   },
   {
-    slug: "frequently-asked-questions", navLabel: "Frequently Asked Questions", eyebrow: "Frequently asked questions",
+    slug: "frequently-asked-questions", navLabel: "Frequently Asked Questions", metaTitle: "AI Automation FAQ | Randall Automation Works", eyebrow: "Frequently asked questions",
     title: "Straight answers about scope, security, cost and what AI can actually do.",
     lead: "A useful engagement starts with realistic expectations and clearly understood responsibility.",
     metaDescription: "Frequently asked questions about AI consulting, workflow assessments, security, pricing, utility boundaries and managed support.",
@@ -122,14 +122,14 @@ export const pages: PageContent[] = [
     ],
   },
   {
-    slug: "contact", navLabel: "Contact", eyebrow: "Contact",
+    slug: "contact", navLabel: "Contact", metaTitle: "Contact | Randall Automation Works", eyebrow: "Contact",
     title: "Bring one frustrating process. Let’s find out whether it is worth improving.",
     lead: "An initial conversation is a practical fit check—no oversized transformation pitch and no need to have the solution figured out first.",
     metaDescription: "Contact Randall Automation Works to discuss a workflow assessment, automation pilot, GIS integration or responsible AI project.",
     aside: "Please do not send passwords, protected records, confidential customer data or sensitive operational information through the contact form.", sections: [],
   },
   {
-    slug: "privacy", navLabel: "Privacy Policy", eyebrow: "Privacy policy",
+    slug: "privacy", navLabel: "Privacy Policy", metaTitle: "Privacy Policy | Randall Automation Works", eyebrow: "Privacy policy",
     title: "Privacy practices should be understandable.",
     lead: "This policy explains the information the website may collect and how it is intended to be handled. It will be reviewed before public launch and updated when final service providers are selected.",
     metaDescription: "Website privacy policy for Randall Automation Works.",
@@ -145,7 +145,7 @@ export const pages: PageContent[] = [
     ],
   },
   {
-    slug: "terms", navLabel: "Terms & Disclaimer", eyebrow: "Terms & professional disclaimer",
+    slug: "terms", navLabel: "Terms & Disclaimer", metaTitle: "Terms & Disclaimer | Randall Automation Works", eyebrow: "Terms & professional disclaimer",
     title: "Clear boundaries support better professional work.",
     lead: "These website terms describe general informational use and do not replace the written agreement for a consulting engagement.",
     metaDescription: "Website terms and professional disclaimer for Randall Automation Works.",
@@ -162,7 +162,7 @@ export const pages: PageContent[] = [
     ],
   },
   {
-    slug: "insights", navLabel: "Insights", eyebrow: "Insights & resources",
+    slug: "insights", navLabel: "Insights", metaTitle: "Insights | Randall Automation Works", eyebrow: "Insights & resources", indexable: false,
     title: "Practical guidance for organizations considering AI and automation.",
     lead: "This section will publish only useful, experience-grounded material—not filler written to manufacture search traffic.",
     metaDescription: "Practical AI automation, utility technology, GIS workflow and responsible adoption resources for Western Colorado organizations.",
