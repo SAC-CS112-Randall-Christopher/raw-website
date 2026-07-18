@@ -56,7 +56,7 @@ export function Footer() {
             <Mark />
             <span>Randall Automation Works</span>
           </Link>
-          <p>Practical AI automation and systems integration for Western Colorado organizations.</p>
+          <p>Practical code-first automation, responsible AI and systems integration for Western Colorado organizations.</p>
           <div className="footer-contact">
             <a href={contactEmailLink}>{contactEmail}</a>
             <a href={contactPhoneLink}>{contactPhone}</a>
