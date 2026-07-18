@@ -92,6 +92,21 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section insight-feature">
+        <div className="shell insight-feature-grid">
+          <div>
+            <p className="eyebrow">New practical guide</p>
+            <h2>Choose the workflow before you choose the AI.</h2>
+          </div>
+          <article className="insight-feature-card">
+            <p className="article-kicker">AI & workflow assessment · 9 minute read</p>
+            <h3>How to Choose a Practical First AI Automation Project for a Small Organization</h3>
+            <p>A useful first pilot is repetitive, bounded, measurable and easy for employees to review. This guide explains how to find one—and which projects to avoid.</p>
+            <Link className="text-link" href="/insights/first-ai-automation-project">Read the guide <span aria-hidden="true">→</span></Link>
+          </article>
+        </div>
+      </section>
+
       <section className="section utility-feature">
         <div className="shell utility-grid">
           <div>
