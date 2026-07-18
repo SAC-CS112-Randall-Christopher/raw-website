@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "Randall Automation Works",
     url: "/",
-    title: "Practical automation for the work that keeps Western Colorado moving.",
+    title: "Less repetitive work. Better-connected systems. AI where it helps.",
     description:
       "Secure, cost-conscious workflow automation and systems integration using focused code or responsible AI—whichever fits the work.",
     images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Randall Automation Works" }],
