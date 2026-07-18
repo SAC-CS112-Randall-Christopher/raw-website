@@ -31,24 +31,20 @@ export default function Home() {
       <section className="home-hero">
         <div className="shell hero-grid">
           <div className="hero-copy reveal">
-            <p className="eyebrow">Practical automation <span>•</span> Western Colorado</p>
-            <h1>Practical automation for the work that keeps Western Colorado moving.</h1>
-            <p className="hero-intro">Secure workflow automation and systems integration for small businesses, utilities and local organizations—using straightforward code or AI, whichever fits the work.</p>
+            <p className="eyebrow">Workflow automation <span>•</span> Systems integration <span>•</span> Western Colorado</p>
+            <h1>Less repetitive work. Better-connected systems. AI where it helps.</h1>
+            <p className="hero-intro">Randall Automation Works uses Python, SQL, JSON and API integrations, GIS and responsible AI to reduce repetitive work, improve reporting and keep ongoing costs practical.</p>
             <div className="button-row">
               <Link className="button button-primary" href="/contact">Schedule an initial conversation</Link>
-              <Link className="button button-secondary" href="/services">Explore what could be automated</Link>
+              <Link className="button button-secondary" href="/services">See the R.A.W. approach</Link>
             </div>
-            <div className="control-promise">
-              <span className="promise-icon" aria-hidden="true">✓</span>
-              <strong>Practical automation. Your team stays informed and in control.</strong>
-            </div>
-            <ul className="hero-chips" aria-label="Core specialties">
-              <li>Python & data automation</li>
-              <li>GIS & field operations</li>
-              <li>Responsible AI</li>
+            <ul className="hero-principles" aria-label="Automation approach">
+              <li><strong>Code-first</strong><span>When the rules are clear</span></li>
+              <li><strong>AI-assisted</strong><span>When interpretation adds value</span></li>
+              <li><strong>Human-reviewed</strong><span>When the outcome matters</span></li>
             </ul>
           </div>
-          <div className="hero-visual" aria-label="Western Colorado agricultural landscape and operational reporting concept">
+          <div className="hero-visual" aria-label="Western Colorado landscape with a right-sized automation decision graphic">
             <Image
               src="/images/hero-western-colorado.png"
               alt="Irrigated Western Colorado valley with a water conveyance and mesa landscape"
@@ -59,12 +55,13 @@ export default function Home() {
               sizes="(max-width: 1050px) 100vw, 54vw"
             />
             <div className="topo-lines" aria-hidden="true" />
-            <div className="field-report-card" aria-hidden="true">
-              <div className="report-title"><span>Operational summary</span><span className="status-dot" /></div>
-              <div className="report-row"><span>Forms reviewed</span><b>24</b></div>
-              <div className="report-row"><span>Exceptions flagged</span><b>3</b></div>
-              <div className="report-row"><span>Human review</span><b>Ready</b></div>
-              <div className="mini-chart"><i /><i /><i /><i /><i /><i /><i /></div>
+            <div className="solution-fit-card" aria-hidden="true">
+              <div className="fit-card-title"><span>Match the tool to the work</span><span className="fit-dot" /></div>
+              <div className="fit-row"><span>Clear rules</span><b>Python + SQL</b></div>
+              <div className="fit-row"><span>System handoffs</span><b>JSON + APIs</b></div>
+              <div className="fit-row"><span>Spatial workflows</span><b>GIS + field</b></div>
+              <div className="fit-row fit-row-ai"><span>Language & documents</span><b>Responsible AI</b></div>
+              <div className="fit-card-footer"><span>Human-reviewed</span><span>Client-controlled</span></div>
             </div>
           </div>
         </div>
