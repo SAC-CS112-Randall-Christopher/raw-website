@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" role="img" aria-labelledby="title desc">
+  <title id="title">R.A.W. workshop block concept</title>
+  <desc id="desc">A sturdy Randall Automation Works logo with a solid industrial R.A.W. letter block.</desc>
+  <rect width="1000" height="240" rx="24" fill="#f6f1e8"/>
+  <g transform="translate(38 35)">
+    <rect width="190" height="170" rx="12" fill="#153b4a"/>
+    <text x="95" y="100" text-anchor="middle" fill="#fffdf8" font-family="Arial, sans-serif" font-size="54" font-weight="900" letter-spacing="2">RAW</text>
+    <path d="M37 123h116" stroke="#ad5636" stroke-width="8"/>
+    <text x="95" y="151" text-anchor="middle" fill="#e4d5bd" font-family="Arial, sans-serif" font-size="12" font-weight="800" letter-spacing="4">EST. WESTERN CO</text>
+  </g>
+  <g transform="translate(270 51)">
+    <text x="0" y="42" fill="#17262b" font-family="Arial, sans-serif" font-size="25" font-weight="800" letter-spacing="7">RANDALL</text>
+    <text x="0" y="102" fill="#153b4a" font-family="Arial, sans-serif" font-size="45" font-weight="900" letter-spacing="2">AUTOMATION WORKS</text>
+    <text x="2" y="137" fill="#58676b" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">PRACTICAL SYSTEMS • RESPONSIBLE AUTOMATION</text>
+  </g>
+</svg>

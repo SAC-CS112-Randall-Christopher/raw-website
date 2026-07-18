@@ -4,9 +4,9 @@ A portable, static-first Next.js website for Randall Automation Works, a Western
 
 ## Current status
 
-The selected brand name is **Randall Automation Works**, founded by Chris Randall. **R.A.W.** is used only as a secondary monogram paired with the full business name. Before a public launch, confirm the legal entity, permanent domain, public email and phone, form provider, scheduling link and final legal language.
+The selected brand name is **Randall Automation Works**, founded by Chris Randall. **R.A.W.** is used only as a secondary monogram paired with the full business name. The permanent domain is `randallautomationworks.com`. Before a broader public launch, confirm the legal entity, optional scheduling link and final legal language.
 
-The contact form is intentionally disconnected during private staging. It validates locally but does not transmit visitor information.
+The contact form validates in the browser and submits to a client-owned Formspree endpoint. Business email and phone links provide a direct fallback.
 
 ## Requirements
 
@@ -59,7 +59,7 @@ Keep DNS, hosting, form delivery, analytics and scheduling under client-owned ac
 | Variable | Required | Purpose |
 | --- | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | Public launch | Canonical domain used by metadata, sitemap and robots files |
-| `NEXT_PUBLIC_CONTACT_FORM_ACTION` | After form-provider selection | Reserved for a replaceable form endpoint |
+| `NEXT_PUBLIC_CONTACT_FORM_ACTION` | Contact form | Replaceable public form endpoint; currently Formspree |
 | `NEXT_PUBLIC_SCHEDULING_URL` | Optional | Client-owned scheduling link |
 | `NEXT_PUBLIC_ANALYTICS_ID` | Optional | Reserved for a replaceable analytics provider |
 
@@ -67,13 +67,15 @@ Never place passwords, API secrets or private tokens in variables prefixed with 
 
 ## Contact-form adapter
 
-`components/contact-form.tsx` currently performs browser-side validation only. When hosting is selected, replace its submit handler with one of:
+`components/contact-form.tsx` performs browser-side validation and submits to the endpoint configured by `NEXT_PUBLIC_CONTACT_FORM_ACTION`. The current Formspree endpoint remains as a safe build fallback until the Cloudflare variable is configured.
+
+The adapter can later be replaced with:
 
 - a client-owned form endpoint;
 - a small same-origin API route that sends mail through a client-owned provider; or
 - a host-native form adapter.
 
-Add spam protection only after the public domain and form provider are selected. Keep the consent language and the warning against submitting sensitive information.
+Keep the honeypot, consent language and warning against submitting sensitive information. Add Cloudflare Turnstile if automated spam becomes material.
 
 ## Project structure
 

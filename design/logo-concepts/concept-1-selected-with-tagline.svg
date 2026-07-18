@@ -1,8 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" role="img" aria-labelledby="title desc">
-  <title id="title">Randall Automation Works</title>
-  <desc id="desc">Outlined R.A.W. monogram with the Randall Automation Works wordmark and Practical Systems, Responsible Automation tagline.</desc>
+  <title id="title">Randall Automation Works selected logo concept</title>
+  <desc id="desc">The outlined R.A.W. wordmark paired with the tagline Practical Systems, Responsible Automation.</desc>
+  <rect width="1000" height="240" rx="24" fill="#fffdf8"/>
   <g transform="translate(38 45)">
-    <rect width="220" height="150" rx="18" fill="#fffdf8" stroke="#153b4a" stroke-width="5"/>
+    <rect x="0" y="0" width="220" height="150" rx="18" fill="none" stroke="#153b4a" stroke-width="5"/>
     <text x="110" y="94" text-anchor="middle" fill="#153b4a" font-family="Arial, sans-serif" font-size="42" font-weight="800" letter-spacing="4">R.A.W.</text>
     <path d="M45 118h130" stroke="#ad5636" stroke-width="7" stroke-linecap="round"/>
   </g>

@@ -1,14 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" role="img" aria-labelledby="title desc">
-  <title id="title">Randall Automation Works</title>
-  <desc id="desc">Outlined R.A.W. monogram with the Randall Automation Works wordmark and Practical Systems, Responsible Automation tagline.</desc>
+  <title id="title">R.A.W. pure wordmark concept</title>
+  <desc id="desc">A typography-only Randall Automation Works logo with a restrained R.A.W. monogram.</desc>
+  <rect width="1000" height="240" rx="24" fill="#fffdf8"/>
   <g transform="translate(38 45)">
-    <rect width="220" height="150" rx="18" fill="#fffdf8" stroke="#153b4a" stroke-width="5"/>
+    <rect x="0" y="0" width="220" height="150" rx="18" fill="none" stroke="#153b4a" stroke-width="5"/>
     <text x="110" y="94" text-anchor="middle" fill="#153b4a" font-family="Arial, sans-serif" font-size="42" font-weight="800" letter-spacing="4">R.A.W.</text>
     <path d="M45 118h130" stroke="#ad5636" stroke-width="7" stroke-linecap="round"/>
   </g>
   <g transform="translate(305 53)">
     <text x="0" y="53" fill="#153b4a" font-family="Arial, sans-serif" font-size="56" font-weight="800" letter-spacing="3">RANDALL</text>
     <text x="1" y="104" fill="#17262b" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="5">AUTOMATION WORKS</text>
-    <text x="2" y="150" fill="#58676b" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.8">PRACTICAL SYSTEMS • RESPONSIBLE AUTOMATION</text>
+    <path d="M1 129h590" stroke="#e4d5bd" stroke-width="3"/>
   </g>
 </svg>

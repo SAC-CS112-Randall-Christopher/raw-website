@@ -15,10 +15,10 @@ const sourceSerif = Source_Serif_4({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://randallautomationworks.com";
 
 export const metadata: Metadata = {
-  metadataBase: siteUrl ? new URL(siteUrl) : undefined,
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Randall Automation Works | Practical AI & Systems Integration",
     template: "%s | Randall Automation Works",
@@ -34,15 +34,16 @@ export const metadata: Metadata = {
     title: "Practical AI for the work that keeps Western Colorado moving.",
     description:
       "Secure workflow automation and systems integration for small businesses, rural utilities and local organizations.",
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Randall Automation Works" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Randall Automation Works",
     description:
       "Practical AI automation for Western Colorado organizations.",
+    images: ["/opengraph-image.png"],
   },
   robots: { index: true, follow: true },
-  other: { "codex-preview": "development" },
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };
 
@@ -50,6 +51,13 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "Randall Automation Works",
+  url: siteUrl,
+  email: "chris@randallautomationworks.com",
+  telephone: "+1-970-787-2161",
+  founder: {
+    "@type": "Person",
+    name: "Chris Randall",
+  },
   description:
     "Practical AI automation and systems integration for Western Colorado small businesses, rural utilities and local organizations.",
   areaServed: [

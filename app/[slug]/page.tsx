@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { ContactForm } from "../../components/contact-form";
 import { pageBySlug, pages } from "../page-content";
 
-const contactEmail = "Chris@randallautomationworks.com";
+const contactEmail = "chris@randallautomationworks.com";
 const contactEmailLink = `mailto:${contactEmail}`;
 const contactPhone = "(970) 787-2161";
 const contactPhoneLink = "tel:+19707872161";

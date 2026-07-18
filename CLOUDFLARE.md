@@ -23,10 +23,13 @@ build command.
 
 ## Domain variable
 
-After the first successful deployment, add the following **runtime variable**
-under the Worker's **Settings → Variables & Secrets**:
+After the first successful deployment, add these **runtime variables** under
+the Worker's **Settings → Variables & Secrets**:
 
-`NEXT_PUBLIC_SITE_URL=https://your-final-domain.example`
+```text
+NEXT_PUBLIC_SITE_URL=https://randallautomationworks.com
+NEXT_PUBLIC_CONTACT_FORM_ACTION=https://formspree.io/f/mpqvpoza
+```
 
 Use the final canonical `https://` origin without a trailing slash. The Worker
 uses this value for canonical metadata, `robots.txt`, and `sitemap.xml`.
@@ -41,9 +44,9 @@ both the apex domain and the preferred `www` behavior resolve consistently.
 
 ## Contact form status
 
-The contact form currently validates entries in the browser but deliberately
-does not transmit or store them. Connect a client-owned form or email service
-before treating the form as a working customer-contact channel.
+The contact form validates entries in the browser and submits them to the
+client-owned Formspree endpoint above. The endpoint is public by design; do not
+place private API keys in any variable beginning with `NEXT_PUBLIC_`.
 
 ## Local verification
 

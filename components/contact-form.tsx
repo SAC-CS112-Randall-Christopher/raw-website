@@ -2,11 +2,11 @@
 
 import { FormEvent, useState } from "react";
 
-const contactEmail = "Chris@randallautomationworks.com";
+const contactEmail = "chris@randallautomationworks.com";
 const contactEmailLink = `mailto:${contactEmail}`;
 const contactPhone = "(970) 787-2161";
 const contactPhoneLink = "tel:+19707872161";
-const formEndpoint = "https://formspree.io/f/mpqvpoza";
+const formEndpoint = process.env.NEXT_PUBLIC_CONTACT_FORM_ACTION ?? "https://formspree.io/f/mpqvpoza";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");

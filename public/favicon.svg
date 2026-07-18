@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <circle cx="32" cy="32" r="29" fill="#f6f1e8" stroke="#153b4a" stroke-width="4"/>
-  <text x="32" y="30" text-anchor="middle" fill="#153b4a" font-family="Arial, sans-serif" font-size="13" font-weight="800" letter-spacing=".3">R.A.W.</text>
-  <path d="M10 40c12-8 27-8 44 0M12 47c13-7 26-7 40 0" fill="none" stroke="#71836a" stroke-width="3.5" stroke-linecap="round"/>
-  <path d="M18 53c9-5 19-5 28 0" fill="none" stroke="#ad5636" stroke-width="3" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="R.A.W.">
+  <rect x="3" y="3" width="58" height="58" rx="12" fill="#fffdf8" stroke="#153b4a" stroke-width="4"/>
+  <text x="32" y="34" text-anchor="middle" fill="#153b4a" font-family="Arial, sans-serif" font-size="14" font-weight="800" letter-spacing=".8">RAW</text>
+  <path d="M19 44h26" stroke="#ad5636" stroke-width="4" stroke-linecap="round"/>
 </svg>

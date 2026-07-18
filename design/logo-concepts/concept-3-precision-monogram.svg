@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" role="img" aria-labelledby="title desc">
+  <title id="title">R.A.W. precision monogram concept</title>
+  <desc id="desc">A structured Randall Automation Works logo using a precise typographic monogram and no illustrative graphic.</desc>
+  <rect width="1000" height="240" rx="24" fill="#fffdf8"/>
+  <g transform="translate(40 37)">
+    <circle cx="83" cy="83" r="78" fill="none" stroke="#153b4a" stroke-width="5"/>
+    <circle cx="83" cy="83" r="66" fill="none" stroke="#d9d0c2" stroke-width="2"/>
+    <text x="83" y="77" text-anchor="middle" fill="#153b4a" font-family="Arial, sans-serif" font-size="44" font-weight="900" letter-spacing="1">RAW</text>
+    <circle cx="38" cy="97" r="4" fill="#ad5636"/>
+    <circle cx="83" cy="97" r="4" fill="#ad5636"/>
+    <circle cx="128" cy="97" r="4" fill="#ad5636"/>
+    <text x="83" y="126" text-anchor="middle" fill="#58676b" font-family="Arial, sans-serif" font-size="12" font-weight="800" letter-spacing="4">COLORADO</text>
+  </g>
+  <path d="M247 52v136" stroke="#ad5636" stroke-width="5"/>
+  <g transform="translate(285 51)">
+    <text x="0" y="53" fill="#153b4a" font-family="Arial, sans-serif" font-size="55" font-weight="800" letter-spacing="3">RANDALL</text>
+    <text x="0" y="106" fill="#17262b" font-family="Arial, sans-serif" font-size="29" font-weight="700" letter-spacing="5">AUTOMATION WORKS</text>
+    <text x="2" y="139" fill="#71836a" font-family="Arial, sans-serif" font-size="14" font-weight="800" letter-spacing="3">PRACTICAL • SECURE • ACCOUNTABLE</text>
+  </g>
+</svg>
