@@ -20,17 +20,19 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://randallautomationwo
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Randall Automation Works | Practical AI & Systems Integration",
+    default: "Western Colorado AI Automation | Randall Automation Works",
     template: "%s | Randall Automation Works",
   },
   description:
     "Practical, secure AI automation and systems integration for Western Colorado small businesses, rural utilities and local organizations.",
   applicationName: "Randall Automation Works",
   category: "Business Services",
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: "Randall Automation Works",
+    url: "/",
     title: "Practical AI for the work that keeps Western Colorado moving.",
     description:
       "Secure workflow automation and systems integration for small businesses, rural utilities and local organizations.",
@@ -50,8 +52,11 @@ export const metadata: Metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
+  "@id": `${siteUrl}/#business`,
   name: "Randall Automation Works",
   url: siteUrl,
+  image: `${siteUrl}/opengraph-image.png`,
+  logo: `${siteUrl}/logo-horizontal.svg`,
   email: "chris@randallautomationworks.com",
   telephone: "+1-970-787-2161",
   founder: {
