@@ -8,6 +8,7 @@ const contactEmail = "chris@randallautomationworks.com";
 const contactEmailLink = `mailto:${contactEmail}`;
 const contactPhone = "(970) 787-2161";
 const contactPhoneLink = "tel:+19707872161";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://randallautomationworks.com";
 
 export function generateStaticParams() {
   return pages.map((page) => ({ slug: page.slug }));
@@ -18,10 +19,25 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const page = pageBySlug[slug];
   if (!page) return {};
   return {
-    title: page.navLabel,
+    title: { absolute: page.metaTitle },
     description: page.metaDescription,
     alternates: { canonical: `/${page.slug}` },
-    openGraph: { title: page.title, description: page.metaDescription, url: `/${page.slug}` },
+    robots: page.indexable === false ? { index: false, follow: true } : { index: true, follow: true },
+    openGraph: {
+      type: "website",
+      locale: "en_US",
+      siteName: "Randall Automation Works",
+      title: page.metaTitle,
+      description: page.metaDescription,
+      url: `/${page.slug}`,
+      images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Randall Automation Works" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: page.metaTitle,
+      description: page.metaDescription,
+      images: ["/opengraph-image.png"],
+    },
   };
 }
 
@@ -30,8 +46,21 @@ export default async function InteriorPage({ params }: { params: Promise<{ slug:
   const page = pageBySlug[slug];
   if (!page) notFound();
 
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+      { "@type": "ListItem", position: 2, name: page.navLabel, item: `${siteUrl}/${page.slug}` },
+    ],
+  };
+
   return (
     <main id="main-content">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+      />
       <section className="page-hero">
         <div className="shell page-hero-inner">
           <div><p className="eyebrow">{page.eyebrow}</p><h1>{page.title}</h1></div>
