@@ -12,6 +12,7 @@ export const primaryNav = [
   { href: "/gis-and-field-operations", label: "GIS & Field" },
   { href: "/responsible-ai-and-security", label: "Security" },
   { href: "/about", label: "About" },
+  { href: "/insights", label: "Insights" },
 ];
 
 function Mark() {
