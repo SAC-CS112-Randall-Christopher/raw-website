@@ -97,7 +97,7 @@ export default function Home() {
           <div>
             <p className="eyebrow eyebrow-light">Utility & special-district experience</p>
             <h2>Technology that respects the responsibility behind public infrastructure.</h2>
-            <p>Hands-on experience in water-utility operations, GIS, reporting, IT and administrative systems brings practical context to every recommendation.</p>
+            <p>Hands-on experience across utility operations, GIS, reporting, IT and administrative systems brings practical context to every recommendation.</p>
             <Link className="button button-sand" href="/utilities-and-special-districts">Explore utility services</Link>
           </div>
           <div className="safe-path">
@@ -154,7 +154,7 @@ export default function Home() {
       <section className="section founder-section">
         <div className="shell founder-grid">
           <div className="founder-art" aria-hidden="true"><span>Systems</span><span>People</span><span>Operations</span></div>
-          <div><p className="eyebrow">The R.A.W. approach</p><h2>Technical depth, explained in practical terms.</h2><p>Founded by Chris Randall, the consultancy is grounded in firsthand experience modernizing technology, GIS, reporting and administrative workflows for a Colorado water utility—along with field operations, employee training, cybersecurity and business-system integration.</p><p>The aim is not to sell technology for its own sake. It is to help people do important work with better information, fewer repetitive steps and clearer support.</p><Link className="text-link" href="/about">More about the approach <span>→</span></Link></div>
+          <div><p className="eyebrow">The R.A.W. approach</p><h2>Technical depth, explained in practical terms.</h2><p>Founded by Chris Randall, the consultancy draws on firsthand work across utility operations, IT infrastructure, cybersecurity, GIS, databases, billing and administrative systems, field information, employee training and technical documentation.</p><p>That experience spans both the systems themselves and the day-to-day work employees depend on them to complete. The aim is to help people do important work with better information, fewer repetitive steps and clearer support.</p><Link className="text-link" href="/about">More about the approach <span>→</span></Link></div>
         </div>
       </section>
 
