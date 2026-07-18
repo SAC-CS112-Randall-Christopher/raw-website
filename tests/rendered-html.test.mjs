@@ -33,7 +33,32 @@ test("renders production branding without staging metadata", async () => {
   const html = await response.text();
   assert.match(html, productionTitle);
   assert.match(html, productionCanonical);
+  assert.match(html, /Not every useful automation needs AI/i);
+  assert.match(html, /Python &amp; data automation/i);
   assert.doesNotMatch(html, developmentPreviewMeta);
+});
+
+test("publishes code-first capabilities on Services and About pages", async () => {
+  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  workerUrl.searchParams.set("capability-test", `${process.pid}-${Date.now()}`);
+  const { default: worker } = await import(workerUrl.href);
+  const env = { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } };
+  const ctx = { waitUntil() {}, passThroughOnException() {} };
+
+  const [servicesResponse, aboutResponse] = await Promise.all([
+    worker.fetch(new Request("http://localhost/services", { headers: { accept: "text/html" } }), env, ctx),
+    worker.fetch(new Request("http://localhost/about", { headers: { accept: "text/html" } }), env, ctx),
+  ]);
+  const services = await servicesResponse.text();
+  const about = await aboutResponse.text();
+
+  assert.equal(servicesResponse.status, 200);
+  assert.equal(aboutResponse.status, 200);
+  assert.match(services, /Code-first automation and systems integration/i);
+  assert.match(services, /Python automation/i);
+  assert.match(services, /Visual Basic and VBA/i);
+  assert.match(about, /Python scripting and workflow automation/i);
+  assert.match(about, /JSON, API and structured-data connections/i);
 });
 
 test("publishes production robots and sitemap URLs", async () => {
