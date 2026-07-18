@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Randall Automation Works",
   },
   description:
-    "Practical, secure AI automation and systems integration for Western Colorado small businesses, rural utilities and local organizations.",
+    "Practical Python, SQL and AI workflow automation and systems integration for Western Colorado small businesses, utilities and local organizations.",
   applicationName: "Randall Automation Works",
   category: "Business Services",
   alternates: { canonical: "/" },
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "Randall Automation Works",
     url: "/",
-    title: "Practical AI for the work that keeps Western Colorado moving.",
+    title: "Practical automation for the work that keeps Western Colorado moving.",
     description:
-      "Secure workflow automation and systems integration for small businesses, rural utilities and local organizations.",
+      "Secure, cost-conscious workflow automation and systems integration using focused code or responsible AI—whichever fits the work.",
     images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Randall Automation Works" }],
   },
   twitter: {
@@ -64,10 +64,10 @@ const structuredData = {
     name: "Chris Randall",
     jobTitle: "Founder",
     description:
-      "Utility operations and technology specialist with hands-on experience in IT infrastructure, cybersecurity, GIS, data, reporting, business systems, employee training and workflow automation.",
+      "Utility operations and technology specialist with hands-on experience in Python, SQL, JSON integration, Visual Basic, IT infrastructure, cybersecurity, GIS, reporting and workflow automation.",
   },
   description:
-    "Practical AI automation and systems integration for Western Colorado small businesses, rural utilities and local organizations.",
+    "Practical code-first automation, responsible AI and systems integration for Western Colorado small businesses, utilities and local organizations.",
   areaServed: [
     "Montrose",
     "Grand Junction",
@@ -83,6 +83,9 @@ const structuredData = {
   serviceType: [
     "AI consulting",
     "Workflow automation",
+    "Python automation",
+    "SQL reporting",
+    "API integration",
     "GIS workflow automation",
     "Systems integration",
     "AI readiness assessment",
