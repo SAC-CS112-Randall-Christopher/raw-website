@@ -86,7 +86,15 @@ export default async function InteriorPage({ params }: { params: Promise<{ slug:
             </div>
           ) : (
             <div className="content-grid">
-              <aside className="page-aside"><p>{page.aside}</p><Link className="button button-primary" href="/contact">Start a conversation</Link></aside>
+              <aside className="page-aside">
+                <p>{page.aside}</p>
+                <Link className="button button-primary" href="/contact">Start a conversation</Link>
+                {slug === "services" && (
+                  <Link className="aside-resource-link" href="/insights/first-ai-automation-project">
+                    Read the first-project guide <span aria-hidden="true">→</span>
+                  </Link>
+                )}
+              </aside>
               <div className="content-sections">
                 {page.sections.map((section) => (
                   <section className="content-section" key={section.heading}>
