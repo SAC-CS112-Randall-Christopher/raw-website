@@ -57,6 +57,9 @@ const structuredData = {
   founder: {
     "@type": "Person",
     name: "Chris Randall",
+    jobTitle: "Founder",
+    description:
+      "Utility operations and technology specialist with hands-on experience in IT infrastructure, cybersecurity, GIS, data, reporting, business systems, employee training and workflow automation.",
   },
   description:
     "Practical AI automation and systems integration for Western Colorado small businesses, rural utilities and local organizations.",
