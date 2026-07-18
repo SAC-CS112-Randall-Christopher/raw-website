@@ -8,8 +8,8 @@ const problems = [
 ];
 
 const services = [
-  ["01", "AI & workflow assessment", "Map the work, identify risks and rank practical opportunities before investing in a build."],
-  ["02", "Small automation pilots", "Start with one measurable workflow, test it safely and expand only when the result justifies it."],
+  ["01", "Automation & AI assessment", "Map the work, identify risks and choose the simplest dependable approach before investing in a build."],
+  ["02", "Small automation pilots", "Use focused code, integrations or AI to improve one measurable workflow, then expand only when the result justifies it."],
   ["03", "Reporting & document automation", "Consolidate recurring information into human-reviewed reports, summaries, notices and drafts."],
   ["04", "Internal knowledge systems", "Make approved SOPs, policies and technical documentation easier for employees to find and use."],
   ["05", "GIS & field operations", "Connect field forms, asset information, inspections and office reporting with clearer exception handling."],
@@ -32,8 +32,8 @@ export default function Home() {
         <div className="shell hero-grid">
           <div className="hero-copy reveal">
             <p className="eyebrow">Practical automation <span>•</span> Western Colorado</p>
-            <h1>Practical AI for the work that keeps Western Colorado moving.</h1>
-            <p className="hero-intro">Secure workflow automation and systems integration for small businesses, rural utilities and local organizations.</p>
+            <h1>Practical automation for the work that keeps Western Colorado moving.</h1>
+            <p className="hero-intro">Secure workflow automation and systems integration for small businesses, utilities and local organizations—using straightforward code or AI, whichever fits the work.</p>
             <div className="button-row">
               <Link className="button button-primary" href="/contact">Schedule an initial conversation</Link>
               <Link className="button button-secondary" href="/services">Explore what could be automated</Link>
@@ -43,7 +43,7 @@ export default function Home() {
               <strong>Practical automation. Your team stays informed and in control.</strong>
             </div>
             <ul className="hero-chips" aria-label="Core specialties">
-              <li>Workflow automation</li>
+              <li>Python & data automation</li>
               <li>GIS & field operations</li>
               <li>Responsible AI</li>
             </ul>
@@ -73,12 +73,37 @@ export default function Home() {
       <section className="section problem-section">
         <div className="shell">
           <div className="section-heading split-heading">
-            <div><p className="eyebrow">Where practical AI starts</p><h2>Work that feels heavier than it should.</h2></div>
+            <div><p className="eyebrow">Where practical automation starts</p><h2>Work that feels heavier than it should.</h2></div>
             <p>Most organizations do not need a sweeping AI transformation. They need a few stubborn processes made more consistent, visible and manageable.</p>
           </div>
           <div className="card-grid three-up">
             {problems.map(([title, text]) => <article className="problem-card" key={title}><span className="card-line" /><h3>{title}</h3><p>{text}</p></article>)}
           </div>
+        </div>
+      </section>
+
+      <section className="section right-size-section">
+        <div className="shell">
+          <div className="right-size-intro">
+            <div>
+              <p className="eyebrow">Right-sized technology</p>
+              <h2>Not every useful automation needs AI.</h2>
+            </div>
+            <div>
+              <p>Many repetitive workflows can be improved with a small, well-documented program, a database query or a direct system connection. The first choice should be the simplest dependable solution—not the most expensive platform.</p>
+              <p>This approach can reduce software subscriptions, AI usage charges and long-term maintenance while keeping the workflow understandable.</p>
+            </div>
+          </div>
+          <div className="tool-grid" aria-label="Technical automation capabilities">
+            <article><span>01</span><h3>Python</h3><p>Focused scripts for file processing, scheduled tasks, reporting, validation and repeatable administrative work.</p></article>
+            <article><span>02</span><h3>SQL</h3><p>Queries, views and reporting workflows that make existing operational and business data more useful.</p></article>
+            <article><span>03</span><h3>JSON & APIs</h3><p>Structured connections that move approved information between applications without unnecessary re-entry.</p></article>
+            <article><span>04</span><h3>Visual Basic & VBA</h3><p>Practical improvements for established Windows, Excel and Office workflows when replacement would add cost.</p></article>
+          </div>
+          <aside className="ai-fit-note">
+            <strong>AI when it earns its place.</strong>
+            <p>AI can add value when the work involves unstructured documents, language, summaries or judgment-supported review. When clear rules can solve the problem, conventional code is often more predictable and economical.</p>
+          </aside>
         </div>
       </section>
 
@@ -169,7 +194,7 @@ export default function Home() {
       <section className="section founder-section">
         <div className="shell founder-grid">
           <div className="founder-art" aria-hidden="true"><span>Systems</span><span>People</span><span>Operations</span></div>
-          <div><p className="eyebrow">The R.A.W. approach</p><h2>Technical depth, explained in practical terms.</h2><p>Founded by Chris Randall, the consultancy draws on firsthand work across utility operations, IT infrastructure, cybersecurity, GIS, databases, billing and administrative systems, field information, employee training and technical documentation.</p><p>That experience spans both the systems themselves and the day-to-day work employees depend on them to complete. The aim is to help people do important work with better information, fewer repetitive steps and clearer support.</p><Link className="text-link" href="/about">More about the approach <span>→</span></Link></div>
+          <div><p className="eyebrow">The R.A.W. approach</p><h2>Technical depth, explained in practical terms.</h2><p>Founded by Chris Randall, the consultancy draws on firsthand work across utility operations, IT infrastructure, cybersecurity, GIS, databases, billing and administrative systems, field information, employee training and technical documentation.</p><p>Chris works directly with Python, SQL, JSON-based integrations, Visual Basic and VBA, alongside responsible AI tools. That range makes it possible to choose a maintainable solution based on the workflow—not force every problem into an AI subscription.</p><p>The aim is to help people do important work with better information, fewer repetitive steps and clearer support.</p><Link className="text-link" href="/about">More about the approach <span>→</span></Link></div>
         </div>
       </section>
 
