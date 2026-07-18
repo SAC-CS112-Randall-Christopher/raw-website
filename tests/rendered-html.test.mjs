@@ -59,6 +59,35 @@ test("publishes production robots and sitemap URLs", async () => {
   assert.equal(sitemapResponse.status, 200);
   assert.match(robots, /https:\/\/randallautomationworks\.com\/sitemap\.xml/i);
   assert.match(sitemap, /https:\/\/randallautomationworks\.com\/utilities-and-special-districts/i);
+  assert.match(sitemap, /https:\/\/randallautomationworks\.com\/insights<\/loc>/i);
+  assert.match(sitemap, /https:\/\/randallautomationworks\.com\/insights\/first-ai-automation-project/i);
   assert.doesNotMatch(`${robots}\n${sitemap}`, /\.invalid/i);
-  assert.doesNotMatch(sitemap, /\/insights<\/loc>/i);
+});
+
+test("renders the first Insights article as an indexable Article", async () => {
+  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  workerUrl.searchParams.set("article-test", `${process.pid}-${Date.now()}`);
+  const { default: worker } = await import(workerUrl.href);
+  const env = {
+    ASSETS: {
+      fetch: async () => new Response("Not found", { status: 404 }),
+    },
+  };
+  const ctx = {
+    waitUntil() {},
+    passThroughOnException() {},
+  };
+  const response = await worker.fetch(
+    new Request("http://localhost/insights/first-ai-automation-project", { headers: { accept: "text/html" } }),
+    env,
+    ctx,
+  );
+  const html = await response.text();
+
+  assert.equal(response.status, 200);
+  assert.match(html, /How to Choose a Practical First AI Automation Project/i);
+  assert.match(html, /https:\/\/randallautomationworks\.com\/insights\/first-ai-automation-project/i);
+  assert.match(html, /"@type":"Article"/i);
+  assert.match(html, /"@type":"BreadcrumbList"/i);
+  assert.doesNotMatch(html, /noindex/i);
 });
