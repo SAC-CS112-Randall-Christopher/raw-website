@@ -64,7 +64,7 @@ const structuredData = {
     name: "Chris Randall",
     jobTitle: "Founder",
     description:
-      "Utility operations and technology specialist with hands-on experience in Python, SQL, JSON integration, Visual Basic, IT infrastructure, cybersecurity, GIS, reporting and workflow automation.",
+      "Utility operations and technology specialist with hands-on experience in Python, SQL, JSON integration, Visual Basic, GIS, IT infrastructure, cybersecurity, agentic workflows, RAG knowledge systems and responsible AI configuration.",
   },
   description:
     "Practical code-first automation, responsible AI and systems integration for Western Colorado small businesses, utilities and local organizations.",
