@@ -33,10 +33,13 @@ test("renders production branding without staging metadata", async () => {
   const html = await response.text();
   assert.match(html, productionTitle);
   assert.match(html, productionCanonical);
-  assert.match(html, /Less repetitive work\. Better-connected systems\. AI where it helps\./i);
-  assert.match(html, /Code-first/i);
-  assert.match(html, /AI-assisted/i);
+  assert.match(html, /Streamline workflows\. Connect systems\. Put AI to work with purpose\./i);
+  assert.match(html, /Workflow-first/i);
+  assert.match(html, /Systems-connected/i);
+  assert.match(html, /Right-sized technology/i);
+  assert.match(html, /Human-controlled/i);
   assert.match(html, /carefully configured AI agents and knowledge systems/i);
+  assert.match(html, /Rough edges between systems/i);
   assert.match(html, />AI Systems<\/a>/i);
   assert.match(html, /Match the tool to the work/i);
   assert.match(html, /Not every useful automation needs AI/i);
