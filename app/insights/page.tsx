@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PageHeroVisual } from "../../components/page-hero-visual";
 
 const description = "Practical AI automation, workflow, GIS and responsible-adoption guidance for Western Colorado small businesses, utilities and local organizations.";
 
@@ -34,7 +35,10 @@ export default function InsightsPage() {
             <p className="eyebrow">Insights & resources</p>
             <h1>Practical guidance before you choose a tool or vendor.</h1>
           </div>
-          <p className="lead">Experience-grounded articles for organizations that want useful automation, clear security boundaries and decisions employees can understand.</p>
+          <div className="page-hero-side">
+            <p className="lead">Experience-grounded articles for organizations that want useful automation, clear security boundaries and decisions employees can understand.</p>
+            <PageHeroVisual slug="insights" />
+          </div>
         </div>
       </section>
 
