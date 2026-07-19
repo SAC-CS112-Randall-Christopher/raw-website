@@ -4,7 +4,7 @@ import Image from "next/image";
 const problems = [
   ["The same work, every week", "Staff rebuild reports, re-enter information and chase routine follow-ups that should move more consistently."],
   ["Information in too many places", "Spreadsheets, shared drives, databases, email and field systems each hold part of the story."],
-  ["Knowledge held by a few people", "Critical procedures and context live in experienced employees’ heads, making transitions and training harder."],
+  ["Knowledge held by a few", "Critical procedures and context live in experienced employees’ heads, making transitions and training harder."],
   ["Rough edges between systems", "Approvals, field updates, customer requests and follow-ups stall when the next step, owner or destination is unclear."],
 ];
 
