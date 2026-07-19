@@ -37,6 +37,7 @@ test("renders production branding without staging metadata", async () => {
   assert.match(html, /Code-first/i);
   assert.match(html, /AI-assisted/i);
   assert.match(html, /carefully configured AI agents and knowledge systems/i);
+  assert.match(html, />AI Systems<\/a>/i);
   assert.match(html, /Match the tool to the work/i);
   assert.match(html, /Not every useful automation needs AI/i);
   assert.doesNotMatch(html, developmentPreviewMeta);
