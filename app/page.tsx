@@ -33,7 +33,7 @@ export default function Home() {
           <div className="hero-copy reveal">
             <p className="eyebrow">Workflow automation <span>•</span> Systems integration <span>•</span> Western Colorado</p>
             <h1>Less repetitive work. Better-connected systems. AI where it helps.</h1>
-            <p className="hero-intro">Randall Automation Works uses Python, SQL, JSON and API integrations, GIS and responsible AI to reduce repetitive work, improve reporting and keep ongoing costs practical.</p>
+            <p className="hero-intro">Randall Automation Works uses Python, SQL, JSON and API integrations, GIS, and carefully configured AI agents and knowledge systems to reduce repetitive work, improve reporting and keep ongoing costs practical.</p>
             <div className="button-row">
               <Link className="button button-primary" href="/contact">Schedule an initial conversation</Link>
               <Link className="button button-secondary" href="/services">See the R.A.W. approach</Link>
@@ -60,7 +60,7 @@ export default function Home() {
               <div className="fit-row"><span>Clear rules</span><b>Python + SQL</b></div>
               <div className="fit-row"><span>System handoffs</span><b>JSON + APIs</b></div>
               <div className="fit-row"><span>Spatial workflows</span><b>GIS + field</b></div>
-              <div className="fit-row fit-row-ai"><span>Language & documents</span><b>Responsible AI</b></div>
+              <div className="fit-row fit-row-ai"><span>Language & knowledge</span><b>AI agents + RAG</b></div>
               <div className="fit-card-footer"><span>Human-reviewed</span><span>Client-controlled</span></div>
             </div>
           </div>
@@ -110,7 +110,10 @@ export default function Home() {
           <div className="service-grid">
             {services.map(([number, title, text]) => <article className="service-card" key={number}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}
           </div>
-          <Link className="text-link" href="/services">See all services and deliverables <span aria-hidden="true">→</span></Link>
+          <div className="section-link-row">
+            <Link className="text-link" href="/services">See all services and deliverables <span aria-hidden="true">→</span></Link>
+            <Link className="text-link" href="/workflow-automation-examples">Explore workflow examples <span aria-hidden="true">→</span></Link>
+          </div>
         </div>
       </section>
 
@@ -191,7 +194,7 @@ export default function Home() {
       <section className="section founder-section">
         <div className="shell founder-grid">
           <div className="founder-art" aria-hidden="true"><span>Systems</span><span>People</span><span>Operations</span></div>
-          <div><p className="eyebrow">The R.A.W. approach</p><h2>Technical depth, explained in practical terms.</h2><p>Founded by Chris Randall, the consultancy draws on firsthand work across utility operations, IT infrastructure, cybersecurity, GIS, databases, billing and administrative systems, field information, employee training and technical documentation.</p><p>Chris works directly with Python, SQL, JSON-based integrations, Visual Basic and VBA, alongside responsible AI tools. That range makes it possible to choose a maintainable solution based on the workflow—not force every problem into an AI subscription.</p><p>The aim is to help people do important work with better information, fewer repetitive steps and clearer support.</p><Link className="text-link" href="/about">More about the approach <span>→</span></Link></div>
+          <div><p className="eyebrow">The R.A.W. approach</p><h2>Technical depth, explained in practical terms.</h2><p>Founded by Chris Randall, the consultancy draws on firsthand work across utility operations, IT infrastructure, cybersecurity, GIS, databases, billing and administrative systems, field information, employee training and technical documentation.</p><p>Chris works directly with Python, SQL, JSON-based integrations, Visual Basic and VBA, alongside responsible AI tools. That range makes it possible to choose a maintainable solution based on the workflow—not force every problem into an AI subscription.</p><p>The aim is to help people do important work with better information, fewer repetitive steps and clearer support.</p><div className="section-link-row"><Link className="text-link" href="/expertise">Explore the expertise <span>→</span></Link><Link className="text-link" href="/about">More about the approach <span>→</span></Link></div></div>
         </div>
       </section>
 
