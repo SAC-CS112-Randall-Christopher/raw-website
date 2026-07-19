@@ -6,13 +6,13 @@ const contactPhone = "(970) 787-2161";
 const contactPhoneLink = "tel:+19707872161";
 
 export const primaryNav = [
+  { href: "/workflow-automation-examples", label: "Examples" },
   { href: "/services", label: "Services" },
   { href: "/utilities-and-special-districts", label: "Utilities" },
   { href: "/small-businesses", label: "Small Business" },
   { href: "/gis-and-field-operations", label: "GIS & Field" },
-  { href: "/responsible-ai-and-security", label: "Security" },
-  { href: "/about", label: "About" },
-  { href: "/insights", label: "Insights" },
+  { href: "/expertise", label: "Expertise" },
+  { href: "/responsible-ai-and-security", label: "AI Systems" },
 ];
 
 function Mark() {
@@ -64,6 +64,7 @@ export function Footer() {
         </div>
         <div>
           <h2>Explore</h2>
+          <Link href="/workflow-automation-examples">Workflow examples</Link>
           <Link href="/services">Services</Link>
           <Link href="/how-engagements-work">How engagements work</Link>
           <Link href="/frequently-asked-questions">Frequently asked questions</Link>
@@ -74,10 +75,11 @@ export function Footer() {
           <Link href="/utilities-and-special-districts">Utilities & special districts</Link>
           <Link href="/small-businesses">Small businesses</Link>
           <Link href="/gis-and-field-operations">GIS & field operations</Link>
-          <Link href="/responsible-ai-and-security">Responsible AI & security</Link>
+          <Link href="/responsible-ai-and-security">AI systems & security</Link>
         </div>
         <div>
           <h2>Company</h2>
+          <Link href="/expertise">Expertise</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/privacy">Privacy</Link>
