@@ -63,7 +63,7 @@ export const pages: PageContent[] = [
     ],
   },
   {
-    slug: "responsible-ai-and-security", navLabel: "Responsible AI & Security", metaTitle: "Responsible AI Systems & Security | Randall Automation Works", eyebrow: "Responsible AI systems & security",
+    slug: "responsible-ai-and-security", navLabel: "AI Systems & Security", metaTitle: "Responsible AI Systems & Security | Randall Automation Works", eyebrow: "Responsible AI systems & security",
     title: "Configure capable AI systems without giving up clarity, ownership or human judgment.",
     lead: "Responsible AI is more than a policy. It is the technical design of models, knowledge sources, tool permissions, agent behavior, testing and human approval around a real workflow.",
     metaDescription: "Responsible AI system design, agentic workflows, RAG knowledge systems, MCP and SDK integrations, evaluation, security and human review for Western Colorado organizations.",
