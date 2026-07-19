@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ContactForm } from "../../components/contact-form";
+import { PageHeroVisual } from "../../components/page-hero-visual";
 import { pageBySlug, pages } from "../page-content";
 
 const contactEmail = "chris@randallautomationworks.com";
@@ -64,7 +65,10 @@ export default async function InteriorPage({ params }: { params: Promise<{ slug:
       <section className="page-hero">
         <div className="shell page-hero-inner">
           <div><p className="eyebrow">{page.eyebrow}</p><h1>{page.title}</h1></div>
-          <p className="lead">{page.lead}</p>
+          <div className="page-hero-side">
+            <p className="lead">{page.lead}</p>
+            <PageHeroVisual slug={slug} />
+          </div>
         </div>
       </section>
       <section className="page-body">
