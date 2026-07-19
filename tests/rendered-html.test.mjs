@@ -65,6 +65,7 @@ test("publishes code-first capabilities on Services and About pages", async () =
   assert.equal(servicesResponse.status, 200);
   assert.equal(aboutResponse.status, 200);
   assert.match(services, /Code-first automation and systems integration/i);
+  assert.match(services, /From problem to working system/i);
   assert.match(services, /Python automation/i);
   assert.match(services, /Visual Basic and VBA/i);
   assert.match(services, /Code-first automation and systems integration[\s\S]*Bring the workflow that keeps causing friction/i);
@@ -119,9 +120,11 @@ test("publishes generalized workflow examples and founder expertise", async () =
   assert.equal(examplesResponse.status, 200);
   assert.equal(expertiseResponse.status, 200);
   assert.match(examples, /Recurring customer-notification lists/i);
+  assert.match(examples, /Remove the avoidable friction/i);
   assert.match(examples, /Asset and business-data reconciliation/i);
   assert.match(examples, /not published client case studies/i);
   assert.match(expertise, /Python/i);
+  assert.match(expertise, /Integrated technical toolkit/i);
   assert.match(expertise, /JSON, APIs and SDKs/i);
   assert.match(expertise, /Agentic workflow orchestration/i);
   assert.match(expertise, /Model Context Protocol/i);
@@ -147,6 +150,7 @@ test("explains responsible AI system configuration in technical detail", async (
 
   assert.equal(response.status, 200);
   assert.match(html, /Model and runtime selection/i);
+  assert.match(html, /Bounded AI system/i);
   assert.match(html, /Agentic workflow design/i);
   assert.match(html, /Model Context Protocol \(MCP\)/i);
   assert.match(html, /retrieval-augmented generation \(RAG\)/i);
