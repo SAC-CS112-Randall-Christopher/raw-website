@@ -2,11 +2,7 @@
 
 import { FormEvent, useState } from "react";
 
-const contactEmail = "chris@randallautomationworks.com";
-const contactEmailLink = `mailto:${contactEmail}`;
-const contactPhone = "(970) 787-2161";
-const contactPhoneLink = "tel:+19707872161";
-const formEndpoint = process.env.NEXT_PUBLIC_CONTACT_FORM_ACTION ?? "https://formspree.io/f/mpqvpoza";
+const FORM_ENDPOINT = "https://formspree.io/f/mpqvpoza";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -19,17 +15,13 @@ export function ContactForm() {
     setStatus("submitting");
 
     try {
-      const formData = new FormData(form);
-      formData.set("_subject", "New Randall Automation Works website inquiry");
-      formData.set("_gotcha", "");
-
-      const response = await fetch(formEndpoint, {
+      const response = await fetch(FORM_ENDPOINT, {
         method: "POST",
+        body: new FormData(form),
         headers: { Accept: "application/json" },
-        body: formData,
       });
 
-      if (!response.ok) throw new Error("Submission failed");
+      if (!response.ok) throw new Error("Form submission failed");
 
       form.reset();
       setStatus("success");
@@ -39,7 +31,12 @@ export function ContactForm() {
   }
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit} action={formEndpoint} method="POST" aria-describedby="form-note">
+    <form className="contact-form" onSubmit={handleSubmit} aria-describedby="form-note">
+      <input type="hidden" name="_subject" value="New Randall Automation Works website inquiry" />
+      <label className="form-honeypot" aria-hidden="true">
+        Leave this field empty
+        <input name="_gotcha" tabIndex={-1} autoComplete="off" />
+      </label>
       <div className="form-row">
         <label>
           Name <span aria-hidden="true">*</span>
@@ -70,7 +67,7 @@ export function ContactForm() {
             <option>Reporting or document automation</option>
             <option>Internal knowledge system</option>
             <option>GIS or field operations</option>
-            <option>Responsible AI and training</option>
+            <option>AI systems, agents and training</option>
             <option>Managed AI support</option>
             <option>Not sure yet</option>
           </select>
@@ -92,23 +89,18 @@ export function ContactForm() {
         <input name="consent" type="checkbox" required />
         <span>I agree that the information provided may be used to respond to this inquiry. Please do not include passwords, protected records or sensitive operational data.</span>
       </label>
-      <input name="_subject" type="hidden" value="New Randall Automation Works website inquiry" />
-      <input className="honeypot" name="_gotcha" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" />
-      <button className="button button-primary" type="submit" disabled={status === "submitting"} aria-busy={status === "submitting"}>
+      <button className="button button-primary" type="submit" disabled={status === "submitting"}>
         {status === "submitting" ? "Sending…" : "Request an initial conversation"}
       </button>
       <p id="form-note" className="form-note">
-        We typically respond within one business day. For urgent matters, reach out directly by email or phone.
+        Your inquiry is delivered securely to Randall Automation Works. You can also contact Chris directly by email or phone.
       </p>
-      {status === "submitting" && (
-        <p className="form-status form-status-submitting" role="status">Sending your message now.</p>
-      )}
       {status === "success" && (
-        <p className="form-status form-status-success" role="status">Thanks for reaching out. We’ll follow up soon.</p>
+        <p className="form-status" role="status">Thank you—your message was sent successfully. Chris will follow up as soon as practical.</p>
       )}
       {status === "error" && (
         <p className="form-status form-status-error" role="alert">
-          We couldn’t send the message right now. Please email <a href={contactEmailLink}>{contactEmail}</a> or call <a href={contactPhoneLink}>{contactPhone}</a>.
+          The message could not be sent. Please email <a href="mailto:Chris@randallautomationworks.com">Chris@randallautomationworks.com</a> or call <a href="tel:+19707872161">(970) 787-2161</a>.
         </p>
       )}
     </form>
