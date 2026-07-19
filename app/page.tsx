@@ -5,6 +5,7 @@ const problems = [
   ["The same work, every week", "Staff rebuild reports, re-enter information and chase routine follow-ups that should move more consistently."],
   ["Information in too many places", "Spreadsheets, shared drives, databases, email and field systems each hold part of the story."],
   ["Knowledge held by a few people", "Critical procedures and context live in experienced employees’ heads, making transitions and training harder."],
+  ["Rough edges between systems", "Approvals, field updates, customer requests and follow-ups stall when the next step, owner or destination is unclear."],
 ];
 
 const services = [
@@ -32,16 +33,17 @@ export default function Home() {
         <div className="shell hero-grid">
           <div className="hero-copy reveal">
             <p className="eyebrow">Workflow automation <span>•</span> Systems integration <span>•</span> Western Colorado</p>
-            <h1>Less repetitive work. Better-connected systems. AI where it helps.</h1>
-            <p className="hero-intro">Randall Automation Works uses Python, SQL, JSON and API integrations, GIS, and carefully configured AI agents and knowledge systems to reduce repetitive work, improve reporting and keep ongoing costs practical.</p>
+            <h1>Streamline workflows. Connect systems. Put AI to work with purpose.</h1>
+            <p className="hero-intro">Randall Automation Works removes friction between people, information and software using Python, SQL, JSON and API integrations, GIS, and carefully configured AI agents and knowledge systems. The result is cleaner handoffs, stronger reporting and technology that fits the work.</p>
             <div className="button-row">
               <Link className="button button-primary" href="/contact">Schedule an initial conversation</Link>
               <Link className="button button-secondary" href="/services">See the R.A.W. approach</Link>
             </div>
             <ul className="hero-principles" aria-label="Automation approach">
-              <li><strong>Code-first</strong><span>When the rules are clear</span></li>
-              <li><strong>AI-assisted</strong><span>When interpretation adds value</span></li>
-              <li><strong>Human-reviewed</strong><span>When the outcome matters</span></li>
+              <li><strong>Workflow-first</strong><span>Fix the process, not just the symptom</span></li>
+              <li><strong>Systems-connected</strong><span>Strengthen each handoff</span></li>
+              <li><strong>Right-sized technology</strong><span>Code or AI, chosen deliberately</span></li>
+              <li><strong>Human-controlled</strong><span>Keep judgment and ownership clear</span></li>
             </ul>
           </div>
           <div className="hero-visual" aria-label="Western Colorado landscape with a right-sized automation decision graphic">
@@ -70,10 +72,10 @@ export default function Home() {
       <section className="section problem-section">
         <div className="shell">
           <div className="section-heading split-heading">
-            <div><p className="eyebrow">Where practical automation starts</p><h2>Work that feels heavier than it should.</h2></div>
-            <p>Most organizations do not need a sweeping AI transformation. They need a few stubborn processes made more consistent, visible and manageable.</p>
+            <div><p className="eyebrow">Where practical automation starts</p><h2>The friction usually lives between the steps.</h2></div>
+            <p>Most organizations do not need a sweeping AI transformation. They need the rough edges between people, information and software made more predictable.</p>
           </div>
-          <div className="card-grid three-up">
+          <div className="card-grid problem-grid">
             {problems.map(([title, text]) => <article className="problem-card" key={title}><span className="card-line" /><h3>{title}</h3><p>{text}</p></article>)}
           </div>
         </div>
