@@ -88,7 +88,6 @@ export default async function InteriorPage({ params }: { params: Promise<{ slug:
             <div className="content-grid">
               <aside className="page-aside">
                 <p>{page.aside}</p>
-                <Link className="button button-primary" href="/contact">Start a conversation</Link>
                 {slug === "services" && (
                   <Link className="aside-resource-link" href="/insights/first-ai-automation-project">
                     Read the first-project guide <span aria-hidden="true">→</span>
@@ -101,7 +100,7 @@ export default async function InteriorPage({ params }: { params: Promise<{ slug:
                     <h2>{section.heading}</h2>
                     {section.intro && <p>{section.intro}</p>}
                     {section.bullets && <ul className="content-list">{section.bullets.map((item) => <li key={item}>{item}</li>)}</ul>}
-                    {section.cards && <div className="plain-card-grid">{section.cards.map((card) => <article className="plain-card" key={card.title}><h3>{card.title}</h3><p>{card.text}</p></article>)}</div>}
+                    {section.cards && <div className="plain-card-grid">{section.cards.map((card) => <article className="plain-card" key={card.title}>{card.label && <p className="card-label">{card.label}</p>}<h3>{card.title}</h3><p>{card.text}</p>{card.details && <ul className="card-details">{card.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>}</article>)}</div>}
                     {section.callout && <aside className="content-callout"><h3>{section.callout.title}</h3><p>{section.callout.text}</p></aside>}
                   </section>
                 ))}
@@ -110,6 +109,18 @@ export default async function InteriorPage({ params }: { params: Promise<{ slug:
           )}
         </div>
       </section>
+      {slug !== "contact" && (
+        <section className="cta-section subpage-cta">
+          <div className="shell cta-inner">
+            <div>
+              <p className="eyebrow eyebrow-light">A practical next step</p>
+              <h2>Bring the workflow that keeps causing friction.</h2>
+              <p>An initial conversation can help determine whether the right next step is a process change, focused code, systems integration or carefully configured AI.</p>
+            </div>
+            <Link className="button button-sand" href="/contact">Start a conversation</Link>
+          </div>
+        </section>
+      )}
     </main>
   );
 }
