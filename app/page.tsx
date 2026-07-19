@@ -13,7 +13,7 @@ const services = [
   ["03", "Reporting & document automation", "Consolidate recurring information into human-reviewed reports, summaries, notices and drafts."],
   ["04", "Internal knowledge systems", "Make approved SOPs, policies and technical documentation easier for employees to find and use."],
   ["05", "GIS & field operations", "Connect field forms, asset information, inspections and office reporting with clearer exception handling."],
-  ["06", "Responsible AI & training", "Set sensible policies, permissions, review requirements and role-specific training for secure adoption."],
+  ["06", "AI systems & training", "Configure agents, knowledge systems and tool integrations with sensible permissions, review requirements and role-specific training."],
 ];
 
 const process = [
