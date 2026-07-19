@@ -65,6 +65,7 @@ test("publishes code-first capabilities on Services and About pages", async () =
   assert.match(services, /Code-first automation and systems integration/i);
   assert.match(services, /Python automation/i);
   assert.match(services, /Visual Basic and VBA/i);
+  assert.match(services, /Code-first automation and systems integration[\s\S]*Bring the workflow that keeps causing friction/i);
   assert.match(about, /Python scripting and workflow automation/i);
   assert.match(about, /JSON, API and structured-data connections/i);
 });
