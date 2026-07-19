@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "Randall Automation Works",
     url: "/",
-    title: "Less repetitive work. Better-connected systems. AI where it helps.",
+    title: "Streamline workflows. Connect systems. Put AI to work with purpose.",
     description:
-      "Secure, cost-conscious workflow automation and systems integration using focused code or responsible AI—whichever fits the work.",
+      "Remove friction between people, information and software with focused code, systems integration and carefully configured AI.",
     images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Randall Automation Works" }],
   },
   twitter: {
