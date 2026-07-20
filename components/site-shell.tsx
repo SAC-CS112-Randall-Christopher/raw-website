@@ -31,6 +31,7 @@ export function Header() {
           {primaryNav.map((item) => (
             <Link key={item.href} href={item.href}>{item.label}</Link>
           ))}
+          <Link href="/client-login">Client login</Link>
           <Link className="nav-contact" href="/contact">Start a conversation</Link>
         </nav>
         <details className="mobile-nav">
@@ -39,6 +40,7 @@ export function Header() {
             {primaryNav.map((item) => (
               <Link key={item.href} href={item.href}>{item.label}</Link>
             ))}
+            <Link href="/client-login">Client login</Link>
             <Link href="/contact">Start a conversation</Link>
           </nav>
         </details>
@@ -81,6 +83,7 @@ export function Footer() {
           <h2>Company</h2>
           <Link href="/expertise">Expertise</Link>
           <Link href="/about">About</Link>
+          <Link href="/client-login">Client login</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/privacy">Privacy</Link>
           <Link href="/terms">Terms & professional disclaimer</Link>
