@@ -7,17 +7,34 @@ const contactPhoneLink = "tel:+19707872161";
 
 export const primaryNav = [
   { href: "/workflow-automation-examples", label: "Examples" },
-  { href: "/client-portal", label: "Portal Demos" },
   { href: "/services", label: "Services" },
   { href: "/utilities-and-special-districts", label: "Utilities" },
   { href: "/small-businesses", label: "Small Business" },
   { href: "/gis-and-field-operations", label: "GIS & Field" },
   { href: "/expertise", label: "Expertise" },
-  { href: "/responsible-ai-and-security", label: "AI Systems" },
+];
+
+const aiSystemsNav = [
+  { href: "/responsible-ai-and-security", label: "AI systems overview" },
+  { href: "/local-ai-deployments", label: "Local deployments" },
+  { href: "/hosted-ai-deployments", label: "Hosted & managed deployments" },
 ];
 
 function Mark() {
   return <span className="brand-mark" aria-hidden="true" />;
+}
+
+function AiSystemsTree() {
+  return (
+    <details className="nav-tree">
+      <summary><span>AI Systems</span><span className="nav-tree-chevron" aria-hidden="true">⌄</span></summary>
+      <div className="nav-submenu">
+        {aiSystemsNav.map((item) => (
+          <Link key={item.href} href={item.href}>{item.label}</Link>
+        ))}
+      </div>
+    </details>
+  );
 }
 
 export function Header() {
@@ -32,6 +49,7 @@ export function Header() {
           {primaryNav.map((item) => (
             <Link key={item.href} href={item.href}>{item.label}</Link>
           ))}
+          <AiSystemsTree />
           <Link className="nav-contact" href="/contact">Start a conversation</Link>
         </nav>
         <details className="mobile-nav">
@@ -40,6 +58,7 @@ export function Header() {
             {primaryNav.map((item) => (
               <Link key={item.href} href={item.href}>{item.label}</Link>
             ))}
+            <AiSystemsTree />
             <Link href="/contact">Start a conversation</Link>
           </nav>
         </details>
@@ -66,7 +85,6 @@ export function Footer() {
         <div>
           <h2>Explore</h2>
           <Link href="/workflow-automation-examples">Workflow examples</Link>
-          <Link href="/client-portal">Client portal demos</Link>
           <Link href="/services">Services</Link>
           <Link href="/how-engagements-work">How engagements work</Link>
           <Link href="/frequently-asked-questions">Frequently asked questions</Link>
@@ -78,6 +96,8 @@ export function Footer() {
           <Link href="/small-businesses">Small businesses</Link>
           <Link href="/gis-and-field-operations">GIS & field operations</Link>
           <Link href="/responsible-ai-and-security">AI systems & security</Link>
+          <Link href="/local-ai-deployments">Local AI deployments</Link>
+          <Link href="/hosted-ai-deployments">Hosted & managed AI</Link>
         </div>
         <div>
           <h2>Company</h2>
