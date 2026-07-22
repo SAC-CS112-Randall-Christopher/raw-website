@@ -36,6 +36,18 @@ const visuals: Record<string, HeroVisualSpec> = {
     nodes: ["Knowledge", "AI workflow", "Approved tools", "Human approval"],
     kind: "hub",
   },
+  "local-ai-deployments": {
+    label: "Client-controlled local AI",
+    footer: "Approved sources stay inside the defined boundary",
+    nodes: ["Local sources", "Local model", "Human review"],
+    kind: "boundary",
+  },
+  "hosted-ai-deployments": {
+    label: "Managed client environment",
+    footer: "Secure access · separated workspace · defined support",
+    nodes: ["Client login", "Portal", "Local or cloud runtime", "Managed support"],
+    kind: "hub",
+  },
   "workflow-automation-examples": {
     label: "Remove the avoidable friction",
     footer: "Generalized workflow pattern",
