@@ -60,6 +60,18 @@ button, a, summary, input, select, textarea { -webkit-tap-highlight-color: trans
 .desktop-nav > a:not(.nav-contact) { position: relative; padding: 8px 0; }
 .desktop-nav > a:not(.nav-contact)::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 2px; background: var(--clay); transition: right .2s ease; }
 .desktop-nav > a:hover::after { right: 0; }
+.nav-tree { position: relative; }
+.nav-tree summary { display: flex; align-items: center; gap: 6px; cursor: pointer; list-style: none; }
+.nav-tree summary::-webkit-details-marker { display: none; }
+.nav-tree-chevron { display: inline-block; color: var(--clay); font-size: 16px; line-height: 1; transition: transform .2s ease; }
+.nav-tree[open] .nav-tree-chevron { transform: rotate(180deg); }
+.desktop-nav > .nav-tree > summary { position: relative; padding: 8px 0; }
+.desktop-nav > .nav-tree > summary::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 2px; background: var(--clay); transition: right .2s ease; }
+.desktop-nav > .nav-tree[open] > summary::after, .desktop-nav > .nav-tree > summary:hover::after { right: 0; }
+.nav-submenu { position: absolute; z-index: 10; right: 0; top: calc(100% + 12px); width: 274px; padding: 9px; border: 1px solid var(--line); border-radius: 12px; background: var(--warm-white); box-shadow: 0 18px 42px rgba(12,45,58,.16); }
+.nav-submenu::before { content: ""; position: absolute; inset: -13px 0 auto; height: 13px; }
+.nav-submenu a { display: block; padding: 10px 12px; border-radius: 8px; color: var(--blue); line-height: 1.35; }
+.nav-submenu a:hover, .nav-submenu a:focus-visible { background: var(--paper); color: var(--clay); }
 .nav-contact { padding: 10px 16px; border: 1px solid var(--blue); border-radius: 8px; color: var(--blue); }
 .nav-contact:hover { background: var(--blue); color: white; }
 .mobile-nav { display: none; position: relative; }
@@ -272,6 +284,11 @@ h1, h2 { font-family: var(--font-serif), Georgia, serif; font-weight: 600; lette
 .page-aside { position: sticky; top: 120px; padding: 24px; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); }
 .page-aside p { margin-top: 0; color: var(--muted); font-size: 14px; }
 .page-aside .button { width: 100%; margin-top: 10px; text-align: center; }
+.aside-link-tree { display: grid; gap: 2px; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); }
+.aside-link-tree strong { margin-bottom: 7px; color: var(--blue-dark); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+.aside-link-tree a { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 0; color: var(--blue); font-weight: 750; line-height: 1.35; }
+.aside-link-tree a:hover { color: var(--clay); }
+.aside-link-tree a[aria-current="page"] { color: var(--clay); }
 .content-grid > *, .content-sections, .content-section { min-width: 0; }
 .content-sections { display: grid; gap: 72px; }
 .content-section { scroll-margin-top: 120px; overflow-wrap: break-word; }
@@ -327,6 +344,10 @@ h1, h2 { font-family: var(--font-serif), Georgia, serif; font-weight: 600; lette
   .mobile-nav summary::-webkit-details-marker { display: none; }
   .mobile-nav nav { position: absolute; right: 0; top: 54px; width: min(320px, calc(100vw - 36px)); padding: 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--warm-white); box-shadow: 0 18px 40px rgba(12,45,58,.16); }
   .mobile-nav nav a { display: block; padding: 12px; border-bottom: 1px solid var(--line); font-weight: 700; }
+  .mobile-nav .nav-tree > summary { padding: 12px; border-bottom: 1px solid var(--line); color: var(--blue); font-weight: 700; }
+  .mobile-nav .nav-submenu { position: static; width: auto; padding: 0 0 0 12px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: var(--paper); box-shadow: none; }
+  .mobile-nav .nav-submenu::before { display: none; }
+  .mobile-nav .nav-submenu a { padding-left: 20px; border-radius: 0; font-size: 14px; }
   .hero-grid { min-height: auto; grid-template-columns: 1fr; }
   .hero-copy { padding-right: 0; }
   .hero-visual { min-height: 550px; margin: 0 calc((100vw - min(100vw - 48px, var(--max-width))) / -2); border-radius: 0; }
