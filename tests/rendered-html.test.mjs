@@ -42,7 +42,9 @@ test("renders production branding without staging metadata", async () => {
   assert.match(html, /Rough edges between systems/i);
   assert.match(html, /Knowledge held by a few/i);
   assert.doesNotMatch(html, /Knowledge held by a few people/i);
-  assert.match(html, />AI Systems<\/a>/i);
+  assert.match(html, /<summary><span>AI Systems<\/span>/i);
+  assert.match(html, /href="\/local-ai-deployments"/i);
+  assert.match(html, /href="\/hosted-ai-deployments"/i);
   assert.match(html, /Match the tool to the work/i);
   assert.match(html, /Not every useful automation needs AI/i);
   assert.doesNotMatch(html, developmentPreviewMeta);
@@ -98,6 +100,8 @@ test("publishes production robots and sitemap URLs", async () => {
   assert.match(sitemap, /https:\/\/randallautomationworks\.com\/utilities-and-special-districts/i);
   assert.match(sitemap, /https:\/\/randallautomationworks\.com\/workflow-automation-examples/i);
   assert.match(sitemap, /https:\/\/randallautomationworks\.com\/expertise/i);
+  assert.match(sitemap, /https:\/\/randallautomationworks\.com\/local-ai-deployments/i);
+  assert.match(sitemap, /https:\/\/randallautomationworks\.com\/hosted-ai-deployments/i);
   assert.match(sitemap, /https:\/\/randallautomationworks\.com\/insights<\/loc>/i);
   assert.match(sitemap, /https:\/\/randallautomationworks\.com\/insights\/first-ai-automation-project/i);
   assert.doesNotMatch(`${robots}\n${sitemap}`, /\.invalid/i);
@@ -157,6 +161,33 @@ test("explains responsible AI system configuration in technical detail", async (
   assert.match(html, /Evaluation and observability/i);
   assert.match(html, /An agent should have a job description/i);
   assert.match(html, /SCADA, PLCs or operational controls/i);
+});
+
+test("publishes local and hosted AI deployment options under AI systems", async () => {
+  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  workerUrl.searchParams.set("deployment-options-test", `${process.pid}-${Date.now()}`);
+  const { default: worker } = await import(workerUrl.href);
+  const env = { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } };
+  const ctx = { waitUntil() {}, passThroughOnException() {} };
+
+  const [localResponse, hostedResponse] = await Promise.all([
+    worker.fetch(new Request("http://localhost/local-ai-deployments", { headers: { accept: "text/html" } }), env, ctx),
+    worker.fetch(new Request("http://localhost/hosted-ai-deployments", { headers: { accept: "text/html" } }), env, ctx),
+  ]);
+  const local = await localResponse.text();
+  const hosted = await hostedResponse.text();
+
+  assert.equal(localResponse.status, 200);
+  assert.equal(hostedResponse.status, 200);
+  assert.match(local, /Run useful AI on infrastructure your organization controls/i);
+  assert.match(local, /Local does not automatically mean secure/i);
+  assert.match(local, /local language or vision model/i);
+  assert.match(hosted, /Secure client access with the system actively managed behind it/i);
+  assert.match(hosted, /Local machine with managed portal access/i);
+  assert.match(hosted, /No cross-client knowledge retrieval/i);
+  assert.match(hosted, /No open public administrative ports/i);
+  assert.match(hosted, /Hosted &amp; managed deployments/i);
+  assert.match(`${local}\n${hosted}`, /AI systems overview/i);
 });
 
 test("renders the first Insights article as an indexable Article", async () => {
