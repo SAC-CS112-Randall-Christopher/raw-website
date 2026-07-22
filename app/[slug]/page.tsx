@@ -10,6 +10,11 @@ const contactEmailLink = `mailto:${contactEmail}`;
 const contactPhone = "(970) 787-2161";
 const contactPhoneLink = "tel:+19707872161";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://randallautomationworks.com";
+const aiSystemPages = [
+  { href: "/responsible-ai-and-security", label: "AI systems overview" },
+  { href: "/local-ai-deployments", label: "Local deployments" },
+  { href: "/hosted-ai-deployments", label: "Hosted & managed deployments" },
+];
 
 export function generateStaticParams() {
   return pages.map((page) => ({ slug: page.slug }));
@@ -46,14 +51,22 @@ export default async function InteriorPage({ params }: { params: Promise<{ slug:
   const { slug } = await params;
   const page = pageBySlug[slug];
   if (!page) notFound();
+  const isAiSystemPage = aiSystemPages.some((item) => item.href === `/${slug}`);
+  const isAiSystemChild = slug === "local-ai-deployments" || slug === "hosted-ai-deployments";
 
   const breadcrumbData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
-      { "@type": "ListItem", position: 2, name: page.navLabel, item: `${siteUrl}/${page.slug}` },
-    ],
+    itemListElement: isAiSystemChild
+      ? [
+          { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+          { "@type": "ListItem", position: 2, name: "AI Systems", item: `${siteUrl}/responsible-ai-and-security` },
+          { "@type": "ListItem", position: 3, name: page.navLabel, item: `${siteUrl}/${page.slug}` },
+        ]
+      : [
+          { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+          { "@type": "ListItem", position: 2, name: page.navLabel, item: `${siteUrl}/${page.slug}` },
+        ],
   };
 
   return (
@@ -92,6 +105,16 @@ export default async function InteriorPage({ params }: { params: Promise<{ slug:
             <div className="content-grid">
               <aside className="page-aside">
                 <p>{page.aside}</p>
+                {isAiSystemPage && (
+                  <nav className="aside-link-tree" aria-label="AI systems pages">
+                    <strong>Explore AI systems</strong>
+                    {aiSystemPages.map((item) => (
+                      <Link aria-current={item.href === `/${slug}` ? "page" : undefined} href={item.href} key={item.href}>
+                        {item.label}<span aria-hidden="true">→</span>
+                      </Link>
+                    ))}
+                  </nav>
+                )}
                 {slug === "services" && (
                   <Link className="aside-resource-link" href="/insights/first-ai-automation-project">
                     Read the first-project guide <span aria-hidden="true">→</span>
