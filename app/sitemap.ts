@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: ["services", "utilities-and-special-districts", "small-businesses", "gis-and-field-operations", "responsible-ai-and-security", "local-ai-deployments", "hosted-ai-deployments", "workflow-automation-examples", "expertise"].includes(page.slug) ? .8 : .6,
     })),
+    { url: `${base}/gis-modernization`, changeFrequency: "monthly", priority: .9 },
     { url: `${base}/insights`, changeFrequency: "monthly", priority: .7 },
     { url: `${base}/insights/first-ai-automation-project`, changeFrequency: "monthly", priority: .8, lastModified: "2026-07-18" },
   ];
