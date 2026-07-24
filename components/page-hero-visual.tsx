@@ -30,6 +30,12 @@ const visuals: Record<string, HeroVisualSpec> = {
     nodes: ["Field form", "Mapped asset", "Office report"],
     kind: "layers",
   },
+  "gis-modernization": {
+    label: "From field history to capital planning",
+    footer: "Survey123 · maintenance history · CIP evidence",
+    nodes: ["Field capture", "Asset history", "Trouble points", "CIP forecast"],
+    kind: "layers",
+  },
   "responsible-ai-and-security": {
     label: "Bounded AI system",
     footer: "Defined tools, permissions and approval points",
