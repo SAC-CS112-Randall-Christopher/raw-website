@@ -9,6 +9,7 @@ const contactEmail = "chris@randallautomationworks.com";
 const contactEmailLink = `mailto:${contactEmail}`;
 const contactPhone = "(970) 787-2161";
 const contactPhoneLink = "tel:+19707872161";
+const bookingLink = "https://calendar.app.google/Qwnjw6tS5TdDo5Hh7";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://randallautomationworks.com";
 const aiSystemPages = [
   { href: "/responsible-ai-and-security", label: "AI systems overview" },
@@ -89,8 +90,10 @@ export default async function InteriorPage({ params }: { params: Promise<{ slug:
           {slug === "contact" ? (
             <div className="contact-layout">
               <aside className="contact-context">
-                <p className="eyebrow eyebrow-light">A useful first message</p>
-                <h2>Tell us about the work—not the technology.</h2>
+                <p className="eyebrow eyebrow-light">A useful first conversation</p>
+                <h2>Book a free 30-minute consultation.</h2>
+                <p>Use the booking page to choose a convenient time, or send a message if you would rather start by email.</p>
+                <a className="button button-sand" href={bookingLink} target="_blank" rel="noreferrer">Book a free 30-minute consultation</a>
                 <p>Helpful context includes:</p>
                 <ul><li>What happens today</li><li>Who is involved</li><li>What regularly goes wrong or takes too long</li><li>Which tools hold the information</li><li>What a useful result would look like</li></ul>
                 <div className="contact-details">
@@ -142,9 +145,9 @@ export default async function InteriorPage({ params }: { params: Promise<{ slug:
             <div>
               <p className="eyebrow eyebrow-light">A practical next step</p>
               <h2>Bring the workflow that keeps causing friction.</h2>
-              <p>An initial conversation can help determine whether the right next step is a process change, focused code, systems integration or carefully configured AI.</p>
+              <p>A free 30-minute consultation can help determine whether the right next step is a process change, focused code, systems integration or carefully configured AI.</p>
             </div>
-            <Link className="button button-sand" href="/contact">Start a conversation</Link>
+            <a className="button button-sand" href={bookingLink} target="_blank" rel="noreferrer">Book a free 30-minute consultation</a>
           </div>
         </section>
       )}
