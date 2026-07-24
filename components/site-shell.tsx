@@ -4,6 +4,7 @@ const contactEmail = "chris@randallautomationworks.com";
 const contactEmailLink = `mailto:${contactEmail}`;
 const contactPhone = "(970) 787-2161";
 const contactPhoneLink = "tel:+19707872161";
+const bookingLink = "https://calendar.app.google/Qwnjw6tS5TdDo5Hh7";
 
 export const primaryNav = [
   { href: "/workflow-automation-examples", label: "Examples" },
@@ -50,7 +51,7 @@ export function Header() {
             <Link key={item.href} href={item.href}>{item.label}</Link>
           ))}
           <AiSystemsTree />
-          <Link className="nav-contact" href="/contact">Start a conversation</Link>
+          <a className="nav-contact" href={bookingLink} target="_blank" rel="noreferrer">Book a free consultation</a>
         </nav>
         <details className="mobile-nav">
           <summary>Menu</summary>
@@ -59,7 +60,8 @@ export function Header() {
               <Link key={item.href} href={item.href}>{item.label}</Link>
             ))}
             <AiSystemsTree />
-            <Link href="/contact">Start a conversation</Link>
+            <a href={bookingLink} target="_blank" rel="noreferrer">Book a free 30-minute consultation</a>
+            <Link href="/contact">Send a message</Link>
           </nav>
         </details>
       </div>
@@ -80,6 +82,7 @@ export function Footer() {
           <div className="footer-contact">
             <a href={contactEmailLink}>{contactEmail}</a>
             <a href={contactPhoneLink}>{contactPhone}</a>
+            <a href={bookingLink} target="_blank" rel="noreferrer">Book a free 30-minute consultation</a>
           </div>
         </div>
         <div>
