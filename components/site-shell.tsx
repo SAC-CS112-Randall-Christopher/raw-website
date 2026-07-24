@@ -10,7 +10,7 @@ export const primaryNav = [
   { href: "/services", label: "Services" },
   { href: "/utilities-and-special-districts", label: "Utilities" },
   { href: "/small-businesses", label: "Small Business" },
-  { href: "/gis-and-field-operations", label: "GIS & Field" },
+  { href: "/gis-modernization", label: "GIS Modernization" },
   { href: "/expertise", label: "Expertise" },
 ];
 
@@ -94,6 +94,7 @@ export function Footer() {
           <h2>Specialties</h2>
           <Link href="/utilities-and-special-districts">Utilities & special districts</Link>
           <Link href="/small-businesses">Small businesses</Link>
+          <Link href="/gis-modernization">GIS modernization</Link>
           <Link href="/gis-and-field-operations">GIS & field operations</Link>
           <Link href="/responsible-ai-and-security">AI systems & security</Link>
           <Link href="/local-ai-deployments">Local AI deployments</Link>
