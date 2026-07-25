@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 const problems = [
   ["The same work, every week", "Staff rebuild reports, re-enter information and chase routine follow-ups that should move more consistently."],
@@ -47,14 +46,18 @@ export default function Home() {
             </ul>
           </div>
           <div className="hero-visual" aria-label="Western Colorado landscape with a right-sized automation decision graphic">
-            <Image
-              src="/images/hero-western-colorado.png"
+            {/* Cloudflare serves responsive WebP/AVIF variants while preserving the original as an automatic fallback. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/cdn-cgi/image/width=1600,quality=82,format=auto,onerror=redirect/images/hero-western-colorado.png"
+              srcSet="/cdn-cgi/image/width=640,quality=82,format=auto,onerror=redirect/images/hero-western-colorado.png 640w, /cdn-cgi/image/width=1024,quality=82,format=auto,onerror=redirect/images/hero-western-colorado.png 1024w, /cdn-cgi/image/width=1600,quality=82,format=auto,onerror=redirect/images/hero-western-colorado.png 1600w"
+              sizes="(max-width: 1050px) 100vw, 54vw"
               alt="Irrigated Western Colorado valley with a water conveyance and mesa landscape"
               width={1919}
               height={820}
-              priority
-              unoptimized
-              sizes="(max-width: 1050px) 100vw, 54vw"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
             />
             <div className="topo-lines" aria-hidden="true" />
             <div className="solution-fit-card" aria-hidden="true">
