@@ -46,11 +46,21 @@ export default function InsightsPage() {
         <div className="shell">
           <div className="section-heading split-heading">
             <div>
-              <p className="eyebrow">Featured guide</p>
-              <h2>Start with the work—not the technology.</h2>
+              <p className="eyebrow">Latest guide</p>
+              <h2>Automate the bottleneck—not the buzzword.</h2>
             </div>
-            <p>The strongest first automation project is usually visible, repetitive and easy for the people doing the work to evaluate.</p>
+            <p>Start with recurring work that consumes time, delays customers or creates avoidable mistakes, then decide whether rules, integrations or AI are actually required.</p>
           </div>
+
+          <Link className="article-card" href="/insights/ai-automation-for-small-business">
+            <div className="article-card-number" aria-hidden="true">02</div>
+            <div>
+              <p className="article-kicker"><time dateTime="2026-08-16">August 16, 2026</time> · 10 minute read</p>
+              <h2>AI Automation for Small Business: 7 Workflows Worth Automating First</h2>
+              <p>Evaluate seven practical workflow categories, decide where AI is justified, measure the real ROI and keep consequential decisions accountable.</p>
+              <span className="article-card-link">Read the guide <span aria-hidden="true">→</span></span>
+            </div>
+          </Link>
 
           <Link className="article-card" href="/insights/first-ai-automation-project">
             <div className="article-card-number" aria-hidden="true">01</div>
@@ -65,7 +75,7 @@ export default function InsightsPage() {
           <aside className="editorial-promise">
             <p className="eyebrow">The publishing standard</p>
             <h2>Useful enough to support a real decision.</h2>
-            <p>Randall Automation Works will publish focused guidance grounded in operational questions—not thin city pages, manufactured statistics or filler written only to attract search traffic.</p>
+            <p>Randall Automation Works publishes focused guidance grounded in operational questions—not thin city pages, manufactured statistics or filler written only to attract search traffic.</p>
           </aside>
         </div>
       </section>
