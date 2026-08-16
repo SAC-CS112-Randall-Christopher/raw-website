@@ -104,10 +104,12 @@ export function Footer() {
           <Link href="/hosted-ai-deployments">Hosted & managed AI</Link>
         </div>
         <div>
-          <h2>Company</h2>
+          <h2>Company & work</h2>
           <Link href="/expertise">Expertise</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
+          <a href="https://truetoplan.com">True to Plan · contractor estimating software</a>
+          <a href="https://jbiconstructionoc.com">JBI Construction · client website</a>
           <Link href="/privacy">Privacy</Link>
           <Link href="/terms">Terms & professional disclaimer</Link>
         </div>
