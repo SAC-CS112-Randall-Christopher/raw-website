@@ -47,10 +47,20 @@ export default function InsightsPage() {
           <div className="section-heading split-heading">
             <div>
               <p className="eyebrow">Latest guide</p>
-              <h2>Automate the bottleneck—not the buzzword.</h2>
+              <h2>Audit the workflow before you automate it.</h2>
             </div>
-            <p>Start with recurring work that consumes time, delays customers or creates avoidable mistakes, then decide whether rules, integrations or AI are actually required.</p>
+            <p>Map the trigger, information, handoffs, decisions and exceptions first. Then choose the smallest fix that removes measurable friction without automating confusion.</p>
           </div>
+
+          <Link className="article-card" href="/insights/workflow-automation-audit-small-business">
+            <div className="article-card-number" aria-hidden="true">03</div>
+            <div>
+              <p className="article-kicker"><time dateTime="2026-08-30">August 30, 2026</time> · 11 minute read</p>
+              <h2>Workflow Automation Audit: How to Find the Bottlenecks Worth Fixing First</h2>
+              <p>Map handoffs, score recurring bottlenecks, choose the right level of technology and baseline the measures that will prove whether a pilot actually improved the work.</p>
+              <span className="article-card-link">Read the guide <span aria-hidden="true">→</span></span>
+            </div>
+          </Link>
 
           <Link className="article-card" href="/insights/ai-automation-for-small-business">
             <div className="article-card-number" aria-hidden="true">02</div>
