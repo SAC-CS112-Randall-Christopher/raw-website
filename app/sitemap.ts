@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     { url: `${base}/gis-modernization`, changeFrequency: "monthly", priority: .9 },
     { url: `${base}/insights`, changeFrequency: "weekly", priority: .7 },
+    { url: `${base}/insights/workflow-automation-audit-small-business`, changeFrequency: "monthly", priority: .9, lastModified: "2026-08-30" },
     { url: `${base}/insights/ai-automation-for-small-business`, changeFrequency: "monthly", priority: .9, lastModified: "2026-08-16" },
     { url: `${base}/insights/first-ai-automation-project`, changeFrequency: "monthly", priority: .8, lastModified: "2026-07-18" },
   ];
