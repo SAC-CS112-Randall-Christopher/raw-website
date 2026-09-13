@@ -47,10 +47,20 @@ export default function InsightsPage() {
           <div className="section-heading split-heading">
             <div>
               <p className="eyebrow">Latest guide</p>
-              <h2>Audit the workflow before you automate it.</h2>
+              <h2>Hire for workflow judgment—not AI vocabulary.</h2>
             </div>
-            <p>Map the trigger, information, handoffs, decisions and exceptions first. Then choose the smallest fix that removes measurable friction without automating confusion.</p>
+            <p>Know when outside automation help is justified, what a sound engagement should include, how to evaluate security and ownership, and which proposal red flags deserve scrutiny.</p>
           </div>
+
+          <Link className="article-card" href="/insights/ai-automation-consultant-small-business">
+            <div className="article-card-number" aria-hidden="true">04</div>
+            <div>
+              <p className="article-kicker"><time dateTime="2026-09-13">September 13, 2026</time> · 12 minute read</p>
+              <h2>AI Automation Consultant for Small Business: What to Expect Before You Hire</h2>
+              <p>Compare software, integration and custom-build options; evaluate data and security boundaries; and demand a proposal tied to a measurable operating outcome.</p>
+              <span className="article-card-link">Read the guide <span aria-hidden="true">→</span></span>
+            </div>
+          </Link>
 
           <Link className="article-card" href="/insights/workflow-automation-audit-small-business">
             <div className="article-card-number" aria-hidden="true">03</div>
