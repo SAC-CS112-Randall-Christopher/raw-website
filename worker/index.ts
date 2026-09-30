@@ -1,6 +1,7 @@
 /** Cloudflare Worker entry point for the vinext-starter template. */
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
+import { canonicalRedirect } from "../lib/canonical-redirect";
 
 interface Env {
   ASSETS: Fetcher;
@@ -27,6 +28,9 @@ interface ExecutionContext {
 
 const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+    const redirect = canonicalRedirect(request);
+    if (redirect) return redirect;
+
     const url = new URL(request.url);
 
     if (url.pathname === "/_vinext/image") {

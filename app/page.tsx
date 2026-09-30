@@ -1,6 +1,30 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { bookingLink } from "../components/site-shell";
 import { implementationExamples } from "./service-examples";
+
+// Include the homepage in route metadata so client history restores its head.
+export const metadata: Metadata = {
+  title: { absolute: "AI Setup & Automation in Montrose, CO | Randall Automation Works" },
+  description: "AI assistant and LLM setup, workflow automation and systems integration based in Montrose, Colorado, serving Western Colorado businesses and utilities.",
+  alternates: { canonical: "/" },
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "Randall Automation Works",
+    url: "/",
+    title: "Bring your business into the automated era.",
+    description: "Custom AI assistants and connected workflows, based in Montrose and serving Western Colorado businesses and utilities.",
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Randall Automation Works" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Randall Automation Works",
+    description: "AI setup and workflow automation based in Montrose, Colorado, serving Western Colorado organizations.",
+    images: ["/opengraph-image.png"],
+  },
+};
 
 const services = [
   { title: "AI assistants & LLM setup", text: "Get an AI assistant configured for your team's work, with the right information, tools and review steps. Local or hosted options.", href: "/responsible-ai-and-security", link: "Explore AI setup" },
@@ -20,9 +44,9 @@ export default function Home() {
       <section className="home-hero">
         <div className="shell hero-grid">
           <div className="hero-copy reveal">
-            <p className="eyebrow">AI setup & workflow automation <span>•</span> Western Colorado</p>
+            <p className="eyebrow">AI setup & workflow automation <span>•</span> Montrose, Colorado</p>
             <h1>Bring your business into the automated era.</h1>
-            <p className="hero-intro">Custom AI assistants and connected workflows that take repetitive work off your plate. Built around your business, here in Western Colorado.</p>
+            <p className="hero-intro">Custom AI assistants and connected workflows that take repetitive work off your plate. Based in Montrose, serving businesses across Western Colorado.</p>
             <div className="button-row">
               <a className="button button-primary" href={bookingLink} target="_blank" rel="noreferrer">Book a free consultation</a>
               <Link className="button button-secondary" href="/responsible-ai-and-security">Explore AI setup</Link>
@@ -33,12 +57,12 @@ export default function Home() {
             {/* Cloudflare serves responsive variants, with the original as fallback. */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/cdn-cgi/image/width=1600,quality=82,format=auto,onerror=redirect/images/hero-western-colorado.png"
-              srcSet="/cdn-cgi/image/width=640,quality=82,format=auto,onerror=redirect/images/hero-western-colorado.png 640w, /cdn-cgi/image/width=1024,quality=82,format=auto,onerror=redirect/images/hero-western-colorado.png 1024w, /cdn-cgi/image/width=1600,quality=82,format=auto,onerror=redirect/images/hero-western-colorado.png 1600w"
+              src="/cdn-cgi/image/width=1600,quality=82,format=auto,onerror=redirect/images/hero-western-colorado-2026.png"
+              srcSet="/cdn-cgi/image/width=640,quality=82,format=auto,onerror=redirect/images/hero-western-colorado-2026.png 640w, /cdn-cgi/image/width=1024,quality=82,format=auto,onerror=redirect/images/hero-western-colorado-2026.png 1024w, /cdn-cgi/image/width=1600,quality=82,format=auto,onerror=redirect/images/hero-western-colorado-2026.png 1600w"
               sizes="(max-width: 1050px) 100vw, 54vw"
-              alt="Irrigated Western Colorado valley with a water conveyance and mesa landscape"
-              width={1919}
-              height={820}
+              alt="Illustration of a Western Colorado valley with pasture, a stream, cottonwoods and distant mountains"
+              width={1672}
+              height={941}
               loading="eager"
               fetchPriority="high"
               decoding="async"

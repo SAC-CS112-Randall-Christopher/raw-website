@@ -93,7 +93,7 @@ export function Footer() {
         </div>
       </div>
       <div className="shell footer-bottom">
-        <span>Serving Montrose, Grand Junction and communities across Western Colorado.</span>
+        <span>Based in Montrose, serving Grand Junction and communities across Western Colorado.</span>
         <span>© {new Date().getFullYear()} Randall Automation Works</span>
       </div>
     </footer>

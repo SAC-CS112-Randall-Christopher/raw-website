@@ -4,11 +4,14 @@ import { pages } from "./page-content";
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://randallautomationworks.com";
   const indexablePages = pages.filter((page) => page.indexable !== false);
+  // Dates record actual content edits, rather than the time of each build.
+  const updatedPages = new Set(["workflow-automation-examples", "privacy", "terms"]);
   return [
-    { url: base, changeFrequency: "monthly", priority: 1 },
+    { url: base, changeFrequency: "monthly", priority: 1, lastModified: "2026-09-30" },
     ...indexablePages.map((page) => ({
       url: `${base}/${page.slug}`,
       changeFrequency: "monthly" as const,
+      ...(updatedPages.has(page.slug) ? { lastModified: "2026-09-30" } : {}),
       priority: ["services", "utilities-and-special-districts", "small-businesses", "gis-and-field-operations", "responsible-ai-and-security", "local-ai-deployments", "hosted-ai-deployments", "workflow-automation-examples", "expertise"].includes(page.slug) ? .8 : .6,
     })),
     { url: `${base}/gis-modernization`, changeFrequency: "monthly", priority: .9 },

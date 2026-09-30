@@ -1,7 +1,8 @@
 import assert from "node:assert/strict";
+import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 
-const productionTitle = /<title>Western Colorado AI Automation \| Randall Automation Works<\/title>/i;
+const productionTitle = /<title>AI Setup &amp; Automation in Montrose, CO \| Randall Automation Works<\/title>/i;
 const developmentPreviewMeta = /<meta(?=[^>]*\bname=["']codex-preview["'])[^>]*>/i;
 const productionCanonical = /<link(?=[^>]*\brel=["']canonical["'])(?=[^>]*\bhref=["']https:\/\/randallautomationworks\.com\/?["'])[^>]*>/i;
 
@@ -34,6 +35,11 @@ test("renders production branding without staging metadata", async () => {
   assert.match(html, productionTitle);
   assert.match(html, productionCanonical);
   assert.match(html, /Bring your business into the automated era/i);
+  assert.match(html, /Illustration of a Western Colorado valley/);
+  assert.match(html, /width=640,quality=82,format=auto,onerror=redirect\/images\/hero-western-colorado-2026\.png 640w/);
+  const hero = await readFile(new URL("../dist/client/images/hero-western-colorado-2026.png", import.meta.url));
+  assert.equal(hero.readUInt32BE(16), 1672);
+  assert.equal(hero.readUInt32BE(20), 941);
   assert.match(html, /AI assistants &amp; LLM setup/i);
   assert.match(html, /Front-office AI helper/i);
   assert.match(html, /rule-based C# code with multiple language models/i);
@@ -243,4 +249,123 @@ test("keeps contact, booking and related service paths accessible", async () => 
       assert.match(html, /AI assistant or LLM setup/);
     }
   }
+});
+
+const reviewEnv = { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } };
+const reviewCtx = { waitUntil() {}, passThroughOnException() {} };
+
+async function renderReviewPage(path) {
+  const { default: worker } = await import("../dist/server/index.js");
+  const response = await worker.fetch(new Request(`http://localhost${path}`, { headers: { accept: "text/html" } }), reviewEnv, reviewCtx);
+  assert.equal(response.status, 200, path);
+  return response.text();
+}
+
+function metaContent(html, name, attribute = "name") {
+  const tag = html.match(new RegExp(`<meta(?=[^>]*\\b${attribute}="${name}")[^>]*>`, "i"))?.[0];
+  return tag?.match(/\bcontent="([^"]*)"/i)?.[1];
+}
+
+function canonicalUrl(html) {
+  return html.match(/<link(?=[^>]*\brel="canonical")[^>]*>/i)?.[0].match(/\bhref="([^"]*)"/i)?.[1];
+}
+
+test("keeps all demo routes out of search with route-specific metadata", async () => {
+  const paths = ["/client-portal", "/demo-portal", "/demo-portal/organization", "/demo-portal/utility"];
+  const titles = new Set();
+  const sitemap = await renderReviewPage("/sitemap.xml");
+  for (const path of paths) {
+    const html = await renderReviewPage(path);
+    const title = html.match(/<title>(.*?)<\/title>/i)?.[1];
+    assert.ok(title && !titles.has(title), `${path}: distinct title`);
+    titles.add(title);
+    assert.equal(metaContent(html, "robots"), "noindex, follow", path);
+    assert.equal(canonicalUrl(html), `https://randallautomationworks.com${path}`, path);
+    assert.equal(metaContent(html, "og:url", "property"), `https://randallautomationworks.com${path}`, path);
+    assert.equal(metaContent(html, "og:title", "property"), title, path);
+    assert.equal(metaContent(html, "twitter:title"), title, path);
+    assert.equal((html.match(/<h1\b/g) ?? []).length, 1, path);
+    assert.ok(!sitemap.includes(`https://randallautomationworks.com${path}</loc>`), path);
+  }
+});
+
+test("serves the existing fonts from public URLs without build paths", async () => {
+  const html = await renderReviewPage("/");
+  const fontCss = await readFile(new URL("../app/fonts.css", import.meta.url), "utf8");
+  const paths = [...fontCss.matchAll(/url\((\/fonts\/[^)]+)\)/g)].map((match) => match[1]);
+  assert.equal(paths.length, 12, "All existing language subsets remain available");
+  for (const path of paths) {
+    const file = await readFile(new URL(`../dist/client${path}`, import.meta.url));
+    assert.equal(file.subarray(0, 4).toString(), "wOF2", path);
+  }
+  const preloads = [...html.matchAll(/<link(?=[^>]*\bas="font")[^>]*>/g)].map((match) => match[0]);
+  assert.equal(preloads.length, 2, "Only the two Latin subsets are preloaded");
+  for (const tag of preloads) assert.match(tag, /href="\/fonts\//);
+  const cssFiles = (await readdir(new URL("../dist/client/assets/", import.meta.url))).filter((name) => name.endsWith(".css"));
+  const compiledCss = await Promise.all(cssFiles.map((name) => readFile(new URL(`../dist/client/assets/${name}`, import.meta.url), "utf8")));
+  assert.doesNotMatch([html, fontCss, ...compiledCss].join("\n"), /\/workspace\/|\.vinext\/fonts\//);
+});
+
+test("redirects production HTTP and www permanently while preserving path and query", async () => {
+  const { default: worker } = await import("../dist/server/index.js");
+  for (const origin of ["http://randallautomationworks.com", "http://www.randallautomationworks.com", "https://www.randallautomationworks.com"]) {
+    const response = await worker.fetch(new Request(`${origin}/services?topic=AI%20setup&source=review`), reviewEnv, reviewCtx);
+    assert.equal(response.status, 308, origin);
+    assert.equal(response.headers.get("location"), "https://randallautomationworks.com/services?topic=AI%20setup&source=review", origin);
+  }
+  const response = await worker.fetch(new Request("https://randallautomationworks.com/services"), reviewEnv, reviewCtx);
+  assert.equal(response.status, 200);
+  assert.equal(response.headers.get("location"), null);
+});
+
+test("preserves unique indexable metadata for every sitemap route", async () => {
+  const sitemap = await renderReviewPage("/sitemap.xml");
+  const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+  assert.equal(urls.length, 22);
+  assert.equal(new Set(urls).size, 22);
+  const titles = new Set();
+  const descriptions = new Set();
+  for (const url of urls) {
+    const path = new URL(url).pathname;
+    const html = await renderReviewPage(path);
+    const title = html.match(/<title>(.*?)<\/title>/i)?.[1];
+    const description = metaContent(html, "description");
+    assert.ok(title && !titles.has(title), `${path}: distinct title`);
+    assert.ok(description && !descriptions.has(description), `${path}: distinct description`);
+    titles.add(title);
+    descriptions.add(description);
+    assert.equal(canonicalUrl(html)?.replace(/\/$/, ""), url.replace(/\/$/, ""), path);
+    assert.doesNotMatch(metaContent(html, "robots") ?? "", /noindex/, path);
+    assert.equal((html.match(/<h1\b/g) ?? []).length, 1, path);
+  }
+  for (const path of ["workflow-automation-examples", "privacy", "terms"]) {
+    assert.match(sitemap, new RegExp(`<loc>https://randallautomationworks\\.com/${path}</loc>\\s*<lastmod>2026-09-30</lastmod>`), path);
+  }
+});
+
+test("describes the Montrose organization and verified implementation experience", async () => {
+  const html = await renderReviewPage("/");
+  const schema = [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)].map((match) => JSON.parse(match[1]));
+  const organization = schema.find((item) => item["@type"] === "Organization");
+  assert.ok(organization);
+  assert.equal(organization.location.name, "Montrose, Colorado");
+  assert.equal(organization.address, undefined);
+  assert.ok(organization.hasOfferCatalog.itemListElement.every((offer) => offer.itemOffered["@type"] === "Service"));
+  assert.doesNotMatch(html, /ProfessionalService/);
+  const examples = await renderReviewPage("/workflow-automation-examples");
+  assert.match(examples, /Two implementations from my own work/);
+  assert.match(examples, /Front-office AI helper/);
+  assert.match(examples, /SDK integration/);
+  assert.match(examples, /Deterministic C#/);
+  assert.match(examples, /task and workload/);
+});
+
+test("discloses the currently observed website providers without launch placeholders", async () => {
+  const privacy = await renderReviewPage("/privacy");
+  const terms = await renderReviewPage("/terms");
+  assert.match(privacy, /Cloudflare Web Analytics beacon is active/);
+  assert.match(privacy, /Formspree/);
+  assert.match(privacy, /Google Calendar/);
+  assert.match(privacy, /chris@randallautomationworks\.com/);
+  assert.doesNotMatch(`${privacy}\n${terms}`, /private-stage|public-launch date|before public launch|enabled later|Final contact details/);
 });

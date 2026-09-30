@@ -1,30 +1,19 @@
 import type { Metadata } from "next";
-import { Manrope, Source_Serif_4 } from "next/font/google";
+import { FontPreloads } from "../components/font-preloads";
 import { Footer, Header } from "../components/site-shell";
+import "./fonts.css";
 import "./globals.css";
-
-const manrope = Manrope({
-  variable: "--font-sans",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const sourceSerif = Source_Serif_4({
-  variable: "--font-serif",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://randallautomationworks.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Western Colorado AI Automation | Randall Automation Works",
+    default: "AI Setup & Automation in Montrose, CO | Randall Automation Works",
     template: "%s | Randall Automation Works",
   },
   description:
-    "AI assistant and LLM setup, workflow automation and systems integration for Western Colorado businesses and utilities.",
+    "AI assistant and LLM setup, workflow automation and systems integration based in Montrose, Colorado, serving Western Colorado businesses and utilities.",
   applicationName: "Randall Automation Works",
   category: "Business Services",
   alternates: { canonical: "/" },
@@ -35,14 +24,14 @@ export const metadata: Metadata = {
     url: "/",
     title: "Bring your business into the automated era.",
     description:
-      "Custom AI assistants and connected workflows that take repetitive work off your plate. Built around your business, here in Western Colorado.",
+      "Custom AI assistants and connected workflows, based in Montrose and serving Western Colorado businesses and utilities.",
     images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Randall Automation Works" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Randall Automation Works",
     description:
-      "Practical AI automation for Western Colorado organizations.",
+      "AI setup and workflow automation based in Montrose, Colorado, serving Western Colorado organizations.",
     images: ["/opengraph-image.png"],
   },
   robots: { index: true, follow: true },
@@ -51,7 +40,7 @@ export const metadata: Metadata = {
 
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": "Organization",
   "@id": `${siteUrl}/#business`,
   name: "Randall Automation Works",
   url: siteUrl,
@@ -59,6 +48,7 @@ const structuredData = {
   logo: `${siteUrl}/logo-horizontal.svg`,
   email: "chris@randallautomationworks.com",
   telephone: "+1-970-787-2161",
+  location: { "@type": "Place", name: "Montrose, Colorado" },
   founder: {
     "@type": "Person",
     name: "Chris Randall",
@@ -80,22 +70,34 @@ const structuredData = {
     "Durango",
     "Cortez",
   ],
-  serviceType: [
-    "AI consulting",
-    "Workflow automation",
-    "Python automation",
-    "SQL reporting",
-    "API integration",
-    "GIS workflow automation",
-    "Systems integration",
-    "AI readiness assessment",
-  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Automation and AI services",
+    itemListElement: [
+      "AI assistant and LLM setup",
+      "Workflow automation",
+      "Python automation",
+      "SQL reporting",
+      "API and systems integration",
+      "GIS workflow automation",
+      "AI readiness assessment",
+    ].map((name) => ({
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name,
+        provider: { "@id": `${siteUrl}/#business` },
+        areaServed: "Western Colorado",
+      },
+    })),
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${sourceSerif.variable}`}>
+      <body>
+        <FontPreloads />
         <a className="skip-link" href="#main-content">Skip to content</a>
         <Header />
         {children}

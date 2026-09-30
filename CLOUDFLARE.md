@@ -57,3 +57,29 @@ npx wrangler deploy --dry-run
 ```
 
 For an authenticated local deployment, run `npm run deploy`.
+
+## HTTPS redirect review
+
+The Worker now redirects HTTP requests for the production hostname to HTTPS
+with status 308, preserving the path and query string. It also provides a
+canonical apex redirect when a `www` request reaches the Worker. Local preview
+hostnames remain usable. The existing dashboard-managed `www` redirect is
+unchanged.
+
+The current `assets` configuration serves matching static files before Worker
+code. To cover HTTP asset requests too, an owner-approved Cloudflare edge rule
+is recommended. No dashboard settings have been changed in this checkout.
+
+Proposed Single Redirect rule, for review before publication:
+
+- Match expression: `http.host eq "randallautomationworks.com" and not ssl`
+- Dynamic target: `concat("https://randallautomationworks.com", http.request.uri.path)`
+- Status: `301`
+- Preserve query string: enabled
+- Keep the existing `www` redirect rule and its scope.
+
+See Cloudflare's [HTTPS Single Redirect example](https://developers.cloudflare.com/rules/url-forwarding/examples/redirect-admin-https/) and [Single Redirect settings](https://developers.cloudflare.com/rules/url-forwarding/single-redirects/settings/).
+After separate approval and publication, verify the apex HTTP homepage,
+interior pages, a public font/image path, and the existing `www` paths with
+queries. The local Worker tests verify the code path; they do not verify
+dashboard rules.
