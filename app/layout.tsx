@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Randall Automation Works",
   },
   description:
-    "Practical Python, SQL and AI workflow automation and systems integration for Western Colorado small businesses, utilities and local organizations.",
+    "AI assistant and LLM setup, workflow automation and systems integration for Western Colorado businesses and utilities.",
   applicationName: "Randall Automation Works",
   category: "Business Services",
   alternates: { canonical: "/" },
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "Randall Automation Works",
     url: "/",
-    title: "Streamline workflows. Connect systems. Put AI to work with purpose.",
+    title: "Bring your business into the automated era.",
     description:
-      "Remove friction between people, information and software with focused code, systems integration and carefully configured AI.",
+      "Custom AI assistants and connected workflows that take repetitive work off your plate. Built around your business, here in Western Colorado.",
     images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Randall Automation Works" }],
   },
   twitter: {

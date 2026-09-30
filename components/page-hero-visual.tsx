@@ -37,20 +37,20 @@ const visuals: Record<string, HeroVisualSpec> = {
     kind: "layers",
   },
   "responsible-ai-and-security": {
-    label: "Bounded AI system",
+    label: "AI set up for your work",
     footer: "Defined tools, permissions and approval points",
     nodes: ["Knowledge", "AI workflow", "Approved tools", "Human approval"],
     kind: "hub",
   },
   "local-ai-deployments": {
     label: "Client-controlled local AI",
-    footer: "Approved sources stay inside the defined boundary",
+    footer: "Define the data boundary before connecting tools",
     nodes: ["Local sources", "Local model", "Human review"],
     kind: "boundary",
   },
   "hosted-ai-deployments": {
     label: "Managed client environment",
-    footer: "Secure access · separated workspace · defined support",
+    footer: "Agreed access · clear ownership · defined support",
     nodes: ["Client login", "Portal", "Local or cloud runtime", "Managed support"],
     kind: "hub",
   },

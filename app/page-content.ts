@@ -1,24 +1,60 @@
-export type InfoCard = { title: string; text: string; label?: string; details?: string[] };
+export type InfoCard = { title: string; text: string; label?: string; details?: string[]; href?: string; linkLabel?: string };
 export type ContentSection = { heading: string; intro?: string; bullets?: string[]; cards?: InfoCard[]; callout?: { title: string; text: string } };
 export type PageContent = { slug: string; navLabel: string; metaTitle: string; eyebrow: string; title: string; lead: string; metaDescription: string; aside: string; sections: ContentSection[]; indexable?: boolean };
 
 export const pages: PageContent[] = [
   {
-    slug: "services", navLabel: "Services", metaTitle: "Workflow & AI Automation Services | Randall Automation Works", eyebrow: "Services",
-    title: "Practical support from first assessment through long-term operation.",
-    lead: "Start with one defined problem, understand the risks and use the simplest technology that can create useful, measurable value.",
-    metaDescription: "Python, SQL, systems integration, workflow automation, AI assessments, reporting, GIS integration and responsible AI services in Western Colorado.",
-    aside: "Not sure which service fits? Bring the process that is consuming time, creating errors or making information hard to find.",
-    sections: [
-      { heading: "Automation and AI workflow assessment", intro: "A paid assessment creates a clear starting point before anyone commits to implementation.", bullets: ["Interview owners, managers and employees", "Map current workflows and information handoffs", "Identify repetitive work, exceptions and failure points", "Review data readiness and security considerations", "Compare code, integration, process-improvement and AI options", "Rank opportunities by effort, risk, ongoing cost and likely return", "Deliver a practical implementation roadmap"], callout: { title: "A decision tool—not a technology shopping list", text: "The assessment may recommend a small program, a database improvement, an integration, responsible AI, a simpler process change or no build at all. The goal is a better decision." } },
-      { heading: "Code-first automation and systems integration", intro: "Clear, rule-based work often does not require an AI model. Focused programs and direct system connections can be faster, more predictable and less expensive to operate.", cards: [{ title: "Python automation", text: "Build documented scripts for scheduled reports, file processing, validation, data preparation and repeatable administrative tasks." }, { title: "SQL and reporting", text: "Use existing database information through carefully scoped queries, views, exports and recurring management reports." }, { title: "JSON and API integration", text: "Connect approved systems through structured information exchange and replace unnecessary manual re-entry." }, { title: "Visual Basic and VBA", text: "Improve established Windows, Excel and Office processes when a familiar, maintainable tool is the best fit." }], callout: { title: "Lower cost is part of good design", text: "Avoiding an unnecessary platform, subscription or per-use AI charge can matter as much as reducing the original workload. Ongoing cost and client maintainability are considered from the beginning." } },
-      { heading: "Small automation pilots", intro: "A pilot limits scope while proving whether the idea works in the real environment.", bullets: ["One defined workflow and measurable objective", "Connections to existing tools where practical", "Controlled testing with representative information", "Employee review and role-specific training", "Written operating and support documentation", "Outcome review before any expansion"] },
-      { heading: "Reporting and document automation", intro: "Turn recurring information into consistent, reviewable outputs without losing human responsibility.", cards: [{ title: "Management reporting", text: "Consolidate recurring operational and administrative information into clearer decision support." }, { title: "Document intake", text: "Classify approved forms and attachments, extract key fields and route exceptions for review." }, { title: "Communications", text: "Prepare human-reviewed customer notices, meeting summaries, follow-ups and action items." }, { title: "Regulatory preparation", text: "Organize source information and draft repeatable reporting materials for qualified review." }] },
-      { heading: "Internal knowledge systems", intro: "Make approved organizational knowledge easier to find without giving everyone access to everything.", bullets: ["Searchable SOPs, policies and technical documentation", "Permission-aware internal question answering", "Institutional-knowledge capture", "Employee onboarding assistance", "Source-linked answers and review workflows", "Ongoing content ownership and update practices"] },
-      { heading: "GIS and field operations automation", intro: "Connect asset and field information with the office workflows that depend on it.", bullets: ["Field-form and inspection processing", "Work-order and maintenance support", "GIS reporting and data-quality exceptions", "Asset-information workflows", "Field-to-office handoffs", "Human-reviewed summaries and notifications"] },
-      { heading: "AI readiness, governance and training", intro: "Help employees use appropriate tools with clear expectations and safeguards.", bullets: ["Employee AI-use policies", "Practical data classification", "Appropriate-tool selection", "Human-review requirements", "Department-specific training", "Responsible implementation guidance"] },
-      { heading: "Managed AI support", intro: "Keep useful workflows reliable after launch with a defined support plan.", bullets: ["Monitoring and maintenance", "Controlled improvements", "Employee support", "Documentation updates", "Usage and outcome reporting", "Security and access reviews"] },
-    ],
+    "slug": "services",
+    "navLabel": "Services",
+    "metaTitle": "AI Setup & Automation Services | Randall Automation Works",
+    "eyebrow": "Services",
+    "title": "Practical help for the work that slows you down.",
+    "lead": "AI assistants, connected software and field-to-office workflows. Start with one useful improvement and build from there.",
+    "metaDescription": "AI assistant and LLM setup, workflow automation, systems integration and GIS services for Western Colorado businesses and utilities.",
+    "aside": "Bring the process that takes too much time, needs repeated data entry or leaves people searching for answers.",
+    "sections": [
+      {
+        "heading": "Three ways to make work easier",
+        "cards": [
+          {
+            "title": "AI assistants & LLM setup",
+            "text": "Configure an assistant around your tasks, approved information and existing tools. Compare local and hosted options, test the results and train your team.",
+            "href": "/responsible-ai-and-security",
+            "linkLabel": "Explore AI setup"
+          },
+          {
+            "title": "Workflow automation & integrations",
+            "text": "Connect applications, prepare recurring reports, route documents and reduce manual data entry. Use clear business rules for work that should behave predictably.",
+            "href": "/workflow-automation-examples",
+            "linkLabel": "See workflow examples"
+          },
+          {
+            "title": "GIS & field operations",
+            "text": "Connect field forms, inspections, asset records and office reporting. Improve how location-based information gets collected and used.",
+            "href": "/gis-and-field-operations",
+            "linkLabel": "Explore GIS services"
+          }
+        ]
+      },
+      {
+        "heading": "Start with a clear scope",
+        "intro": "A free 30-minute consultation helps identify the problem and a useful next step. If more discovery is needed, a paid assessment maps the workflow and recommends an approach.",
+        "bullets": [
+          "A defined workflow and the people who use it",
+          "Agreed deliverables, price and ongoing costs before implementation",
+          "A focused pilot tested against representative work",
+          "Documentation, employee training and a review of the result"
+        ]
+      },
+      {
+        "heading": "Code-first automation and systems integration",
+        "intro": "The task determines the tools: Python automation, SQL reporting, C# integrations, JSON and APIs, or Visual Basic and VBA for established Office workflows. AI handles language and documents where it adds value."
+      },
+      {
+        "heading": "Support after handoff",
+        "intro": "Optional support can cover maintenance, approved updates, access reviews and employee help. Support hours, responsibilities and third-party costs are agreed as part of the plan."
+      }
+    ]
   },
   {
     slug: "utilities-and-special-districts", navLabel: "Utilities", metaTitle: "Utility & Special District Automation | Randall Automation Works", eyebrow: "Utilities & special districts",
@@ -63,87 +99,189 @@ export const pages: PageContent[] = [
     ],
   },
   {
-    slug: "responsible-ai-and-security", navLabel: "AI Systems & Security", metaTitle: "Responsible AI Systems & Security | Randall Automation Works", eyebrow: "Responsible AI systems & security",
-    title: "Configure capable AI systems without giving up clarity, ownership or human judgment.",
-    lead: "Responsible AI is more than a policy. It is the technical design of models, knowledge sources, tool permissions, agent behavior, testing and human approval around a real workflow.",
-    metaDescription: "Responsible AI system design, agentic workflows, RAG knowledge systems, MCP and SDK integrations, evaluation, security and human review for Western Colorado organizations.",
-    aside: "No system is risk-free and AI output is not guaranteed to be correct. Responsible design makes limitations visible and manageable.",
-    sections: [
-      { heading: "Core implementation commitments", intro: "Each workflow should have understandable safeguards proportionate to the information and decision involved.", bullets: ["Least-privilege access", "Read-only integrations whenever practical", "Client-owned accounts and credentials", "No unnecessary information collection", "Human review for consequential outputs", "Documented workflows, limitations and handoff", "Clear client ownership of data", "Transparent third-party services and costs"] },
-      { heading: "How an AI system is configured", intro: "A dependable implementation requires more than selecting a chatbot. The model, instructions, information, tools and review path are configured as one system.", cards: [
-        { title: "Model and runtime selection", text: "Compare model capability, context limits, structured-output support, administrative controls, retention terms, latency and usage cost against the actual task." },
-        { title: "Prompt and output design", text: "Define system instructions, allowed behavior, response schemas, confidence or exception rules and versioned templates that can be tested instead of relying on an informal prompt." },
-        { title: "Knowledge grounding", text: "Use retrieval-augmented generation (RAG), approved document collections, metadata and source links so answers are grounded in information the organization controls." },
-        { title: "Evaluation and observability", text: "Test representative and difficult cases, validate structured outputs, trace tool use and monitor quality, errors, latency and cost before expanding the workflow." },
-      ] },
-      { heading: "Bounded agents and tool-using workflows", intro: "Agentic AI can coordinate several steps, but useful autonomy should be narrow, observable and matched to the risk of the work.", cards: [
-        { title: "Agentic workflow design", text: "Break work into defined stages such as retrieve, compare, draft, validate, route and request approval instead of giving an agent a vague goal and unrestricted authority." },
-        { title: "APIs, SDKs and MCP", text: "Connect approved tools through application programming interfaces, software development kits and Model Context Protocol (MCP) servers with specific methods and permissions." },
-        { title: "State, memory and recovery", text: "Control what context persists, separate temporary task state from approved organizational knowledge and define retries, timeouts, fallbacks and escalation paths." },
-        { title: "Approval before action", text: "Require an identified person to approve consequential communications, record changes, external actions or unusual exceptions before the workflow proceeds." },
-      ], callout: { title: "An agent should have a job description—not a blank check", text: "Its available information, tools, permissions, stopping conditions and human approval points should be documented and testable." } },
-      { heading: "Knowledge systems and retrieval configuration", intro: "Internal question-answering systems are only as useful as the information architecture behind them.", bullets: ["Select and approve source collections", "Apply permission-aware retrieval", "Choose chunking, metadata and indexing strategies", "Use embeddings and search appropriate to the material", "Show citations or source records where practical", "Handle outdated, conflicting and missing information", "Assign document owners and refresh processes", "Test questions employees actually ask"] },
-      { heading: "Information and model use", intro: "AI tools differ in how they retain, process and use information. Tool selection should match the sensitivity and purpose of the work.", bullets: ["Classify information before choosing a tool", "Avoid sending confidential data to unapproved services", "Do not train public models on client information without authorization", "Limit retained information to what the workflow needs", "Use client-owned organizational accounts where available", "Review vendor terms and administrative controls"] },
-      { heading: "Human review and accountability", intro: "Automation can prepare, organize and flag information. Responsibility must remain clear.", cards: [{ title: "Drafts stay drafts", text: "AI-generated summaries, communications and interpretations are labeled for review." }, { title: "Sources stay visible", text: "Where practical, outputs link back to the records or documents that support them." }, { title: "Exceptions have owners", text: "The workflow identifies who reviews unusual, incomplete or consequential items." }, { title: "Decisions remain human", text: "No autonomous safety-critical decisions or unsupported professional determinations." }] },
-      { heading: "IT reporting and OT control stay separate", intro: "Operational information can support analysis without creating a control path.", callout: { title: "A deliberate separation", text: "Approved exports move into a separate reporting or staging environment. AI services do not receive write-enabled access to SCADA, PLCs or operational controls." } },
-      { heading: "Governance and employee training", intro: "Policies work best when they are understandable, relevant to real roles and supported by practical examples.", bullets: ["Employee AI-use policy development", "Data classification guidance", "Approved-tool and prohibited-use definitions", "Human-review expectations", "Department-specific training", "Incident and correction pathways"] },
-    ],
+    "slug": "responsible-ai-and-security",
+    "navLabel": "AI Setup",
+    "metaTitle": "AI Assistant & LLM Setup | Randall Automation Works",
+    "eyebrow": "AI assistants & LLM setup",
+    "title": "An AI assistant set up for your business.",
+    "lead": "Turn a useful idea into a working assistant. I help choose the model, connect approved information and tools, test the workflow and show your team how to use it.",
+    "metaDescription": "Custom AI assistant and LLM setup in Western Colorado. Model selection, document search, software integrations, local or hosted deployment, testing and training.",
+    "aside": "You do not need to choose a model or hosting platform before we talk. Start with the work you want help with.",
+    "sections": [
+      {
+        "heading": "What would you like help with?",
+        "cards": [
+          {
+            "title": "Front-office work",
+            "text": "Assist with routine administration, information lookup and drafts that staff can review."
+          },
+          {
+            "title": "Finding internal answers",
+            "text": "Help employees search approved procedures, policies and documentation, with links back to the source."
+          },
+          {
+            "title": "Working inside your software",
+            "text": "Connect AI to existing applications, with rule-based code handling validation and repeatable steps."
+          }
+        ]
+      },
+      {
+        "heading": "What the setup includes",
+        "bullets": [
+          "One defined workflow, its users and a clear way to judge the result",
+          "Model selection based on the task, response quality and running costs",
+          "Approved document sources, tool connections and access permissions",
+          "Testing with typical work, difficult cases and clear failure handling",
+          "Human review before consequential actions or decisions",
+          "Operating instructions, employee training and an agreed support plan"
+        ]
+      },
+      {
+        "heading": "Choose where it runs",
+        "cards": [
+          {
+            "title": "Local AI",
+            "text": "Run selected models on your own workstation or server. Worth considering for local data, on-site systems or limited connectivity.",
+            "href": "/local-ai-deployments",
+            "linkLabel": "Compare local setup"
+          },
+          {
+            "title": "Hosted & managed AI",
+            "text": "Use cloud models and a shared application without maintaining a local model server. Optional support keeps responsibilities clear.",
+            "href": "/hosted-ai-deployments",
+            "linkLabel": "Compare hosted setup"
+          }
+        ]
+      },
+      {
+        "heading": "Clear boundaries from the start",
+        "intro": "AI can be wrong. We agree on approved data, permissions, review points, vendor terms and ongoing costs before implementation. Consequential outputs need human review.",
+        "callout": {
+          "title": "Utility operations stay separate",
+          "text": "AI services do not receive write-enabled access to SCADA, PLCs or operational controls. Qualified people retain responsibility for safety-critical decisions."
+        }
+      },
+      {
+        "heading": "For technical teams",
+        "intro": "Integration can use APIs, SDKs or Model Context Protocol (MCP). Document search can use retrieval-augmented generation (RAG). Where useful, deterministic C# or other rule-based code validates outputs and routes tasks between language models. Model choice, logging and evaluation are scoped to the actual workflow."
+      }
+    ]
   },
   {
-    slug: "local-ai-deployments", navLabel: "Local AI Deployments", metaTitle: "Local AI Deployments | Randall Automation Works", eyebrow: "AI systems · local deployments",
-    title: "Run useful AI on infrastructure your organization controls.",
-    lead: "A local deployment can keep approved documents, retrieval and model processing on a client-owned workstation or server while avoiding unnecessary dependence on a public AI service.",
-    metaDescription: "Local AI deployment consulting for Western Colorado organizations, including local language models, private RAG, hardware planning, security, testing and managed support.",
-    aside: "Local does not automatically mean secure, private or inexpensive. Hardware, model licenses, access, patching, backups and support still need deliberate design.",
-    sections: [
-      { heading: "When a local deployment can make sense", intro: "Local infrastructure is worth evaluating when control, connectivity or predictable ongoing cost matters more than access to the largest cloud models.", cards: [
-        { title: "Sensitive internal knowledge", text: "Keep approved documents and retrieval indexes within infrastructure the organization owns and administers, subject to the specific system design." },
-        { title: "Predictable, repeated use", text: "A purchased machine may be economical for steady workloads that would otherwise create recurring per-use model charges." },
-        { title: "Limited connectivity", text: "Support selected workflows when Internet access is unavailable, unreliable or intentionally restricted." },
-        { title: "Greater operational control", text: "Choose when models, indexes and updates change instead of accepting every vendor-side change automatically." },
-      ] },
-      { heading: "What the local system can include", intro: "The useful product is the complete workflow around the model—not a model running alone on a computer.", bullets: ["A right-sized local language or vision model", "Permission-aware retrieval-augmented generation (RAG)", "Approved document ingestion and indexing", "Structured outputs that Python, SQL or business rules can validate", "Connections to approved local files, databases, GIS or internal applications", "Role-based access and human approval points", "Logging, evaluation, backup and recovery procedures", "Employee training and operating documentation"] },
-      { heading: "Hardware and model selection", intro: "The workload determines the machine. Model size, context, response time, concurrent users, document volume and required integrations are evaluated before recommending hardware.", cards: [
-        { label: "Capacity", title: "CPU, memory, storage and GPU", text: "Balance available hardware with model size, quantization, indexing, context requirements and acceptable response time." },
-        { label: "Fitness", title: "Test the work—not a benchmark", text: "Evaluate representative documents, questions and difficult cases because a model that scores well generally may still be wrong for the workflow." },
-        { label: "Licensing", title: "Open does not always mean unrestricted", text: "Review model, software and commercial-use terms along with update sources and dependency ownership." },
-        { label: "Lifecycle", title: "Plan for support and replacement", text: "Define patching, model updates, backups, monitoring, failure recovery and the expected service life of the machine." },
-      ] },
-      { heading: "A controlled local information path", intro: "Approved sources move into a defined local index or application, the model prepares an answer or draft, and an authorized employee reviews consequential output.", callout: { title: "Local processing should not create a hidden control path", text: "Operational reporting remains separated from SCADA, PLCs and safety-critical control. Local AI does not receive write-enabled OT access or replace qualified judgment." } },
-      { heading: "Client ownership with optional support", intro: "The client can own the machine, organizational accounts, source information and final configurations. Support can be limited to scheduled maintenance or expanded into a defined managed plan.", bullets: ["Documented administrative and recovery access", "Client approval before material configuration changes", "Identity-aware remote support instead of exposed public administration ports", "Update, evaluation and incident records", "Defined support hours and response expectations", "A clear exit and handoff process"] },
-      { heading: "Local, hosted or hybrid?", intro: "A local build is not automatically the best answer. Some workflows benefit from stronger cloud models, simpler remote access or a hybrid design that keeps sensitive processing local while using a secure managed portal.", callout: { title: "Choose the boundary before choosing the model", text: "An assessment compares information sensitivity, model capability, performance, administration, connectivity and full lifecycle cost before recommending a deployment pattern." } },
-    ],
+    "slug": "local-ai-deployments",
+    "navLabel": "Local AI Setup",
+    "metaTitle": "Local AI & LLM Setup | Randall Automation Works",
+    "eyebrow": "AI setup · local",
+    "title": "Run AI on your own hardware.",
+    "lead": "Set up a local language model and the workflow around it on a workstation or server your organization controls.",
+    "metaDescription": "Local AI and LLM setup for Western Colorado organizations. Hardware planning, document access, integrations, testing, training and optional support.",
+    "aside": "Local does not automatically mean secure, private or inexpensive. Connected tools may still send data elsewhere; the full design needs review.",
+    "sections": [
+      {
+        "heading": "When local is worth considering",
+        "cards": [
+          {
+            "title": "Information kept on-site",
+            "text": "Your workflow needs approved documents or processing to stay within a defined local environment."
+          },
+          {
+            "title": "Limited connectivity",
+            "text": "Your team needs selected tasks to work without dependable Internet access. External integrations may still require a connection."
+          },
+          {
+            "title": "Existing local systems",
+            "text": "The assistant needs to work with files, databases or applications already on your network."
+          }
+        ]
+      },
+      {
+        "heading": "What I help set up",
+        "bullets": [
+          "Hardware and model selection based on your actual tasks and number of users",
+          "Approved document search and connections to existing tools",
+          "User access, review steps and clearly defined data boundaries",
+          "Tests for answer quality, response time and failure handling",
+          "Backup, update and recovery procedures",
+          "Team training and documentation for day-to-day use"
+        ]
+      },
+      {
+        "heading": "Test the fit before buying hardware",
+        "intro": "Local models vary in capability and hardware needs. Compare the quality, speed and full cost of a representative workflow before committing to a machine. Include model licensing, electricity, maintenance and replacement costs.",
+        "callout": {
+          "title": "A practical comparison",
+          "text": "A hosted or hybrid setup may be a better fit when model capability, remote access or simpler maintenance matters more. We can compare these options together."
+        }
+      },
+      {
+        "heading": "Know who maintains it",
+        "intro": "Agree on who owns the machine and accounts, installs updates, handles backups and provides support. Optional managed support has defined access, hours and responsibilities. Local AI remains separate from safety-critical operational control."
+      }
+    ]
   },
   {
-    slug: "hosted-ai-deployments", navLabel: "Hosted & Managed AI", metaTitle: "Hosted & Managed AI Deployments | Randall Automation Works", eyebrow: "AI systems · hosted & managed deployments",
-    title: "Secure client access with the system actively managed behind it.",
-    lead: "Hosted and hybrid deployments can give employees a straightforward client portal while Randall Automation Works maintains the configured workflow, access boundaries, knowledge sources and service health under a defined support agreement.",
-    metaDescription: "Hosted and hybrid managed AI deployments with secure client portals, separated workspaces, usage controls, local processing options and ongoing support in Western Colorado.",
-    aside: "Deployment details are scoped to the client. Hosting, model usage, support limits, data location, retention and third-party services are documented before implementation.",
-    sections: [
-      { heading: "Three practical delivery patterns", intro: "The portal experience can remain consistent while the processing and information boundary change to fit the organization.", cards: [
-        { label: "Managed cloud", title: "Hosted client workspace", text: "Authorized employees sign in to a separated client workspace while approved cloud services run the workflow. This can provide strong model capability and reduce local infrastructure maintenance." },
-        { label: "Client cloud", title: "Client-owned hosted environment", text: "Where practical, the client owns the cloud tenant, model account or usage billing while Randall Automation Works configures and manages the application under delegated access." },
-        { label: "Hybrid managed", title: "Local machine with managed portal access", text: "A client-owned machine can perform sensitive retrieval or model processing locally while the portal provides authenticated access, workflow coordination and an approved management channel." },
-      ], callout: { title: "Hybrid can reduce unnecessary data movement", text: "The local machine can retain designated source information and inference workloads. The portal and management path should exchange only what the documented architecture requires." } },
-      { heading: "What the managed portal can provide", intro: "A portal is more than a branded chat window. It is the controlled entry point to a client-specific workflow.", bullets: ["Individual user identities and role-appropriate access", "Separated client workspaces and knowledge sources", "Purpose-built tools, prompts, forms and output formats", "Source links, review queues and human approval steps", "Usage limits, cost visibility and activity records", "Secure credential handling and replaceable provider connections", "A support path for employees and administrators", "The ability to revoke access without rebuilding the underlying workflow"] },
-      { heading: "Managed service responsibilities", intro: "Ongoing support is defined rather than implied, so the client knows what is monitored and what remains its responsibility.", cards: [
-        { title: "Service monitoring", text: "Review availability, workflow failures, integration health, latency and unusual usage within the limits of the support plan." },
-        { title: "Controlled improvements", text: "Version prompts, tools, retrieval settings and business rules; test representative cases; and document material changes before release." },
-        { title: "Knowledge maintenance", text: "Support approved source updates, index refreshes, ownership practices and handling for outdated or conflicting information." },
-        { title: "Access and security review", text: "Periodically review users, roles, service credentials, remote-management access, retention settings and third-party dependencies." },
-        { title: "Usage and outcome reporting", text: "Report agreed measures such as volume, exceptions, model or service usage, employee review and observed operational value." },
-        { title: "Employee support", text: "Provide documented support and training within defined hours, response expectations and out-of-scope boundaries." },
-      ] },
-      { heading: "Security and client separation", intro: "Hosted does not mean casually placing every client behind the same chatbot. Identity, information and management boundaries are designed explicitly.", bullets: ["Least-privilege access and multi-factor authentication where supported", "No cross-client knowledge retrieval or shared client credentials", "Encryption in transit and service-appropriate storage controls", "Secrets kept outside source code", "Client-owned accounts and keys when practical", "Documented retention, backup and deletion practices", "No use of client information to train public models without authorization", "Logs and alerts proportionate to the sensitivity and support plan"] },
-      { heading: "Managing a client-owned local machine", intro: "For a hybrid deployment, the client machine remains part of the client environment while approved management is performed through a secure, identity-aware pathway.", bullets: ["No open public administrative ports", "Client-approved administrator identities and revocable access", "Outbound or identity-aware connectivity appropriate to the design", "Patch, health, backup and capacity checks", "Separation from operational-control networks and safety-critical systems", "Documented fallback behavior when the portal or Internet is unavailable", "Client visibility into material changes and support activity"] },
-      { heading: "Model usage and third-party costs", intro: "Hosted services may use metered model, storage, email, identity or integration services. The commercial structure should keep those costs visible.", cards: [
-        { title: "Client-owned usage", text: "The client can pay model or platform usage directly through its own account while management is billed separately." },
-        { title: "Included allowance", text: "A managed package may include a stated level of usage, with limits and any overage treatment agreed in advance." },
-        { title: "Local processing", text: "A hybrid machine can reduce some model charges, but hardware, electricity, maintenance and eventual replacement still count toward total cost." },
-      ], callout: { title: "No surprise consumption model", text: "Hosting, support, third-party subscriptions and variable AI usage should be identified separately or combined through a clearly stated allowance and limit." } },
-      { heading: "A managed service still keeps people in control", intro: "The system can retrieve, organize, draft, validate and route work. Consequential actions remain subject to the permissions and human approval defined for the engagement.", callout: { title: "Managed access is not operational control", text: "The portal does not authorize autonomous safety-critical decisions, write-enabled AI access to OT systems or substitution for qualified operators, engineers or other licensed professionals." } },
-    ],
+    "slug": "hosted-ai-deployments",
+    "navLabel": "Hosted & Managed AI",
+    "metaTitle": "Hosted & Managed AI Setup | Randall Automation Works",
+    "eyebrow": "AI setup · hosted & managed",
+    "title": "AI your team can use, with a clear support plan.",
+    "lead": "A hosted assistant can connect your team to cloud models and business tools without maintaining a local model server.",
+    "metaDescription": "Hosted and managed AI assistant setup for Western Colorado businesses. Cloud model integration, access controls, testing, employee training and defined support.",
+    "aside": "Hosting, model usage and support are separate costs to understand before you commit. The setup and service agreement define what is included.",
+    "sections": [
+      {
+        "heading": "Choose the right arrangement",
+        "cards": [
+          {
+            "title": "Hosted application",
+            "text": "Employees use an application connected to approved cloud services. Account ownership, access and provider choices are agreed before setup."
+          },
+          {
+            "title": "Client-owned cloud",
+            "text": "Use your own cloud or model accounts where practical, with configuration and support provided through approved access."
+          },
+          {
+            "title": "Hybrid setup",
+            "text": "Combine local processing with hosted access where the workflow needs both. Document exactly what information moves between them."
+          }
+        ]
+      },
+      {
+        "heading": "What the setup includes",
+        "bullets": [
+          "An assistant configured for one agreed workflow",
+          "Approved knowledge sources and software integrations",
+          "Individual access and permissions suited to each role",
+          "Human review points, test cases and operating instructions",
+          "Usage limits and visibility into model and service costs",
+          "Employee training and a clear handoff"
+        ]
+      },
+      {
+        "heading": "Optional ongoing support",
+        "intro": "A support plan can include service checks, troubleshooting, source updates and tested improvements. Agree on support hours, response expectations, change approval and an exit process.",
+        "cards": [
+          {
+            "title": "Keep it working",
+            "text": "Review errors, integrations and usage within the support plan. Update prompts, models and connections through agreed testing."
+          },
+          {
+            "title": "Keep ownership clear",
+            "text": "Record who manages users, documents, billing, backups and provider accounts. Make access revocable and document the handoff."
+          }
+        ]
+      },
+      {
+        "heading": "Review data handling before launch",
+        "intro": "Confirm which providers receive information, where it is stored, how long it is retained and whether their terms fit the work. Local and hosted systems both need deliberate access and security decisions.",
+        "bullets": [
+          "Keep each client’s knowledge and credentials separate",
+          "Use only approved information and provider accounts",
+          "Require human review for consequential actions",
+          "Keep AI separate from safety-critical operational control"
+        ]
+      }
+    ]
   },
   {
     slug: "workflow-automation-examples", navLabel: "Examples", metaTitle: "Workflow Automation Examples | Randall Automation Works", eyebrow: "Workflow solution examples",

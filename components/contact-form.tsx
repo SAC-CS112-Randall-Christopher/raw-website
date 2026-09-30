@@ -67,7 +67,7 @@ export function ContactForm() {
             <option>Reporting or document automation</option>
             <option>Internal knowledge system</option>
             <option>GIS or field operations</option>
-            <option>AI systems, agents and training</option>
+            <option>AI assistant or LLM setup</option>
             <option>Managed AI support</option>
             <option>Not sure yet</option>
           </select>

@@ -4,38 +4,18 @@ const contactEmail = "chris@randallautomationworks.com";
 const contactEmailLink = `mailto:${contactEmail}`;
 const contactPhone = "(970) 787-2161";
 const contactPhoneLink = "tel:+19707872161";
-const bookingLink = "https://calendar.app.google/Qwnjw6tS5TdDo5Hh7";
+export const bookingLink = "https://calendar.app.google/Qwnjw6tS5TdDo5Hh7";
 
 export const primaryNav = [
-  { href: "/workflow-automation-examples", label: "Examples" },
+  { href: "/responsible-ai-and-security", label: "AI Setup" },
   { href: "/services", label: "Services" },
+  { href: "/workflow-automation-examples", label: "Examples" },
   { href: "/utilities-and-special-districts", label: "Utilities" },
-  { href: "/small-businesses", label: "Small Business" },
-  { href: "/gis-modernization", label: "GIS Modernization" },
-  { href: "/expertise", label: "Expertise" },
-];
-
-const aiSystemsNav = [
-  { href: "/responsible-ai-and-security", label: "AI systems overview" },
-  { href: "/local-ai-deployments", label: "Local deployments" },
-  { href: "/hosted-ai-deployments", label: "Hosted & managed deployments" },
+  { href: "/about", label: "About" },
 ];
 
 function Mark() {
   return <span className="brand-mark" aria-hidden="true" />;
-}
-
-function AiSystemsTree() {
-  return (
-    <details className="nav-tree">
-      <summary><span>AI Systems</span><span className="nav-tree-chevron" aria-hidden="true">⌄</span></summary>
-      <div className="nav-submenu">
-        {aiSystemsNav.map((item) => (
-          <Link key={item.href} href={item.href}>{item.label}</Link>
-        ))}
-      </div>
-    </details>
-  );
 }
 
 export function Header() {
@@ -50,7 +30,6 @@ export function Header() {
           {primaryNav.map((item) => (
             <Link key={item.href} href={item.href}>{item.label}</Link>
           ))}
-          <AiSystemsTree />
           <a className="nav-contact" href={bookingLink} target="_blank" rel="noreferrer">Book a free consultation</a>
         </nav>
         <details className="mobile-nav">
@@ -59,8 +38,7 @@ export function Header() {
             {primaryNav.map((item) => (
               <Link key={item.href} href={item.href}>{item.label}</Link>
             ))}
-            <AiSystemsTree />
-            <a href={bookingLink} target="_blank" rel="noreferrer">Book a free 30-minute consultation</a>
+              <a href={bookingLink} target="_blank" rel="noreferrer">Book a free 30-minute consultation</a>
             <Link href="/contact">Send a message</Link>
           </nav>
         </details>
@@ -78,7 +56,7 @@ export function Footer() {
             <Mark />
             <span>Randall Automation Works</span>
           </Link>
-          <p>Practical code-first automation, responsible AI and systems integration for Western Colorado organizations.</p>
+          <p>AI assistants, workflow automation and systems integration for Western Colorado organizations.</p>
           <div className="footer-contact">
             <a href={contactEmailLink}>{contactEmail}</a>
             <a href={contactPhoneLink}>{contactPhone}</a>
@@ -99,7 +77,7 @@ export function Footer() {
           <Link href="/small-businesses">Small businesses</Link>
           <Link href="/gis-modernization">GIS modernization</Link>
           <Link href="/gis-and-field-operations">GIS & field operations</Link>
-          <Link href="/responsible-ai-and-security">AI systems & security</Link>
+          <Link href="/responsible-ai-and-security">AI setup & security</Link>
           <Link href="/local-ai-deployments">Local AI deployments</Link>
           <Link href="/hosted-ai-deployments">Hosted & managed AI</Link>
         </div>
