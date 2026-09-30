@@ -266,7 +266,7 @@ export default function AiAutomationConsultantGuide() {
                 <li><strong>The demo is the deliverable.</strong> A polished prototype is not production-ready if it has no authentication, error handling, audit trail, monitoring or recovery path.</li>
                 <li><strong>Every exception becomes a human workaround.</strong> The automation may simply relocate the manual burden instead of reducing it.</li>
                 <li><strong>Ownership is vague.</strong> You should know who controls the source code, accounts, domains, data, credentials and vendor subscriptions.</li>
-                <li><strong>Success cannot be measured.</strong> Claims about "efficiency" should resolve into time, quality, throughput, response or cost measures.</li>
+                <li><strong>Success cannot be measured.</strong> Claims about &quot;efficiency&quot; should resolve into time, quality, throughput, response or cost measures.</li>
                 <li><strong>Security answers depend on trust rather than architecture.</strong> Ask how access is technically limited and revoked.</li>
               </ul>
             </section>

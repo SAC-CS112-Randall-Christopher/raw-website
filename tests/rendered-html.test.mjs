@@ -33,20 +33,21 @@ test("renders production branding without staging metadata", async () => {
   const html = await response.text();
   assert.match(html, productionTitle);
   assert.match(html, productionCanonical);
-  assert.match(html, /Streamline workflows\. Connect systems\. Put AI to work with purpose\./i);
-  assert.match(html, /Workflow-first/i);
-  assert.match(html, /Systems-connected/i);
-  assert.match(html, /Right-sized technology/i);
-  assert.match(html, /Human-controlled/i);
-  assert.match(html, /carefully configured AI agents and knowledge systems/i);
-  assert.match(html, /Rough edges between systems/i);
-  assert.match(html, /Knowledge held by a few/i);
-  assert.doesNotMatch(html, /Knowledge held by a few people/i);
-  assert.match(html, /<summary><span>AI Systems<\/span>/i);
+  assert.match(html, /Bring your business into the automated era/i);
+  assert.match(html, /AI assistants &amp; LLM setup/i);
+  assert.match(html, /Front-office AI helper/i);
+  assert.match(html, /rule-based C# code with multiple language models/i);
+  assert.match(html, /href="\/responsible-ai-and-security"/i);
   assert.match(html, /href="\/local-ai-deployments"/i);
   assert.match(html, /href="\/hosted-ai-deployments"/i);
-  assert.match(html, /Match the tool to the work/i);
-  assert.match(html, /Not every useful automation needs AI/i);
+  assert.match(html, /No autonomous infrastructure control/i);
+  assert.match(html, /free 30-minute consultation/i);
+  assert.match(html, /paid assessment/i);
+  assert.doesNotMatch(html, /AI agents \+ RAG|solution-fit-card/i);
+  const mainText = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)[1]
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "")
+    .replace(/<[^>]+>/g, " ").trim();
+  assert.ok(mainText.split(/\s+/).length < 700, "Homepage stays concise");
   assert.doesNotMatch(html, developmentPreviewMeta);
 });
 
@@ -138,7 +139,7 @@ test("publishes generalized workflow examples and founder expertise", async () =
   assert.doesNotMatch(`${examples}\n${expertise}`, /Tri-County Water/i);
 });
 
-test("explains responsible AI system configuration in technical detail", async () => {
+test("explains AI setup, technical options and safety boundaries", async () => {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("responsible-ai-test", `${process.pid}-${Date.now()}`);
   const { default: worker } = await import(workerUrl.href);
@@ -153,14 +154,16 @@ test("explains responsible AI system configuration in technical detail", async (
   const html = await response.text();
 
   assert.equal(response.status, 200);
-  assert.match(html, /Model and runtime selection/i);
-  assert.match(html, /Bounded AI system/i);
-  assert.match(html, /Agentic workflow design/i);
+  assert.match(html, /An AI assistant set up for your business/i);
+  assert.match(html, /What the setup includes/i);
   assert.match(html, /Model Context Protocol \(MCP\)/i);
   assert.match(html, /retrieval-augmented generation \(RAG\)/i);
-  assert.match(html, /Evaluation and observability/i);
-  assert.match(html, /An agent should have a job description/i);
+  assert.match(html, /deterministic C#/i);
+  assert.match(html, /Human review before consequential actions/i);
   assert.match(html, /SCADA, PLCs or operational controls/i);
+  assert.match(html, /href="\/local-ai-deployments"/i);
+  assert.match(html, /href="\/hosted-ai-deployments"/i);
+
 });
 
 test("publishes local and hosted AI deployment options under AI systems", async () => {
@@ -179,15 +182,16 @@ test("publishes local and hosted AI deployment options under AI systems", async 
 
   assert.equal(localResponse.status, 200);
   assert.equal(hostedResponse.status, 200);
-  assert.match(local, /Run useful AI on infrastructure your organization controls/i);
+  assert.match(local, /Run AI on your own hardware/i);
   assert.match(local, /Local does not automatically mean secure/i);
-  assert.match(local, /local language or vision model/i);
-  assert.match(hosted, /Secure client access with the system actively managed behind it/i);
-  assert.match(hosted, /Local machine with managed portal access/i);
-  assert.match(hosted, /No cross-client knowledge retrieval/i);
-  assert.match(hosted, /No open public administrative ports/i);
-  assert.match(hosted, /Hosted &amp; managed deployments/i);
-  assert.match(`${local}\n${hosted}`, /AI systems overview/i);
+  assert.match(local, /Connected tools may still send data elsewhere/i);
+  assert.match(local, /Test the fit before buying hardware/i);
+  assert.match(hosted, /AI your team can use, with a clear support plan/i);
+  assert.match(hosted, /Hybrid setup/i);
+  assert.match(hosted, /Review data handling before launch/i);
+  assert.match(hosted, /Optional ongoing support/i);
+  assert.match(`${local}\n${hosted}`, /AI setup overview/i);
+
 });
 
 test("renders the first Insights article as an indexable Article", async () => {
@@ -216,4 +220,27 @@ test("renders the first Insights article as an indexable Article", async () => {
   assert.match(html, /"@type":"Article"/i);
   assert.match(html, /"@type":"BreadcrumbList"/i);
   assert.doesNotMatch(html, /noindex/i);
+});
+
+
+test("keeps contact, booking and related service paths accessible", async () => {
+  const { default: worker } = await import("../dist/server/index.js");
+  const env = { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } };
+  const ctx = { waitUntil() {}, passThroughOnException() {} };
+  const paths = ["/", "/services", "/responsible-ai-and-security", "/local-ai-deployments", "/hosted-ai-deployments", "/contact", "/gis-and-field-operations", "/gis-modernization", "/utilities-and-special-districts", "/small-businesses"];
+  for (const path of paths) {
+    const response = await worker.fetch(new Request(`http://localhost${path}`, { headers: { accept: "text/html" } }), env, ctx);
+    const html = await response.text();
+    assert.equal(response.status, 200, path);
+    assert.match(html, /href="https:\/\/calendar\.app\.google\/Qwnjw6tS5TdDo5Hh7"/, path);
+    assert.match(html, /href="mailto:chris@randallautomationworks\.com"/, path);
+    assert.match(html, /href="tel:\+19707872161"/, path);
+    assert.equal((html.match(/<h1\b/g) ?? []).length, 1, path);
+    assert.doesNotMatch(html, /noindex/i, path);
+    if (path === "/contact") {
+      assert.match(html, /<form\b/);
+      assert.match(html, /<input(?=[^>]*name="email")(?=[^>]*required)[^>]*>/);
+      assert.match(html, /AI assistant or LLM setup/);
+    }
+  }
 });

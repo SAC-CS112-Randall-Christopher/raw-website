@@ -12,9 +12,9 @@ const contactPhoneLink = "tel:+19707872161";
 const bookingLink = "https://calendar.app.google/Qwnjw6tS5TdDo5Hh7";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://randallautomationworks.com";
 const aiSystemPages = [
-  { href: "/responsible-ai-and-security", label: "AI systems overview" },
-  { href: "/local-ai-deployments", label: "Local deployments" },
-  { href: "/hosted-ai-deployments", label: "Hosted & managed deployments" },
+  { href: "/responsible-ai-and-security", label: "AI setup overview" },
+  { href: "/local-ai-deployments", label: "Local AI setup" },
+  { href: "/hosted-ai-deployments", label: "Hosted & managed AI" },
 ];
 
 export function generateStaticParams() {
@@ -61,7 +61,7 @@ export default async function InteriorPage({ params }: { params: Promise<{ slug:
     itemListElement: isAiSystemChild
       ? [
           { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
-          { "@type": "ListItem", position: 2, name: "AI Systems", item: `${siteUrl}/responsible-ai-and-security` },
+          { "@type": "ListItem", position: 2, name: "AI Setup", item: `${siteUrl}/responsible-ai-and-security` },
           { "@type": "ListItem", position: 3, name: page.navLabel, item: `${siteUrl}/${page.slug}` },
         ]
       : [
@@ -110,7 +110,7 @@ export default async function InteriorPage({ params }: { params: Promise<{ slug:
                 <p>{page.aside}</p>
                 {isAiSystemPage && (
                   <nav className="aside-link-tree" aria-label="AI systems pages">
-                    <strong>Explore AI systems</strong>
+                    <strong>Explore AI setup</strong>
                     {aiSystemPages.map((item) => (
                       <Link aria-current={item.href === `/${slug}` ? "page" : undefined} href={item.href} key={item.href}>
                         {item.label}<span aria-hidden="true">→</span>
@@ -130,7 +130,7 @@ export default async function InteriorPage({ params }: { params: Promise<{ slug:
                     <h2>{section.heading}</h2>
                     {section.intro && <p>{section.intro}</p>}
                     {section.bullets && <ul className="content-list">{section.bullets.map((item) => <li key={item}>{item}</li>)}</ul>}
-                    {section.cards && <div className="plain-card-grid">{section.cards.map((card) => <article className="plain-card" key={card.title}>{card.label && <p className="card-label">{card.label}</p>}<h3>{card.title}</h3><p>{card.text}</p>{card.details && <ul className="card-details">{card.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>}</article>)}</div>}
+                    {section.cards && <div className="plain-card-grid">{section.cards.map((card) => <article className="plain-card" key={card.title}>{card.label && <p className="card-label">{card.label}</p>}<h3>{card.title}</h3><p>{card.text}</p>{card.details && <ul className="card-details">{card.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>}{card.href && <Link className="text-link" href={card.href}>{card.linkLabel ?? "Learn more"} <span aria-hidden="true">→</span></Link>}</article>)}</div>}
                     {section.callout && <aside className="content-callout"><h3>{section.callout.title}</h3><p>{section.callout.text}</p></aside>}
                   </section>
                 ))}
@@ -145,7 +145,7 @@ export default async function InteriorPage({ params }: { params: Promise<{ slug:
             <div>
               <p className="eyebrow eyebrow-light">A practical next step</p>
               <h2>Bring the workflow that keeps causing friction.</h2>
-              <p>A free 30-minute consultation can help determine whether the right next step is a process change, focused code, systems integration or carefully configured AI.</p>
+              <p>Start with a free 30-minute conversation about one task, question or idea.</p>
             </div>
             <a className="button button-sand" href={bookingLink} target="_blank" rel="noreferrer">Book a free 30-minute consultation</a>
           </div>
