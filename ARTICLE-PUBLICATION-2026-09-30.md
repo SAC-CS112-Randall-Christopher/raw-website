@@ -6,6 +6,8 @@
 - Branch: `codex/article-route-first-20260930`, isolated from the previous SEO work.
 - Pull request: [#15 — Publish RAW article: Route first, reason when needed](https://github.com/SAC-CS112-Randall-Christopher/raw-website/pull/15).
 - Article content commit: `184a1f897ed497ce92d3e2798c6d8d42dbb08e6f`; the linked PR identifies the final reviewed revision and merge commit.
+- Published content merge: `0cbba8ae936f11ba7d438c03c13ecdaf726f4a57`, PR #15 merged October 1, 2026 at 01:18:10 UTC / September 30 at 7:18:10 p.m. MDT.
+- Verification follow-up: `codex/article-route-first-verification-20260930` carries the completed receipt and the sitemap test-count correction; PR #15 merged before those changes reached its branch.
 - Base: verified `main` at `cdd798c42ccd781b0a44902d29d19ebaeb802b7d` (PR #14 merged).
 - Publication date: September 30, 2026 in Colorado; October 1 UTC.
 - Authorization: the owner approved this catch-up article and the existing draft PR → checks → merge → Cloudflare automatic deployment workflow.
@@ -18,8 +20,8 @@ end-to-end evaluation, maintainability, and Tev1's model/license limitations.
 The work-order example is explicitly fictional and read-only.
 
 The next Sunday article run must inspect the current Insights index, this receipt,
-and merged article PRs. Treat this title and topic as already covered once this PR
-is merged. Do not republish it under a different title as the missed article.
+and merged article PRs. This title and topic are already published. Do not
+republish the same topic under a different title as the missed article.
 
 ## Public sources checked
 
@@ -41,11 +43,9 @@ published. No ROI, performance, accuracy or client-result claims are made.
 - Insights card navigation, the incoming software-integration example link, and the contact page's existing consultation booking destination passed. No form was submitted.
 - Local browser evidence is retained under `.sites-runtime/article-review/`, outside Git. This preview verifies layout and interaction, not production performance.
 
-Publication uses the existing RAW Cloudflare integration. Verify the final PR head
-and its Cloudflare check before merge, then verify the live article, index, incoming
-link and sitemap before claiming publication. Merge status and deployment evidence
-belong to the linked PR and its check; this receipt's presence alone is not proof
-of a completed deployment.
+- Production deployment: the existing [Cloudflare Workers Build](https://dash.cloudflare.com/dc34c5b1bb899c50b220159b42d35752/workers/services/view/randall-automation-works/production/builds/a62e8a5d-c352-4cc0-93bc-dd11e1301466) reported success for the content merge.
+- Live verification completed October 1 at `01:23:04.681Z`: the canonical article returned HTTP 200 and passed the same metadata, Article dates, desktop/mobile and link checks. The Insights index shows it first, the software-integration example links to it, and the sitemap contains one dated canonical entry. Production screenshots were visually inspected.
+- Live browser evidence is retained under `.sites-runtime/article-review/live/`, outside Git. No performance or ranking claim is inferred from these checks.
 
 The previously documented edge-rule 403 is outside this article's scope; no retry
 or settings change is required.
