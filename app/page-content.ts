@@ -290,6 +290,10 @@ export const pages: PageContent[] = [
     metaDescription: "Practical workflow automation examples using Python, SQL, APIs, GIS, reporting and responsible AI for Western Colorado organizations.",
     aside: "These examples reflect hands-on founder experience in operational, administrative, GIS and IT environments. They are generalized—not published client case studies—and omit employers, proprietary systems, data and exact configurations.",
     sections: [
+      { heading: "Two implementations from my own work", intro: "These two examples describe implemented AI work at a general level. They do not claim measured savings or outcomes for another organization.", cards: [
+        { label: "Implemented AI assistant", title: "Front-office AI helper", text: "An implemented AI assistant for front-office and administrative work. The scope is office assistance, with people retaining responsibility for the work and for reviewing AI outputs.", details: ["Context: front-office and administrative work", "Approach: an AI assistant", "Specific tasks and proprietary configuration are not published here"] },
+        { label: "SDK + deterministic C# + multiple models", title: "AI connected to business software", text: "An SDK integration connects AI with business software. Deterministic C# handles rule-based parts of the workflow, while multiple language models are available for AI tasks. Work is routed according to the task and workload.", details: ["Software connection through an SDK", "Deterministic C# for predictable processing", "Multiple language models rather than one model for every task", "Routing based on task and workload"] },
+      ], callout: { title: "Match the tool to the work", text: "An office assistant and a software integration need different designs. These implementations illustrate that choice; a new engagement still needs its own scope, review steps and evaluation." } },
       { heading: "Reporting and administrative workflows", intro: "Routine office work is often the safest place to create immediate, measurable value.", cards: [
         { label: "SQL + Python + scheduled export", title: "Recurring customer-notification lists", text: "Replace manual account review and spreadsheet formatting with a documented workflow that applies approved business rules, validates required fields and prepares a communication-platform export for employee review.", details: ["Preserve the source records", "Log record counts and exceptions", "Require approval before notices are sent"] },
         { label: "SQL + spreadsheets + reporting", title: "Repeatable management reporting", text: "Bring approved figures from databases, spreadsheets or exports into a consistent report instead of rebuilding the same workbook every week or month.", details: ["Flag missing or stale inputs", "Keep source references visible", "Compare preparation time and corrections"] },
@@ -406,25 +410,30 @@ export const pages: PageContent[] = [
   {
     slug: "privacy", navLabel: "Privacy Policy", metaTitle: "Privacy Policy | Randall Automation Works", eyebrow: "Privacy policy",
     title: "Privacy practices should be understandable.",
-    lead: "This policy explains the information the website may collect and how it is intended to be handled. It will be reviewed before public launch and updated when final service providers are selected.",
+    lead: "This page describes the information requested by the Randall Automation Works LLC website and the services it currently uses. Contact Chris Randall with questions about an inquiry or personal information.",
     metaDescription: "Website privacy policy for Randall Automation Works.",
-    aside: "Effective date: public-launch date. This private-stage policy is prepared for final legal and service-provider review.",
+    aside: "Website service information reviewed September 30, 2026. Contact: chris@randallautomationworks.com or (970) 787-2161.",
     sections: [
-      { heading: "Information you provide", intro: "The site may collect information submitted through a contact form, including your name, organization, email, phone, service interest, location and message." },
-      { heading: "How information is used", intro: "Submitted information is used to respond to inquiries, evaluate service fit, maintain business records and improve the website. It is not sold." },
+      { heading: "Information you provide", intro: "The contact form asks for your name, email and message. Organization, phone and service interest are optional; you can also select a location. The form asks for permission to use the information to respond to your inquiry." },
+      { heading: "Contact and scheduling services", intro: "When you send the contact form, the submission is sent to Formspree. The booking links open Google Calendar, where you can choose a consultation time. You can also contact Chris directly by email or phone." },
       { heading: "Sensitive information", intro: "Do not submit passwords, authentication codes, protected health information, payment-card information, confidential customer records or sensitive operational and infrastructure data." },
-      { heading: "Service providers", intro: "Hosting, form delivery, scheduling, analytics and spam-protection services may process limited information. Final providers will be identified before public launch." },
-      { heading: "Cookies and analytics", intro: "Optional privacy-conscious analytics may be enabled later. Material analytics or cookie use will be disclosed and controls provided where required." },
-      { heading: "Retention and security", intro: "Information is retained only as long as reasonably needed. Reasonable safeguards are used, but no website or transmission method can guarantee absolute security." },
-      { heading: "Your choices", intro: "You may request access to, correction of or deletion of personal information, subject to legitimate recordkeeping and legal requirements. Final contact details will be added before public launch." },
+      { heading: "Current service providers", intro: "This website uses Cloudflare for hosting and Web Analytics, Formspree for contact-form delivery, and Google Calendar for consultation booking. These services have their own privacy policies.", cards: [
+        { title: "Cloudflare", text: "Website hosting and Web Analytics.", href: "https://www.cloudflare.com/privacypolicy/", linkLabel: "Cloudflare privacy policy" },
+        { title: "Formspree", text: "Contact-form submissions.", href: "https://formspree.io/legal/privacy-policy/", linkLabel: "Formspree privacy policy" },
+        { title: "Google", text: "Calendar consultation bookings.", href: "https://policies.google.com/privacy", linkLabel: "Google privacy policy" },
+      ] },
+      { heading: "Website analytics", intro: "A Cloudflare Web Analytics beacon is active on this site. It measures website traffic and page performance. Cloudflare describes its data collection in the documentation linked below.", cards: [
+        { title: "Cloudflare Web Analytics data collection", text: "Details from the analytics provider about the information its beacon collects.", href: "https://developers.cloudflare.com/web-analytics/data-metrics/data-origin-and-collection/", linkLabel: "Read the data-collection documentation" },
+      ] },
+      { heading: "Questions about information handling", intro: "Contact chris@randallautomationworks.com or (970) 787-2161 to ask about information you have submitted, its handling or retention, or a correction or deletion request. Do not include sensitive records in the request." },
     ],
   },
   {
     slug: "terms", navLabel: "Terms & Disclaimer", metaTitle: "Terms & Disclaimer | Randall Automation Works", eyebrow: "Terms & professional disclaimer",
     title: "Clear boundaries support better professional work.",
-    lead: "These website terms describe general informational use and do not replace the written agreement for a consulting engagement.",
+    lead: "These website terms describe general informational use of the Randall Automation Works LLC website and do not replace the written agreement for a consulting engagement.",
     metaDescription: "Website terms and professional disclaimer for Randall Automation Works.",
-    aside: "These draft terms require final legal review and entity details before public launch.",
+    aside: "Website information reviewed September 30, 2026. Questions: chris@randallautomationworks.com or (970) 787-2161.",
     sections: [
       { heading: "General information", intro: "Website content is provided for general informational purposes and may change. It is not a substitute for advice based on a complete review of a specific situation." },
       { heading: "No professional substitution", intro: "The consultancy does not replace licensed engineering, legal, accounting, cybersecurity, regulatory or qualified operator judgment." },
@@ -433,7 +442,7 @@ export const pages: PageContent[] = [
       { heading: "No engagement through website use", intro: "Viewing the site or sending an inquiry does not create a client relationship. An engagement begins only through a mutually executed written agreement." },
       { heading: "Third-party services", intro: "References to third-party tools do not constitute a warranty or endorsement. Availability, features, pricing and terms are controlled by their providers." },
       { heading: "Intellectual property", intro: "Website text, design and original materials are protected by applicable law. Client deliverable ownership is governed by the written consulting agreement." },
-      { heading: "Final legal details", intro: "The governing-law provision, legal entity name, business contact information and final limitation language will be completed before public launch." },
+      { heading: "Contact", intro: "For questions about this website or a proposed engagement, contact Chris Randall at chris@randallautomationworks.com or (970) 787-2161. Engagement-specific terms belong in the written consulting agreement." },
     ],
   },
   {

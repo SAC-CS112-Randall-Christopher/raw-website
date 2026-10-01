@@ -92,10 +92,14 @@ Keep the honeypot, consent language and warning against submitting sensitive inf
 
 - Next.js and React: application framework
 - Vinext and Cloudflare tooling: current private-stage/Worker build adapter
-- Google Fonts through `next/font`: Manrope and Source Serif 4, self-hosted by the build output
+- Manrope and Source Serif 4: existing variable WOFF2 fonts self-hosted in `public/fonts`, with their open-font licenses; two Latin subsets preload and other subsets load when used
 - Generated regional hero image: stored locally in `public/images`
 
-There are currently no required databases, external APIs, analytics services, scheduling services, authentication providers or form providers.
+The public site is hosted on Cloudflare. Contact submissions use Formspree,
+consultation booking links use Google Calendar, and the live site includes a
+Cloudflare Web Analytics beacon. There is no required application database or
+authentication provider. Review [`SEO-REVIEW-2026-09-30.md`](./SEO-REVIEW-2026-09-30.md)
+for the current local change scope and remaining owner decisions.
 
 ## Accessibility and content
 

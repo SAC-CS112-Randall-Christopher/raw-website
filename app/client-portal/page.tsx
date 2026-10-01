@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import Link from "next/link";
+import { demoMetadata } from "../../lib/demo-metadata";
 import { demos } from "../../lib/public-demo-data";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
-  title: "Public Client Portal Demos",
-  description: "Explore fictional public demonstrations of managed workspaces for a small business, utility, and community organization.",
-};
+export const metadata = demoMetadata(
+  "/client-portal",
+  "Public Client Portal Demos",
+  "Explore fictional public demonstrations of managed workspaces for a small business, utility, and community organization.",
+);
 
 export default function ClientPortalGallery() {
   return (
