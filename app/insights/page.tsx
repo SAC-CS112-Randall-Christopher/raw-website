@@ -47,10 +47,20 @@ export default function InsightsPage() {
           <div className="section-heading split-heading">
             <div>
               <p className="eyebrow">Latest guide</p>
-              <h2>Hire for workflow judgment—not AI vocabulary.</h2>
+              <h2>Route routine requests. Reason when the work calls for it.</h2>
             </div>
-            <p>Know when outside automation help is justified, what a sound engagement should include, how to evaluate security and ownership, and which proposal red flags deserve scrutiny.</p>
+            <p>See how a small routing model, application checks and a larger reasoning model can share the work-and how to decide whether the extra layer is worth maintaining.</p>
           </div>
+
+          <Link className="article-card" href="/insights/route-first-reason-when-needed">
+            <div className="article-card-number" aria-hidden="true">05</div>
+            <div>
+              <p className="article-kicker"><time dateTime="2026-09-30">September 30, 2026</time></p>
+              <h2>Route first, reason when needed</h2>
+              <p>A generic office example shows how known capabilities, permission checks and model fallback fit together. Measure the whole workflow before adding a router.</p>
+              <span className="article-card-link">Read the article <span aria-hidden="true">&rarr;</span></span>
+            </div>
+          </Link>
 
           <Link className="article-card" href="/insights/ai-automation-consultant-small-business">
             <div className="article-card-number" aria-hidden="true">04</div>
