@@ -348,6 +348,7 @@ test("describes the Montrose organization and verified implementation experience
   const schema = [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)].map((match) => JSON.parse(match[1]));
   const organization = schema.find((item) => item["@type"] === "Organization");
   assert.ok(organization);
+  assert.equal(organization.legalName, "Randall Automation Works LLC");
   assert.equal(organization.location.name, "Montrose, Colorado");
   assert.equal(organization.address, undefined);
   assert.ok(organization.hasOfferCatalog.itemListElement.every((offer) => offer.itemOffered["@type"] === "Service"));
@@ -363,6 +364,8 @@ test("describes the Montrose organization and verified implementation experience
 test("discloses the currently observed website providers without launch placeholders", async () => {
   const privacy = await renderReviewPage("/privacy");
   const terms = await renderReviewPage("/terms");
+  assert.match(privacy, /Randall Automation Works LLC/);
+  assert.match(terms, /Randall Automation Works LLC/);
   assert.match(privacy, /Cloudflare Web Analytics beacon is active/);
   assert.match(privacy, /Formspree/);
   assert.match(privacy, /Google Calendar/);

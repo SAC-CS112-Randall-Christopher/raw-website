@@ -410,7 +410,7 @@ export const pages: PageContent[] = [
   {
     slug: "privacy", navLabel: "Privacy Policy", metaTitle: "Privacy Policy | Randall Automation Works", eyebrow: "Privacy policy",
     title: "Privacy practices should be understandable.",
-    lead: "This page describes the information requested by this website and the services it currently uses. Contact Chris Randall with questions about an inquiry or personal information.",
+    lead: "This page describes the information requested by the Randall Automation Works LLC website and the services it currently uses. Contact Chris Randall with questions about an inquiry or personal information.",
     metaDescription: "Website privacy policy for Randall Automation Works.",
     aside: "Website service information reviewed September 30, 2026. Contact: chris@randallautomationworks.com or (970) 787-2161.",
     sections: [
@@ -431,7 +431,7 @@ export const pages: PageContent[] = [
   {
     slug: "terms", navLabel: "Terms & Disclaimer", metaTitle: "Terms & Disclaimer | Randall Automation Works", eyebrow: "Terms & professional disclaimer",
     title: "Clear boundaries support better professional work.",
-    lead: "These website terms describe general informational use and do not replace the written agreement for a consulting engagement.",
+    lead: "These website terms describe general informational use of the Randall Automation Works LLC website and do not replace the written agreement for a consulting engagement.",
     metaDescription: "Website terms and professional disclaimer for Randall Automation Works.",
     aside: "Website information reviewed September 30, 2026. Questions: chris@randallautomationworks.com or (970) 787-2161.",
     sections: [

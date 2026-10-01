@@ -4,10 +4,12 @@ The active project root is `C:\Projects\RAW Website`. This is the existing
 `SAC-CS112-Randall-Christopher/raw-website` application, on separate local branch
 `codex/seo-visual-review-20260930`, based on `028e005` from `main`.
 
-Publication is on hold. Nothing has been pushed, merged, deployed, purchased,
-or changed in an account dashboard. Hosting configuration, package files and
-unrelated Q-Trades work are unchanged. The original task-folder checkout is
-retained as a backup; use the Projects checkout for further work.
+Chris approved publication of the scoped RAW update and the apex HTTP-to-HTTPS
+redirect, then reconfirmed after the target-scope check. Before publication,
+authenticated Cloudflare reads verified that randallautomationworks.com is bound
+to the existing randall-automation-works Worker in Chris's account. Hosting
+configuration, package files and unrelated work are unchanged. The original
+task-folder checkout is retained as a backup; use the Projects checkout.
 
 ## Changes ready for review
 
@@ -97,24 +99,28 @@ requests used the new local PNG as a layout fixture. This preview does not
 measure production CDN compression, transfer size or performance. The browser
 and temporary preview server were closed after verification.
 
-## Chris's remaining decisions
+## Confirmed identity and remaining follow-up
 
-1. **Business identity:** What exact legal contracting name should the website
-   identify — Chris Randall trading as Randall Automation Works, or a registered
-   entity's exact name?
-2. **Privacy and terms:** Do you have approved privacy/terms and inquiry
-   retention/deletion procedures to use, or should these go through legal review?
-   Final governing-law/liability language and applicable privacy/consent/provider
-   arrangements remain owner/legal decisions. Current copy does not invent them.
-3. **Cloudflare edge rule:** Approve the documented apex-only HTTP-to-HTTPS 301
-   Single Redirect, preserving paths and queries while retaining the existing
-   www rule? The current assets configuration serves matching files before
-   Worker code, so this edge rule would also cover plain-HTTP font/image requests.
-   Exact expression and target are in `CLOUDFLARE.md`; no account change was made.
+Chris confirmed the legal business name is Randall Automation Works LLC. It is
+identified on privacy/terms pages and in the Organization legalName property.
+The public brand and approved homepage title remain Randall Automation Works.
 
-Publication needs separate approval after those decisions. Once approved and
-published, verify live apex HTTP pages/assets and www redirects with queries,
-font responses, demo metadata and actual Cloudflare image delivery.
+Privacy retention/deletion procedures, governing-law/liability language and
+applicable privacy/consent/provider arrangements remain owner/legal decisions.
+The factual provider corrections add no retention guarantee, legal jurisdiction,
+liability limit or vendor-contract promise.
+
+The apex-only HTTP-to-HTTPS 301 Single Redirect is approved. The existing
+Wrangler OAuth session can inspect the RAW domain and deploy its Worker, but
+reading the zone redirect rules returned HTTP 403 / Authentication error. No
+new credentials or broader permissions were created. Apply the documented rule
+through an existing authorized Cloudflare connection, preserving the existing
+www rule. The current assets configuration serves matching files before Worker
+code, so this edge rule is also needed for plain-HTTP font/image requests.
+
+Publication and live checks must verify actual domain redirects, public fonts,
+demo metadata, Cloudflare image delivery and desktop/mobile interaction. Results
+are reported from the deployed site; local results above remain preview evidence.
 
 Chris confirmed there was no prior local RAW checkout; it had been GitHub-only.
 No applicable AGENTS.md or checkout .agents/skills exists in this repository or

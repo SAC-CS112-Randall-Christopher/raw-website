@@ -43,6 +43,7 @@ const structuredData = {
   "@type": "Organization",
   "@id": `${siteUrl}/#business`,
   name: "Randall Automation Works",
+  legalName: "Randall Automation Works LLC",
   url: siteUrl,
   image: `${siteUrl}/opengraph-image.png`,
   logo: `${siteUrl}/logo-horizontal.svg`,
