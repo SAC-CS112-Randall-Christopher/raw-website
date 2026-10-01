@@ -321,8 +321,8 @@ test("redirects production HTTP and www permanently while preserving path and qu
 test("preserves unique indexable metadata for every sitemap route", async () => {
   const sitemap = await renderReviewPage("/sitemap.xml");
   const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-  assert.equal(urls.length, 22);
-  assert.equal(new Set(urls).size, 22);
+  assert.equal(urls.length, 23);
+  assert.equal(new Set(urls).size, urls.length);
   const titles = new Set();
   const descriptions = new Set();
   for (const url of urls) {
