@@ -47,10 +47,20 @@ export default function InsightsPage() {
           <div className="section-heading split-heading">
             <div>
               <p className="eyebrow">Latest guide</p>
-              <h2>Route routine requests. Reason when the work calls for it.</h2>
+              <h2>Give your assistant a current, approved source to work from.</h2>
             </div>
-            <p>See how a small routing model, application checks and a larger reasoning model can share the work-and how to decide whether the extra layer is worth maintaining.</p>
+            <p>Use a source register, a clearly labeled office example and update checks to decide whether your documents are ready for an internal knowledge assistant.</p>
           </div>
+
+          <Link className="article-card" href="/insights/prepare-sops-for-ai-assistant">
+            <div className="article-card-number" aria-hidden="true">06</div>
+            <div>
+              <p className="article-kicker"><time dateTime="2026-10-04">October 4, 2026</time></p>
+              <h2>Before an AI assistant reads your SOPs, name the current version</h2>
+              <p>Identify approved instructions, assign a content owner and test what happens when a document changes before connecting more files.</p>
+              <span className="article-card-link">Read the article <span aria-hidden="true">&rarr;</span></span>
+            </div>
+          </Link>
 
           <Link className="article-card" href="/insights/route-first-reason-when-needed">
             <div className="article-card-number" aria-hidden="true">05</div>
