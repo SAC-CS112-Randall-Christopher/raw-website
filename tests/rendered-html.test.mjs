@@ -321,7 +321,7 @@ test("redirects production HTTP and www permanently while preserving path and qu
 test("preserves unique indexable metadata for every sitemap route", async () => {
   const sitemap = await renderReviewPage("/sitemap.xml");
   const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-  assert.equal(urls.length, 23);
+  assert.equal(urls.length, 24);
   assert.equal(new Set(urls).size, urls.length);
   const titles = new Set();
   const descriptions = new Set();
@@ -338,8 +338,8 @@ test("preserves unique indexable metadata for every sitemap route", async () => 
     assert.doesNotMatch(metaContent(html, "robots") ?? "", /noindex/, path);
     assert.equal((html.match(/<h1\b/g) ?? []).length, 1, path);
   }
-  for (const path of ["workflow-automation-examples", "privacy", "terms"]) {
-    assert.match(sitemap, new RegExp(`<loc>https://randallautomationworks\\.com/${path}</loc>\\s*<lastmod>2026-09-30</lastmod>`), path);
+  for (const [path, date] of [["workflow-automation-examples", "2026-10-04"], ["insights", "2026-10-04"], ["insights/prepare-sops-for-ai-assistant", "2026-10-04"], ["privacy", "2026-09-30"], ["terms", "2026-09-30"]]) {
+    assert.match(sitemap, new RegExp(`<loc>https://randallautomationworks\\.com/${path}</loc>\\s*<lastmod>${date}</lastmod>`), path);
   }
 });
 
