@@ -5,7 +5,9 @@
 - Repository: `SAC-CS112-Randall-Christopher/raw-website`
 - Branch: `codex/article-current-sops-20261004`
 - Base: `0c096edd51c527302f2252270ee4a01a927e6384` on `main`.
-- Status: local quality gates passed; PR and live publication evidence will be recorded after verification.
+- Draft publication PR: [#17](https://github.com/SAC-CS112-Randall-Christopher/raw-website/pull/17).
+- Verified content commit: `396905d271a1cf8cee1dbe1d7ee48d945ea7e4ad`; the PR identifies the final revision including this receipt update.
+- Status: local quality gates passed. The linked PR will record the merge commit and completed live verification; check it before retrying this topic.
 - Authorization: Chris's standing authorization and the October 4 delegation authorize article-only merge and normal hosting publication after substantive quality and verification pass.
 
 ## Editorial decision and deduplication
