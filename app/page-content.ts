@@ -216,6 +216,18 @@ export const pages: PageContent[] = [
       {
         "heading": "Know who maintains it",
         "intro": "Agree on who owns the machine and accounts, installs updates, handles backups and provides support. Optional managed support has defined access, hours and responsibilities. Local AI remains separate from safety-critical operational control."
+      },
+      {
+        "heading": "Compare the whole office workflow",
+        "intro": "The model location is one part of the decision. Compare document access, unavailable services, ownership and support for the same employee task.",
+        "cards": [
+          {
+            "title": "Local vs hosted AI assistants",
+            "text": "Use a synthetic office example and six acceptance checks before choosing where the assistant runs.",
+            "href": "/insights/local-vs-hosted-ai-assistants",
+            "linkLabel": "Use the deployment checklist"
+          }
+        ]
       }
     ]
   },

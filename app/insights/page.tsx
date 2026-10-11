@@ -47,10 +47,20 @@ export default function InsightsPage() {
           <div className="section-heading split-heading">
             <div>
               <p className="eyebrow">Latest guide</p>
-              <h2>Give your assistant a current, approved source to work from.</h2>
+              <h2>Choose where your office assistant should run.</h2>
             </div>
-            <p>Use a source register, a clearly labeled office example and update checks to decide whether your documents are ready for an internal knowledge assistant.</p>
+            <p>Compare local, hosted and hybrid AI against one office workflow, including document access, outages, ownership, support and full cost categories.</p>
           </div>
+
+          <Link className="article-card" href="/insights/local-vs-hosted-ai-assistants">
+            <div className="article-card-number" aria-hidden="true">07</div>
+            <div>
+              <p className="article-kicker"><time dateTime="2026-10-11">October 11, 2026</time></p>
+              <h2>Local vs Hosted AI: Where Should Your Office Assistant Run?</h2>
+              <p>A synthetic office decision and six workflow checks help compare deployment options before buying hardware or connecting business records.</p>
+              <span className="article-card-link">Read the article <span aria-hidden="true">&rarr;</span></span>
+            </div>
+          </Link>
 
           <Link className="article-card" href="/insights/prepare-sops-for-ai-assistant">
             <div className="article-card-number" aria-hidden="true">06</div>
