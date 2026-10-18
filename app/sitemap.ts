@@ -5,17 +5,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://randallautomationworks.com";
   const indexablePages = pages.filter((page) => page.indexable !== false);
   // Dates record actual content edits, rather than the time of each build.
-  const updatedPages = new Set(["workflow-automation-examples", "local-ai-deployments", "privacy", "terms"]);
+  const updatedPages = new Set(["services", "workflow-automation-examples", "local-ai-deployments", "privacy", "terms"]);
   return [
     { url: base, changeFrequency: "monthly", priority: 1, lastModified: "2026-09-30" },
     ...indexablePages.map((page) => ({
       url: `${base}/${page.slug}`,
       changeFrequency: "monthly" as const,
-      ...(updatedPages.has(page.slug) ? { lastModified: page.slug === "local-ai-deployments" ? "2026-10-11" : page.slug === "workflow-automation-examples" ? "2026-10-04" : "2026-09-30" } : {}),
+      ...(updatedPages.has(page.slug) ? { lastModified: page.slug === "services" ? "2026-10-18" : page.slug === "local-ai-deployments" ? "2026-10-11" : page.slug === "workflow-automation-examples" ? "2026-10-04" : "2026-09-30" } : {}),
       priority: ["services", "utilities-and-special-districts", "small-businesses", "gis-and-field-operations", "responsible-ai-and-security", "local-ai-deployments", "hosted-ai-deployments", "workflow-automation-examples", "expertise"].includes(page.slug) ? .8 : .6,
     })),
     { url: `${base}/gis-modernization`, changeFrequency: "monthly", priority: .9 },
-    { url: `${base}/insights`, changeFrequency: "weekly", priority: .7, lastModified: "2026-10-11" },
+    { url: `${base}/insights`, changeFrequency: "weekly", priority: .7, lastModified: "2026-10-18" },
+    { url: `${base}/insights/ai-integration-readiness-checklist`, changeFrequency: "monthly", priority: .9, lastModified: "2026-10-18" },
     { url: `${base}/insights/local-vs-hosted-ai-assistants`, changeFrequency: "monthly", priority: .9, lastModified: "2026-10-11" },
     { url: `${base}/insights/prepare-sops-for-ai-assistant`, changeFrequency: "monthly", priority: .9, lastModified: "2026-10-04" },
     { url: `${base}/insights/route-first-reason-when-needed`, changeFrequency: "monthly", priority: .9, lastModified: "2026-09-30" },
