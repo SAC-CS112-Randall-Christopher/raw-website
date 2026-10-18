@@ -48,7 +48,8 @@ export const pages: PageContent[] = [
       },
       {
         "heading": "Code-first automation and systems integration",
-        "intro": "The task determines the tools: Python automation, SQL reporting, C# integrations, JSON and APIs, or Visual Basic and VBA for established Office workflows. AI handles language and documents where it adds value."
+        "intro": "The task determines the tools: Python automation, SQL reporting, C# integrations, JSON and APIs, or Visual Basic and VBA for established Office workflows. AI handles language and documents where it adds value.",
+        "cards": [{ "title": "Before connecting AI to business software", "text": "Verify access, record ownership, freshness and failure handling before accepting an integration pilot.", "href": "/insights/ai-integration-readiness-checklist", "linkLabel": "Read the integration readiness checklist" }]
       },
       {
         "heading": "Support after handoff",

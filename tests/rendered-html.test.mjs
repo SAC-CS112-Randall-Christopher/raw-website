@@ -321,7 +321,7 @@ test("redirects production HTTP and www permanently while preserving path and qu
 test("preserves unique indexable metadata for every sitemap route", async () => {
   const sitemap = await renderReviewPage("/sitemap.xml");
   const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-  assert.equal(urls.length, 25);
+  assert.equal(urls.length, 26);
   assert.equal(new Set(urls).size, urls.length);
   const titles = new Set();
   const descriptions = new Set();
@@ -338,7 +338,7 @@ test("preserves unique indexable metadata for every sitemap route", async () => 
     assert.doesNotMatch(metaContent(html, "robots") ?? "", /noindex/, path);
     assert.equal((html.match(/<h1\b/g) ?? []).length, 1, path);
   }
-  for (const [path, date] of [["workflow-automation-examples", "2026-10-04"], ["insights", "2026-10-11"], ["local-ai-deployments", "2026-10-11"], ["insights/local-vs-hosted-ai-assistants", "2026-10-11"], ["insights/prepare-sops-for-ai-assistant", "2026-10-04"], ["privacy", "2026-09-30"], ["terms", "2026-09-30"]]) {
+  for (const [path, date] of [["workflow-automation-examples", "2026-10-04"], ["insights", "2026-10-18"], ["services", "2026-10-18"], ["insights/ai-integration-readiness-checklist", "2026-10-18"], ["local-ai-deployments", "2026-10-11"], ["insights/local-vs-hosted-ai-assistants", "2026-10-11"], ["insights/prepare-sops-for-ai-assistant", "2026-10-04"], ["privacy", "2026-09-30"], ["terms", "2026-09-30"]]) {
     assert.match(sitemap, new RegExp(`<loc>https://randallautomationworks\\.com/${path}</loc>\\s*<lastmod>${date}</lastmod>`), path);
   }
 });
@@ -371,4 +371,25 @@ test("discloses the currently observed website providers without launch placehol
   assert.match(privacy, /Google Calendar/);
   assert.match(privacy, /chris@randallautomationworks\.com/);
   assert.doesNotMatch(`${privacy}\n${terms}`, /private-stage|public-launch date|before public launch|enabled later|Final contact details/);
+});
+
+
+test("publishes integration readiness with consistent dates and acceptance evidence", async () => {
+  const path = "/insights/ai-integration-readiness-checklist";
+  const html = await renderReviewPage(path);
+  assert.equal(canonicalUrl(html), `https://randallautomationworks.com${path}`);
+  assert.match(html, /<time dateTime="2026-10-18">October 18, 2026<\/time>/i);
+  assert.match(html, /"datePublished":"2026-10-18"/);
+  assert.match(html, /"dateModified":"2026-10-18"/);
+  assert.match(html, /"@type":"Article"/);
+  assert.match(html, /"@type":"BreadcrumbList"/);
+  assert.match(html, /This example is fictional/);
+  for (const phrase of ["Stale data", "Deleted or restricted record", "Retry and replay", "Review boundary", "Recovery"]) assert.ok(html.includes(phrase), phrase);
+  for (const anchor of ["access", "contract", "example", "tests", "handoff", "next-step"]) {
+    assert.ok(html.includes(`href="#${anchor}"`), anchor);
+    assert.ok(html.includes(`id="${anchor}"`), anchor);
+  }
+  for (const source of ["https://learn.microsoft.com/en-us/graph/delta-query-overview", "https://learn.microsoft.com/en-us/graph/throttling"]) assert.ok(html.includes(`href="${source}"`));
+  for (const incoming of ["/insights", "/services"]) assert.ok((await renderReviewPage(incoming)).includes(`href="${path}"`));
+  for (const destination of ["/services", "/workflow-automation-examples", "/how-engagements-work", "/contact"]) assert.ok(html.includes(`href="${destination}"`));
 });

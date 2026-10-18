@@ -47,10 +47,20 @@ export default function InsightsPage() {
           <div className="section-heading split-heading">
             <div>
               <p className="eyebrow">Latest guide</p>
-              <h2>Choose where your office assistant should run.</h2>
+              <h2>Check the connection before accepting the pilot.</h2>
             </div>
-            <p>Compare local, hosted and hybrid AI against one office workflow, including document access, outages, ownership, support and full cost categories.</p>
+            <p>Verify API or export access, define the data contract and test failures before connecting AI to business software.</p>
           </div>
+
+          <Link className="article-card" href="/insights/ai-integration-readiness-checklist">
+            <div className="article-card-number" aria-hidden="true">08</div>
+            <div>
+              <p className="article-kicker"><time dateTime="2026-10-18">October 18, 2026</time></p>
+              <h2>Before Connecting AI to Business Software: An Integration Readiness Checklist</h2>
+              <p>A synthetic request-status workflow shows the access, freshness, retry and ownership evidence to ask for before accepting a pilot.</p>
+              <span className="article-card-link">Read the article <span aria-hidden="true">&rarr;</span></span>
+            </div>
+          </Link>
 
           <Link className="article-card" href="/insights/local-vs-hosted-ai-assistants">
             <div className="article-card-number" aria-hidden="true">07</div>
