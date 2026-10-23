@@ -7,7 +7,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Dates record actual content edits, rather than the time of each build.
   const updatedPages = new Set(["services", "workflow-automation-examples", "local-ai-deployments", "privacy", "terms"]);
   return [
-    { url: base, changeFrequency: "monthly", priority: 1, lastModified: "2026-09-30" },
+    { url: base, changeFrequency: "monthly", priority: 1, lastModified: "2026-10-23" },
+    { url: `${base}/raw-workspace`, changeFrequency: "monthly", priority: .9, lastModified: "2026-10-23" },
     ...indexablePages.map((page) => ({
       url: `${base}/${page.slug}`,
       changeFrequency: "monthly" as const,

@@ -34,7 +34,7 @@ const services = [
 
 const process = [
   ["01", "Talk through the work", "Bring one repetitive task to a free 30-minute consultation. We'll discuss what happens today and whether there's a useful next step."],
-  ["02", "Scope a focused pilot", "Agree on the workflow, deliverables, price and success measures before building. A paid assessment can help when the scope needs more work."],
+  ["02", "Define the solution", "Agree on the workflow, deliverables, price and success measures before building. A paid assessment can help when the scope needs more work."],
   ["03", "Test, hand over, support", "Try the system with your team, document how it works and train the people using it. Add ongoing support if you need it."],
 ];
 
@@ -69,6 +69,17 @@ export default function Home() {
             />
             <div className="topo-lines" aria-hidden="true" />
           </div>
+        </div>
+      </section>
+
+      <section className="workspace-home-feature" aria-labelledby="workspace-offer-title">
+        <div className="shell workspace-home-grid">
+          <div><p className="eyebrow">Featured product · RAW Business Workspace</p><h2 id="workspace-offer-title">Your business.<br />Connected.</h2><p>Customers, equipment quotes, tasks, documents and reporting. One workspace, configured around the way your business runs.</p><Link className="button button-primary" href="/raw-workspace">Explore RAW Workspace <span aria-hidden="true">↗</span></Link></div>
+          <Link className="workspace-home-screen" href="/raw-workspace" aria-label="Explore RAW Business Workspace">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/products/raw-workspace/overview.png" width={1600} height={1000} loading="lazy" alt="RAW Business Workspace home screen with sample customers, quotes and tasks" />
+            <span>Actual interface · Sample business data</span>
+          </Link>
         </div>
       </section>
 
