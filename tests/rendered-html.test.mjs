@@ -321,7 +321,7 @@ test("redirects production HTTP and www permanently while preserving path and qu
 test("preserves unique indexable metadata for every sitemap route", async () => {
   const sitemap = await renderReviewPage("/sitemap.xml");
   const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-  assert.equal(urls.length, 26);
+  assert.equal(urls.length, 27);
   assert.equal(new Set(urls).size, urls.length);
   const titles = new Set();
   const descriptions = new Set();
@@ -351,7 +351,9 @@ test("describes the Montrose organization and verified implementation experience
   assert.equal(organization.legalName, "Randall Automation Works LLC");
   assert.equal(organization.location.name, "Montrose, Colorado");
   assert.equal(organization.address, undefined);
-  assert.ok(organization.hasOfferCatalog.itemListElement.every((offer) => offer.itemOffered["@type"] === "Service"));
+  assert.ok(organization.hasOfferCatalog.itemListElement.every((offer) => ["Service", "SoftwareApplication"].includes(offer.itemOffered["@type"])));
+  const workspace = organization.hasOfferCatalog.itemListElement.find((offer) => offer.itemOffered.name === "RAW Business Workspace");
+  assert.equal(workspace.itemOffered.url, "https://randallautomationworks.com/raw-workspace");
   assert.doesNotMatch(html, /ProfessionalService/);
   const examples = await renderReviewPage("/workflow-automation-examples");
   assert.match(examples, /Two implementations from my own work/);

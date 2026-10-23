@@ -7,6 +7,7 @@ const contactPhoneLink = "tel:+19707872161";
 export const bookingLink = "https://calendar.app.google/Qwnjw6tS5TdDo5Hh7";
 
 export const primaryNav = [
+  { href: "/raw-workspace", label: "RAW Workspace" },
   { href: "/responsible-ai-and-security", label: "AI Setup" },
   { href: "/services", label: "Services" },
   { href: "/workflow-automation-examples", label: "Examples" },
@@ -83,6 +84,7 @@ export function Footer() {
         </div>
         <div>
           <h2>Company & work</h2>
+          <Link href="/raw-workspace">RAW Business Workspace</Link>
           <Link href="/expertise">Expertise</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>

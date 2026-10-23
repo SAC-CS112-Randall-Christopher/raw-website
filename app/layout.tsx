@@ -75,6 +75,8 @@ const structuredData = {
     "@type": "OfferCatalog",
     name: "Automation and AI services",
     itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "SoftwareApplication", name: "RAW Business Workspace", url: `${siteUrl}/raw-workspace`, applicationCategory: "BusinessApplication", description: "Connected customer records, equipment quotes, tasks, documents and reporting, configured around your small business." } },
+      ...[
       "AI assistant and LLM setup",
       "Workflow automation",
       "Python automation",
@@ -91,6 +93,7 @@ const structuredData = {
         areaServed: "Western Colorado",
       },
     })),
+    ],
   },
 };
 
