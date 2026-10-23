@@ -50,3 +50,11 @@ password flow also passes a local HTTPS gateway simulation. Public-domain
 hosting remains unverified until the owner's Cloudflare access and rendering
 computer are available. Do not represent this development workspace as a
 permanent production server.
+
+The owner is continuing directly in **local Codex on MAIN**, without Desktop
+Commander. Use the latest paired DMPH branch's
+[local handoff](https://github.com/SAC-CS112-Randall-Christopher/DMPH/blob/feat/professional-video-editing/docs/LOCAL_CODEX_HANDOFF.md)
+for runtime recreation, demo/narration bootstrap, Windows/WSL considerations
+and remaining deployment steps. Cloud-session access limitations do not imply
+that MAIN lacks its own existing Cloudflare login. No cloud credentials or
+sessions are transferred through GitHub.
