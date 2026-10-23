@@ -58,13 +58,25 @@ npx wrangler deploy --dry-run
 
 For an authenticated local deployment, run `npm run deploy`.
 
+On 2026-10-23 the DMPH feature gateway was deployed to the existing Worker
+using MAIN's authorized Wrangler account. The matching named tunnel, origin
+CNAME and two private gateway bindings are configured. Actual custom-domain
+fixture login, required password replacement, narration/export, protected
+downloads, restart and offline-host checks passed. See [DMPH-STUDIO.md](DMPH-STUDIO.md)
+for the remaining owner password input and current 503 availability state.
+
 On Windows, build and test in the existing WSL/Linux runtime. Keep Linux Node
 dependencies separate from any native Windows installation. The build helpers
 preserve the host's real home and XDG configuration directories so the normal
 authorized Wrangler session remains usable; only build scratch files and npm
 cache are redirected. Text files use LF endings for Bash/WSL compatibility.
-The root deployment configuration explicitly retains `nodejs_compat`, matching
-the existing production Worker's setting and the Vinext build configuration.
+The root deployment configuration is the single source of `nodejs_compat`,
+matching the existing production Worker. Do not also add that flag through
+the Vite plugin override: the plugin concatenates those arrays, and Cloudflare
+rejects duplicate flags with code 10021. Artifact validation now checks the
+generated Wrangler configuration for missing or duplicate compatibility flags
+before an upload. This caught and reproduced the failed preview upload from
+commit `b3fc27a` locally; the Vite override was removed to correct its cause.
 
 ## HTTPS redirect review
 

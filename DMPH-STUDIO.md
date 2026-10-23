@@ -1,6 +1,6 @@
 # Private DMPH Studio gateway
 
-Prepared address: `https://randallautomationworks.com/admin/dmph/`.
+Deployed gateway: `https://randallautomationworks.com/admin/dmph/`.
 
 `worker/index.ts` intercepts only that exact path prefix before the public
 website router. The private host checks the administrator's server-side session
@@ -43,18 +43,32 @@ current public baseline. Refreshed narrated films remain in the paired private
 DMPH repository for owner listening review before public publication. The
 protected studio integration does not require changing public promotional media.
 
-The paired DMPH branch is `feat/professional-video-editing`; its `deploy/` folder
-has the host instructions and tunnel/environment templates. Both the public
-site production build and gateway contract tests pass locally. The browser
-password flow also passes a local HTTPS gateway simulation. Public-domain
-hosting remains unverified until the owner's Cloudflare access and rendering
-computer are available. Do not represent this development workspace as a
-permanent production server.
+The paired DMPH branch is `feat/professional-video-editing`. On 2026-10-23 the
+existing authorized Cloudflare account deployed this gateway to the existing
+`randall-automation-works` Worker. A free named tunnel, `dmph-main-studio`,
+connects `dmph-origin.randallautomationworks.com` to MAIN's loopback studio.
+The private bindings above are configured. Existing DNS records and public
+pages were preserved; the public RAW film still matches the main baseline.
+
+The actual HTTPS custom-domain browser acceptance passed using disposable
+fixture state and credentials on MAIN: required first-password rotation,
+private project/media protection, direct-origin/cross-origin rejection,
+secure scoped cookies, recording upload/trim, fresh local narration, native
+video export, protected MP4/range/caption/editable-package downloads,
+offline-host 503, restart persistence and logout revocation. The Python suite
+passed 24 tests; this website passed 23 tests, production build, lint and
+Wrangler dry run. These are local/runtime checks, not a claim of hosted CI.
+
+The owner's `DMPHstudio` account still awaits password entry at a hidden local
+prompt. The owner host remains stopped, so the public studio currently
+returns 503. Once initialized and started from MAIN's desktop shortcut it uses
+the already deployed route. MAIN and its WSL launcher must stay running for
+editing and exports. This does not make the computer an always-on server.
 
 The owner is continuing directly in **local Codex on MAIN**, without Desktop
 Commander. Use the latest paired DMPH branch's
 [local handoff](https://github.com/SAC-CS112-Randall-Christopher/DMPH/blob/feat/professional-video-editing/docs/LOCAL_CODEX_HANDOFF.md)
-for runtime recreation, demo/narration bootstrap, Windows/WSL considerations
-and remaining deployment steps. Cloud-session access limitations do not imply
-that MAIN lacks its own existing Cloudflare login. No cloud credentials or
-sessions are transferred through GitHub.
+and [MAIN setup](https://github.com/SAC-CS112-Randall-Christopher/DMPH/blob/feat/professional-video-editing/docs/MAIN_SETUP.md)
+for runtime paths, bootstrap, desktop shortcuts, password setup, start/stop and
+the actual local acceptance receipts. No cloud credentials or sessions are
+transferred through GitHub.
