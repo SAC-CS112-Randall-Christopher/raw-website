@@ -1,0 +1,62 @@
+RAW — final narration transcript
+Fictional business: Pine Ridge Rental & Service
+
+00:00:00.000  Your business already has the information
+Customers, equipment, billing, email, spreadsheets. Running a business means connecting the details. Here is Pine Ridge Rental and Service, a fictional business with real working records inside RAW. Its Home screen brings saved answers, upcoming work, and recent activity into one useful starting point.
+
+00:00:18.433  Bring your AI into the workflow
+Start with Connect AI. Choose a supported connection and the business work you want help with. This demonstration uses an existing ChatGPT subscription through OpenClaw.
+
+00:00:29.600  Your provider handles sign-in
+Sign-in happens with the provider. We completed that step privately; now this genuine connection is ready inside RAW.
+
+00:00:36.967  Explicit business access
+The connection has explicit permissions for RAW tools and business information. Review that access here, then open the assistant from another business page.
+
+00:00:46.267  Ask an ordinary business question
+Ask a question in everyday language. Show active customer accounts by customer type, include unknown types, and give me a chart. RAW already holds the reviewed business definition.
+
+00:00:57.867  A real answer from permitted records
+The connected assistant calls RAW's permitted tools. Active means an account has no closing date. The result comes from the full matching population, with the tool activity available to inspect.
+
+00:01:09.733  960 active accounts, including unknown types
+There are nine hundred sixty active accounts. Six hundred homeowners, one hundred eighty contractors, one hundred twenty businesses, forty-five public-sector accounts, and fifteen with an unknown type. Nothing disappears because a category is missing.
+
+00:01:23.933  Inspect the supporting records
+Open the supporting records behind a group. Check the customer names and the conditions that produced the answer. You can understand the result without writing SQL.
+
+00:01:33.767  Keep the original. Save a useful variant.
+Now narrow the question to Pine Ridge. The town view contains four hundred active accounts. Keep the original all-town report, and reopen the separate saved view whenever you need it.
+
+00:01:45.100  Reports that fit your business calendar
+Reusable date choices keep reports useful. Choose Last month, compare with the previous period, or anchor a report to the latest available business date. The selected dates stay visible.
+
+00:01:57.200  Follow one customer situation
+Next, open Alder Grove Landscaping. Maya Chen's correspondence, account details, notes, tasks, and documents give the owner context for the next conversation.
+
+00:02:07.333  AI works with the information on screen
+Ask the assistant to summarize the customer situation and prepare careful reply wording. A claim that payment was sent still needs checking against the billing records. The assistant should preserve that uncertainty.
+
+00:02:19.600  The owner reviews the next action
+The owner reviews the wording and creates a follow-up through RAW's supported workflow. These imported messages are read-only samples. The prepared response stays editable; this demonstration sends no email.
+
+00:02:32.433  Source-backed pricing, with clear limits
+The equipment quote uses the source rate: seven hundred fifty dollars a day for three days. That is a two-thousand-two-hundred-fifty-dollar equipment subtotal, with delivery, insurance, and tax still to review.
+
+00:02:45.367  Keep the conversation in the work
+Dock the assistant, minimize it, move to another page, and restore the conversation. The business stays in view while you work.
+
+00:02:53.300  See the calculation and the control difference
+Finance shows eighty-four thousand dollars in net posted rental charges against an independent eighty-four-thousand-one-hundred-eighty-dollar control. The minus-one-hundred-eighty-dollar difference stays visible, with contributing records available for review.
+
+00:03:08.833  Maintenance from dated evidence
+Maintenance combines service plans with dated readings. Here, the owner checks actual hours against the service threshold. Replacement meters stay marked for review, with observation dates and reading details available before any service is planned.
+
+00:03:23.267  Refresh sources. Preserve your work.
+Replace a source snapshot and review what changed. The updated account total is nine hundred sixty-one. The earlier nine-hundred-sixty result remains in history, while RAW-owned notes and follow-up work stay intact.
+
+00:03:36.067  Useful answers, ready to reuse
+Saved reports, history, and recurring schedules make the answer reusable. This weekday review is configured for eight in the morning. Email delivery needs its own approved setup.
+
+00:03:46.900  Your information. Useful work.
+Keep the systems you already depend on. Connect your information, bring your AI into the workflow, and make your business easier to understand. RAW. Book a demo with Randall Automation Works.

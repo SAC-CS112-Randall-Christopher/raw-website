@@ -3,6 +3,7 @@ import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } fr
 import handler from "vinext/server/app-router-entry";
 import { canonicalRedirect } from "../lib/canonical-redirect";
 import { studioGateway } from "../lib/dmph-gateway.mjs";
+import { publicDemoVideo } from "../lib/public-demo-video.mjs";
 
 interface Env {
   DMPH_STUDIO_ORIGIN?: string;
@@ -37,6 +38,8 @@ const worker = {
     const url = new URL(request.url);
     const studio = await studioGateway(request, env);
     if (studio) return studio;
+    const video = await publicDemoVideo(request, env);
+    if (video) return video;
 
     if (url.pathname === "/_vinext/image") {
       const allowedWidths = [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES];

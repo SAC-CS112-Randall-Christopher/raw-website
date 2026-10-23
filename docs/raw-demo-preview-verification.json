@@ -1,0 +1,75 @@
+{
+  "base_url": "http://127.0.0.1:8892",
+  "checks": [
+    {
+      "label": "desktop-highlight",
+      "src": "http://127.0.0.1:8892/products/raw-workspace/raw-highlight.mp4",
+      "duration": 80.042,
+      "width": 1920,
+      "height": 1080,
+      "english_captions": {
+        "cues": 21,
+        "mode": "showing"
+      },
+      "range_status": 206,
+      "range_matches_packaged_bytes": true,
+      "keyboard_playback": true,
+      "seek_to_middle_and_end": true,
+      "no_horizontal_overflow": true,
+      "no_autoplay_or_initial_mp4_download": true
+    },
+    {
+      "label": "desktop-full-demo",
+      "src": "http://127.0.0.1:8892/products/raw-workspace/raw-full-demo.mp4",
+      "duration": 239.018,
+      "width": 1920,
+      "height": 1080,
+      "english_captions": {
+        "cues": 63,
+        "mode": "showing"
+      },
+      "range_status": 206,
+      "range_matches_packaged_bytes": true,
+      "keyboard_playback": true,
+      "seek_to_middle_and_end": true,
+      "no_horizontal_overflow": true,
+      "no_autoplay_or_initial_mp4_download": true
+    },
+    {
+      "label": "mobile-highlight",
+      "src": "http://127.0.0.1:8892/products/raw-workspace/raw-highlight.mp4",
+      "duration": 80.042,
+      "width": 1920,
+      "height": 1080,
+      "english_captions": {
+        "cues": 21,
+        "mode": "showing"
+      },
+      "range_status": 206,
+      "range_matches_packaged_bytes": true,
+      "keyboard_playback": true,
+      "seek_to_middle_and_end": true,
+      "no_horizontal_overflow": true,
+      "no_autoplay_or_initial_mp4_download": true
+    },
+    {
+      "label": "mobile-full-demo",
+      "src": "http://127.0.0.1:8892/products/raw-workspace/raw-full-demo.mp4",
+      "duration": 239.018,
+      "width": 1920,
+      "height": 1080,
+      "english_captions": {
+        "cues": 63,
+        "mode": "showing"
+      },
+      "range_status": 206,
+      "range_matches_packaged_bytes": true,
+      "keyboard_playback": true,
+      "seek_to_middle_and_end": true,
+      "no_horizontal_overflow": true,
+      "no_autoplay_or_initial_mp4_download": true
+    }
+  ],
+  "page_errors": [],
+  "browser": "151.0.7922.34"
+}

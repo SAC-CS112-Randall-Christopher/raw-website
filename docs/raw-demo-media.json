@@ -1,0 +1,59 @@
+{
+  "source_repository": "SAC-CS112-Randall-Christopher/DMPH",
+  "source_commit": "e233f2a0366861c05e4101bda5fcc94f2ab3ed27",
+  "source_folder": "deliverables/raw-demo-video",
+  "assets": {
+    "raw-highlight.mp4": {
+      "bytes": 11562703,
+      "sha256": "2cd941e9094258b230007f5ef48f23c53e52bc99e3b35b60ca8e85800e7d40c0"
+    },
+    "raw-full-demo.mp4": {
+      "bytes": 24454900,
+      "sha256": "4901442b3bc7921bdbacfee4a4191c616cfc82d8fc5e9ee9193938a02040622b"
+    },
+    "raw-demo-poster.jpg": {
+      "bytes": 39066,
+      "sha256": "3b655ba825862b4b0b0ed6127ae8ba988bf04ad3adac923ffe8d151696d006f9"
+    },
+    "raw-highlight.vtt": {
+      "bytes": 1976,
+      "sha256": "9a0076e987237df1b3a54a4f3567158a551778e7cb366294ebf5a3d7356db988"
+    },
+    "raw-full-demo.vtt": {
+      "bytes": 5839,
+      "sha256": "93a560f87e5980d1823e8e5265edda94327c1e1e24469e0ccd8c865e6e472e28"
+    },
+    "raw-demo-transcript.txt": {
+      "bytes": 5032,
+      "sha256": "cd40c0f12bc4e1b2df630e01f3650ac3c013fc78f5aa88d9f70524841ea00562"
+    }
+  },
+  "videos": {
+    "raw-highlight.mp4": {
+      "duration": 80.042,
+      "frames": 2401,
+      "video": "H.264 1920x1080 30fps yuv420p",
+      "audio": "AAC 48kHz stereo",
+      "fast_start": true,
+      "complete_decode_passed": true,
+      "source_file": "RAW-highlights.mp4",
+      "source_sha256": "2cd941e9094258b230007f5ef48f23c53e52bc99e3b35b60ca8e85800e7d40c0",
+      "audio_packets_unchanged": true,
+      "audio_sha256": "73b5c02ab2325912e2a336a4d5221e494a85532e5123febf622b5af7a2c152e2"
+    },
+    "raw-full-demo.mp4": {
+      "duration": 239.018,
+      "frames": 7170,
+      "video": "H.264 1920x1080 30fps yuv420p",
+      "audio": "AAC 48kHz stereo",
+      "fast_start": true,
+      "complete_decode_passed": true,
+      "source_file": "RAW-business-demo.mp4",
+      "source_sha256": "97e5f42f32a7e627a0c37512ed34fb86ae49bc6768e825887bf9397d57d1a9d7",
+      "audio_packets_unchanged": true,
+      "audio_sha256": "6fd37e7d77ca7afa5fae4e35babf5808a07c24fbe60f9fcfb9487b4170a56d93",
+      "web_encoding": "FFmpeg 6.1.1 / libx264 slow CRF 22; audio copied; fast-start"
+    }
+  },
+  "new_spend_usd": 0
+}

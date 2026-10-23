@@ -37,7 +37,7 @@ const structuredData = {
       applicationCategory: "BusinessApplication", operatingSystem: "Web browser", creator: { "@id": `${base}/#business` },
       image: `${base}/products/raw-workspace/overview.png`, featureList: ["Connected customer records", "Equipment rental quotes from source rates", "Tasks and documents", "SQLite and CSV data reporting", "Configurable business modules"] },
     { "@type": "WebPage", "@id": `${base}/raw-workspace#page`, url: `${base}/raw-workspace`, name: "RAW Business Workspace", description, about: { "@id": `${base}/raw-workspace#product` }, isPartOf: { "@id": `${base}/#business` } },
-    { "@type": "VideoObject", name: "RAW Business Workspace — Your business. Connected.", description: "A 24-second look at the actual RAW Business Workspace interface using sample business data: customer context, equipment quotes and reporting.", thumbnailUrl: `${base}/products/raw-workspace/video-poster.png`, uploadDate: "2026-10-23T00:00:00Z", duration: "PT24S", contentUrl: `${base}/products/raw-workspace/raw-workspace-landscape.mp4`, about: { "@id": `${base}/raw-workspace#product` } },
+    { "@type": "VideoObject", name: "RAW — Your information. Useful work.", description: "A complete desktop demonstration of RAW's connected AI, inspectable reports and everyday business workflows using fictional Pine Ridge Rental & Service data. Processing waits are condensed.", thumbnailUrl: `${base}/products/raw-workspace/raw-demo-poster.jpg`, uploadDate: "2026-10-23T00:00:00Z", duration: "PT3M59S", contentUrl: `${base}/products/raw-workspace/raw-full-demo.mp4`, about: { "@id": `${base}/raw-workspace#product` } },
     { "@type": "FAQPage", mainEntity: faqs.map(({ q, a }) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) },
     { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: base }, { "@type": "ListItem", position: 2, name: "RAW Business Workspace", item: `${base}/raw-workspace` }] },
   ],
@@ -60,7 +60,20 @@ export default function RawWorkspace() {
 
     <section className="section workspace-intro"><div className="shell workspace-two-col"><div><p className="eyebrow">One place to keep things moving</p><h2>Less scattered.<br />More connected.</h2></div><div><p>Customer details in one system. Quotes in another. Tasks and files somewhere else. The information exists, but your team still has to piece it together.</p><p>RAW Workspace gives that work a shared home. Start with the modules your business needs and keep the records, next steps and supporting details connected.</p></div></div></section>
 
-    <section className="section workspace-film-section" id="see-it-in-action"><div className="shell"><div className="section-heading"><p className="eyebrow">See it in action · 24 seconds</p><h2>A closer look at a more connected day.</h2><p>Customer context. Clear quotes. Useful reports.</p></div><div className="workspace-video-frame"><video controls playsInline preload="none" poster="/products/raw-workspace/video-poster.png" width="1920" height="1080" aria-label="RAW Business Workspace product overview"><source src="/products/raw-workspace/raw-workspace-landscape.mp4" type="video/mp4" /><track kind="captions" src="/products/raw-workspace/captions.vtt" srcLang="en" label="English" default />Your browser does not support embedded video. <a href="/products/raw-workspace/raw-workspace-landscape.mp4">Watch the product overview</a>.</video></div><p className="workspace-caption">Actual product screens with sample business data. All key messages are visible with sound off.</p></div></section>
+    <section className="section workspace-film-section" id="see-it-in-action">
+      <div className="shell">
+        <div className="section-heading"><p className="eyebrow">The full demo · 3 minutes 59 seconds</p><h2>Your information. Useful work.</h2><p>Connect your AI, ask a business question and follow the answer into everyday work.</p></div>
+        <div className="workspace-video-frame">
+          <video controls playsInline preload="none" poster="/products/raw-workspace/raw-demo-poster.jpg" width="1920" height="1080" aria-label="RAW Business Workspace full demonstration">
+            <source src="/products/raw-workspace/raw-full-demo.mp4" type="video/mp4" />
+            <track kind="captions" src="/products/raw-workspace/raw-full-demo.vtt" srcLang="en" label="English" default />
+            Your browser does not support embedded video. <a href="/products/raw-workspace/raw-full-demo.mp4">Watch the full demonstration</a>.
+          </video>
+        </div>
+        <p className="workspace-caption">Actual RAW desktop interface and connected assistant results using fictional Pine Ridge Rental &amp; Service data. Provider sign-in was completed privately; processing waits are condensed. No email was sent.</p>
+        <div className="workspace-film-links"><a className="text-link" href="/products/raw-workspace/raw-demo-transcript.txt">Read the demo transcript</a><a className="text-link" href="/products/raw-workspace/raw-full-demo.vtt" download>Download English captions</a></div>
+      </div>
+    </section>
 
     <section className="section"><div className="shell"><div className="section-heading"><p className="eyebrow">Built around the work</p><h2>The right details.<br />Right where you need them.</h2></div><div className="workspace-feature-grid">{features.map(([n, title, text]) => <article key={n}><span>{n}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
 
