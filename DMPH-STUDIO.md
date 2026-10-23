@@ -38,10 +38,10 @@ not contained in either repository.
 This implements an administrator sign-in. An OIDC/SAML identity provider has
 not been configured, so provider-based SSO is not claimed.
 
-This branch also replaces the existing RAW product-page film, poster and
-captions with the new 24-second, 1080p/30 fps MLT export and local VoiceStudio
-English narration. Product claims and the destination URL are unchanged. The
-film uses actual source captures and sample business data.
+The public RAW product-page film, poster and captions are preserved from the
+current public baseline. Refreshed narrated films remain in the paired private
+DMPH repository for owner listening review before public publication. The
+protected studio integration does not require changing public promotional media.
 
 The paired DMPH branch is `feat/professional-video-editing`; its `deploy/` folder
 has the host instructions and tunnel/environment templates. Both the public

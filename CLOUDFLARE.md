@@ -58,6 +58,14 @@ npx wrangler deploy --dry-run
 
 For an authenticated local deployment, run `npm run deploy`.
 
+On Windows, build and test in the existing WSL/Linux runtime. Keep Linux Node
+dependencies separate from any native Windows installation. The build helpers
+preserve the host's real home and XDG configuration directories so the normal
+authorized Wrangler session remains usable; only build scratch files and npm
+cache are redirected. Text files use LF endings for Bash/WSL compatibility.
+The root deployment configuration explicitly retains `nodejs_compat`, matching
+the existing production Worker's setting and the Vinext build configuration.
+
 ## HTTPS redirect review
 
 The Worker now redirects HTTP requests for the production hostname to HTTPS

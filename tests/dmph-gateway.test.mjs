@@ -25,6 +25,17 @@ test('fails closed without host settings and when the local host is offline', as
   assert.equal(result.status, 503);assert.match(result.headers.get('Cache-Control'), /no-store/);
   assert.doesNotMatch(await result.text(), /test-only-gateway-token/);
 });
+
+test('reports tunnel and host failures as an unavailable private studio', async () => {
+  for (const status of [500, 502, 503, 504]) {
+    const result = await studioGateway(new Request(base + '/editor.html'), env,
+      async () => new Response('upstream diagnostic details', { status }));
+    assert.equal(result.status, 503);
+    assert.match(result.headers.get('Cache-Control'), /no-store/);
+    assert.match(result.headers.get('X-Robots-Tag'), /noindex/);
+    assert.doesNotMatch(await result.text(), /upstream diagnostic details/);
+  }
+});
 test('sets trusted gateway headers and preserves protected media range responses', async () => {
   const response = await studioGateway(new Request(base + '/exports/take/film.mp4', { headers: { Range: 'bytes=4-8', 'X-DMPH-Gateway': 'forged', Authorization: 'must-not-forward' } }), env, async request => {
     assert.equal(request.url, 'https://studio-origin.example/exports/take/film.mp4');
