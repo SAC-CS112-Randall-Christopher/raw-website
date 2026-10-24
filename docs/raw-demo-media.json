@@ -1,0 +1,72 @@
+{
+  "source_repository": "SAC-CS112-Randall-Christopher/DMPH",
+  "source_commit": "37ce8fc592b2e02ffcfa60c8155bb00b328057f0",
+  "source_folder": "deliverables/raw-demo-result-led",
+  "assets": {
+    "raw-highlight.mp4": {
+      "bytes": 7726243,
+      "sha256": "91cbd6eb834322b790fc9f7fa69485aceef3cb4d07e0e8c1504454736ea36b78"
+    },
+    "raw-full-demo.mp4": {
+      "bytes": 19787840,
+      "sha256": "f5a41af4b5e53a249bf88b99a4beda19484bbc9ec0d2343f1f6761a65ae2fbf7"
+    },
+    "raw-demo-poster.jpg": {
+      "bytes": 238277,
+      "sha256": "5ca6aa6c18e72f493ad4d87292f20f994938f2edc564c10d15bb9fea06d41787"
+    },
+    "raw-highlight-poster.jpg": {
+      "bytes": 190430,
+      "sha256": "75202c8c43c4494bbdb65787188cef02aad72a48d7c12811ee07085a3ed33de5"
+    },
+    "raw-highlight.vtt": {
+      "bytes": 1491,
+      "sha256": "5f556d3a4e15b6ead4fcd3ff70b4b1c371e7565dc8864d0d06b4480e77d54732"
+    },
+    "raw-full-demo.vtt": {
+      "bytes": 3716,
+      "sha256": "b4b548e4ee0a74088ed2378a24c73c5ec522d14fcd95265bbf5213a9c06a8d58"
+    },
+    "raw-demo-transcript.txt": {
+      "bytes": 3025,
+      "sha256": "9e3c7678eea554e22e646cd0445c11144c49b56dbc7f2947480721fac3ad2607"
+    },
+    "raw-highlight-transcript.txt": {
+      "bytes": 1220,
+      "sha256": "490233392d2e51a948bc494c35bd08bf08ee5e928566ff8e913454eed6faff0f"
+    }
+  },
+  "videos": {
+    "raw-highlight.mp4": {
+      "duration": 74.538,
+      "duration_iso": "PT1M15S",
+      "duration_label": "1 minutes 15 seconds",
+      "caption_cues": 18,
+      "frames": 2236,
+      "video": "H.264 1920x1080 30fps yuv420p",
+      "audio": "AAC 48kHz stereo",
+      "fast_start": true,
+      "complete_decode_passed": true,
+      "source_file": "RAW-highlights.mp4",
+      "source_sha256": "91cbd6eb834322b790fc9f7fa69485aceef3cb4d07e0e8c1504454736ea36b78",
+      "audio_packets_unchanged": true,
+      "audio_sha256": "95cf6f5d764c2342e51bd1b4e94a8f904372eb8edec8ec6ad87ed32437e17454"
+    },
+    "raw-full-demo.mp4": {
+      "duration": 178.346,
+      "duration_iso": "PT2M58S",
+      "duration_label": "2 minutes 58 seconds",
+      "caption_cues": 43,
+      "frames": 5350,
+      "video": "H.264 1920x1080 30fps yuv420p",
+      "audio": "AAC 48kHz stereo",
+      "fast_start": true,
+      "complete_decode_passed": true,
+      "source_file": "RAW-business-demo.mp4",
+      "source_sha256": "f5a41af4b5e53a249bf88b99a4beda19484bbc9ec0d2343f1f6761a65ae2fbf7",
+      "audio_packets_unchanged": true,
+      "audio_sha256": "349b7641b73fa12de545f072c793567a15c75e7e08f46a4fc84a04d5d4746f0a"
+    }
+  },
+  "new_spend_usd": 0
+}

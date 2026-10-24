@@ -38,17 +38,18 @@ not contained in either repository.
 This implements an administrator sign-in. An OIDC/SAML identity provider has
 not been configured, so provider-based SSO is not claimed.
 
-The public RAW product-page film, poster and captions are preserved from the
-current public baseline. Refreshed narrated films remain in the paired private
-DMPH repository for owner listening review before public publication. The
-protected studio integration does not require changing public promotional media.
+The owner subsequently approved publication of the finished narrated films:
+the 80-second highlight on the homepage and the 3:59 full demo on `/raw-workspace`.
+See `docs/raw-workspace-product.md` and the publication receipt. These static
+public assets are independent of the protected editor and its owner account.
 
 The paired DMPH branch is `feat/professional-video-editing`. On 2026-10-23 the
 existing authorized Cloudflare account deployed this gateway to the existing
 `randall-automation-works` Worker. A free named tunnel, `dmph-main-studio`,
 connects `dmph-origin.randallautomationworks.com` to MAIN's loopback studio.
 The private bindings above are configured. Existing DNS records and public
-pages were preserved; the public RAW film still matches the main baseline.
+pages were preserved by that gateway deployment. The later film-publication
+lane updates only the public video placement, media and matching metadata.
 
 The actual HTTPS custom-domain browser acceptance passed using disposable
 fixture state and credentials on MAIN: required first-password rotation,

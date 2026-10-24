@@ -86,8 +86,11 @@ canonical apex redirect when a `www` request reaches the Worker. Local preview
 hostnames remain usable. The existing dashboard-managed `www` redirect is
 unchanged.
 
-The current `assets` configuration serves matching static files before Worker
-code. To cover HTTP asset requests too, Chris approved an apex-only Cloudflare edge
+The `assets` configuration serves matching static files before Worker code,
+except for the two published RAW MP4 paths listed in `assets.run_worker_first`.
+Those paths use the native Cache API for verified byte-range playback; see
+[RAW video publication](docs/raw-demo-publication.md). To cover HTTP asset
+requests too, Chris approved an apex-only Cloudflare edge
 redirect rule. No dashboard settings have been changed in this checkout.
 
 Approved Single Redirect rule:

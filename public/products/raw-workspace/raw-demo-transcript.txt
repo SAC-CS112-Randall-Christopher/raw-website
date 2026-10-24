@@ -1,0 +1,53 @@
+RAW — final narration transcript
+Fictional business: Pine Ridge Rental & Service
+
+00:00:00.000  An answer you can check
+Here's a useful answer: 961 active customer accounts, with a chart you can open to check the records behind it.
+
+00:00:08.700  Keep the systems you rely on
+Keep the business software you rely on. RAW connects its information with your AI assistant, helping you understand the business and move work forward.
+
+00:00:19.267  A connected, permitted assistant
+This example uses an existing ChatGPT subscription, connected privately. The assistant works through the RAW tools we've permitted.
+
+00:00:29.067  Ask in ordinary language
+We asked for active accounts by customer type, including unknown types, and a chart.
+
+00:00:35.133  961 active accounts
+RAW applies the approved definition. Homeowners lead the breakdown. All fifteen accounts without a customer type stay included.
+
+00:00:45.367  Inspect the people behind the chart
+Open a group to inspect the customers behind it. The answer remains available in Reports.
+
+00:00:53.367  Keep both useful views
+Narrow the question to Pine Ridge: 401 accounts. Keep that view alongside the original, ready to use again.
+
+00:01:02.667  Maya needs a three-day rental
+Now Maya at Alder Grove Landscaping needs an excavator for three days, starting October 28. She asks for a quote and delivery window.
+
+00:01:14.500  Read and summarize the request
+The assistant reads her imported email and summarizes the request. This is a read-only sample, with ongoing mailbox sync off.
+
+00:01:23.933  A source-backed rental subtotal
+The source rate is $750 a day. Three days gives a $2,250 rental subtotal. Availability, delivery, insurance and tax still need confirmation.
+
+00:01:37.833  A useful reply, ready for owner review
+The assistant uses that quote to compose this reply. We review the wording in an editable draft and save it. Sending remains our decision.
+
+00:01:48.600  Save the next step
+Next, we create a delivery confirmation task for October 26, two days before the rental, and save a thirty-minute calendar block.
+
+00:01:58.300  The customer and follow-up stay connected
+Here's Monday's ten o'clock follow-up, linked to the customer. The assistant stays available between pages.
+
+00:02:07.300  Spot a difference that needs investigation
+RAW also highlights work needing attention. Rental charges total $84,000 against an $84,180 control: a $180 difference to investigate, with supporting records.
+
+00:02:22.667  See overdue service
+This machine reads 1,420 hours against a 1,350-hour service target. The dated reading makes the overdue work clear.
+
+00:02:32.567  Return to a generated report
+Saved reports keep their history. This scheduled report has actually run, and its result opens here in RAW. Email delivery requires separate approval.
+
+00:02:43.967  RAW Business Workspace
+Keep your existing systems. Turn their information into useful work with RAW Business Workspace. Bring one recurring task and the software you use. Let's discuss your workflow.

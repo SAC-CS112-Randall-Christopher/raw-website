@@ -1,0 +1,46 @@
+RAW result-led publication checks on MAIN
+Source media commit: 37ce8fc592b2e02ffcfa60c8155bb00b328057f0
+Deployed website source: 86c80e0775688895b889d81afd7fd7fd20cdda54
+
+Package:
+raw-highlight: 74.538 seconds, 7726243 bytes
+raw-full-demo: 178.346 seconds, 19787840 bytes
+Reviewed web package and exact media manifest written.
+
+Verified build and Node tests:
+✔ discloses the currently observed website providers without launch placeholders (26.910484ms)
+✔ publishes integration readiness with consistent dates and acceptance evidence (55.876361ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2231.369948
+
+ESLint:
+
+> randall-automation-works@0.1.0 lint
+> bash scripts/sites-env.sh -- eslint . --ignore-pattern dist --ignore-pattern .next
+
+
+Wrangler dry run:
+✨ Read 73 files from the assets directory /mnt/c/Projects/RAW-Video-Publication/dist/client
+Total Upload: 1874.49 KiB / gzip: 348.06 KiB
+env.ASSETS         Assets
+--dry-run: exiting now.
+
+Actual deployment:
+Uploaded randall-automation-works (11.48 sec)
+Deployed randall-automation-works triggers (0.61 sec)
+Current Version ID: 42fa0fe4-d3f1-450f-91c6-0becd105fb26
+
+Preview: four desktop/390px cases and all eight complete HTTP hashes passed.
+Independent Codex review: final media and packaged preview accepted; no material finding remains.
+Live results and complete playback are retained in docs/raw-demo-live-verification.json.
+New spend: $0. Existing hardware, authorization, models and hosting only.
+
+Live custom domain: four desktop/390px cases and all eight exact HTTP hashes passed.
+Both live files completed normal-speed playback (1x), with ended=true and no media/page error.
+Highlight: 74.538 seconds. Full demonstration: 178.346 seconds.

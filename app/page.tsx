@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { bookingLink } from "../components/site-shell";
 import { implementationExamples } from "./service-examples";
+import demoMedia from "../docs/raw-demo-media.json";
 
 // Include the homepage in route metadata so client history restores its head.
 export const metadata: Metadata = {
@@ -38,9 +39,22 @@ const process = [
   ["03", "Test, hand over, support", "Try the system with your team, document how it works and train the people using it. Add ongoing support if you need it."],
 ];
 
+const highlightMedia = demoMedia.videos['raw-highlight.mp4'];
+const highlightVideo = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: "RAW Business Workspace — Answers you can use",
+  description: `An ${Math.round(highlightMedia.duration)}-second highlight of the actual RAW desktop interface: a real AI inquiry, report results, email reply and owner-reviewed calendar follow-up, using fictional Pine Ridge Rental & Service data. Processing waits are condensed.`,
+  thumbnailUrl: "https://randallautomationworks.com/products/raw-workspace/raw-highlight-poster.jpg",
+  uploadDate: "2026-10-23T00:00:00Z",
+  duration: highlightMedia.duration_iso,
+  contentUrl: "https://randallautomationworks.com/products/raw-workspace/raw-highlight.mp4",
+};
+
 export default function Home() {
   return (
     <main id="main-content">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(highlightVideo).replace(/</g, "\\u003c") }} />
       <section className="home-hero">
         <div className="shell hero-grid">
           <div className="hero-copy reveal">
@@ -74,12 +88,18 @@ export default function Home() {
 
       <section className="workspace-home-feature" aria-labelledby="workspace-offer-title">
         <div className="shell workspace-home-grid">
-          <div><p className="eyebrow">Featured product · RAW Business Workspace</p><h2 id="workspace-offer-title">Your business.<br />Connected.</h2><p>Customers, equipment quotes, tasks, documents and reporting. One workspace, configured around the way your business runs.</p><Link className="button button-primary" href="/raw-workspace">Explore RAW Workspace <span aria-hidden="true">↗</span></Link></div>
-          <Link className="workspace-home-screen" href="/raw-workspace" aria-label="Explore RAW Business Workspace">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/products/raw-workspace/overview.png" width={1600} height={1000} loading="lazy" alt="RAW Business Workspace home screen with sample customers, quotes and tasks" />
-            <span>Actual interface · Sample business data</span>
-          </Link>
+          <div><p className="eyebrow">Featured product · RAW Business Workspace</p><h2 id="workspace-offer-title">Your business.<br />Connected.</h2><p>Connect your existing business information with your AI assistant. Ask questions, inspect the records and turn answers into useful work.</p><Link className="button button-primary" href="/raw-workspace">Explore RAW Workspace <span aria-hidden="true">↗</span></Link></div>
+          <figure className="workspace-home-film">
+            <div className="workspace-video-frame">
+              <video controls playsInline preload="none" poster="/products/raw-workspace/raw-highlight-poster.jpg" width="1920" height="1080" aria-label="RAW Business Workspace highlight">
+                <source src="/products/raw-workspace/raw-highlight.mp4" type="video/mp4" />
+                <track kind="captions" src="/products/raw-workspace/raw-highlight.vtt" srcLang="en" label="English" default />
+                Your browser does not support embedded video. <a href="/products/raw-workspace/raw-highlight.mp4">Watch the highlight</a>.
+              </video>
+            </div>
+            <figcaption>{Math.round(highlightMedia.duration)}-second highlight · Actual RAW interface with fictional Pine Ridge business data. Processing waits are condensed.</figcaption>
+            <div className="workspace-film-links"><Link className="text-link" href="/raw-workspace#see-it-in-action">Watch the full demo <span aria-hidden="true">→</span></Link><a className="text-link" href={bookingLink} target="_blank" rel="noreferrer">Discuss your workflow with Chris <span aria-hidden="true">↗</span></a><a className="text-link" href="/products/raw-workspace/raw-highlight-transcript.txt">Read the highlight transcript</a></div>
+          </figure>
         </div>
       </section>
 
