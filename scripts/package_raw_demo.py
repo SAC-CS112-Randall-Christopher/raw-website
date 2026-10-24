@@ -1,4 +1,4 @@
-"""Package reviewed DMPH exports for the existing RAW website asset host."""
+"""Copy reviewed DMPH films unchanged for R2; package smaller website assets."""
 import argparse
 import hashlib
 import json
@@ -16,7 +16,8 @@ root=Path(__file__).resolve().parents[1]
 source=args.source.resolve()
 target=root/'public/products/raw-workspace'
 target.mkdir(parents=True,exist_ok=True)
-limit=25*1024*1024
+films=root/'media/raw-workspace'
+films.mkdir(parents=True,exist_ok=True)
 
 def digest(file):return hashlib.sha256(file.read_bytes()).hexdigest()
 def probe(file):
@@ -29,17 +30,12 @@ def seconds(stamp):
 media={'source_repository':'SAC-CS112-Randall-Christopher/DMPH','source_commit':args.source_commit,
        'source_folder':'deliverables/'+source.name,'assets':{},'videos':{},'new_spend_usd':0}
 for original,web in [('RAW-highlights','raw-highlight'),('RAW-business-demo','raw-full-demo')]:
-    src=source/(original+'.mp4');dst=target/(web+'.mp4')
+    src=source/(original+'.mp4');dst=films/(web+'.mp4')
     reviewed=json.loads((source/(original+'-verification.json')).read_text())
     assert reviewed['sha256']==digest(src) and reviewed['complete_decode_passed']
-    encoding=None
-    if src.stat().st_size>=limit:
-        subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-y','-i',str(src),
-            '-map','0:v:0','-map','0:a:0','-c:v','libx264','-crf','22','-preset','slow',
-            '-threads','4','-pix_fmt','yuv420p','-c:a','copy','-movflags','+faststart',str(dst)],check=True)
-        encoding='FFmpeg / libx264 slow CRF22; audio copied; fast-start'
-    else:shutil.copyfile(src,dst)
-    assert dst.stat().st_size<limit,'Review the web encode before deployment.'
+    shutil.copyfile(src,dst)
+    assert digest(dst)==reviewed['sha256'],'R2 publication must preserve the reviewed master byte for byte.'
+    assert not (target/(web+'.mp4')).exists(),'Remove the legacy static MP4; films belong in media/raw-workspace.'
     info=probe(dst)
     video=next(s for s in info['streams'] if s['codec_type']=='video')
     audio=next(s for s in info['streams'] if s['codec_type']=='audio')
@@ -69,14 +65,13 @@ for original,web in [('RAW-highlights','raw-highlight'),('RAW-business-demo','ra
          'audio':'AAC 48kHz stereo','fast_start':True,'complete_decode_passed':True,
          'source_file':src.name,'source_sha256':digest(src),'audio_packets_unchanged':True,
          'audio_sha256':original_audio}
-    if encoding:row['web_encoding']=encoding
     media['videos'][web+'.mp4']=row
     print(web+': '+str(duration)+' seconds, '+str(dst.stat().st_size)+' bytes',flush=True)
 for src,dst in [('RAW-poster.jpg','raw-demo-poster.jpg'),('RAW-highlight-poster.jpg','raw-highlight-poster.jpg'),('narration-transcript.txt','raw-demo-transcript.txt'),('highlight-transcript.txt','raw-highlight-transcript.txt')]:
     shutil.copyfile(source/src,target/dst)
 for name in ['raw-highlight.mp4','raw-full-demo.mp4','raw-demo-poster.jpg','raw-highlight-poster.jpg',
              'raw-highlight.vtt','raw-full-demo.vtt','raw-demo-transcript.txt','raw-highlight-transcript.txt']:
-    file=target/name
+    file=(films if name.endswith('.mp4') else target)/name
     media['assets'][name]={'bytes':file.stat().st_size,'sha256':digest(file)}
 (root/'docs/raw-demo-media.json').write_text(json.dumps(media,indent=2)+'\n')
 print('Reviewed web package and exact media manifest written.',flush=True)

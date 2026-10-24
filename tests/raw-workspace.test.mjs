@@ -61,10 +61,14 @@ test("promotes the real RAW product with playable media and answerable product i
     assert.ok((await stat(file)).size > 0, asset);
   }
   for (const [asset, expected] of Object.entries(media.assets)) {
-    const bytes = await readFile(new URL(`../dist/client/products/raw-workspace/${asset}`, import.meta.url));
+    const isVideo = asset.endsWith('.mp4');
+    const location = isVideo ? `../media/raw-workspace/${asset}` : `../dist/client/products/raw-workspace/${asset}`;
+    const bytes = await readFile(new URL(location, import.meta.url));
     assert.equal(bytes.length, expected.bytes, `${asset}: complete packaged file`);
     assert.equal(createHash("sha256").update(bytes).digest("hex"), expected.sha256, `${asset}: reviewed media`);
-    assert.ok(bytes.length < 25 * 1024 * 1024, `${asset}: existing Cloudflare static-asset limit`);
+    if (isVideo) {
+      await assert.rejects(stat(new URL(`../dist/client/products/raw-workspace/${asset}`, import.meta.url)), { code: 'ENOENT' }, 'R2 films are excluded from Workers static assets');
+    } else assert.ok(bytes.length < 25 * 1024 * 1024, `${asset}: static asset limit applies only to remaining assets`);
   }
   for (const [name, details] of Object.entries(media.videos)) {
     const count=details.caption_cues, duration=details.duration;

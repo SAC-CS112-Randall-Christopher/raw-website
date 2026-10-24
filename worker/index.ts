@@ -38,7 +38,7 @@ const worker = {
     const url = new URL(request.url);
     const studio = await studioGateway(request, env);
     if (studio) return studio;
-    const video = await publicDemoVideo(request, env);
+    const video = await publicDemoVideo(request);
     if (video) return video;
 
     if (url.pathname === "/_vinext/image") {

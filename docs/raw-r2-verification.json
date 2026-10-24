@@ -1,0 +1,115 @@
+{
+  "verifiedAt": "2026-10-24T14:43:54.183Z",
+  "bucket": "randall-automation-works-media",
+  "publicOrigin": "https://media.randallautomationworks.com",
+  "tls": "verified by HTTPS requests with normal certificate validation",
+  "websiteCutover": false,
+  "results": [
+    {
+      "name": "raw-highlight.mp4",
+      "url": "https://media.randallautomationworks.com/raw-workspace/6aaebd51a71943e6bd189485213e1f7a93dad48bb27041d2d87a73c8cfc7747a/raw-highlight.mp4",
+      "bytes": 7956375,
+      "sha256": "6aaebd51a71943e6bd189485213e1f7a93dad48bb27041d2d87a73c8cfc7747a",
+      "etag": "\"0a6a23d2702abdc633238e2ac2c4bf8f\"",
+      "headStatus": 200,
+      "fullChecksum": true,
+      "checks": [
+        {
+          "label": "start",
+          "status": 206,
+          "bytes": 32,
+          "contentRange": "bytes 0-31/7956375"
+        },
+        {
+          "label": "suffix",
+          "status": 206,
+          "bytes": 32,
+          "contentRange": "bytes 7956343-7956374/7956375"
+        },
+        {
+          "label": "if-range-match",
+          "status": 206,
+          "bytes": 32,
+          "contentRange": "bytes 0-31/7956375"
+        },
+        {
+          "label": "if-range-stale",
+          "status": 200,
+          "bytes": 7956375,
+          "contentRange": null
+        },
+        {
+          "label": "not-modified",
+          "status": 304,
+          "bytes": 0,
+          "contentRange": null
+        },
+        {
+          "label": "unsatisfiable",
+          "status": 416,
+          "bytes": 0,
+          "contentRange": "bytes */7956375"
+        },
+        {
+          "label": "cors",
+          "status": 206,
+          "bytes": 32,
+          "contentRange": "bytes 0-31/7956375"
+        }
+      ]
+    },
+    {
+      "name": "raw-full-demo.mp4",
+      "url": "https://media.randallautomationworks.com/raw-workspace/ab08e2eb3346453829d91d9bb5fe96e24d7ba21306fb87175ae0e285c64e1906/raw-full-demo.mp4",
+      "bytes": 16841446,
+      "sha256": "ab08e2eb3346453829d91d9bb5fe96e24d7ba21306fb87175ae0e285c64e1906",
+      "etag": "\"afd34fa95187d08c80372c2980f77bf2\"",
+      "headStatus": 200,
+      "fullChecksum": true,
+      "checks": [
+        {
+          "label": "start",
+          "status": 206,
+          "bytes": 32,
+          "contentRange": "bytes 0-31/16841446"
+        },
+        {
+          "label": "suffix",
+          "status": 206,
+          "bytes": 32,
+          "contentRange": "bytes 16841414-16841445/16841446"
+        },
+        {
+          "label": "if-range-match",
+          "status": 206,
+          "bytes": 32,
+          "contentRange": "bytes 0-31/16841446"
+        },
+        {
+          "label": "if-range-stale",
+          "status": 200,
+          "bytes": 16841446,
+          "contentRange": null
+        },
+        {
+          "label": "not-modified",
+          "status": 304,
+          "bytes": 0,
+          "contentRange": null
+        },
+        {
+          "label": "unsatisfiable",
+          "status": 416,
+          "bytes": 0,
+          "contentRange": "bytes */16841446"
+        },
+        {
+          "label": "cors",
+          "status": 206,
+          "bytes": 32,
+          "contentRange": "bytes 0-31/16841446"
+        }
+      ]
+    }
+  ]
+}

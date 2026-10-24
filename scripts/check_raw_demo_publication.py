@@ -61,7 +61,7 @@ def inspect_player(page, name, duration, cues, label):
       return {status:r.status,range:r.headers.get('content-range'),type:r.headers.get('content-type'),bytes:[...new Uint8Array(await r.arrayBuffer())]};
     }''', metadata['src'])
     assert ranged['status'] == 206 and ranged['range'].startswith('bytes 1024-2047/'), ranged['status']
-    assert bytes(ranged['bytes']) == (root / 'public/products/raw-workspace' / name).read_bytes()[1024:2048]
+    assert bytes(ranged['bytes']) == (root / 'media/raw-workspace' / name).read_bytes()[1024:2048]
     video.evaluate('v=>{v.currentTime=v.duration-1.2;return v.play();}')
     page.wait_for_function('document.querySelector("video").ended', timeout=20000)
     assert video.evaluate('v=>v.error===null')
