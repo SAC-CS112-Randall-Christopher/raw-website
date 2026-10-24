@@ -48,7 +48,7 @@ for original,web in [('RAW-highlights','raw-highlight'),('RAW-business-demo','ra
     assert [video['width'],video['height']]==[1920,1080] and video['pix_fmt']=='yuv420p'
     assert video['r_frame_rate']=='30/1' and audio['sample_rate']=='48000' and audio['channels']==2
     assert int(video['nb_frames'])==reviewed['frames'] and abs(duration-reviewed['duration'])<.05
-    assert (60<=duration<=90) if web=='raw-highlight' else (180<=duration<=240)
+    assert (65<=duration<=75) if web=='raw-highlight' else (150<=duration<=180)
     subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-i',str(dst),'-f','null','-'],check=True)
     blob=dst.read_bytes();assert blob.index(b'moov')<blob.index(b'mdat')
     original_audio=audio_hash(src);assert audio_hash(dst)==original_audio
@@ -69,10 +69,10 @@ for original,web in [('RAW-highlights','raw-highlight'),('RAW-business-demo','ra
     if encoding:row['web_encoding']=encoding
     media['videos'][web+'.mp4']=row
     print(web+': '+str(duration)+' seconds, '+str(dst.stat().st_size)+' bytes',flush=True)
-for src,dst in [('RAW-poster.jpg','raw-demo-poster.jpg'),('narration-transcript.txt','raw-demo-transcript.txt')]:
+for src,dst in [('RAW-poster.jpg','raw-demo-poster.jpg'),('RAW-highlight-poster.jpg','raw-highlight-poster.jpg'),('narration-transcript.txt','raw-demo-transcript.txt'),('highlight-transcript.txt','raw-highlight-transcript.txt')]:
     shutil.copyfile(source/src,target/dst)
-for name in ['raw-highlight.mp4','raw-full-demo.mp4','raw-demo-poster.jpg',
-             'raw-highlight.vtt','raw-full-demo.vtt','raw-demo-transcript.txt']:
+for name in ['raw-highlight.mp4','raw-full-demo.mp4','raw-demo-poster.jpg','raw-highlight-poster.jpg',
+             'raw-highlight.vtt','raw-full-demo.vtt','raw-demo-transcript.txt','raw-highlight-transcript.txt']:
     file=target/name
     media['assets'][name]={'bytes':file.stat().st_size,'sha256':digest(file)}
 (root/'docs/raw-demo-media.json').write_text(json.dumps(media,indent=2)+'\n')

@@ -1,126 +1,100 @@
-# RAW website video publication
+# RAW result-led website video publication
 
-The revised films were published on October 23, 2026 on MAIN (October 24 UTC),
-using the existing Cloudflare Worker and authorized local Wrangler session.
+The revised films give useful results priority over setup and routine navigation.
+Each has independent narration, a distinct viewing poster, its own transcript
+and a real adjacent invitation to discuss a business workflow.
 
 | Placement | Public page | Film |
 | --- | --- | --- |
-| Homepage featured RAW product | [Randall Automation Works](https://randallautomationworks.com/#workspace-offer-title) | 89-second highlight |
-| RAW product demonstration | [RAW Workspace: see it in action](https://randallautomationworks.com/raw-workspace#see-it-in-action) | 3 minutes 43 seconds |
+| Homepage | [Randall Automation Works](https://randallautomationworks.com/#workspace-offer-title) | 1:15 highlight |
+| RAW Business Workspace | [See it in action](https://randallautomationworks.com/raw-workspace#see-it-in-action) | 2:58 full demonstration |
 
-Both native players have controls, inline playback, a poster, default English
-captions and transcript links. Playback begins after the visitor starts it.
-The homepage links to the full demonstration. Copy identifies fictional
-Pine Ridge Rental & Service data, private sign-in and condensed processing waits.
+Both native players have controls, inline playback and default English captions.
+Playback starts after visitor interaction. The homepage's actual link opens the
+full demonstration. Fictional data and condensed processing waits are disclosed.
 
-## What the revised film proves
+## Demonstrated outcome
 
-The owner types a real account question. The connected assistant returns 961
-active accounts, including 15 unknown types, followed by the native chart and
-supporting records. A fresh email inquiry reads Maya's actual fictional request
-and returns a summary and reply wording. The owner saves that exact wording as
-an editable, unsent draft and creates a linked task and internal calendar block
-for October 26, 9:00–9:30 a.m. America/Denver. The full film also shows report
-history, a weekday 8 a.m. report schedule, financial evidence and dated readings.
+The opening shows **961 active accounts**, followed by the genuine connected
+assistant inquiry, chart and contributing customer records. A narrower Pine Ridge
+view has **401** accounts; the original saved report remains available.
 
-VoiceStudio uses the installed KittenTTS Hugo preset at speed 0.92. There is
-no narration acceleration after generation; music is quieter at -36 dB.
-All recording, narration, recognition and rendering used existing local tools
-and hardware. Existing ChatGPT authorization supplies the actual inquiries.
+Maya at Alder Grove Landscaping requests an excavator for three days starting
+**October 28, 2026**. The actual source rate is **$750/day**, giving a **$2,250 USD
+rental subtotal**. Availability, delivery, insurance and tax remain pending, and
+the quote total is visibly unconfirmed. The assistant reads the imported message,
+summarizes it and prepares reply wording using the reviewed quote. The owner
+reviews and saves the unsent draft, then saves a task and linked internal calendar
+block for **October 26, 10:00–10:30 America/Denver**, before the rental. Decisive
+save actions and their readable results remain in the edit.
 
-## Published artifacts
+The full film also shows a **$180 discrepancy to investigate** between $84,000
+of rental charges and an $84,180 control; a dated **1,420-hour** equipment reading
+against a **1,350-hour** service target; and a genuinely completed scheduled report
+run with an inspectable result. The original weekday **08:00** schedule was
+restored afterward. No report email was delivered.
 
-Source master commit:
-[d0e0443f9c0207fa5118ef3669ec1a2227a01d77](https://github.com/SAC-CS112-Randall-Christopher/DMPH/commit/d0e0443f9c0207fa5118ef3669ec1a2227a01d77),
-folder `deliverables/raw-demo-revision`, in
-[DMPH PR #4](https://github.com/SAC-CS112-Randall-Christopher/DMPH/pull/4).
-The website was built, tested and deployed from
-`a42b4fd85edc6ecdb75b567506cef5ec90c193c7`.
+## Media and deployment
 
-| Public asset | Duration | Bytes | Format |
-| --- | --- | --- | --- |
-| [raw-highlight.mp4](https://randallautomationworks.com/products/raw-workspace/raw-highlight.mp4) | 88.704 seconds | 8,372,432 | 1080p H.264 / AAC stereo |
-| [raw-full-demo.mp4](https://randallautomationworks.com/products/raw-workspace/raw-full-demo.mp4) | 223.082 seconds | 20,139,719 | 1080p H.264 / AAC stereo |
+The source delivery, both native edits, selected original WebMs/WAVs, captions,
+separate scripts and fictional service receipts are in `deliverables/raw-demo-result-led`
+in [DMPH PR #4](https://github.com/SAC-CS112-Randall-Christopher/DMPH/pull/4).
+The exact source commit and all eight asset hashes/byte counts are pinned in
+[raw-demo-media.json](raw-demo-media.json).
 
-The highlight is the reviewed source export byte for byte. The full web copy
-uses libx264 slow CRF 22 to fit the existing 25 MiB static asset limit. All
-6,692 frames and the exact original AAC packets remain; the duration and
-captions are unchanged. Both packaged files pass complete decoding and actual
-fast-start structure checks. Source/publication SHA-256 values, audio packet
-hashes, dimensions and frame counts are in [raw-demo-media.json](raw-demo-media.json).
-The original films remain preserved in Git history and the DMPH delivery.
+Both MP4s fit the existing 25 MiB asset limit and are copied byte for byte from
+the reviewed 1080p/30 H.264/AAC exports. There is no additional website compression.
+The package checks original AAC packets, every frame, captions, complete decoding
+and actual fast-start atom order.
 
-## Deployment
+VoiceStudio uses installed KittenTTS **Hugo** at speed **0.92**, no later speech
+acceleration, and locally generated music at **−36 dB**. The preceding revision
+already used this engine/preset; the changes are the scripts, timing, story and
+framing. No new model, paid API, stock purchase, service or subscription was added.
+**New spend: $0.**
 
-- Existing Worker: `randall-automation-works`.
-- Production version: `65e6df6c-604c-4fd0-beef-98b4dbb8147a`.
-- Deployment time: `2026-10-24T00:18:01.881058Z`.
-- Wrangler's fresh deployment listing confirms that version receives 100% of traffic.
-- Previous production version: `713028df-b08b-481f-8d2b-13cd4caeb7da`.
+The existing Worker is `randall-automation-works`. The sanitized
+[deployment receipt](raw-demo-deployment.json) records its deployed source commit,
+production version, 100% traffic assignment and prior rollback version. The
+protected gateway keeps routing priority and `keep_vars` preserves its bindings.
 
-The existing seekable-public-video path is retained. Only the two public MP4
-paths run through the Worker and a content-hash-keyed native Cache API entry.
-Complete Assets streams populate the cache; Cloudflare serves byte ranges.
-The Worker does not buffer or manually slice whole videos in JavaScript.
-Client cookies, authorization headers and query strings do not enter the cache.
-Public browser responses revalidate when a film changes at its existing URL.
-
-The protected studio gateway keeps its existing routing priority. Deployment
-uses the existing owner account and preserves dashboard-managed configuration.
-No storage bucket, paid API, new model, purchase or subscription was added.
-New spend: **$0**. The previous version above is the explicit rollback reference;
-no rollback was performed.
+Only the two public MP4 paths use the existing content-hash-keyed native Cache
+API entries, populated from complete Assets streams. Cloudflare serves byte
+ranges without JavaScript buffering or manual slicing. Browser responses
+revalidate the stable URLs when films change. User credentials, cookies and
+queries do not enter the video cache.
 
 ## Verification
 
-- Production build and all **28 tests** passed, without failures or skips.
-- ESLint and Wrangler deployment dry run passed.
-- Independent Codex review found no material issue in the revised copy, code,
-  media package or source provenance. Actual committed DMPH blobs match the
-  source hashes. Sampled web frames preserve readable report, email, calendar
-  and schedule details after compression.
-- Local Wrangler preview: all four desktop/mobile browser cases passed,
-  including native keyboard playback, default captions, exact 206 range bytes,
-  middle/end seeking and navigation through the actual homepage link. See
-  [preview verification](raw-demo-preview-verification.json).
-- Live custom domain: all four desktop/mobile cases passed, with 19/49 loaded
-  default English caption cues, exact 206 range bytes, correct client navigation,
-  no autoplay/initial MP4 download, no horizontal overflow and no page errors.
-  All six complete HTTP response hashes and byte counts match the media manifest.
-- Both public films played from beginning to end at **normal speed (1x)**,
-  reaching 88.704 and 223.082 seconds with `ended: true`, without media or page
-  errors. See [live verification](raw-demo-live-verification.json) and the
-  [local command logs](evidence/raw-demo-local-checks.txt).
-
-Verified live layouts:
-[desktop highlight](evidence/raw-demo-live-desktop-highlight.png),
-[desktop full demo](evidence/raw-demo-live-desktop-full-demo.png),
-[mobile highlight](evidence/raw-demo-live-mobile-highlight.png) and
-[mobile full demo](evidence/raw-demo-live-mobile-full-demo.png).
-
-Reproduce with the existing local Playwright/Chromium runtime:
+See [preview verification](raw-demo-preview-verification.json),
+[live verification](raw-demo-live-verification.json) and
+[local check evidence](evidence/raw-demo-local-checks.txt) for actual-file proof.
 
 ```sh
 python scripts/check_raw_demo_publication.py \
   --base-url https://randallautomationworks.com --label live --complete
 ```
 
-The checker verifies all six complete HTTP response hashes against the media
-manifest, in addition to native player behavior and byte-range seeking.
-Mobile checks use Chromium viewport/touch emulation; they do not certify
-physical phones or Safari. Complete playback and local ASR do not establish
-human preference for the synthetic voice or a physical speaker listening test.
+The checker verifies all eight complete HTTP response hashes, desktop and 390px
+mobile layouts, default captions, native keyboard playback, exact 206 bytes,
+seeking and the actual homepage-to-full-demo link. `--complete` also plays both
+public films beginning to end at normal speed.
+
+Mobile uses Chromium viewport/touch emulation, not physical phones or Safari.
+Dense source records are best inspected full screen. Playback, local speech
+recognition and loudness checks do not establish human voice preference or a
+physical-speaker listening test.
 
 ## Demonstration limits
 
-AI reads permitted records, answers the report question and prepares reply
-wording. The owner saves the draft, task and appointment. The existing
-assistant's retained private correspondence context correctly prevented shared
-AI writes; a separate narrowed connection did not finish provider setup.
-Neither failure is presented as a successful AI save. No email or invitation
-was sent, no equipment booking was confirmed, and recurring execution/email
-delivery are not demonstrated. The configured report schedule has no run yet.
+The incoming Gmail message is a **one-time read-only sample** with ongoing sync
+off. AI reads, summarizes, reports and prepares wording; the owner saves the
+draft, task and calendar block. No email, invitation, equipment reservation,
+source-system write or accounting certification is implied. Access restrictions
+remain active. Universal subscription compatibility and all-local AI processing
+are not claimed. Provider sign-in was completed privately.
 
-The separate protected-studio owner-password initialization still requires
-its hidden local prompt. This public-video update does not complete that setup.
-Complete source-film proof and limitations are in the DMPH revision handoff.
+The source display correction is preserved in
+[RAW PR #59](https://github.com/SAC-CS112-Randall-Christopher/sb_harness/pull/59).
+The separate protected-studio password initialization still requires its hidden
+local prompt. Public video publication does not complete that setup.

@@ -1,14 +1,14 @@
 {
-  "base_url": "http://127.0.0.1:8751",
+  "base_url": "http://127.0.0.1:8892",
   "checks": [
     {
       "label": "desktop-highlight",
-      "src": "http://127.0.0.1:8751/products/raw-workspace/raw-highlight.mp4",
-      "duration": 88.704,
+      "src": "http://127.0.0.1:8892/products/raw-workspace/raw-highlight.mp4",
+      "duration": 74.538,
       "width": 1920,
       "height": 1080,
       "english_captions": {
-        "cues": 19,
+        "cues": 18,
         "mode": "showing"
       },
       "range_status": 206,
@@ -20,12 +20,12 @@
     },
     {
       "label": "desktop-full-demo",
-      "src": "http://127.0.0.1:8751/products/raw-workspace/raw-full-demo.mp4",
-      "duration": 223.082,
+      "src": "http://127.0.0.1:8892/products/raw-workspace/raw-full-demo.mp4",
+      "duration": 178.346,
       "width": 1920,
       "height": 1080,
       "english_captions": {
-        "cues": 49,
+        "cues": 43,
         "mode": "showing"
       },
       "range_status": 206,
@@ -37,12 +37,12 @@
     },
     {
       "label": "mobile-highlight",
-      "src": "http://127.0.0.1:8751/products/raw-workspace/raw-highlight.mp4",
-      "duration": 88.704,
+      "src": "http://127.0.0.1:8892/products/raw-workspace/raw-highlight.mp4",
+      "duration": 74.538,
       "width": 1920,
       "height": 1080,
       "english_captions": {
-        "cues": 19,
+        "cues": 18,
         "mode": "showing"
       },
       "range_status": 206,
@@ -54,12 +54,12 @@
     },
     {
       "label": "mobile-full-demo",
-      "src": "http://127.0.0.1:8751/products/raw-workspace/raw-full-demo.mp4",
-      "duration": 223.082,
+      "src": "http://127.0.0.1:8892/products/raw-workspace/raw-full-demo.mp4",
+      "duration": 178.346,
       "width": 1920,
       "height": 1080,
       "english_captions": {
-        "cues": 49,
+        "cues": 43,
         "mode": "showing"
       },
       "range_status": 206,
@@ -75,33 +75,43 @@
   "exact_public_assets": [
     {
       "name": "raw-highlight.mp4",
-      "bytes": 8372432,
-      "sha256": "615db04bd75b102f1756efb9d6b57b95326767f10fea852135a94301eee431c6"
+      "bytes": 7726243,
+      "sha256": "91cbd6eb834322b790fc9f7fa69485aceef3cb4d07e0e8c1504454736ea36b78"
     },
     {
       "name": "raw-full-demo.mp4",
-      "bytes": 20139719,
-      "sha256": "151c6205c6f91d7527bcbc8771082c01062f6f13a53dd86709a8d133e44671f8"
+      "bytes": 19787840,
+      "sha256": "f5a41af4b5e53a249bf88b99a4beda19484bbc9ec0d2343f1f6761a65ae2fbf7"
     },
     {
       "name": "raw-demo-poster.jpg",
-      "bytes": 40729,
-      "sha256": "510b30effcdae08ddd224de2ab59be3a130d7313f43ea71d838c127435b9dd6d"
+      "bytes": 238277,
+      "sha256": "5ca6aa6c18e72f493ad4d87292f20f994938f2edc564c10d15bb9fea06d41787"
+    },
+    {
+      "name": "raw-highlight-poster.jpg",
+      "bytes": 190430,
+      "sha256": "75202c8c43c4494bbdb65787188cef02aad72a48d7c12811ee07085a3ed33de5"
     },
     {
       "name": "raw-highlight.vtt",
-      "bytes": 1673,
-      "sha256": "153d3bd03be396bacb363adbc5004eaedc0c1c7bf9e0e2b4840c530394316e3a"
+      "bytes": 1491,
+      "sha256": "5f556d3a4e15b6ead4fcd3ff70b4b1c371e7565dc8864d0d06b4480e77d54732"
     },
     {
       "name": "raw-full-demo.vtt",
-      "bytes": 4410,
-      "sha256": "7920d89dce3eef7d781b6ab487de5e4f274da6fba26e3292f6c2cb7ee3aba28f"
+      "bytes": 3716,
+      "sha256": "b4b548e4ee0a74088ed2378a24c73c5ec522d14fcd95265bbf5213a9c06a8d58"
     },
     {
       "name": "raw-demo-transcript.txt",
-      "bytes": 3595,
-      "sha256": "c22798a020f8515aad1e6a7ee20a14a64a20e7b2f5fe154aa70a3fc42721bb49"
+      "bytes": 3025,
+      "sha256": "9e3c7678eea554e22e646cd0445c11144c49b56dbc7f2947480721fac3ad2607"
+    },
+    {
+      "name": "raw-highlight-transcript.txt",
+      "bytes": 1220,
+      "sha256": "490233392d2e51a948bc494c35bd08bf08ee5e928566ff8e913454eed6faff0f"
     }
   ]
 }

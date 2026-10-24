@@ -1,0 +1,26 @@
+RAW — final narration transcript
+Fictional business: Pine Ridge Rental & Service
+
+00:00:00.000  Ask. Check. Act.
+961 active accounts. A chart you can explore. The customer records behind the answer.
+
+00:00:08.667  Your information, with your assistant
+RAW connects your existing business information with your AI assistant. This example uses a connected ChatGPT subscription.
+
+00:00:18.700  An answer you can inspect
+Ask for accounts by customer type. Inspect a group, then reopen the result in Reports.
+
+00:00:26.700  Maya needs a three-day rental
+Now Maya needs an excavator from October 28. She asks for a quote and delivery window.
+
+00:00:34.167  A useful, reviewed reply
+The assistant prepares a reply using the $2,250 rental subtotal. We review and save the draft. Delivery and extra charges remain pending.
+
+00:00:47.667  Save the follow-up
+Review the October 26 follow-up. Save the task and its linked calendar block, two days before the rental.
+
+00:00:57.667  Work stays connected
+Useful answers and follow-ups stay with the business.
+
+00:01:01.833  RAW Business Workspace
+RAW Business Workspace. Keep your systems. Turn information into useful work. Watch the full demo, or discuss your workflow with Chris.

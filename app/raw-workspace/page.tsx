@@ -5,7 +5,7 @@ import demoMedia from "../../docs/raw-demo-media.json";
 
 const base = "https://randallautomationworks.com";
 const fullDemoMedia = demoMedia.videos['raw-full-demo.mp4'];
-const description = "RAW Business Workspace connects customer records, equipment quotes, tasks, documents and reporting. Configure a workspace around the way your small business works.";
+const description = "Keep the business software you rely on. RAW Business Workspace connects its information with your AI assistant for inspectable reports, customer context and useful follow-up.";
 
 export const metadata: Metadata = {
   title: "RAW Business Workspace | Connected Small Business Software",
@@ -51,7 +51,7 @@ export default function RawWorkspace() {
     <section className="workspace-hero">
       <div className="shell">
         <p className="workspace-breadcrumb"><Link href="/">Randall Automation Works</Link><span aria-hidden="true">/</span> RAW Business Workspace</p>
-        <div className="workspace-hero-copy"><p className="eyebrow eyebrow-light">RAW Business Workspace</p><h1>Your business.<br /><em>Connected.</em></h1><p>Customers, quotes and the work in between. One workspace, configured around your business.</p><div className="button-row"><a className="button button-sand" href={bookingLink} target="_blank" rel="noreferrer">Talk about your workspace <span aria-hidden="true">↗</span></a><a className="workspace-watch-link" href="#see-it-in-action">See it in action <span aria-hidden="true">↓</span></a></div><p className="workspace-byline">Built by Randall Automation Works · Montrose, Colorado</p></div>
+        <div className="workspace-hero-copy"><p className="eyebrow eyebrow-light">RAW Business Workspace</p><h1>Your business.<br /><em>Connected.</em></h1><p>Keep the software you rely on. Connect its business information with your AI assistant, understand what is happening and turn answers into useful work.</p><div className="button-row"><a className="button button-sand" href={bookingLink} target="_blank" rel="noreferrer">Discuss your workflow with Chris <span aria-hidden="true">↗</span></a><a className="workspace-watch-link" href="#see-it-in-action">See it in action <span aria-hidden="true">↓</span></a></div><p className="workspace-byline">Built by Randall Automation Works · Montrose, Colorado</p></div>
         <figure className="workspace-product-frame">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/products/raw-workspace/overview.png" width={1600} height={1000} alt="Actual RAW Business Workspace home screen showing a sample business overview, customers, quotes and tasks" fetchPriority="high" />
@@ -60,7 +60,7 @@ export default function RawWorkspace() {
       </div>
     </section>
 
-    <section className="section workspace-intro"><div className="shell workspace-two-col"><div><p className="eyebrow">One place to keep things moving</p><h2>Less scattered.<br />More connected.</h2></div><div><p>Customer details in one system. Quotes in another. Tasks and files somewhere else. The information exists, but your team still has to piece it together.</p><p>RAW Workspace gives that work a shared home. Start with the modules your business needs and keep the records, next steps and supporting details connected.</p></div></div></section>
+    <section className="section workspace-intro"><div className="shell workspace-two-col"><div><p className="eyebrow">One place to keep things moving</p><h2>Less scattered.<br />More connected.</h2></div><div><p>Customer details in one system. Quotes in another. Tasks and files somewhere else. The information exists, but your team still has to piece it together.</p><p>RAW works with permitted business information from supported connections and source snapshots. Ask ordinary questions, inspect the records behind an answer and keep reports, customer context and follow-up available in one workspace. We agree on the inputs and access for your business before connecting them.</p></div></div></section>
 
     <section className="section workspace-film-section" id="see-it-in-action">
       <div className="shell">
@@ -73,7 +73,8 @@ export default function RawWorkspace() {
           </video>
         </div>
         <p className="workspace-caption">Actual RAW desktop interface and connected assistant results using fictional Pine Ridge Rental &amp; Service data. The owner reviews and saves the draft, task and calendar block. Provider sign-in was completed privately; processing waits are condensed. No email or invitation was sent.</p>
-        <div className="workspace-film-links"><a className="text-link" href="/products/raw-workspace/raw-demo-transcript.txt">Read the demo transcript</a><a className="text-link" href="/products/raw-workspace/raw-full-demo.vtt" download>Download English captions</a></div>
+        <p>Bring one recurring task and the software you use today. We will discuss the first useful improvement for your business.</p>
+        <div className="workspace-film-links"><a className="button button-primary" href={bookingLink} target="_blank" rel="noreferrer">Discuss your workflow with Chris <span aria-hidden="true">↗</span></a><a className="text-link" href="/products/raw-workspace/raw-demo-transcript.txt">Read the demo transcript</a><a className="text-link" href="/products/raw-workspace/raw-full-demo.vtt" download>Download English captions</a></div>
       </div>
     </section>
 

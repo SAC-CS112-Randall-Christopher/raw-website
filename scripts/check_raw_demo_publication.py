@@ -91,7 +91,7 @@ with sync_playwright() as pw:
         page.wait_for_url(base + '/raw-workspace#see-it-in-action')
         inspected=media['raw-full-demo.mp4']
         inspect_player(page, 'raw-full-demo.mp4', inspected['duration'], inspected['caption_cues'], label + '-full-demo')
-        for name in ['raw-demo-poster.jpg', 'raw-full-demo.vtt', 'raw-highlight.vtt', 'raw-demo-transcript.txt']:
+        for name in ['raw-demo-poster.jpg', 'raw-highlight-poster.jpg', 'raw-full-demo.vtt', 'raw-highlight.vtt', 'raw-demo-transcript.txt', 'raw-highlight-transcript.txt']:
             status = page.evaluate('async path=>(await fetch(path,{signal:AbortSignal.timeout(20000)})).status', '/products/raw-workspace/' + name)
             assert status == 200, (name, status)
         context.close()

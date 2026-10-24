@@ -1,64 +1,71 @@
 {
   "source_repository": "SAC-CS112-Randall-Christopher/DMPH",
-  "source_commit": "d0e0443f9c0207fa5118ef3669ec1a2227a01d77",
-  "source_folder": "deliverables/raw-demo-revision",
+  "source_commit": "37ce8fc592b2e02ffcfa60c8155bb00b328057f0",
+  "source_folder": "deliverables/raw-demo-result-led",
   "assets": {
     "raw-highlight.mp4": {
-      "bytes": 8372432,
-      "sha256": "615db04bd75b102f1756efb9d6b57b95326767f10fea852135a94301eee431c6"
+      "bytes": 7726243,
+      "sha256": "91cbd6eb834322b790fc9f7fa69485aceef3cb4d07e0e8c1504454736ea36b78"
     },
     "raw-full-demo.mp4": {
-      "bytes": 20139719,
-      "sha256": "151c6205c6f91d7527bcbc8771082c01062f6f13a53dd86709a8d133e44671f8"
+      "bytes": 19787840,
+      "sha256": "f5a41af4b5e53a249bf88b99a4beda19484bbc9ec0d2343f1f6761a65ae2fbf7"
     },
     "raw-demo-poster.jpg": {
-      "bytes": 40729,
-      "sha256": "510b30effcdae08ddd224de2ab59be3a130d7313f43ea71d838c127435b9dd6d"
+      "bytes": 238277,
+      "sha256": "5ca6aa6c18e72f493ad4d87292f20f994938f2edc564c10d15bb9fea06d41787"
+    },
+    "raw-highlight-poster.jpg": {
+      "bytes": 190430,
+      "sha256": "75202c8c43c4494bbdb65787188cef02aad72a48d7c12811ee07085a3ed33de5"
     },
     "raw-highlight.vtt": {
-      "bytes": 1673,
-      "sha256": "153d3bd03be396bacb363adbc5004eaedc0c1c7bf9e0e2b4840c530394316e3a"
+      "bytes": 1491,
+      "sha256": "5f556d3a4e15b6ead4fcd3ff70b4b1c371e7565dc8864d0d06b4480e77d54732"
     },
     "raw-full-demo.vtt": {
-      "bytes": 4410,
-      "sha256": "7920d89dce3eef7d781b6ab487de5e4f274da6fba26e3292f6c2cb7ee3aba28f"
+      "bytes": 3716,
+      "sha256": "b4b548e4ee0a74088ed2378a24c73c5ec522d14fcd95265bbf5213a9c06a8d58"
     },
     "raw-demo-transcript.txt": {
-      "bytes": 3595,
-      "sha256": "c22798a020f8515aad1e6a7ee20a14a64a20e7b2f5fe154aa70a3fc42721bb49"
+      "bytes": 3025,
+      "sha256": "9e3c7678eea554e22e646cd0445c11144c49b56dbc7f2947480721fac3ad2607"
+    },
+    "raw-highlight-transcript.txt": {
+      "bytes": 1220,
+      "sha256": "490233392d2e51a948bc494c35bd08bf08ee5e928566ff8e913454eed6faff0f"
     }
   },
   "videos": {
     "raw-highlight.mp4": {
-      "duration": 88.704,
-      "duration_iso": "PT1M29S",
-      "duration_label": "1 minutes 29 seconds",
-      "caption_cues": 19,
-      "frames": 2661,
+      "duration": 74.538,
+      "duration_iso": "PT1M15S",
+      "duration_label": "1 minutes 15 seconds",
+      "caption_cues": 18,
+      "frames": 2236,
       "video": "H.264 1920x1080 30fps yuv420p",
       "audio": "AAC 48kHz stereo",
       "fast_start": true,
       "complete_decode_passed": true,
       "source_file": "RAW-highlights.mp4",
-      "source_sha256": "615db04bd75b102f1756efb9d6b57b95326767f10fea852135a94301eee431c6",
+      "source_sha256": "91cbd6eb834322b790fc9f7fa69485aceef3cb4d07e0e8c1504454736ea36b78",
       "audio_packets_unchanged": true,
-      "audio_sha256": "0ef7c67d15836cae57131b0839547c11abc6f1e5376f7670b4543a63e19a0013"
+      "audio_sha256": "95cf6f5d764c2342e51bd1b4e94a8f904372eb8edec8ec6ad87ed32437e17454"
     },
     "raw-full-demo.mp4": {
-      "duration": 223.082,
-      "duration_iso": "PT3M43S",
-      "duration_label": "3 minutes 43 seconds",
-      "caption_cues": 49,
-      "frames": 6692,
+      "duration": 178.346,
+      "duration_iso": "PT2M58S",
+      "duration_label": "2 minutes 58 seconds",
+      "caption_cues": 43,
+      "frames": 5350,
       "video": "H.264 1920x1080 30fps yuv420p",
       "audio": "AAC 48kHz stereo",
       "fast_start": true,
       "complete_decode_passed": true,
       "source_file": "RAW-business-demo.mp4",
-      "source_sha256": "4e456286e214c8122ba729628e33db10fde9973cb5798b4de991419b1c24079c",
+      "source_sha256": "f5a41af4b5e53a249bf88b99a4beda19484bbc9ec0d2343f1f6761a65ae2fbf7",
       "audio_packets_unchanged": true,
-      "audio_sha256": "c34aebcd8c47e014095af259a8bc00454a320d397fbd0617e81ff7f322b66836",
-      "web_encoding": "FFmpeg / libx264 slow CRF22; audio copied; fast-start"
+      "audio_sha256": "349b7641b73fa12de545f072c793567a15c75e7e08f46a4fc84a04d5d4746f0a"
     }
   },
   "new_spend_usd": 0
