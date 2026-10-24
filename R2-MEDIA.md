@@ -4,8 +4,14 @@ Chris authorized a separate R2 media bucket and use of the existing account's
 R2 billing on 2026-10-24. The public films no longer need to fit the Workers
 static-assets 25 MiB per-file limit. The subsequent sharp edit uses native
 DPR2/DPR3 lossless captures, complete readable regions and one final video
-encode. Its source package is DMPH `c30865067d3675942bd163f38191ea154c38dba0`,
-`deliverables/raw-workspace-polish/`; the website cutover has separate evidence.
+encode. The owner subsequently selected **option B, conversational Ryan**. Its
+accepted 1:48 highlight / 3:48 full-demo source is DMPH
+`230a443b2b42c6163ebf95a6aa1afe2a2d0f291b`,
+`deliverables/raw-workspace-ryan-b/`. The website copies all eight assets
+unchanged; new origin/publication receipts use the `raw-ryan-b-*` prefix.
+Both films and both lossless edit archives already pass complete public R2
+hashes and exact ranges. Website cutover has separate preview/deployment/live
+evidence and must not be inferred from origin availability alone.
 
 ## Configured resources
 
@@ -83,7 +89,9 @@ downloads and full hashes. See [live checks](docs/raw-r2-live.json),
 new voice auditions are separate work; those original hosting receipts do not
 represent the newer film revision.
 
-The newer accepted films are 105.877s / 212.010s with 28 / 57 cues. They explicitly
+## Previous sharp release — historical
+
+The previous accepted films are 105.877s / 212.010s with 28 / 57 cues. They explicitly
 show the connected-inbox workflow and retain Ryan with ordinal dates. Source and
 website MP4s are byte-identical; public R2 full hashes and ranges pass before any
 Worker change. The source delivery also preserves original narration and links
@@ -113,8 +121,10 @@ the temporary website checkout is retired after clean-state and remote proof.
 The owner requested another local voice comparison. Five matched-volume MP3/WAV
 auditions are available at
 https://media.randallautomationworks.com/raw-workspace/voice-auditions/20261024-polish-1/index.html.
-They are public review copies, not a change to the production narration. Ryan
-remains the last owner-approved production voice while the choice is pending.
+They remain public review copies. The owner chose option B; the new source
+package above applies that exact Ryan instruction and seed 41 at natural speed.
+Its per-scene narration and concatenations are sample-exact at 48 kHz. The
+approved audition is distinct from subjective listening to every new sentence.
 
 Primary references: [public buckets](https://developers.cloudflare.com/r2/buckets/public-buckets/),
 [CORS](https://developers.cloudflare.com/r2/buckets/cors/),

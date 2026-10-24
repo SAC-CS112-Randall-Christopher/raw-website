@@ -60,11 +60,19 @@ offline-host 503, restart persistence and logout revocation. The Python suite
 passed 24 tests; this website passed 23 tests, production build, lint and
 Wrangler dry run. These are local/runtime checks, not a claim of hosted CI.
 
-The owner's `DMPHstudio` account still awaits password entry at a hidden local
-prompt. The owner host remains stopped, so the public studio currently
-returns 503. Once initialized and started from MAIN's desktop shortcut it uses
-the already deployed route. MAIN and its WSL launcher must stay running for
-editing and exports. This does not make the computer an always-on server.
+The owner's `DMPHstudio` account is initialized. On October 24 the owner used
+the protected phone-browser handoff, signed in and changed the temporary
+password. A separate status-only observation confirmed `must_change=false`
+and cleared temporary expiry, without reading any password or hash. Studio,
+voice and tunnel services are running on MAIN. The consumed setup link was
+removed; ordinary login now uses the owner's chosen password.
+
+The studio service currently runs from `C:/Projects/DMPH-Phone-Login` through a
+private systemd override. Retain that checkout while the service points to it.
+Do not reset the permanent owner account or run disposable acceptance on its
+port. See [phone setup and owner activation](https://github.com/SAC-CS112-Randall-Christopher/DMPH/blob/feat/dmph-phone-first-login/docs/PHONE_LOGIN.md)
+and [draft PR7](https://github.com/SAC-CS112-Randall-Christopher/DMPH/pull/7).
+MAIN and its existing WSL launcher must stay running for editing and exports.
 
 The owner is continuing directly in **local Codex on MAIN**, without Desktop
 Commander. Use the latest paired DMPH branch's

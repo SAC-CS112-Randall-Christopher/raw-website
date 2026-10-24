@@ -7,41 +7,41 @@ A business question becomes a report. A customer email becomes a useful next ste
 00:00:10.600  Bring your AI
 Keep the systems you rely on. Start with a supported assistant and approve its access. Here, an existing ChatGPT subscription is already connected, ready to use the RAW tools we've permitted.
 
-00:00:22.967  Bring your business information
+00:00:24.467  Bring your business information
 Pine Ridge Rental has customers, equipment, rentals and billing records. Bring that information into RAW. Open a source, check its date, and browse the records your business already has.
 
-00:00:34.967  Add what your business needs
+00:00:36.467  Add what your business needs
 Your existing software may not have a place for everything you need. Add delivery instructions in RAW's database, linked to the existing customer. For Alder Grove Landscaping, we save: use the north gate, and call Maya thirty minutes before arrival.
 
-00:00:51.167  Use the information together
+00:00:53.767  Use the information together
 Ask what the dispatcher needs to know about Alder Grove. The assistant reads the customer record and brings the existing business facts together with the delivery instructions we just saved. That extra information is now useful.
 
-00:01:05.767  Ask questions. Build reports.
+00:01:08.367  Ask questions. Build reports.
 You can ask bigger questions too. Show active customers by customer type, include unknown types, and give me a chart. RAW uses the approved business definition and returns 961 active accounts, including fifteen without a customer type.
 
-00:01:22.200  Check the answer. Keep both views.
+00:01:26.167  Check the answer. Keep both views.
 Open a chart group to inspect the supporting customers. Narrow the question to Pine Ridge: 401 accounts. Keep that view alongside the original. Both reports stay available to reopen, without starting the conversation again.
 
-00:01:36.467  Bring your email inboxes together
+00:01:47.167  Bring your email inboxes together
 Bring your connected email inboxes into one place. Read and search your mail, with the customer context right beside it.
 
-00:01:45.367  Bring customer context into email
+00:01:56.067  Bring customer context into email
 Now Maya needs a three-day excavator rental starting October 28th. Open her message and ask for a summary. The assistant identifies the request, the quote she needs, and the delivery details that still need confirming.
 
-00:02:00.433  Prepare a reply you can review
+00:02:12.500  Prepare a reply you can review
 For three days, the listed rate gives a $2,250 rental subtotal. Check the source, prepare the quote, and review an editable reply. Availability, delivery and other charges still need checking.
 
-00:02:15.433  Let AI offer the next step
+00:02:27.500  Let AI offer the next step
 The assistant also offers a follow-up and asks when it should happen. We approve a high-priority task and a half-hour block on My calendar: October 26th at 9 AM, before the rental starts. Then it saves the linked work.
 
-00:02:32.433  Keep the next step connected
+00:02:44.500  Keep the next step connected
 There is the task in the planner, and the appointment on the calendar. Both lead back to Maya's email. Minimize the assistant, move to another page, and restore the same conversation when you need it.
 
-00:02:45.433  See what needs attention
+00:03:00.367  See what needs attention
 Spot other work that needs attention. Compare financial totals and investigate the $180 difference in the records. For equipment, a dated reading of 1,420 hours is beyond the 1,350-hour service target. You can see why maintenance is due.
 
-00:03:06.733  Keep useful work available
+00:03:21.667  Keep useful work available
 Updated source snapshots preserve RAW-owned information and work. Saved reports retain their history. Use reusable date choices and configure recurring reports in RAW. The owner stays in control.
 
-00:03:21.500  RAW Business Workspace
+00:03:36.433  RAW Business Workspace
 Keep what works. Add the information you need, bring your AI into the workflow, and make the business easier to run. RAW Business Workspace. Book a demo.

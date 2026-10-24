@@ -1,71 +1,71 @@
 {
   "source_repository": "SAC-CS112-Randall-Christopher/DMPH",
-  "source_commit": "c30865067d3675942bd163f38191ea154c38dba0",
-  "source_folder": "deliverables/raw-workspace-polish",
+  "source_commit": "230a443b2b42c6163ebf95a6aa1afe2a2d0f291b",
+  "source_folder": "deliverables/raw-workspace-ryan-b",
   "assets": {
     "raw-highlight.mp4": {
-      "bytes": 8970882,
-      "sha256": "ec890311f4b9decc68a139791107ed2b288306431b555403c6ab02ff112e7e59"
+      "bytes": 8823342,
+      "sha256": "fdcd3895f3c32fcfae1248a970f8fc94e1a9287ea289c0cc6f7f0dc263a72e38"
     },
     "raw-full-demo.mp4": {
-      "bytes": 14966565,
-      "sha256": "f32d3410aaa93405a6fedaa575e8156fd7f6d92352592005f1346aa085b13a2a"
+      "bytes": 16116583,
+      "sha256": "bc9777869a39dc3be2a4b9a3048221349bf10db78872fbff50dcaf3abc9681fc"
     },
     "raw-demo-poster.jpg": {
-      "bytes": 244521,
-      "sha256": "edfd4ac3e3055e2118343883613a2a4ec844e8bd9db524758c2b87d3810c9397"
+      "bytes": 244539,
+      "sha256": "443cee36cefd367cdf1ed1cda8dbd321113cbef7fca60e924caea85052f3c021"
     },
     "raw-highlight-poster.jpg": {
-      "bytes": 217775,
-      "sha256": "a84eadfa62de6929ea2f0878264199c638079bac2781a13b908ad1e9797d719f"
+      "bytes": 217794,
+      "sha256": "7ce37d064b0de3b6b0e55fe42ba2cae004c9384524bb46c2e7b869e5a25beef0"
     },
     "raw-highlight.vtt": {
       "bytes": 3108,
-      "sha256": "ac2ceaee8e549b4fff6e8e9c6dba9869488b187f51298eae9fb4a8a89ec68b9d"
+      "sha256": "657dee2adefe9184bd5d8d1703b01cefd2d96d249d2489392c7fd9898defc699"
     },
     "raw-full-demo.vtt": {
       "bytes": 6653,
-      "sha256": "bb03da9d942b4d9211f91a7399a6a0aefeff4424cdcdb3f6dc5ff06a27cd5a7a"
+      "sha256": "7ca51cc6a578a754571214b8ae4b05c884c436d431070ea0569a122b4e4d0e2c"
     },
     "raw-demo-transcript.txt": {
       "bytes": 3730,
-      "sha256": "e791f2d4313a892da1a5bc3732fa737d7f154ccff35274d31d722c469550bae1"
+      "sha256": "317bdd392ff3c5868657fc26707ef5df5d1d72a7cf880834db0bdd2234a06e6e"
     },
     "raw-highlight-transcript.txt": {
       "bytes": 1807,
-      "sha256": "c2849d48f70bd2045b91ba115e0a2708b3193e97f0cef9d2bb0b56b092bdea32"
+      "sha256": "0b51ae1611cdd919951b7277e7d3c176173180201a531b26f457277c1520334f"
     }
   },
   "videos": {
     "raw-highlight.mp4": {
-      "duration": 105.877,
-      "duration_iso": "PT1M46S",
-      "duration_label": "1 minutes 46 seconds",
+      "duration": 108.266667,
+      "duration_iso": "PT1M48S",
+      "duration_label": "1 minutes 48 seconds",
       "caption_cues": 28,
-      "frames": 3176,
+      "frames": 3248,
       "video": "H.264 1920x1080 30fps yuv420p",
       "audio": "AAC 48kHz stereo",
       "fast_start": true,
       "complete_decode_passed": true,
       "source_file": "RAW-highlights.mp4",
-      "source_sha256": "ec890311f4b9decc68a139791107ed2b288306431b555403c6ab02ff112e7e59",
+      "source_sha256": "fdcd3895f3c32fcfae1248a970f8fc94e1a9287ea289c0cc6f7f0dc263a72e38",
       "audio_packets_unchanged": true,
-      "audio_sha256": "bf18d89bc42b71e7254978d84348c5211a2f3d26e5b70a648319189905420510"
+      "audio_sha256": "6d463fd19d73d70bc7278fdc4b059521fdb2bdae30d8c001f10b0e93516bfa95"
     },
     "raw-full-demo.mp4": {
-      "duration": 212.01,
-      "duration_iso": "PT3M32S",
-      "duration_label": "3 minutes 32 seconds",
+      "duration": 227.669,
+      "duration_iso": "PT3M48S",
+      "duration_label": "3 minutes 48 seconds",
       "caption_cues": 57,
-      "frames": 6360,
+      "frames": 6830,
       "video": "H.264 1920x1080 30fps yuv420p",
       "audio": "AAC 48kHz stereo",
       "fast_start": true,
       "complete_decode_passed": true,
       "source_file": "RAW-business-demo.mp4",
-      "source_sha256": "f32d3410aaa93405a6fedaa575e8156fd7f6d92352592005f1346aa085b13a2a",
+      "source_sha256": "bc9777869a39dc3be2a4b9a3048221349bf10db78872fbff50dcaf3abc9681fc",
       "audio_packets_unchanged": true,
-      "audio_sha256": "6f43fa5280304c703ea9e6a5ed7bd7ec7737b666a98ac459452d2ff9f5c939d1"
+      "audio_sha256": "73f21d20b84cd23580ea28e0afbe75445d4e78adc2a1585ab0abfa74316f2469"
     }
   },
   "new_paid_api_usage": false,
