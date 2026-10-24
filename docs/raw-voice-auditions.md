@@ -8,8 +8,10 @@ and `noindex,nofollow` metadata.
 
 The source is DMPH's `deliverables/raw-voice-refresh/`. Both files are real,
 locally generated Qwen3-TTS 1.7B CustomVoice auditions, using built-in English
-speakers without a human reference recording. Aiden is the new production
-command's default; Ryan is a comparison. The samples have no music, no speed
+speakers without a human reference recording. Chris selected Ryan after
+listening; Ryan is the production default. The page also provides a real Ryan
+date check saying October twenty-eighth and October twenty-sixth. Displayed
+dates remain unchanged. The samples have no music, no speed
 adjustment and no pitch adjustment. The existing website films are retained
 while the owner listens to these samples.
 
