@@ -5,9 +5,11 @@ narrated data-origin and email-not-sent caveats, plus the matching editorial
 labels, posters and public player descriptions. The verified product story,
 actual source recordings, Ryan voice and spoken ordinal dates are retained.
 
-The replacement package is prepared; public deployment and live verification
-are pending. The previous live Worker version is
-`b6cf7eb0-75c6-4789-a6fa-20e313f5b355`.
+The replacement package is deployed from website source
+`ec36dd8a96c79732b6c4f5f97d91dc1ee54d4d35`. Worker version
+`519a2143-daa8-4ba7-980a-80789a992669` receives **100%** of production
+traffic. Live playback and download verification passed. The previous version
+`b6cf7eb0-75c6-4789-a6fa-20e313f5b355` remains available for rollback.
 
 | Placement | Public page | Replacement |
 | --- | --- | --- |
@@ -74,9 +76,13 @@ python scripts/check_raw_demo_publication.py \
 The checker covers desktop and 390px layouts, native captions, keyboard
 playback, actual homepage-to-full-demo navigation, exact 206 bytes, seeking,
 all eight full HTTP hashes and four real attachment downloads. `--complete`
-plays both public films at normal speed. Release receipts are refreshed only
-after the corresponding checks complete; earlier receipts describe the prior
-release until that update.
+plays both public films at normal speed. All four live cases and downloads passed; all eight HTTP asset hashes match.
+Both public films completed normal-speed playback at **96.981 / 203.114 seconds**,
+with no media/page errors. Production build and all **29 tests**, ESLint, artifact
+validation and Wrangler dry run passed. Cloudflare Workers Builds passed for
+the exact deployed source. Current receipts are `raw-demo-preview-verification.json`,
+`raw-demo-live-verification.json`, `raw-demo-deployment.json` and
+`raw-demo-hosted-checks.json`.
 
 The content-hash-keyed public MP4 cache and attachment handling are unchanged.
 The existing Worker configuration, private gateway and authorized bindings
