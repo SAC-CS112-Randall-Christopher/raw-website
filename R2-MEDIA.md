@@ -88,7 +88,27 @@ show the connected-inbox workflow and retain Ryan with ordinal dates. Source and
 website MP4s are byte-identical; public R2 full hashes and ranges pass before any
 Worker change. The source delivery also preserves original narration and links
 to verified lossless MLT edit archives. Uncropped account settings remain private.
-Production publication will be recorded separately from these source/origin checks.
+The new website publication is now verified at source
+`611af4832db898a3b6800a362b6322e006a7ba07`, Worker version
+`170dfcf3-2ba5-4180-a6bd-1c1ccc97149d` at 100 percent, deployed on
+`2026-10-24T17:02:56.422901Z`. The source passed Workers Builds. The previous
+version `e19bfba6...` remains available for rollback. See the sanitized
+[deployment receipt](docs/raw-polished-deployment.json) and exact-source
+[hosted check](docs/raw-polished-hosted-checks.json).
+
+Both exact public films completed normal-speed playback to 105.877 / 212.010
+seconds, `ended=true`, with no media or page errors. Four desktop/390px cases,
+four real downloads, eight complete asset hashes, 28/57 captions, exact 206
+bytes, keyboard playback, seeking and client navigation pass. See
+[live checks](docs/raw-polished-live.json),
+[live images](docs/raw-polished-live-images/),
+[preview checks](docs/raw-polished-preview.json) and
+[origin/archive checks](docs/raw-polished-origin.json).
+The independent reviewer accepted the exact source films, eight matching website
+assets and fresh preview evidence. Phone checks use Chromium touch/viewport
+emulation; they do not claim a physical iPhone/Safari test. Dense records are
+best viewed full screen. The DMPH worktree remains for owner review/editing;
+the temporary website checkout is retired after clean-state and remote proof.
 
 The owner requested another local voice comparison. Five matched-volume MP3/WAV
 auditions are available at
