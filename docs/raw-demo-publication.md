@@ -1,4 +1,10 @@
-# RAW connected-workspace films
+# Current RAW film publication
+
+The selected Ryan B films supersede the release below. Use the
+[current production record](raw-ryan-b-publication.md) and `raw-ryan-b-*`
+receipts for the verified 1:48 highlight / 3:48 full demo and working downloads.
+
+# Previous connected-workspace films — historical
 
 The owner approved the Ryan films and requested a focused cleanup: remove
 narrated data-origin and email-not-sent caveats, plus the matching editorial

@@ -13,6 +13,10 @@ Both films and both lossless edit archives already pass complete public R2
 hashes and exact ranges. Website cutover has separate preview/deployment/live
 evidence and must not be inferred from origin availability alone.
 
+The new films are now live and both completed normal-speed public playback.
+See the [current production record](docs/raw-ryan-b-publication.md) for exact
+source/deployment pins, hosted checks, downloads and independent review.
+
 ## Configured resources
 
 - Bucket: `randall-automation-works-media`, Standard storage, Western North America.

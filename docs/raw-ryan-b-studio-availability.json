@@ -1,0 +1,23 @@
+{
+  "verified_at": "2026-10-24T23:01:55.167Z",
+  "method": "Anonymous read-only HTTPS requests; no owner credentials or cookies",
+  "checks": [
+    {
+      "path": "/admin/dmph/login.html",
+      "status": 200,
+      "expected": 200,
+      "cache_control": "private, no-store",
+      "robots": "noindex, nofollow, noarchive",
+      "anonymous_request": true
+    },
+    {
+      "path": "/admin/dmph/api/state",
+      "status": 401,
+      "expected": 401,
+      "cache_control": "private, no-store",
+      "robots": "noindex, nofollow, noarchive",
+      "anonymous_request": true
+    }
+  ],
+  "owner_state_changed": false
+}
