@@ -1,304 +1,237 @@
 WEBVTT
 
 1
-00:00:00.120 --> 00:00:04.451
-Customers, equipment, billing, email,
-spreadsheets. Running a business
+00:00:00.120 --> 00:00:04.580
+Your customer list is in one system. Your
+invoices are in
 
 2
-00:00:04.451 --> 00:00:08.580
-means connecting the details. Here is Pine
-Ridge Rental and Service,
+00:00:04.580 --> 00:00:09.040
+another. RAW brings the information
+together, so your AI
 
 3
-00:00:08.982 --> 00:00:13.258
-a fictional business with real working
-records inside RAW. Its Home screen
+00:00:09.040 --> 00:00:11.320
+assistant can help with the work in front
+of you.
 
 4
-00:00:13.258 --> 00:00:17.186
-brings saved answers, upcoming work, and
-recent activity into one useful
+00:00:12.287 --> 00:00:16.927
+Start with Connect AI. Choose your
+assistant and review
 
 5
-00:00:17.186 --> 00:00:17.881
-starting point.
+00:00:16.927 --> 00:00:21.847
+what it can access. This example uses an
+existing ChatGPT
 
 6
-00:00:18.553 --> 00:00:22.756
-Start with Connect AI. Choose a supported
-connection and the business
+00:00:21.847 --> 00:00:22.407
+subscription.
 
 7
-00:00:22.756 --> 00:00:27.361
-work you want help with. This
-demonstration uses an existing ChatGPT
+00:00:24.287 --> 00:00:28.727
+We signed in privately. Back in RAW, the
+connected status
 
 8
-00:00:27.361 --> 00:00:29.066
-subscription through OpenClaw.
+00:00:28.727 --> 00:00:30.227
+tells us the assistant is ready.
 
 9
-00:00:29.720 --> 00:00:34.142
-Sign-in happens with the provider. We
-completed that step privately; now
+00:00:31.287 --> 00:00:36.067
+Let's find out who is doing business with
+us. How many active
 
 10
-00:00:34.142 --> 00:00:36.353
-this genuine connection is ready inside
-RAW.
+00:00:36.067 --> 00:00:40.667
+customer accounts do we have? Break them
+down by customer type, and
 
 11
-00:00:37.087 --> 00:00:40.595
-The connection has explicit permissions
-for RAW tools and business
+00:00:40.667 --> 00:00:41.427
+show me a chart.
 
 12
-00:00:40.595 --> 00:00:44.706
-information. Review that access here, then
-open the assistant from
+00:00:47.287 --> 00:00:51.727
+Here's the answer. Nine hundred sixty-one
+active accounts.
 
 13
-00:00:44.706 --> 00:00:45.675
-another business page.
+00:00:52.467 --> 00:00:57.067
+Homeowners are the largest group. And 15
+accounts without a
 
 14
-00:00:46.387 --> 00:00:50.681
-Ask a question in everyday language. Show
-active customer accounts
+00:00:57.067 --> 00:01:00.687
+customer type are still included, so they
+don't disappear from the picture.
 
 15
-00:00:50.681 --> 00:00:55.048
-by customer type, include unknown types,
-and give me a chart. RAW
+00:01:04.287 --> 00:01:09.187
+The chart is more than a picture. Open a
+group to check the
 
 16
-00:00:55.048 --> 00:00:57.149
-already holds the reviewed business
-definition.
+00:01:09.187 --> 00:01:13.727
+customers behind it. The result is kept in
+Reports, ready to reopen
 
 17
-00:00:57.987 --> 00:01:02.025
-The connected assistant calls RAW's
-permitted tools. Active means
+00:01:13.727 --> 00:01:14.407
+or download.
 
 18
-00:01:02.025 --> 00:01:05.972
-an account has no closing date. The result
-comes from the full matching
+00:01:16.287 --> 00:01:20.947
+Want just Pine Ridge? Narrow the view to
+that town and keep the
 
 19
-00:01:05.972 --> 00:01:09.041
-population, with the tool activity
-available to inspect.
+00:01:20.947 --> 00:01:24.227
+original report. Both are there when you
+need them.
 
 20
-00:01:09.853 --> 00:01:13.910
-There are 960 active accounts. 600
-homeowners,
+00:01:26.287 --> 00:01:30.807
+Now let's help Maya at Alder Grove
+Landscaping. Her customer
 
 21
-00:01:14.348 --> 00:01:18.514
-180 contractors, 120 businesses, 45
-public-sector accounts,
+00:01:30.807 --> 00:01:34.027
+record brings the conversation and the
+next steps together.
 
 22
-00:01:18.642 --> 00:01:22.717
-and 15 with an unknown type. Nothing
-disappears because a category
+00:01:35.087 --> 00:01:40.327
+Ask the assistant to read Maya's email and
+pull out what matters. She
 
 23
-00:01:22.717 --> 00:01:23.217
-is missing.
+00:01:40.327 --> 00:01:45.427
+wants a mini excavator for three days,
+starting October twenty-fourth.
 
 24
-00:01:24.053 --> 00:01:28.274
-Open the supporting records behind a
-group. Check the customer names and
+00:01:45.427 --> 00:01:49.847
+The summary points us to the details we
+need to check: the quote, equipment
 
 25
-00:01:28.274 --> 00:01:32.185
-the conditions that produced the answer.
-You can understand the result without
+00:01:49.847 --> 00:01:51.787
+availability and delivery window.
 
 26
-00:01:32.185 --> 00:01:32.952
-writing SQL.
+00:01:53.087 --> 00:01:57.627
+Next, ask for a short reply. The assistant
+gives us
 
 27
-00:01:33.887 --> 00:01:37.925
-Now narrow the question to Pine Ridge. The
-town view contains four
+00:01:57.627 --> 00:02:02.447
+wording to thank Maya and explain that
+we'll check the details. I
 
 28
-00:01:37.925 --> 00:01:42.000
-hundred active accounts. Keep the original
-all-town report, and
+00:02:02.447 --> 00:02:06.567
+put it in a draft, where I can edit the
+message and check the address before
 
 29
-00:01:42.000 --> 00:01:44.539
-reopen the separate saved view whenever
-you need it.
+00:02:06.567 --> 00:02:09.807
+deciding to send. This demo sends nothing.
 
 30
-00:01:45.220 --> 00:01:49.295
-Reusable date choices keep reports useful.
-Choose Last
+00:02:10.953 --> 00:02:15.573
+I review the next step, then create a
+follow-up: call Maya about
 
 31
-00:01:49.295 --> 00:01:53.132
-month, compare with the previous period,
-or anchor a report to the latest
+00:02:15.573 --> 00:02:20.413
+payment and delivery. I add a thirty-
+minute block on Monday morning,
 
 32
-00:01:53.132 --> 00:01:56.531
-available business date. The selected
-dates stay visible.
+00:02:20.813 --> 00:02:23.533
+so the request doesn't get lost in a busy
+day.
 
 33
-00:01:57.320 --> 00:02:01.504
-Next, open Alder Grove Landscaping. Maya
-Chen's correspondence,
+00:02:28.953 --> 00:02:33.493
+Now the task and its appointment are saved
+together. Open the
 
 34
-00:02:01.906 --> 00:02:05.853
-account details, notes, tasks, and
-documents give the owner context for the
+00:02:33.493 --> 00:02:38.153
+calendar to see the time and customer
+context. This is an internal
 
 35
-00:02:05.853 --> 00:02:06.621
-next conversation.
+00:02:38.153 --> 00:02:40.653
+review, not a confirmed equipment booking.
 
 36
-00:02:07.453 --> 00:02:11.418
-Ask the assistant to summarize the
-customer situation and prepare careful
+00:02:42.953 --> 00:02:47.473
+Move between email, customers and the
+calendar. Minimize
 
 37
-00:02:11.418 --> 00:02:15.511
-reply wording. A claim that payment was
-sent still needs checking against
+00:02:47.473 --> 00:02:51.653
+the assistant when you need space, then
+bring the conversation back.
 
 38
-00:02:15.511 --> 00:02:18.874
-the billing records. The assistant should
-preserve that uncertainty.
+00:02:52.620 --> 00:02:57.360
+The same approach helps with money. Here,
+the rental total is
 
 39
-00:02:19.720 --> 00:02:23.630
-The owner reviews the wording and creates
-a follow-up through RAW's supported
+00:02:57.360 --> 00:03:01.920
+180 dollars below the comparison figure.
+Open the records and
 
 40
-00:02:23.630 --> 00:02:28.235
-workflow. These imported messages are
-read-only samples. The
+00:03:01.920 --> 00:03:02.700
+check the difference.
 
 41
-00:02:28.235 --> 00:02:31.761
-prepared response stays editable; this
-demonstration sends no email.
+00:03:03.853 --> 00:03:08.833
+For equipment, check the latest hour
+reading against the service plan. You
 
 42
-00:02:32.553 --> 00:02:36.665
-The equipment quote uses the source rate:
-$750 a day for
+00:03:08.833 --> 00:03:12.133
+can see what's due and which readings need
+a closer look.
 
 43
-00:02:36.665 --> 00:02:40.940
-three days. That is a $2,250 equipment
+00:03:13.087 --> 00:03:17.667
+When fresh business information comes in,
+your notes and follow-ups stay with
 
 44
-00:02:40.940 --> 00:02:44.686
-subtotal, with delivery, insurance, and
-tax still to review.
+00:03:17.667 --> 00:03:21.787
+the customer. Earlier report results
+remain available, too.
 
 45
-00:02:45.487 --> 00:02:49.744
-Dock the assistant, minimize it, move to
-another page, and restore the
+00:03:22.753 --> 00:03:27.673
+Keep the reports you use often, and set up
+a regular review. This
 
 46
-00:02:49.744 --> 00:02:52.704
-conversation. The business stays in view
-while you work.
+00:03:27.673 --> 00:03:30.253
+weekday report is scheduled for eight in
+the morning.
 
 47
-00:02:53.420 --> 00:02:57.550
-Finance shows $84,000 in net posted rental
+00:03:31.353 --> 00:03:35.933
+Keep the systems you depend on. Connect
+your information, ask
 
 48
-00:02:57.550 --> 00:03:01.606
-charges against an independent $84,180
+00:03:35.933 --> 00:03:40.653
+your AI for help, and turn the answer into
+useful work. RAW.
 
 49
-00:03:01.606 --> 00:03:05.754
-control. The minus $180 difference stays
-visible,
-
-50
-00:03:05.754 --> 00:03:08.184
-with contributing records available for
-review.
-
-51
-00:03:08.953 --> 00:03:13.247
-Maintenance combines service plans with
-dated readings. Here, the
-
-52
-00:03:13.247 --> 00:03:17.450
-owner checks actual hours against the
-service threshold. Replacement meters
-
-53
-00:03:17.450 --> 00:03:21.159
-stay marked for review, with observation
-dates and reading details available
-
-54
-00:03:21.159 --> 00:03:22.639
-before any service is planned.
-
-55
-00:03:23.387 --> 00:03:27.589
-Replace a source snapshot and review what
-changed. The updated
-
-56
-00:03:27.589 --> 00:03:31.975
-account total is 961. The earlier 960
-result
-
-57
-00:03:31.975 --> 00:03:35.300
-remains in history, while RAW-owned notes
-and follow-up work stay intact.
-
-58
-00:03:36.187 --> 00:03:40.956
-Saved reports, history, and recurring
-schedules make the answer reusable. This
-
-59
-00:03:40.956 --> 00:03:45.158
-weekday review is configured for eight in
-the morning. Email delivery needs
-
-60
-00:03:45.158 --> 00:03:46.200
-its own approved setup.
-
-61
-00:03:47.020 --> 00:03:51.095
-Keep the systems you already depend on.
-Connect your information, bring
-
-62
-00:03:51.095 --> 00:03:55.645
-your AI into the workflow, and make your
-business easier to understand. RAW.
-
-63
-00:03:56.357 --> 00:03:58.440
-Book a demo with Randall Automation Works.
+00:03:41.433 --> 00:03:42.073
+Book a demo.

@@ -4,6 +4,7 @@ Requires the existing local Playwright/Chromium runtime. Reads public pages only
 --complete additionally plays both desktop films through at normal speed.
 """
 import argparse
+import hashlib
 import json
 import time
 from pathlib import Path
@@ -26,6 +27,8 @@ out = root / 'outputs' / ('browser-' + args.label)
 out.mkdir(parents=True, exist_ok=True)
 errors = []
 result = {'base_url': base, 'checks': [], 'page_errors': errors}
+manifest = json.loads((root/'docs/raw-demo-media.json').read_text())
+media = manifest['videos']
 
 
 def inspect_player(page, name, duration, cues, label):
@@ -80,16 +83,30 @@ with sync_playwright() as pw:
         page.on('pageerror', lambda e: errors.append(str(e)))
         response = page.goto(base + '/', wait_until='networkidle', timeout=60000)
         assert response.status == 200
-        inspect_player(page, 'raw-highlight.mp4', 80.042, 21, label + '-highlight')
+        inspected=media['raw-highlight.mp4']
+        inspect_player(page, 'raw-highlight.mp4', inspected['duration'], inspected['caption_cues'], label + '-highlight')
         # Follow the actual Next/Vinext client link, so a retained old media
         # element or incorrect source after navigation cannot pass this check.
         page.get_by_role('link', name='Watch the full demo').click()
         page.wait_for_url(base + '/raw-workspace#see-it-in-action')
-        inspect_player(page, 'raw-full-demo.mp4', 239.018, 63, label + '-full-demo')
+        inspected=media['raw-full-demo.mp4']
+        inspect_player(page, 'raw-full-demo.mp4', inspected['duration'], inspected['caption_cues'], label + '-full-demo')
         for name in ['raw-demo-poster.jpg', 'raw-full-demo.vtt', 'raw-highlight.vtt', 'raw-demo-transcript.txt']:
             status = page.evaluate('async path=>(await fetch(path,{signal:AbortSignal.timeout(20000)})).status', '/products/raw-workspace/' + name)
             assert status == 200, (name, status)
         context.close()
+    request = pw.request.new_context(base_url=base)
+    result['exact_public_assets'] = []
+    try:
+        for name, expected in manifest['assets'].items():
+            response = request.get('/products/raw-workspace/' + name, timeout=60000)
+            assert response.status == 200, (name, response.status)
+            body = response.body()
+            actual = {'bytes':len(body), 'sha256':hashlib.sha256(body).hexdigest()}
+            assert actual == expected, (name, actual)
+            result['exact_public_assets'].append({'name':name, **actual})
+    finally:
+        request.dispose()
     if args.complete:
         context = browser.new_context(viewport={'width': 1440, 'height': 1000})
         pages = []

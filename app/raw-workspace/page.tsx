@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { bookingLink } from "../../components/site-shell";
+import demoMedia from "../../docs/raw-demo-media.json";
 
 const base = "https://randallautomationworks.com";
+const fullDemoMedia = demoMedia.videos['raw-full-demo.mp4'];
 const description = "RAW Business Workspace connects customer records, equipment quotes, tasks, documents and reporting. Configure a workspace around the way your small business works.";
 
 export const metadata: Metadata = {
@@ -37,7 +39,7 @@ const structuredData = {
       applicationCategory: "BusinessApplication", operatingSystem: "Web browser", creator: { "@id": `${base}/#business` },
       image: `${base}/products/raw-workspace/overview.png`, featureList: ["Connected customer records", "Equipment rental quotes from source rates", "Tasks and documents", "SQLite and CSV data reporting", "Configurable business modules"] },
     { "@type": "WebPage", "@id": `${base}/raw-workspace#page`, url: `${base}/raw-workspace`, name: "RAW Business Workspace", description, about: { "@id": `${base}/raw-workspace#product` }, isPartOf: { "@id": `${base}/#business` } },
-    { "@type": "VideoObject", name: "RAW — Your information. Useful work.", description: "A complete desktop demonstration of RAW's connected AI, inspectable reports and everyday business workflows using fictional Pine Ridge Rental & Service data. Processing waits are condensed.", thumbnailUrl: `${base}/products/raw-workspace/raw-demo-poster.jpg`, uploadDate: "2026-10-23T00:00:00Z", duration: "PT3M59S", contentUrl: `${base}/products/raw-workspace/raw-full-demo.mp4`, about: { "@id": `${base}/raw-workspace#product` } },
+    { "@type": "VideoObject", name: "RAW — Your information. Useful work.", description: "A complete desktop demonstration of RAW's connected AI, inspectable reports, email summary and reply, and owner-reviewed task and calendar follow-up using fictional Pine Ridge Rental & Service data. Processing waits are condensed.", thumbnailUrl: `${base}/products/raw-workspace/raw-demo-poster.jpg`, uploadDate: "2026-10-23T00:00:00Z", duration: fullDemoMedia.duration_iso, contentUrl: `${base}/products/raw-workspace/raw-full-demo.mp4`, about: { "@id": `${base}/raw-workspace#product` } },
     { "@type": "FAQPage", mainEntity: faqs.map(({ q, a }) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) },
     { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: base }, { "@type": "ListItem", position: 2, name: "RAW Business Workspace", item: `${base}/raw-workspace` }] },
   ],
@@ -62,7 +64,7 @@ export default function RawWorkspace() {
 
     <section className="section workspace-film-section" id="see-it-in-action">
       <div className="shell">
-        <div className="section-heading"><p className="eyebrow">The full demo · 3 minutes 59 seconds</p><h2>Your information. Useful work.</h2><p>Connect your AI, ask a business question and follow the answer into everyday work.</p></div>
+        <div className="section-heading"><p className="eyebrow">The full demo · {fullDemoMedia.duration_label}</p><h2>Your information. Useful work.</h2><p>Ask a real business question. Check the report, prepare a customer reply and schedule the next step.</p></div>
         <div className="workspace-video-frame">
           <video controls playsInline preload="none" poster="/products/raw-workspace/raw-demo-poster.jpg" width="1920" height="1080" aria-label="RAW Business Workspace full demonstration">
             <source src="/products/raw-workspace/raw-full-demo.mp4" type="video/mp4" />
@@ -70,7 +72,7 @@ export default function RawWorkspace() {
             Your browser does not support embedded video. <a href="/products/raw-workspace/raw-full-demo.mp4">Watch the full demonstration</a>.
           </video>
         </div>
-        <p className="workspace-caption">Actual RAW desktop interface and connected assistant results using fictional Pine Ridge Rental &amp; Service data. Provider sign-in was completed privately; processing waits are condensed. No email was sent.</p>
+        <p className="workspace-caption">Actual RAW desktop interface and connected assistant results using fictional Pine Ridge Rental &amp; Service data. The owner reviews and saves the draft, task and calendar block. Provider sign-in was completed privately; processing waits are condensed. No email or invitation was sent.</p>
         <div className="workspace-film-links"><a className="text-link" href="/products/raw-workspace/raw-demo-transcript.txt">Read the demo transcript</a><a className="text-link" href="/products/raw-workspace/raw-full-demo.vtt" download>Download English captions</a></div>
       </div>
     </section>

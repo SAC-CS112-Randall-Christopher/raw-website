@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { bookingLink } from "../components/site-shell";
 import { implementationExamples } from "./service-examples";
+import demoMedia from "../docs/raw-demo-media.json";
 
 // Include the homepage in route metadata so client history restores its head.
 export const metadata: Metadata = {
@@ -38,14 +39,15 @@ const process = [
   ["03", "Test, hand over, support", "Try the system with your team, document how it works and train the people using it. Add ongoing support if you need it."],
 ];
 
+const highlightMedia = demoMedia.videos['raw-highlight.mp4'];
 const highlightVideo = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
   name: "RAW — Your information. Useful work.",
-  description: "An 80-second highlight of the actual RAW desktop interface and connected AI workflow, using fictional Pine Ridge Rental & Service data. Processing waits are condensed.",
+  description: `An ${Math.round(highlightMedia.duration)}-second highlight of the actual RAW desktop interface: a real AI inquiry, report results, email reply and owner-reviewed calendar follow-up, using fictional Pine Ridge Rental & Service data. Processing waits are condensed.`,
   thumbnailUrl: "https://randallautomationworks.com/products/raw-workspace/raw-demo-poster.jpg",
   uploadDate: "2026-10-23T00:00:00Z",
-  duration: "PT1M20S",
+  duration: highlightMedia.duration_iso,
   contentUrl: "https://randallautomationworks.com/products/raw-workspace/raw-highlight.mp4",
 };
 
@@ -95,7 +97,7 @@ export default function Home() {
                 Your browser does not support embedded video. <a href="/products/raw-workspace/raw-highlight.mp4">Watch the highlight</a>.
               </video>
             </div>
-            <figcaption>80-second highlight · Actual RAW interface with fictional Pine Ridge business data. Processing waits are condensed.</figcaption>
+            <figcaption>{Math.round(highlightMedia.duration)}-second highlight · Actual RAW interface with fictional Pine Ridge business data. Processing waits are condensed.</figcaption>
             <div className="workspace-film-links"><Link className="text-link" href="/raw-workspace#see-it-in-action">Watch the full demo <span aria-hidden="true">→</span></Link><a className="text-link" href="/products/raw-workspace/raw-demo-transcript.txt">Read the full demo transcript</a></div>
           </figure>
         </div>

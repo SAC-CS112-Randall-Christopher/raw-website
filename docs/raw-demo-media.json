@@ -1,58 +1,64 @@
 {
   "source_repository": "SAC-CS112-Randall-Christopher/DMPH",
-  "source_commit": "e233f2a0366861c05e4101bda5fcc94f2ab3ed27",
-  "source_folder": "deliverables/raw-demo-video",
+  "source_commit": "d0e0443f9c0207fa5118ef3669ec1a2227a01d77",
+  "source_folder": "deliverables/raw-demo-revision",
   "assets": {
     "raw-highlight.mp4": {
-      "bytes": 11562703,
-      "sha256": "2cd941e9094258b230007f5ef48f23c53e52bc99e3b35b60ca8e85800e7d40c0"
+      "bytes": 8372432,
+      "sha256": "615db04bd75b102f1756efb9d6b57b95326767f10fea852135a94301eee431c6"
     },
     "raw-full-demo.mp4": {
-      "bytes": 24454900,
-      "sha256": "4901442b3bc7921bdbacfee4a4191c616cfc82d8fc5e9ee9193938a02040622b"
+      "bytes": 20139719,
+      "sha256": "151c6205c6f91d7527bcbc8771082c01062f6f13a53dd86709a8d133e44671f8"
     },
     "raw-demo-poster.jpg": {
-      "bytes": 39066,
-      "sha256": "3b655ba825862b4b0b0ed6127ae8ba988bf04ad3adac923ffe8d151696d006f9"
+      "bytes": 40729,
+      "sha256": "510b30effcdae08ddd224de2ab59be3a130d7313f43ea71d838c127435b9dd6d"
     },
     "raw-highlight.vtt": {
-      "bytes": 1976,
-      "sha256": "9a0076e987237df1b3a54a4f3567158a551778e7cb366294ebf5a3d7356db988"
+      "bytes": 1673,
+      "sha256": "153d3bd03be396bacb363adbc5004eaedc0c1c7bf9e0e2b4840c530394316e3a"
     },
     "raw-full-demo.vtt": {
-      "bytes": 5839,
-      "sha256": "93a560f87e5980d1823e8e5265edda94327c1e1e24469e0ccd8c865e6e472e28"
+      "bytes": 4410,
+      "sha256": "7920d89dce3eef7d781b6ab487de5e4f274da6fba26e3292f6c2cb7ee3aba28f"
     },
     "raw-demo-transcript.txt": {
-      "bytes": 5032,
-      "sha256": "cd40c0f12bc4e1b2df630e01f3650ac3c013fc78f5aa88d9f70524841ea00562"
+      "bytes": 3595,
+      "sha256": "c22798a020f8515aad1e6a7ee20a14a64a20e7b2f5fe154aa70a3fc42721bb49"
     }
   },
   "videos": {
     "raw-highlight.mp4": {
-      "duration": 80.042,
-      "frames": 2401,
+      "duration": 88.704,
+      "duration_iso": "PT1M29S",
+      "duration_label": "1 minutes 29 seconds",
+      "caption_cues": 19,
+      "frames": 2661,
       "video": "H.264 1920x1080 30fps yuv420p",
       "audio": "AAC 48kHz stereo",
       "fast_start": true,
       "complete_decode_passed": true,
       "source_file": "RAW-highlights.mp4",
-      "source_sha256": "2cd941e9094258b230007f5ef48f23c53e52bc99e3b35b60ca8e85800e7d40c0",
+      "source_sha256": "615db04bd75b102f1756efb9d6b57b95326767f10fea852135a94301eee431c6",
       "audio_packets_unchanged": true,
-      "audio_sha256": "73b5c02ab2325912e2a336a4d5221e494a85532e5123febf622b5af7a2c152e2"
+      "audio_sha256": "0ef7c67d15836cae57131b0839547c11abc6f1e5376f7670b4543a63e19a0013"
     },
     "raw-full-demo.mp4": {
-      "duration": 239.018,
-      "frames": 7170,
+      "duration": 223.082,
+      "duration_iso": "PT3M43S",
+      "duration_label": "3 minutes 43 seconds",
+      "caption_cues": 49,
+      "frames": 6692,
       "video": "H.264 1920x1080 30fps yuv420p",
       "audio": "AAC 48kHz stereo",
       "fast_start": true,
       "complete_decode_passed": true,
       "source_file": "RAW-business-demo.mp4",
-      "source_sha256": "97e5f42f32a7e627a0c37512ed34fb86ae49bc6768e825887bf9397d57d1a9d7",
+      "source_sha256": "4e456286e214c8122ba729628e33db10fde9973cb5798b4de991419b1c24079c",
       "audio_packets_unchanged": true,
-      "audio_sha256": "6fd37e7d77ca7afa5fae4e35babf5808a07c24fbe60f9fcfb9487b4170a56d93",
-      "web_encoding": "FFmpeg 6.1.1 / libx264 slow CRF 22; audio copied; fast-start"
+      "audio_sha256": "c34aebcd8c47e014095af259a8bc00454a320d397fbd0617e81ff7f322b66836",
+      "web_encoding": "FFmpeg / libx264 slow CRF22; audio copied; fast-start"
     }
   },
   "new_spend_usd": 0

@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFile, stat } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import test from "node:test";
+const media = JSON.parse(await readFile(new URL("../docs/raw-demo-media.json", import.meta.url), "utf8"));
 
 test("promotes the real RAW product with playable media and answerable product information", async () => {
   const { default: worker } = await import("../dist/server/index.js");
@@ -21,7 +22,7 @@ test("promotes the real RAW product with playable media and answerable product i
   assert.equal(product.url, "https://randallautomationworks.com/raw-workspace");
   assert.equal(product.offers, undefined, "No invented pricing");
   const video = graph.find((s) => s["@type"] === "VideoObject");
-  assert.equal(video.duration, "PT3M59S");
+  assert.equal(video.duration, media.videos['raw-full-demo.mp4'].duration_iso);
   assert.equal(video.contentUrl, "https://randallautomationworks.com/products/raw-workspace/raw-full-demo.mp4");
   const faq = graph.find((s) => s["@type"] === "FAQPage");
   for (const item of faq.mainEntity) assert.ok(html.includes(item.name));
@@ -43,22 +44,23 @@ test("promotes the real RAW product with playable media and answerable product i
   assert.doesNotMatch(homepage, /<video[^>]+autoplay/);
   const homeScripts = [...homepage.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)].map((m) => JSON.parse(m[1]));
   const highlight = homeScripts.find((s) => s["@type"] === "VideoObject");
-  assert.equal(highlight.duration, "PT1M20S");
+  assert.equal(highlight.duration, media.videos['raw-highlight.mp4'].duration_iso);
   assert.equal(highlight.contentUrl, "https://randallautomationworks.com/products/raw-workspace/raw-highlight.mp4");
   assert.match(await sitemap.text(), /https:\/\/randallautomationworks.com\/raw-workspace/);
   for (const asset of ["overview.png", "quotes.png", "video-poster.png", "social-card.png", "captions.vtt", "raw-workspace-landscape.mp4"]) {
     const file = new URL(`../dist/client/products/raw-workspace/${asset}`, import.meta.url);
     assert.ok((await stat(file)).size > 0, asset);
   }
-  const media = JSON.parse(await readFile(new URL("../docs/raw-demo-media.json", import.meta.url), "utf8"));
   for (const [asset, expected] of Object.entries(media.assets)) {
     const bytes = await readFile(new URL(`../dist/client/products/raw-workspace/${asset}`, import.meta.url));
     assert.equal(bytes.length, expected.bytes, `${asset}: complete packaged file`);
     assert.equal(createHash("sha256").update(bytes).digest("hex"), expected.sha256, `${asset}: reviewed media`);
     assert.ok(bytes.length < 25 * 1024 * 1024, `${asset}: existing Cloudflare static-asset limit`);
   }
-  for (const [name, count, duration] of [["raw-highlight.vtt", 21, 80.042], ["raw-full-demo.vtt", 63, 239.018]]) {
-    const captions = await readFile(new URL(`../dist/client/products/raw-workspace/${name}`, import.meta.url), "utf8");
+  for (const [name, details] of Object.entries(media.videos)) {
+    const count=details.caption_cues, duration=details.duration;
+    const captionFile=name.replace(/\.mp4$/, '.vtt');
+    const captions = await readFile(new URL(`../dist/client/products/raw-workspace/${captionFile}`, import.meta.url), "utf8");
     assert.match(captions, /^WEBVTT/);
     const stamps = [...captions.matchAll(/(\d\d:\d\d:\d\d\.\d{3}) --> (\d\d:\d\d:\d\d\.\d{3})/g)];
     assert.equal(stamps.length, count);
