@@ -29,7 +29,7 @@ test("promotes the real RAW product with playable media and answerable product i
   assert.match(html, /<video[^>]+controls/);
   assert.match(html, /raw-full-demo\.vtt/);
   assert.match(html, /raw-demo-transcript\.txt/);
-  assert.match(html, /fictional Pine Ridge/);
+  assert.match(html, /Follow Pine Ridge Rental/);
   assert.doesNotMatch(html, /24 seconds|PT24S/);
   assert.match(html, /calendar\.app\.google\/Qwnjw6tS5TdDo5Hh7/);
   const mainText = html.match(/<main[^>]*>([\s\S]*?)<\/main>/)[1].replace(/<script[^>]*>[\s\S]*?<\/script>/g, "").replace(/<[^>]+>/g, " ");

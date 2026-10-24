@@ -11,46 +11,36 @@ Running bounded vinext build...
   vinext build  (Vite 8.0.13)
 
 [1/5] analyze client references...
-
-transforming...✓ 168 modules transformed.
+transforming...✓ 168 modules transformed.
 rendering chunks...
 [PLUGIN_TIMINGS] Your build spent significant time in plugins. Here is a breakdown:
-  - vinext:config (29%)
-  - vinext:jsx-in-js (20%)
-  - vinext:react-canary (13%)
-  - rsc:virtual-client-package (11%)
-  - vinext:image-imports (7%)
+  - vinext:jsx-in-js (35%)
+  - vinext:config (27%)
+  - vinext:react-canary (11%)
+  - vite:css (7%)
+  - rsc:virtual-client-package (7%)
 See https://rolldown.rs/options/checks#plugintimings for more details.
 
-✓ built in 11.66s
+✓ built in 22.39s
 [2/5] analyze server references...
-
-transforming...✓ 61 modules transformed.
+transforming...✓ 61 modules transformed.
 rendering chunks...
-✓ built in 377ms
+✓ built in 299ms
 [3/5] build rsc environment...
-
-transforming...✓ 174 modules transformed.
+transforming...✓ 174 modules transformed.
 rendering chunks...
 computing gzip size...
-✓ built in 2.08s
+✓ built in 2.05s
 [4/5] build client environment...
-
-transforming...✓ 68 modules transformed.
+transforming...✓ 68 modules transformed.
 rendering chunks...
 computing gzip size...
-[PLUGIN_TIMINGS] Your build spent significant time in plugins. Here is a breakdown:
-  - vinext:react-canary (45%)
-  - vite:prepare-out-dir (27%)
-See https://rolldown.rs/options/checks#plugintimings for more details.
-
-✓ built in 3.79s
+✓ built in 2.75s
 [5/5] build ssr environment...
-
-transforming...✓ 67 modules transformed.
+transforming...✓ 67 modules transformed.
 rendering chunks...
 computing gzip size...
-✓ built in 997ms
+✓ built in 733ms
 
   Route (app)
   ┌ ? /
@@ -80,41 +70,41 @@ computing gzip size...
   Build complete. Run `vinext start` to start the production server.
 
 Validated Sites artifact: ESM Worker, hosting manifest and unique compatibility flags are present.
-✔ does not intercept public website routes or nearby path names (45.611496ms)
-✔ the built website intercepts every private studio route and disallows indexing (73.490559ms)
-✔ fails closed without host settings and when the local host is offline (3.277725ms)
-✔ reports tunnel and host failures as an unavailable private studio (3.435918ms)
-✔ sets trusted gateway headers and preserves protected media range responses (1.653795ms)
-✔ forwards sign-in to the server and preserves scoped secure session cookies (4.234442ms)
-✔ rejects cross-origin changes, unsafe redirects, invalid origins and oversized uploads (5.218576ms)
+✔ does not intercept public website routes or nearby path names (38.491685ms)
+✔ the built website intercepts every private studio route and disallows indexing (85.828373ms)
+✔ fails closed without host settings and when the local host is offline (4.049157ms)
+✔ reports tunnel and host failures as an unavailable private studio (3.31558ms)
+✔ sets trusted gateway headers and preserves protected media range responses (1.283301ms)
+✔ forwards sign-in to the server and preserves scoped secure session cookies (2.613697ms)
+✔ rejects cross-origin changes, unsafe redirects, invalid origins and oversized uploads (2.599107ms)
 Public demo asset rejected {
   name: 'raw-highlight.mp4',
   length: '5',
   type: 'video/mp4',
   encoding: null
 }
-✔ limits shared video caching to the two reviewed public assets and GET/HEAD (44.498907ms)
-✔ fills a hash-versioned cache without forwarding private headers or arbitrary queries (6.913815ms)
-✔ honors a matching If-Range and drops ranges for changed representations and HEAD (2.748748ms)
-✔ phone downloads use an attachment without contaminating the shared playback response (3.583741ms)
-✔ provides the verified artifact length when the Assets binding omits a wire length (1.957744ms)
-✔ preserves failed source status and refuses mismatched or unavailable cached video (4.606755ms)
-✔ promotes the real RAW product with playable media and answerable product information (729.733035ms)
-✔ renders production branding without staging metadata (356.99698ms)
-✔ publishes code-first capabilities on Services and About pages (114.298326ms)
-✔ publishes production robots and sitemap URLs (51.49854ms)
-✔ publishes generalized workflow examples and founder expertise (104.064828ms)
-✔ explains AI setup, technical options and safety boundaries (92.316125ms)
-✔ publishes local and hosted AI deployment options under AI systems (109.500073ms)
-✔ renders the first Insights article as an indexable Article (89.179707ms)
-✔ keeps contact, booking and related service paths accessible (209.365536ms)
-✔ keeps all demo routes out of search with route-specific metadata (58.641685ms)
-✔ serves the existing fonts from public URLs without build paths (85.857124ms)
-✔ redirects production HTTP and www permanently while preserving path and query (7.731227ms)
-✔ preserves unique indexable metadata for every sitemap route (361.04834ms)
-✔ describes the Montrose organization and verified implementation experience (23.943949ms)
-✔ discloses the currently observed website providers without launch placeholders (19.910654ms)
-✔ publishes integration readiness with consistent dates and acceptance evidence (32.974555ms)
+✔ limits shared video caching to the two reviewed public assets and GET/HEAD (41.372519ms)
+✔ fills a hash-versioned cache without forwarding private headers or arbitrary queries (5.584659ms)
+✔ honors a matching If-Range and drops ranges for changed representations and HEAD (2.887889ms)
+✔ phone downloads use an attachment without contaminating the shared playback response (3.391426ms)
+✔ provides the verified artifact length when the Assets binding omits a wire length (1.711438ms)
+✔ preserves failed source status and refuses mismatched or unavailable cached video (4.023718ms)
+✔ promotes the real RAW product with playable media and answerable product information (662.225729ms)
+✔ renders production branding without staging metadata (338.144061ms)
+✔ publishes code-first capabilities on Services and About pages (106.091639ms)
+✔ publishes production robots and sitemap URLs (55.081897ms)
+✔ publishes generalized workflow examples and founder expertise (98.524725ms)
+✔ explains AI setup, technical options and safety boundaries (72.884815ms)
+✔ publishes local and hosted AI deployment options under AI systems (80.469041ms)
+✔ renders the first Insights article as an indexable Article (69.282895ms)
+✔ keeps contact, booking and related service paths accessible (192.154816ms)
+✔ keeps all demo routes out of search with route-specific metadata (50.7804ms)
+✔ serves the existing fonts from public URLs without build paths (70.318492ms)
+✔ redirects production HTTP and www permanently while preserving path and query (7.173269ms)
+✔ preserves unique indexable metadata for every sitemap route (310.179531ms)
+✔ describes the Montrose organization and verified implementation experience (21.039866ms)
+✔ discloses the currently observed website providers without launch placeholders (21.998206ms)
+✔ publishes integration readiness with consistent dates and acceptance evidence (41.817536ms)
 ℹ tests 29
 ℹ suites 0
 ℹ pass 29
@@ -122,18 +112,6 @@ Public demo asset rejected {
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 1898.264708
+ℹ duration_ms 1689.024468
 
-ESLint: npm run lint passed (exit 0).
-Wrangler 4.92.0 deploy --dry-run passed: 80 asset files, ESM Worker, existing ASSETS binding.
-Preview: four desktop/390px cases, 27/58 caption cues, exact range bytes, client navigation and all eight complete HTTP hashes passed.
-Four actual MP4 downloads completed with matching filenames, byte counts and SHA-256 values.
-The local DMPH source films completed complete 1x playback; live publication has its own receipt.
-Phone means Chromium touch/viewport emulation, not physical iPhone/Safari. No new spend.
-
-Live custom domain: four playback/layout cases and four actual MP4 downloads passed; all eight complete HTTP hashes match.
-Both public films completed normal-speed 1x playback, ended=true, no media/page errors: 102.912 and 212.586 seconds.
-Production source: 0565eab3754b045c08ec07598d48386253a751b6
-Production version at 100 percent: b6cf7eb0-75c6-4789-a6fa-20e313f5b355
-Independent Codex source/preview review: accepted, no material finding remaining.
-Protected studio: anonymous 503, no-store/private, noindex; initial administrator unset and studio service guarded/inactive.
+Additional observed checks: ESLint passed; artifact validation passed in the production build; Wrangler 4.92.0 dry-run passed with 80 assets. Four local desktop/390px cases and four real MP4 attachment downloads passed with matching bytes and hashes.

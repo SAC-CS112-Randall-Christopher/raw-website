@@ -1,21 +1,22 @@
-Independent Codex review accepted the publication source and preview.
+Independent Codex review accepted the revised publication source and preview.
 
-All eight public files were independently hashed against the manifest and
-DMPH source ae7d57c6675d1e4b2f6dcab294738025236c1027. They retain the accepted
-full c8acfdb5607e488c395ef74df6ffbc8b9ac7a48d8d415d8182d92b0c90ebaad6 and
-highlight 5cd98fe17917c8059696b0db1dc7cb87c4c34ac7804324017b95cdd90d768457.
+All eight public assets independently match both docs/raw-demo-media.json
+and DMPH source b1de67e322a15365d7de80fbb28f563d8e702c99 byte for byte.
+Highlight SHA: 6aaebd51a71943e6bd189485213e1f7a93dad48bb27041d2d87a73c8cfc7747a
+Full SHA: ab08e2eb3346453829d91d9bb5fe96e24d7ba21306fb87175ae0e285c64e1906
 
-Review covered page copy, structured metadata, source/manifest, current docs,
-attachment/cache behavior, browser checker/tests and all four preview images.
-Four preview cases and four actual downloads agree with the reviewed bytes;
-default 27/58 cues, ranges, seeking and client navigation pass without errors.
+Review covered final copy, structured metadata, the existing test assertion,
+publication documentation, all four fresh preview screenshots and the receipt.
+Four desktop/390px cases, four actual MP4 attachment downloads, eight exact
+HTTP hashes, 26/55 default captions, range seeking, keyboard use and actual
+client navigation pass with no page errors. The production build and all
+29 tests passed without failures or skips. The local test log is unchanged
+except removal of ANSI control codes and trailing whitespace.
 
-Attachment headers modify only a new outgoing Headers object. Worker routing,
-private gateway, Wrangler and Vite configuration have no diff. The private
-gateway remains ahead of the two whitelisted public MP4 paths.
+Narration and editorial caveats were removed as requested. Reply preparation,
+owner review and approved task/calendar actions remain accurately represented.
+Original source pixels and records are retained. Worker, gateway, video handler,
+Wrangler and Vite configuration have no diff. No material finding remains.
 
-No material finding remains. Fictional/imported/read-only/owner approval and
-Chromium emulation limits are retained. Live publication is separately proved
-by raw-demo-deployment.json and raw-demo-live-verification.json, not inferred
-from this source/preview review. No physical iPhone/Safari or human listening
-acceptance is claimed.
+This accepts the packaged source and preview. Deployment and live verification
+are separate receipts; physical-phone or human-listening acceptance is not claimed.

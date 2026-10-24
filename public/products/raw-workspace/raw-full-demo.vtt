@@ -34,238 +34,224 @@ ready to use the RAW
 tools we've permitted.
 
 8
-00:00:23.087 --> 00:00:28.127 line:8% position:50% size:90%
+00:00:23.087 --> 00:00:26.847 line:8% position:50% size:90%
 Pine Ridge Rental has customers,
 equipment, rentals and billing records.
 
 9
-00:00:28.707 --> 00:00:31.907 line:8% position:50% size:90%
-This fictional business
-uses imported snapshots.
+00:00:27.107 --> 00:00:28.747 line:8% position:50% size:90%
+Bring that information into RAW.
 
 10
-00:00:32.627 --> 00:00:34.527 line:8% position:50% size:90%
-Open a source, check its date,
+00:00:28.847 --> 00:00:33.267 line:8% position:50% size:90%
+Open a source, check its date, and browse
+the records your business already has.
 
 11
-00:00:34.707 --> 00:00:38.047 line:8% position:50% size:90%
-and browse the information
-already available to the business.
-
-12
-00:00:39.120 --> 00:00:42.980 line:8% position:50% size:90%
+00:00:35.087 --> 00:00:38.947 line:8% position:50% size:90%
 Your existing software may not have
 a place for everything you need.
 
-13
-00:00:43.200 --> 00:00:47.540 line:8% position:50% size:90%
+12
+00:00:39.167 --> 00:00:43.507 line:8% position:50% size:90%
 Add delivery instructions in RAW's
 database, linked to the existing customer.
 
-14
-00:00:47.860 --> 00:00:51.590 line:8% position:50% size:90%
+13
+00:00:43.827 --> 00:00:47.557 line:8% position:50% size:90%
 For Alder Grove Landscaping,
 we save: use the north gate,
 
-15
-00:00:51.620 --> 00:00:54.300 line:8% position:50% size:90%
+14
+00:00:47.587 --> 00:00:50.267 line:8% position:50% size:90%
 and call Maya thirty
 minutes before arrival.
 
-16
-00:00:55.320 --> 00:00:58.480 line:8% position:50% size:90%
+15
+00:00:51.287 --> 00:00:54.447 line:8% position:50% size:90%
 Ask what the dispatcher needs
 to know about Alder Grove.
 
-17
-00:00:59.060 --> 00:01:02.310 line:8% position:50% size:90%
+16
+00:00:55.027 --> 00:00:58.277 line:8% position:50% size:90%
 The assistant reads the customer
 record and brings the existing
 
-18
-00:01:02.340 --> 00:01:06.440 line:8% position:50% size:90%
+17
+00:00:58.307 --> 00:01:02.407 line:8% position:50% size:90%
 business facts together with the delivery
 instructions we just saved.
 
-19
-00:01:06.660 --> 00:01:08.860 line:8% position:50% size:90%
+18
+00:01:02.627 --> 00:01:04.827 line:8% position:50% size:90%
 That extra information is now useful.
 
-20
-00:01:09.920 --> 00:01:12.100 line:8% position:50% size:90%
+19
+00:01:05.887 --> 00:01:08.067 line:8% position:50% size:90%
 You can ask bigger questions too.
 
-21
-00:01:12.500 --> 00:01:14.690 line:8% position:50% size:90%
+20
+00:01:08.467 --> 00:01:10.657 line:8% position:50% size:90%
 Show active customers by customer type,
 
-22
-00:01:14.720 --> 00:01:17.220 line:8% position:50% size:90%
+21
+00:01:10.687 --> 00:01:13.187 line:8% position:50% size:90%
 include unknown types,
 and give me a chart.
 
-23
-00:01:17.700 --> 00:01:22.920 line:8% position:50% size:90%
+22
+00:01:13.667 --> 00:01:18.887 line:8% position:50% size:90%
 RAW uses the approved business definition
 and returns 961 active accounts,
 
-24
-00:01:23.080 --> 00:01:25.500 line:8% position:50% size:90%
+23
+00:01:19.047 --> 00:01:21.467 line:8% position:50% size:90%
 including 15 without a customer type.
 
-25
-00:01:26.353 --> 00:01:29.193 line:8% position:50% size:90%
+24
+00:01:22.320 --> 00:01:25.160 line:8% position:50% size:90%
 Open a chart group to inspect
 the supporting customers.
 
-26
-00:01:29.593 --> 00:01:32.753 line:8% position:50% size:90%
+25
+00:01:25.560 --> 00:01:28.720 line:8% position:50% size:90%
 Narrow the question to Pine
 Ridge: 401 accounts.
 
-27
-00:01:33.233 --> 00:01:35.073 line:8% position:50% size:90%
+26
+00:01:29.200 --> 00:01:31.040 line:8% position:50% size:90%
 Keep that view alongside the original.
 
-28
-00:01:35.473 --> 00:01:39.733 line:8% position:50% size:90%
+27
+00:01:31.440 --> 00:01:35.700 line:8% position:50% size:90%
 Both reports stay available to reopen,
 without starting the conversation again.
 
-29
-00:01:40.620 --> 00:01:45.830 line:8% position:50% size:90%
+28
+00:01:36.587 --> 00:01:41.797 line:8% position:50% size:90%
 Now Maya needs a three-day excavator
 rental starting October 28th.
 
-30
-00:01:45.860 --> 00:01:48.280 line:8% position:50% size:90%
+29
+00:01:41.827 --> 00:01:44.247 line:8% position:50% size:90%
 Open her message and ask for a summary.
 
-31
-00:01:48.620 --> 00:01:51.820 line:8% position:50% size:90%
+30
+00:01:44.587 --> 00:01:47.787 line:8% position:50% size:90%
 The assistant identifies
 the request, the quote she needs,
 
-32
-00:01:51.980 --> 00:01:54.760 line:8% position:50% size:90%
+31
+00:01:47.947 --> 00:01:50.727 line:8% position:50% size:90%
 and the delivery details
 that still need confirming.
 
-33
-00:01:55.687 --> 00:02:00.767 line:8% position:50% size:90%
+32
+00:01:51.653 --> 00:01:56.613 line:8% position:50% size:90%
 For three days, the listed rate
 gives a $2,250 rental subtotal.
 
-34
-00:02:00.987 --> 00:02:05.227 line:8% position:50% size:90%
+33
+00:01:56.793 --> 00:02:00.513 line:8% position:50% size:90%
 Check the source, prepare the quote,
 and review an editable reply.
 
-35
-00:02:06.167 --> 00:02:09.547 line:8% position:50% size:90%
+34
+00:02:01.253 --> 00:02:04.173 line:8% position:50% size:90%
 Availability, delivery and other
 charges still need checking.
 
-36
-00:02:09.927 --> 00:02:13.867 line:8% position:50% size:90%
-This email is a read-only
-sample; nothing is sent here.
-
-37
-00:02:14.687 --> 00:02:18.687 line:8% position:50% size:90%
+35
+00:02:06.653 --> 00:02:10.653 line:8% position:50% size:90%
 The assistant also offers a follow-up
 and asks when it should happen.
 
-38
-00:02:18.987 --> 00:02:23.287 line:8% position:50% size:90%
+36
+00:02:10.953 --> 00:02:15.253 line:8% position:50% size:90%
 We approve a high-priority task and
 a half-hour block on My calendar:
 
-39
-00:02:23.527 --> 00:02:27.367 line:8% position:50% size:90%
+37
+00:02:15.493 --> 00:02:19.333 line:8% position:50% size:90%
 October 26th at 9 AM,
 before the rental starts.
 
-40
-00:02:27.747 --> 00:02:29.567 line:8% position:50% size:90%
+38
+00:02:19.713 --> 00:02:21.533 line:8% position:50% size:90%
 Then it saves the linked work.
 
-41
-00:02:31.687 --> 00:02:35.567 line:8% position:50% size:90%
+39
+00:02:23.653 --> 00:02:27.533 line:8% position:50% size:90%
 There is the task in the planner,
 and the appointment on the calendar.
 
-42
-00:02:35.947 --> 00:02:37.707 line:8% position:50% size:90%
+40
+00:02:27.913 --> 00:02:29.673 line:8% position:50% size:90%
 Both lead back to Maya's email.
 
-43
-00:02:38.087 --> 00:02:40.647 line:8% position:50% size:90%
+41
+00:02:30.053 --> 00:02:32.613 line:8% position:50% size:90%
 Minimize the assistant,
 move to another page,
 
-44
-00:02:40.927 --> 00:02:43.527 line:8% position:50% size:90%
+42
+00:02:32.893 --> 00:02:35.493 line:8% position:50% size:90%
 and restore the same
 conversation when you need it.
 
-45
-00:02:44.687 --> 00:02:47.527 line:8% position:50% size:90%
+43
+00:02:36.653 --> 00:02:39.493 line:8% position:50% size:90%
 Spot other work that needs attention.
 
-46
-00:02:48.207 --> 00:02:54.047 line:8% position:50% size:90%
+44
+00:02:40.173 --> 00:02:46.013 line:8% position:50% size:90%
 Compare financial totals and investigate
 the $180 difference in the records.
 
-47
-00:02:54.447 --> 00:02:58.437 line:8% position:50% size:90%
+45
+00:02:46.413 --> 00:02:50.403 line:8% position:50% size:90%
 For equipment, a dated
 reading of 1,420 hours
 
-48
-00:02:58.467 --> 00:03:02.327 line:8% position:50% size:90%
+46
+00:02:50.433 --> 00:02:54.293 line:8% position:50% size:90%
 is beyond the 1,350-hour service target.
 
-49
-00:03:03.047 --> 00:03:05.107 line:8% position:50% size:90%
+47
+00:02:55.013 --> 00:02:57.073 line:8% position:50% size:90%
 You can see why maintenance is due.
 
-50
-00:03:05.987 --> 00:03:10.387 line:8% position:50% size:90%
+48
+00:02:57.953 --> 00:03:02.593 line:8% position:50% size:90%
 Updated source snapshots preserve
 RAW-owned information and work.
 
-51
-00:03:10.907 --> 00:03:12.687 line:8% position:50% size:90%
+49
+00:03:03.093 --> 00:03:05.053 line:8% position:50% size:90%
 Saved reports retain their history.
 
-52
-00:03:12.907 --> 00:03:16.887 line:8% position:50% size:90%
+50
+00:03:05.393 --> 00:03:09.433 line:8% position:50% size:90%
 Use reusable date choices and
 configure recurring reports in RAW.
 
-53
-00:03:17.187 --> 00:03:19.327 line:8% position:50% size:90%
-Email delivery has a separate approval.
-
-54
-00:03:19.767 --> 00:03:21.267 line:8% position:50% size:90%
+51
+00:03:09.873 --> 00:03:11.793 line:8% position:50% size:90%
 The owner stays in control.
 
-55
-00:03:22.187 --> 00:03:23.387 line:8% position:50% size:90%
+52
+00:03:12.720 --> 00:03:13.920 line:8% position:50% size:90%
 Keep what works.
 
-56
-00:03:23.687 --> 00:03:26.637 line:8% position:50% size:90%
+53
+00:03:14.220 --> 00:03:17.170 line:8% position:50% size:90%
 Add the information you need,
 bring your AI into the workflow,
 
-57
-00:03:26.667 --> 00:03:28.927 line:8% position:50% size:90%
+54
+00:03:17.200 --> 00:03:19.460 line:8% position:50% size:90%
 and make the business easier to run.
 
-58
-00:03:29.387 --> 00:03:31.747 line:8% position:50% size:90%
+55
+00:03:19.920 --> 00:03:22.280 line:8% position:50% size:90%
 RAW Business Workspace. Book a demo.

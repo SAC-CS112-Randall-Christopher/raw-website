@@ -1,26 +1,26 @@
 RAW — final narration transcript
-Fictional business: Pine Ridge Rental & Service
+Pine Ridge Rental & Service
 
 00:00:00.000  Your information. Useful work.
 A clear answer. A useful reply. A next step on the calendar. RAW brings your business information and your AI into the same workspace.
 
 00:00:11.733  Bring your AI and business information
-Keep the systems you rely on. Connect a supported assistant with approved access. Bring in customer, equipment and billing information. Here, Pine Ridge Rental uses imported snapshots of fictional business data.
+Keep the systems you rely on. Connect a supported assistant with approved access. Bring your customer, equipment and billing information into RAW, ready to use together.
 
-00:00:24.967  Add what your business needs
+00:00:21.767  Add what your business needs
 Add what your old software is missing. We save delivery instructions alongside Alder Grove's existing customer record. Ask the assistant what the dispatcher needs to know, and it uses both the business facts and our new instructions.
 
-00:00:40.967  Ask questions. Check the answer.
+00:00:37.767  Ask questions. Check the answer.
 Ask for active customers by type, including unknown types. There are 961. Open the chart to inspect the supporting records, and keep the report to use again.
 
-00:00:55.967  Turn messages into useful replies
-Maya needs an excavator starting October 28th. Summarize her request, check the source rate, and prepare a reply the owner can review. This read-only email sample sends nothing.
+00:00:52.767  Turn messages into useful replies
+Maya needs an excavator starting October 28th. Summarize her request, check the source rate, and prepare a reply the owner can review.
 
-00:01:09.700  Offer a next step. Save approved work.
+00:01:03.767  Offer a next step. Save approved work.
 The assistant offers a follow-up. We approve October 26th at 9 AM. It saves a high-priority task and a half-hour calendar block, both linked to Maya's email.
 
-00:01:24.700  Keep the next step connected
+00:01:18.767  Keep the next step connected
 The customer, added information, correspondence and next step stay connected, with the assistant available across pages.
 
-00:01:34.700  RAW Business Workspace
+00:01:28.767  RAW Business Workspace
 Bring your AI into the business you already run. RAW Business Workspace. Book a demo.

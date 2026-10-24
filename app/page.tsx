@@ -44,9 +44,9 @@ const highlightVideo = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
   name: "RAW Business Workspace — Answers you can use",
-  description: `A ${Math.round(highlightMedia.duration)}-second overview of the actual RAW workspace: connected AI, imported business information, added database fields, inspectable reports, email and approved task/calendar creation. Fictional Pine Ridge Rental & Service data; processing waits condensed.`,
+  description: `A ${Math.round(highlightMedia.duration)}-second overview of RAW Business Workspace: connected AI, imported business information, added database fields, inspectable reports, email and approved task/calendar creation. Processing waits condensed.`,
   thumbnailUrl: "https://randallautomationworks.com/products/raw-workspace/raw-highlight-poster.jpg",
-  uploadDate: "2026-10-23T00:00:00Z",
+  uploadDate: "2026-10-24T00:00:00Z",
   duration: highlightMedia.duration_iso,
   contentUrl: "https://randallautomationworks.com/products/raw-workspace/raw-highlight.mp4",
 };
@@ -97,7 +97,7 @@ export default function Home() {
                 Your browser does not support embedded video. <a href="/products/raw-workspace/raw-highlight.mp4">Watch the highlight</a>.
               </video>
             </div>
-            <figcaption>{Math.round(highlightMedia.duration)}-second highlight · Actual RAW interface with fictional Pine Ridge business data. Processing waits are condensed.</figcaption>
+            <figcaption>{Math.round(highlightMedia.duration)}-second highlight · See your business information, AI and daily work come together. Processing waits are condensed.</figcaption>
             <div className="workspace-film-links"><Link className="text-link" href="/raw-workspace#see-it-in-action">Watch the full demo <span aria-hidden="true">→</span></Link><a className="text-link" href="/products/raw-workspace/raw-highlight.mp4?download=1" download="RAW-highlight.mp4">Download highlight MP4</a><a className="text-link" href={bookingLink} target="_blank" rel="noreferrer">Book a demo <span aria-hidden="true">↗</span></a><a className="text-link" href="/products/raw-workspace/raw-highlight-transcript.txt">Read the highlight transcript</a></div>
           </figure>
         </div>

@@ -1,71 +1,71 @@
 {
   "source_repository": "SAC-CS112-Randall-Christopher/DMPH",
-  "source_commit": "ae7d57c6675d1e4b2f6dcab294738025236c1027",
+  "source_commit": "b1de67e322a15365d7de80fbb28f563d8e702c99",
   "source_folder": "deliverables/raw-workspace-connected",
   "assets": {
     "raw-highlight.mp4": {
-      "bytes": 8666156,
-      "sha256": "5cd98fe17917c8059696b0db1dc7cb87c4c34ac7804324017b95cdd90d768457"
+      "bytes": 7956375,
+      "sha256": "6aaebd51a71943e6bd189485213e1f7a93dad48bb27041d2d87a73c8cfc7747a"
     },
     "raw-full-demo.mp4": {
-      "bytes": 17708958,
-      "sha256": "c8acfdb5607e488c395ef74df6ffbc8b9ac7a48d8d415d8182d92b0c90ebaad6"
+      "bytes": 16841446,
+      "sha256": "ab08e2eb3346453829d91d9bb5fe96e24d7ba21306fb87175ae0e285c64e1906"
     },
     "raw-demo-poster.jpg": {
-      "bytes": 261556,
-      "sha256": "a1101474b72d7e2133b74158c98c1061049505059d494d7dec6953433a865782"
+      "bytes": 257480,
+      "sha256": "6ce2121cd78ed03be4b0d8602690199c52174ad1a857569b39bfae0c2cf7ca33"
     },
     "raw-highlight-poster.jpg": {
-      "bytes": 225389,
-      "sha256": "8b2730d113a2e5c99b4a7bad08b69f4c74ab4a0f471928908738c8012a6c5442"
+      "bytes": 222362,
+      "sha256": "ce946d1cbfd39b77c1cd23eb5680f071f9df4f3ec9fab4dc2c59d7ef26a47bb4"
     },
     "raw-highlight.vtt": {
-      "bytes": 3008,
-      "sha256": "f0ef436ef3740407ef899c15c9fb90160d0d8207f5ecce814cdcb5b28d6cf13c"
+      "bytes": 2859,
+      "sha256": "8f4f8b0fbd9dadd7aff9a724fb005da767be5558678bb58e977067f2516190b5"
     },
     "raw-full-demo.vtt": {
-      "bytes": 6720,
-      "sha256": "1ed93e15ee9822b327e39a5b7965b0e2610d9f88e4511606547300127542fcf5"
+      "bytes": 6404,
+      "sha256": "38857a7d10bbd823e005d8914fdd003936ca06a82c65fc2b3e66e4b9661b624f"
     },
     "raw-demo-transcript.txt": {
-      "bytes": 3704,
-      "sha256": "c5b4f6066a1b2710c7f7080da79684c1a5f8ddce3e316f9044d85bc42b7044b2"
+      "bytes": 3560,
+      "sha256": "77c08c4812259b81e8af7d982e5d0895a9da3803e0bdf661ee4842fdf53df747"
     },
     "raw-highlight-transcript.txt": {
-      "bytes": 1742,
-      "sha256": "6a703a129563af4bcd7fe2398b962782c81a66a0f2fc64f3c0aa20b079c1819e"
+      "bytes": 1637,
+      "sha256": "5ef06946f9310bd7240840d8cf783fd265933c63454a17d6340f4d07e14119e1"
     }
   },
   "videos": {
     "raw-highlight.mp4": {
-      "duration": 102.912,
-      "duration_iso": "PT1M43S",
-      "duration_label": "1 minutes 43 seconds",
-      "caption_cues": 27,
-      "frames": 3087,
+      "duration": 96.981,
+      "duration_iso": "PT1M37S",
+      "duration_label": "1 minutes 37 seconds",
+      "caption_cues": 26,
+      "frames": 2909,
       "video": "H.264 1920x1080 30fps yuv420p",
       "audio": "AAC 48kHz stereo",
       "fast_start": true,
       "complete_decode_passed": true,
       "source_file": "RAW-highlights.mp4",
-      "source_sha256": "5cd98fe17917c8059696b0db1dc7cb87c4c34ac7804324017b95cdd90d768457",
+      "source_sha256": "6aaebd51a71943e6bd189485213e1f7a93dad48bb27041d2d87a73c8cfc7747a",
       "audio_packets_unchanged": true,
-      "audio_sha256": "0e3b4f40ec16c8e14cff4e85af94d343dd530c2e043ff548ca677319e087675b"
+      "audio_sha256": "2c226d79a2bee4b72c05777706f7a48545afa1c3dbb0a5e164bc74c82120d913"
     },
     "raw-full-demo.mp4": {
-      "duration": 212.586,
-      "duration_iso": "PT3M33S",
-      "duration_label": "3 minutes 33 seconds",
-      "caption_cues": 58,
-      "frames": 6377,
+      "duration": 203.114,
+      "duration_iso": "PT3M23S",
+      "duration_label": "3 minutes 23 seconds",
+      "caption_cues": 55,
+      "frames": 6093,
       "video": "H.264 1920x1080 30fps yuv420p",
       "audio": "AAC 48kHz stereo",
       "fast_start": true,
       "complete_decode_passed": true,
       "source_file": "RAW-business-demo.mp4",
-      "source_sha256": "c8acfdb5607e488c395ef74df6ffbc8b9ac7a48d8d415d8182d92b0c90ebaad6",
+      "source_sha256": "ab08e2eb3346453829d91d9bb5fe96e24d7ba21306fb87175ae0e285c64e1906",
       "audio_packets_unchanged": true,
-      "audio_sha256": "8dcb4d970db64838249ce6caf1fe88639712691f854c9685885ea74850dd61a0"
+      "audio_sha256": "4cefbc4fa4b8d8ccc6afe170e3c5a040da4558ec9e38dd24cc379bf4cdf457dd"
     }
   },
   "new_spend_usd": 0

@@ -23,7 +23,7 @@ const features = [
   ["02", "Keep the information you already have.", "Import supported database snapshots or table exports. Browse customer, equipment and billing information with its source date and identity available."],
   ["03", "Add what your business needs.", "Save typed RAW fields alongside imported records. Keep delivery instructions, dispatch details and other additional information connected to the existing business record."],
   ["04", "Ask questions. Inspect the answer.", "Build reusable reports from permitted information and approved business definitions. Open supporting records, keep useful views and review report history."],
-  ["05", "Give correspondence useful context.", "Read and summarize permitted messages, inspect related business information, and prepare replies for review. Sending remains a deliberate owner action."],
+  ["05", "Give correspondence useful context.", "Read and summarize permitted messages, inspect related business information, and prepare useful replies with the customer context already at hand."],
   ["06", "Keep the next step connected.", "Let the assistant offer a follow-up, clarify its timing, and save approved tasks or calendar blocks. Priorities, dates and links keep daily work understandable."],
 ];
 
@@ -41,7 +41,7 @@ const structuredData = {
       applicationCategory: "BusinessApplication", operatingSystem: "Web browser", creator: { "@id": `${base}/#business` },
       image: `${base}/products/raw-workspace/overview.png`, featureList: ["Supported connected AI", "Imported business snapshots", "Linked RAW database fields", "Inspectable saved reports", "Email summary and reply preparation", "Approved task and calendar creation", "Equipment quotes from source rates"] },
     { "@type": "WebPage", "@id": `${base}/raw-workspace#page`, url: `${base}/raw-workspace`, name: "RAW Business Workspace", description, about: { "@id": `${base}/raw-workspace#product` }, isPartOf: { "@id": `${base}/#business` } },
-    { "@type": "VideoObject", name: "RAW — Your information. Useful work.", description: "An actual desktop demonstration of supported connected AI, imported business information, added RAW database fields used in an AI answer, inspectable reports, email reply preparation, and approved task and calendar creation using fictional Pine Ridge Rental & Service data. Processing waits are condensed.", thumbnailUrl: `${base}/products/raw-workspace/raw-demo-poster.jpg`, uploadDate: "2026-10-23T00:00:00Z", duration: fullDemoMedia.duration_iso, contentUrl: `${base}/products/raw-workspace/raw-full-demo.mp4`, about: { "@id": `${base}/raw-workspace#product` } },
+    { "@type": "VideoObject", name: "RAW — Your information. Useful work.", description: "A desktop demonstration of supported connected AI, imported business information, added RAW database fields used in an AI answer, inspectable reports, email reply preparation, and approved task and calendar creation. Processing waits are condensed.", thumbnailUrl: `${base}/products/raw-workspace/raw-demo-poster.jpg`, uploadDate: "2026-10-24T00:00:00Z", duration: fullDemoMedia.duration_iso, contentUrl: `${base}/products/raw-workspace/raw-full-demo.mp4`, about: { "@id": `${base}/raw-workspace#product` } },
     { "@type": "FAQPage", mainEntity: faqs.map(({ q, a }) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) },
     { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: base }, { "@type": "ListItem", position: 2, name: "RAW Business Workspace", item: `${base}/raw-workspace` }] },
   ],
@@ -56,8 +56,8 @@ export default function RawWorkspace() {
         <div className="workspace-hero-copy"><p className="eyebrow eyebrow-light">RAW Business Workspace</p><h1>Your business.<br /><em>Connected.</em></h1><p>Keep the software you rely on. Connect its business information with your AI assistant, understand what is happening and turn answers into useful work.</p><div className="button-row"><a className="button button-sand" href={bookingLink} target="_blank" rel="noreferrer">Discuss your workflow with Chris <span aria-hidden="true">↗</span></a><a className="workspace-watch-link" href="#see-it-in-action">See it in action <span aria-hidden="true">↓</span></a></div><p className="workspace-byline">Built by Randall Automation Works · Montrose, Colorado</p></div>
         <figure className="workspace-product-frame">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/products/raw-workspace/overview.png" width={1600} height={1000} alt="Actual RAW Business Workspace home screen showing a sample business overview, customers, quotes and tasks" fetchPriority="high" />
-          <figcaption>Actual workspace interface · Sample business data</figcaption>
+          <img src="/products/raw-workspace/overview.png" width={1600} height={1000} alt="Actual RAW Business Workspace home screen showing the business overview, customers, quotes and tasks" fetchPriority="high" />
+          <figcaption>Your business information and daily work, connected</figcaption>
         </figure>
       </div>
     </section>
@@ -74,7 +74,7 @@ export default function RawWorkspace() {
             Your browser does not support embedded video. <a href="/products/raw-workspace/raw-full-demo.mp4">Watch the full demonstration</a>.
           </video>
         </div>
-        <p className="workspace-caption">Actual RAW interface and connected assistant results using fictional Pine Ridge Rental &amp; Service data. The owner saves added information and reviews the draft; the assistant creates the task and calendar block after approval. Provider sign-in was completed privately; processing waits are condensed. Imported snapshots and a read-only email sample are shown. No email or invitation was sent.</p>
+        <p className="workspace-caption">Follow Pine Ridge Rental &amp; Service from connected business information to a useful report, a reviewed reply and a scheduled next step. See added customer details work alongside existing records, with the assistant available across pages. Processing waits are condensed.</p>
         <p>Bring one recurring task and the software you use today. We will discuss the first useful improvement for your business.</p>
         <div className="workspace-film-links"><a className="button button-primary" href={bookingLink} target="_blank" rel="noreferrer">Book a demo <span aria-hidden="true">↗</span></a><a className="text-link" href="/products/raw-workspace/raw-full-demo.mp4?download=1" download="RAW-full-demo.mp4">Download full demo MP4</a><a className="text-link" href="/products/raw-workspace/raw-demo-transcript.txt">Read the demo transcript</a><a className="text-link" href="/products/raw-workspace/raw-full-demo.vtt" download>Download English captions</a></div>
       </div>
@@ -84,7 +84,7 @@ export default function RawWorkspace() {
 
     <section className="section workspace-detail-section"><div className="shell workspace-detail-grid"><figure>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/products/raw-workspace/quotes.png" width={1600} height={1000} loading="lazy" alt="Actual equipment quote screen with sample source rates and rental line items" /><figcaption>Actual quote workflow · Sample business data</figcaption></figure><div><p className="eyebrow">For the way your business runs</p><h2>A workspace.<br />Your way of working.</h2><p>Rental desk, service team or growing small business: the work is different. Your workspace should reflect that.</p><p>Choose the modules that matter, connect the information you use, and give the people doing the work a clear place to start.</p><Link className="text-link" href="/contact">Discuss your configuration <span aria-hidden="true">→</span></Link></div></div></section>
+      <img src="/products/raw-workspace/quotes.png" width={1600} height={1000} loading="lazy" alt="Actual equipment quote screen with source rates and rental line items" /><figcaption>Build a quote from connected equipment and source rates</figcaption></figure><div><p className="eyebrow">For the way your business runs</p><h2>A workspace.<br />Your way of working.</h2><p>Rental desk, service team or growing small business: the work is different. Your workspace should reflect that.</p><p>Choose the modules that matter, connect the information you use, and give the people doing the work a clear place to start.</p><Link className="text-link" href="/contact">Discuss your configuration <span aria-hidden="true">→</span></Link></div></div></section>
 
     <section className="section"><div className="shell workspace-faq"><div><p className="eyebrow">A few useful answers</p><h2>Get to know<br />RAW Workspace.</h2></div><div>{faqs.map(({ q, a }) => <details key={q}><summary>{q}<span aria-hidden="true">+</span></summary><p>{a}</p></details>)}</div></div></section>
 
