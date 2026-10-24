@@ -71,6 +71,22 @@ HTTPS are recorded in [docs/raw-r2-verification.json](docs/raw-r2-verification.j
 That receipt identifies whether it covers the R2 origin or the final website
 cutover; do not treat an origin-only receipt as a deployed website check.
 
+The production cutover is complete: source `bec63fca1782345825cc723bba6fc745da6eae7e`,
+Worker version `e19bfba6-81d7-4c20-a27d-907204421e54` at 100 percent. The films
+are byte-identical to the previous reviewed release. Both complete real-time
+playbacks ended successfully, along with desktop/mobile captions, seeking,
+downloads and full hashes. See [live checks](docs/raw-r2-live.json),
+[preview checks](docs/raw-r2-preview.json) and the
+[deployment receipt](docs/raw-r2-deployment.json). The sharper film edit and
+new voice auditions are separate work; this hosting cutover does not represent
+a newly finished edit.
+
+The owner requested another local voice comparison. Five matched-volume MP3/WAV
+auditions are available at
+https://media.randallautomationworks.com/raw-workspace/voice-auditions/20261024-polish-1/index.html.
+They are public review copies, not a change to the production narration. Ryan
+remains the last owner-approved production voice while the choice is pending.
+
 Primary references: [public buckets](https://developers.cloudflare.com/r2/buckets/public-buckets/),
 [CORS](https://developers.cloudflare.com/r2/buckets/cors/),
 [pricing](https://developers.cloudflare.com/r2/pricing/).

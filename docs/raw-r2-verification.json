@@ -3,7 +3,7 @@
   "bucket": "randall-automation-works-media",
   "publicOrigin": "https://media.randallautomationworks.com",
   "tls": "verified by HTTPS requests with normal certificate validation",
-  "websiteCutover": false,
+  "websiteCutover": true,
   "results": [
     {
       "name": "raw-highlight.mp4",
@@ -111,5 +111,7 @@
         }
       ]
     }
-  ]
+  ],
+  "websiteSourceCommit": "bec63fca1782345825cc723bba6fc745da6eae7e",
+  "websiteVersionId": "e19bfba6-81d7-4c20-a27d-907204421e54"
 }

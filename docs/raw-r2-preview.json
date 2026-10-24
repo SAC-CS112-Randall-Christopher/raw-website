@@ -1,0 +1,147 @@
+{
+  "base_url": "http://127.0.0.1:8791",
+  "checks": [
+    {
+      "label": "desktop-highlight",
+      "src": "http://127.0.0.1:8791/products/raw-workspace/raw-highlight.mp4",
+      "duration": 96.981,
+      "width": 1920,
+      "height": 1080,
+      "english_captions": {
+        "cues": 26,
+        "mode": "showing"
+      },
+      "range_status": 206,
+      "range_matches_packaged_bytes": true,
+      "keyboard_playback": true,
+      "seek_to_middle_and_end": true,
+      "no_horizontal_overflow": true,
+      "no_autoplay_or_initial_mp4_download": true
+    },
+    {
+      "label": "desktop-full-demo",
+      "src": "http://127.0.0.1:8791/products/raw-workspace/raw-full-demo.mp4",
+      "duration": 203.114,
+      "width": 1920,
+      "height": 1080,
+      "english_captions": {
+        "cues": 55,
+        "mode": "showing"
+      },
+      "range_status": 206,
+      "range_matches_packaged_bytes": true,
+      "keyboard_playback": true,
+      "seek_to_middle_and_end": true,
+      "no_horizontal_overflow": true,
+      "no_autoplay_or_initial_mp4_download": true
+    },
+    {
+      "label": "mobile-highlight",
+      "src": "http://127.0.0.1:8791/products/raw-workspace/raw-highlight.mp4",
+      "duration": 96.981,
+      "width": 1920,
+      "height": 1080,
+      "english_captions": {
+        "cues": 26,
+        "mode": "showing"
+      },
+      "range_status": 206,
+      "range_matches_packaged_bytes": true,
+      "keyboard_playback": true,
+      "seek_to_middle_and_end": true,
+      "no_horizontal_overflow": true,
+      "no_autoplay_or_initial_mp4_download": true
+    },
+    {
+      "label": "mobile-full-demo",
+      "src": "http://127.0.0.1:8791/products/raw-workspace/raw-full-demo.mp4",
+      "duration": 203.114,
+      "width": 1920,
+      "height": 1080,
+      "english_captions": {
+        "cues": 55,
+        "mode": "showing"
+      },
+      "range_status": 206,
+      "range_matches_packaged_bytes": true,
+      "keyboard_playback": true,
+      "seek_to_middle_and_end": true,
+      "no_horizontal_overflow": true,
+      "no_autoplay_or_initial_mp4_download": true
+    }
+  ],
+  "page_errors": [],
+  "browser": "151.0.7922.34",
+  "downloads": [
+    {
+      "label": "desktop-highlight-download",
+      "file": "raw-highlight.mp4",
+      "suggested_filename": "raw-highlight.mp4",
+      "bytes": 7956375,
+      "sha256": "6aaebd51a71943e6bd189485213e1f7a93dad48bb27041d2d87a73c8cfc7747a"
+    },
+    {
+      "label": "desktop-full-download",
+      "file": "raw-full-demo.mp4",
+      "suggested_filename": "raw-full-demo.mp4",
+      "bytes": 16841446,
+      "sha256": "ab08e2eb3346453829d91d9bb5fe96e24d7ba21306fb87175ae0e285c64e1906"
+    },
+    {
+      "label": "mobile-highlight-download",
+      "file": "raw-highlight.mp4",
+      "suggested_filename": "raw-highlight.mp4",
+      "bytes": 7956375,
+      "sha256": "6aaebd51a71943e6bd189485213e1f7a93dad48bb27041d2d87a73c8cfc7747a"
+    },
+    {
+      "label": "mobile-full-download",
+      "file": "raw-full-demo.mp4",
+      "suggested_filename": "raw-full-demo.mp4",
+      "bytes": 16841446,
+      "sha256": "ab08e2eb3346453829d91d9bb5fe96e24d7ba21306fb87175ae0e285c64e1906"
+    }
+  ],
+  "exact_public_assets": [
+    {
+      "name": "raw-highlight.mp4",
+      "bytes": 7956375,
+      "sha256": "6aaebd51a71943e6bd189485213e1f7a93dad48bb27041d2d87a73c8cfc7747a"
+    },
+    {
+      "name": "raw-full-demo.mp4",
+      "bytes": 16841446,
+      "sha256": "ab08e2eb3346453829d91d9bb5fe96e24d7ba21306fb87175ae0e285c64e1906"
+    },
+    {
+      "name": "raw-demo-poster.jpg",
+      "bytes": 257480,
+      "sha256": "6ce2121cd78ed03be4b0d8602690199c52174ad1a857569b39bfae0c2cf7ca33"
+    },
+    {
+      "name": "raw-highlight-poster.jpg",
+      "bytes": 222362,
+      "sha256": "ce946d1cbfd39b77c1cd23eb5680f071f9df4f3ec9fab4dc2c59d7ef26a47bb4"
+    },
+    {
+      "name": "raw-highlight.vtt",
+      "bytes": 2859,
+      "sha256": "8f4f8b0fbd9dadd7aff9a724fb005da767be5558678bb58e977067f2516190b5"
+    },
+    {
+      "name": "raw-full-demo.vtt",
+      "bytes": 6404,
+      "sha256": "38857a7d10bbd823e005d8914fdd003936ca06a82c65fc2b3e66e4b9661b624f"
+    },
+    {
+      "name": "raw-demo-transcript.txt",
+      "bytes": 3560,
+      "sha256": "77c08c4812259b81e8af7d982e5d0895a9da3803e0bdf661ee4842fdf53df747"
+    },
+    {
+      "name": "raw-highlight-transcript.txt",
+      "bytes": 1637,
+      "sha256": "5ef06946f9310bd7240840d8cf783fd265933c63454a17d6340f4d07e14119e1"
+    }
+  ]
+}
