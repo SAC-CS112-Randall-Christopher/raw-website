@@ -70,6 +70,16 @@ See [preview verification](raw-demo-preview-verification.json),
 [live verification](raw-demo-live-verification.json) and
 [local check evidence](evidence/raw-demo-local-checks.txt) for actual-file proof.
 
+The verified production build and all **28 tests** passed, with no failures or
+skips. ESLint and Wrangler dry run passed. Independent Codex review accepted the
+final films, all eight exact Git/source asset matches and all four preview
+layouts without a remaining material finding. The live custom-domain checks
+cover desktop/mobile default 43/18 caption cues, keyboard playback, exact range
+bytes, navigation, no autoplay or initial MP4 download, and no page errors.
+Both public films completed beginning-to-end playback at **1x**, reaching
+**74.538** and **178.346 seconds** with `ended: true` and no media errors.
+All eight complete HTTP response hashes match the reviewed package.
+
 ```sh
 python scripts/check_raw_demo_publication.py \
   --base-url https://randallautomationworks.com --label live --complete
