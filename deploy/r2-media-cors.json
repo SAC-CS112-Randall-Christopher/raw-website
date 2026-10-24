@@ -1,0 +1,16 @@
+{
+  "rules": [
+    {
+      "allowed": {
+        "origins": [
+          "https://randallautomationworks.com",
+          "https://www.randallautomationworks.com"
+        ],
+        "methods": ["GET", "HEAD"],
+        "headers": ["Range", "If-Range", "If-None-Match"]
+      },
+      "exposeHeaders": ["Accept-Ranges", "Content-Range", "Content-Length", "ETag"],
+      "maxAgeSeconds": 3600
+    }
+  ]
+}

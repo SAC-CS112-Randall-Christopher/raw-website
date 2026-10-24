@@ -1,0 +1,15 @@
+{
+  "headRefOid": "611af4832db898a3b6800a362b6322e006a7ba07",
+  "statusCheckRollup": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-24T17:03:25Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://dash.cloudflare.com/dc34c5b1bb899c50b220159b42d35752/workers/services/view/randall-automation-works/production/builds/2c360b03-eb4c-4e46-890a-dd588a51ad78",
+      "name": "Workers Builds: randall-automation-works",
+      "startedAt": "2026-10-24T17:03:25Z",
+      "status": "COMPLETED",
+      "workflowName": ""
+    }
+  ]
+}

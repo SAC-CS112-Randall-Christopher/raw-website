@@ -1,0 +1,48 @@
+{
+  "verified_at": "2026-10-24T16:51:39.522Z",
+  "method": "Node native fetch, complete streaming SHA-256 and byte-for-byte ranges",
+  "objects": [
+    {
+      "file": "raw-highlight.mp4",
+      "bytes": 8970882,
+      "sha256": "ec890311f4b9decc68a139791107ed2b288306431b555403c6ab02ff112e7e59",
+      "url": "https://media.randallautomationworks.com/raw-workspace/ec890311f4b9decc68a139791107ed2b288306431b555403c6ab02ff112e7e59/raw-highlight.mp4",
+      "public_full_hash_verified": true,
+      "range_status": 206,
+      "range_matches_local": true
+    },
+    {
+      "file": "raw-full-demo.mp4",
+      "bytes": 14966565,
+      "sha256": "f32d3410aaa93405a6fedaa575e8156fd7f6d92352592005f1346aa085b13a2a",
+      "url": "https://media.randallautomationworks.com/raw-workspace/f32d3410aaa93405a6fedaa575e8156fd7f6d92352592005f1346aa085b13a2a/raw-full-demo.mp4",
+      "public_full_hash_verified": true,
+      "range_status": 206,
+      "range_matches_local": true
+    },
+    {
+      "file": "RAW-full-lossless-edit.zip",
+      "bytes": 60554628,
+      "sha256": "7aa53d60df95367a8e29894b225bfe7313c8324613bc0b2943702e0cdf5d6c08",
+      "url": "https://media.randallautomationworks.com/raw-workspace/edits/7aa53d60df95367a8e29894b225bfe7313c8324613bc0b2943702e0cdf5d6c08/RAW-full-lossless-edit.zip",
+      "uploaded": false,
+      "note": "Lossless reviewed picture only; private uncropped originals excluded.",
+      "public_full_hash_verified": true,
+      "range_status": 206,
+      "range_matches_local": true
+    },
+    {
+      "file": "RAW-highlight-lossless-edit.zip",
+      "bytes": 35590121,
+      "sha256": "3e92cd483e358e0d1b8d4ff3bd9a3667e690a962c5c6244c5d8e2c27e338b21a",
+      "url": "https://media.randallautomationworks.com/raw-workspace/edits/3e92cd483e358e0d1b8d4ff3bd9a3667e690a962c5c6244c5d8e2c27e338b21a/RAW-highlight-lossless-edit.zip",
+      "uploaded": false,
+      "note": "Lossless reviewed picture only; private uncropped originals excluded.",
+      "public_full_hash_verified": true,
+      "range_status": 206,
+      "range_matches_local": true
+    }
+  ],
+  "private_bucket_changed": false,
+  "new_paid_api_usage": false
+}

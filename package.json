@@ -8,8 +8,9 @@
   "scripts": {
     "install:ci": "bash scripts/install-ci.sh",
     "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vite",
-    "build": "bash scripts/build-verified.sh",
+    "build": "bash scripts/build-verified.sh && npm run verify:videos",
     "deploy": "npm run build && wrangler deploy --config wrangler.jsonc",
+    "verify:videos": "node scripts/verify-r2-media.mjs",
     "preview:cloudflare": "npm run build && wrangler dev --config wrangler.jsonc",
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
     "test": "npm run build && node --test tests/*.test.mjs",

@@ -2,3 +2,4 @@
 
 # Published delivery manifests identify the exact exported bytes.
 public/products/raw-workspace/raw-* -text
+media/raw-workspace/** -text

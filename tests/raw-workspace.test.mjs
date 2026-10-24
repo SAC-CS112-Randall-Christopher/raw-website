@@ -29,7 +29,7 @@ test("promotes the real RAW product with playable media and answerable product i
   assert.match(html, /<video[^>]+controls/);
   assert.match(html, /raw-full-demo\.vtt/);
   assert.match(html, /raw-demo-transcript\.txt/);
-  assert.match(html, /fictional Pine Ridge/);
+  assert.match(html, /Follow Pine Ridge Rental/);
   assert.doesNotMatch(html, /24 seconds|PT24S/);
   assert.match(html, /calendar\.app\.google\/Qwnjw6tS5TdDo5Hh7/);
   const mainText = html.match(/<main[^>]*>([\s\S]*?)<\/main>/)[1].replace(/<script[^>]*>[\s\S]*?<\/script>/g, "").replace(/<[^>]+>/g, " ");
@@ -52,7 +52,8 @@ test("promotes the real RAW product with playable media and answerable product i
   for (const markup of [html, homepage]) {
     const links = [...markup.matchAll(/<div class="workspace-film-links">([\s\S]*?)<\/div>/g)].map(m => m[1]).join(' ');
     assert.match(links, /href="https:\/\/calendar\.app\.google\/Qwnjw6tS5TdDo5Hh7"/);
-    assert.match(links, /Discuss your workflow with Chris/, "The invitation beside the player is a real link");
+    assert.match(links, /Book a demo/, "The invitation beside the player is a real link");
+    assert.match(links, /raw-(?:highlight|full-demo)\.mp4\?download=1/, "The film has a direct MP4 download beside the player");
   }
   assert.match(await sitemap.text(), /https:\/\/randallautomationworks.com\/raw-workspace/);
   for (const asset of ["overview.png", "quotes.png", "video-poster.png", "social-card.png", "captions.vtt", "raw-workspace-landscape.mp4"]) {
@@ -60,10 +61,14 @@ test("promotes the real RAW product with playable media and answerable product i
     assert.ok((await stat(file)).size > 0, asset);
   }
   for (const [asset, expected] of Object.entries(media.assets)) {
-    const bytes = await readFile(new URL(`../dist/client/products/raw-workspace/${asset}`, import.meta.url));
+    const isVideo = asset.endsWith('.mp4');
+    const location = isVideo ? `../media/raw-workspace/${asset}` : `../dist/client/products/raw-workspace/${asset}`;
+    const bytes = await readFile(new URL(location, import.meta.url));
     assert.equal(bytes.length, expected.bytes, `${asset}: complete packaged file`);
     assert.equal(createHash("sha256").update(bytes).digest("hex"), expected.sha256, `${asset}: reviewed media`);
-    assert.ok(bytes.length < 25 * 1024 * 1024, `${asset}: existing Cloudflare static-asset limit`);
+    if (isVideo) {
+      await assert.rejects(stat(new URL(`../dist/client/products/raw-workspace/${asset}`, import.meta.url)), { code: 'ENOENT' }, 'R2 films are excluded from Workers static assets');
+    } else assert.ok(bytes.length < 25 * 1024 * 1024, `${asset}: static asset limit applies only to remaining assets`);
   }
   for (const [name, details] of Object.entries(media.videos)) {
     const count=details.caption_cues, duration=details.duration;
