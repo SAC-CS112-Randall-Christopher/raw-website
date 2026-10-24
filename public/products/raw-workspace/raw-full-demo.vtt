@@ -1,202 +1,271 @@
 WEBVTT
 
 1
-00:00:00.120 --> 00:00:04.880
-Here's a useful answer: 961
-active customer accounts,
+00:00:00.120 --> 00:00:02.220 line:8% position:50% size:90%
+A business question becomes a report.
 
 2
-00:00:05.120 --> 00:00:08.040
-with a chart you can open
-to check the records behind it.
+00:00:02.540 --> 00:00:05.180 line:8% position:50% size:90%
+A customer email becomes
+a useful next step.
 
 3
-00:00:08.820 --> 00:00:11.940
-Keep the business software you rely on.
+00:00:05.680 --> 00:00:09.820 line:8% position:50% size:90%
+RAW brings your information and your
+AI into the work you already do.
 
 4
-00:00:12.200 --> 00:00:15.240
-RAW connects its information
-with your AI assistant,
+00:00:10.720 --> 00:00:12.480 line:8% position:50% size:90%
+Keep the systems you rely on.
 
 5
-00:00:15.600 --> 00:00:18.480
-helping you understand
-the business and move work forward.
+00:00:12.700 --> 00:00:15.520 line:8% position:50% size:90%
+Start with a supported assistant
+and approve its access.
 
 6
-00:00:19.387 --> 00:00:24.547
-This example uses an existing ChatGPT
-subscription, connected privately.
+00:00:16.040 --> 00:00:19.760 line:8% position:50% size:90%
+Here, an existing ChatGPT
+subscription is already connected,
 
 7
-00:00:25.287 --> 00:00:28.247
-The assistant works through
-the RAW tools we've permitted.
+00:00:20.000 --> 00:00:22.140 line:8% position:50% size:90%
+ready to use the RAW
+tools we've permitted.
 
 8
-00:00:29.187 --> 00:00:32.247
-We asked for active
-accounts by customer type,
+00:00:23.087 --> 00:00:28.127 line:8% position:50% size:90%
+Pine Ridge Rental has customers,
+equipment, rentals and billing records.
 
 9
-00:00:32.367 --> 00:00:34.327
-including unknown types, and a chart.
+00:00:28.707 --> 00:00:31.907 line:8% position:50% size:90%
+This fictional business
+uses imported snapshots.
 
 10
-00:00:35.253 --> 00:00:37.913
-RAW applies the approved definition.
+00:00:32.627 --> 00:00:34.527 line:8% position:50% size:90%
+Open a source, check its date,
 
 11
-00:00:38.653 --> 00:00:40.253
-Homeowners lead the breakdown.
+00:00:34.707 --> 00:00:38.047 line:8% position:50% size:90%
+and browse the information
+already available to the business.
 
 12
-00:00:41.073 --> 00:00:44.533
-All 15 accounts without
-a customer type stay included.
+00:00:39.120 --> 00:00:42.980 line:8% position:50% size:90%
+Your existing software may not have
+a place for everything you need.
 
 13
-00:00:45.487 --> 00:00:49.227
-Open a group to inspect
-the customers behind it.
+00:00:43.200 --> 00:00:47.540 line:8% position:50% size:90%
+Add delivery instructions in RAW's
+database, linked to the existing customer.
 
 14
-00:00:49.487 --> 00:00:51.767
-The answer remains available in Reports.
+00:00:47.860 --> 00:00:51.590 line:8% position:50% size:90%
+For Alder Grove Landscaping,
+we save: use the north gate,
 
 15
-00:00:53.487 --> 00:00:57.967
+00:00:51.620 --> 00:00:54.300 line:8% position:50% size:90%
+and call Maya thirty
+minutes before arrival.
+
+16
+00:00:55.320 --> 00:00:58.480 line:8% position:50% size:90%
+Ask what the dispatcher needs
+to know about Alder Grove.
+
+17
+00:00:59.060 --> 00:01:02.310 line:8% position:50% size:90%
+The assistant reads the customer
+record and brings the existing
+
+18
+00:01:02.340 --> 00:01:06.440 line:8% position:50% size:90%
+business facts together with the delivery
+instructions we just saved.
+
+19
+00:01:06.660 --> 00:01:08.860 line:8% position:50% size:90%
+That extra information is now useful.
+
+20
+00:01:09.920 --> 00:01:12.100 line:8% position:50% size:90%
+You can ask bigger questions too.
+
+21
+00:01:12.500 --> 00:01:14.690 line:8% position:50% size:90%
+Show active customers by customer type,
+
+22
+00:01:14.720 --> 00:01:17.220 line:8% position:50% size:90%
+include unknown types,
+and give me a chart.
+
+23
+00:01:17.700 --> 00:01:22.920 line:8% position:50% size:90%
+RAW uses the approved business definition
+and returns 961 active accounts,
+
+24
+00:01:23.080 --> 00:01:25.500 line:8% position:50% size:90%
+including 15 without a customer type.
+
+25
+00:01:26.353 --> 00:01:29.193 line:8% position:50% size:90%
+Open a chart group to inspect
+the supporting customers.
+
+26
+00:01:29.593 --> 00:01:32.753 line:8% position:50% size:90%
 Narrow the question to Pine
 Ridge: 401 accounts.
 
-16
-00:00:58.687 --> 00:01:01.907
-Keep that view alongside
-the original, ready to use again.
-
-17
-00:01:02.787 --> 00:01:08.727 line:10%
-Now Maya at Alder Grove Landscaping
-needs an excavator for three days,
-
-18
-00:01:09.207 --> 00:01:10.487 line:10%
-starting October 28.
-
-19
-00:01:11.267 --> 00:01:13.747 line:10%
-She asks for a quote and delivery window.
-
-20
-00:01:14.620 --> 00:01:18.680
-The assistant reads her imported
-email and summarizes the request.
-
-21
-00:01:19.380 --> 00:01:23.260
-This is a read-only sample,
-with ongoing mailbox sync off.
-
-22
-00:01:24.053 --> 00:01:27.753
-The source rate is $750 a day.
-
-23
-00:01:28.193 --> 00:01:32.333
-Three days gives a $2,250 rental subtotal.
-
-24
-00:01:32.893 --> 00:01:36.933
-Availability, delivery, insurance
-and tax still need confirmation.
-
-25
-00:01:37.953 --> 00:01:41.413 line:10%
-The assistant uses that
-quote to compose this reply.
-
-26
-00:01:42.113 --> 00:01:46.033 line:10%
-We review the wording in
-an editable draft and save it.
-
 27
-00:01:46.373 --> 00:01:47.713 line:10%
-Sending remains our decision.
+00:01:33.233 --> 00:01:35.073 line:8% position:50% size:90%
+Keep that view alongside the original.
 
 28
-00:01:48.720 --> 00:01:53.160 line:10%
-Next, we create a delivery
-confirmation task for October 26,
+00:01:35.473 --> 00:01:39.733 line:8% position:50% size:90%
+Both reports stay available to reopen,
+without starting the conversation again.
 
 29
-00:01:53.520 --> 00:01:57.580 line:10%
-two days before the rental, and
-save a thirty-minute calendar block.
+00:01:40.620 --> 00:01:45.830 line:8% position:50% size:90%
+Now Maya needs a three-day excavator
+rental starting October 28th.
 
 30
-00:01:58.420 --> 00:02:02.480
-Here's Monday's ten o'clock
-follow-up, linked to the customer.
+00:01:45.860 --> 00:01:48.280 line:8% position:50% size:90%
+Open her message and ask for a summary.
 
 31
-00:02:03.260 --> 00:02:05.760
-The assistant stays
-available between pages.
+00:01:48.620 --> 00:01:51.820 line:8% position:50% size:90%
+The assistant identifies
+the request, the quote she needs,
 
 32
-00:02:07.420 --> 00:02:10.260
-RAW also highlights
-work needing attention.
+00:01:51.980 --> 00:01:54.760 line:8% position:50% size:90%
+and the delivery details
+that still need confirming.
 
 33
-00:02:11.120 --> 00:02:17.440
-Rental charges total $84,000
-against an $84,180 control:
+00:01:55.687 --> 00:02:00.767 line:8% position:50% size:90%
+For three days, the listed rate
+gives a $2,250 rental subtotal.
 
 34
-00:02:17.800 --> 00:02:21.900
-a $180 difference to investigate,
-with supporting records.
+00:02:00.987 --> 00:02:05.227 line:8% position:50% size:90%
+Check the source, prepare the quote,
+and review an editable reply.
 
 35
-00:02:22.787 --> 00:02:28.327
-This machine reads 1,420 hours
-against a 1,350-hour service target.
+00:02:06.167 --> 00:02:09.547 line:8% position:50% size:90%
+Availability, delivery and other
+charges still need checking.
 
 36
-00:02:29.067 --> 00:02:31.807
-The dated reading makes
-the overdue work clear.
+00:02:09.927 --> 00:02:13.867 line:8% position:50% size:90%
+This email is a read-only
+sample; nothing is sent here.
 
 37
-00:02:32.687 --> 00:02:35.267
-Saved reports keep their history.
+00:02:14.687 --> 00:02:18.687 line:8% position:50% size:90%
+The assistant also offers a follow-up
+and asks when it should happen.
 
 38
-00:02:35.927 --> 00:02:39.967
-This scheduled report has actually
-run, and its result opens here in RAW.
+00:02:18.987 --> 00:02:23.287 line:8% position:50% size:90%
+We approve a high-priority task and
+a half-hour block on My calendar:
 
 39
-00:02:40.607 --> 00:02:43.167
-Email delivery requires separate approval.
+00:02:23.527 --> 00:02:27.367 line:8% position:50% size:90%
+October 26th at 9 AM,
+before the rental starts.
 
 40
-00:02:44.087 --> 00:02:46.407
-Keep your existing systems.
+00:02:27.747 --> 00:02:29.567 line:8% position:50% size:90%
+Then it saves the linked work.
 
 41
-00:02:46.947 --> 00:02:51.087
-Turn their information into useful
-work with RAW Business Workspace.
+00:02:31.687 --> 00:02:35.567 line:8% position:50% size:90%
+There is the task in the planner,
+and the appointment on the calendar.
 
 42
-00:02:51.907 --> 00:02:55.117
-Bring one recurring task
-and the software you use.
+00:02:35.947 --> 00:02:37.707 line:8% position:50% size:90%
+Both lead back to Maya's email.
 
 43
-00:02:55.147 --> 00:02:57.487
-Let's discuss your workflow.
+00:02:38.087 --> 00:02:40.647 line:8% position:50% size:90%
+Minimize the assistant,
+move to another page,
+
+44
+00:02:40.927 --> 00:02:43.527 line:8% position:50% size:90%
+and restore the same
+conversation when you need it.
+
+45
+00:02:44.687 --> 00:02:47.527 line:8% position:50% size:90%
+Spot other work that needs attention.
+
+46
+00:02:48.207 --> 00:02:54.047 line:8% position:50% size:90%
+Compare financial totals and investigate
+the $180 difference in the records.
+
+47
+00:02:54.447 --> 00:02:58.437 line:8% position:50% size:90%
+For equipment, a dated
+reading of 1,420 hours
+
+48
+00:02:58.467 --> 00:03:02.327 line:8% position:50% size:90%
+is beyond the 1,350-hour service target.
+
+49
+00:03:03.047 --> 00:03:05.107 line:8% position:50% size:90%
+You can see why maintenance is due.
+
+50
+00:03:05.987 --> 00:03:10.387 line:8% position:50% size:90%
+Updated source snapshots preserve
+RAW-owned information and work.
+
+51
+00:03:10.907 --> 00:03:12.687 line:8% position:50% size:90%
+Saved reports retain their history.
+
+52
+00:03:12.907 --> 00:03:16.887 line:8% position:50% size:90%
+Use reusable date choices and
+configure recurring reports in RAW.
+
+53
+00:03:17.187 --> 00:03:19.327 line:8% position:50% size:90%
+Email delivery has a separate approval.
+
+54
+00:03:19.767 --> 00:03:21.267 line:8% position:50% size:90%
+The owner stays in control.
+
+55
+00:03:22.187 --> 00:03:23.387 line:8% position:50% size:90%
+Keep what works.
+
+56
+00:03:23.687 --> 00:03:26.637 line:8% position:50% size:90%
+Add the information you need,
+bring your AI into the workflow,
+
+57
+00:03:26.667 --> 00:03:28.927 line:8% position:50% size:90%
+and make the business easier to run.
+
+58
+00:03:29.387 --> 00:03:31.747 line:8% position:50% size:90%
+RAW Business Workspace. Book a demo.

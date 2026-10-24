@@ -5,7 +5,7 @@ import demoMedia from "../../docs/raw-demo-media.json";
 
 const base = "https://randallautomationworks.com";
 const fullDemoMedia = demoMedia.videos['raw-full-demo.mp4'];
-const description = "Keep the business software you rely on. RAW Business Workspace connects its information with your AI assistant for inspectable reports, customer context and useful follow-up.";
+const description = "Bring your AI and existing business information into RAW Business Workspace. Add linked information, build inspectable reports, prepare replies and organize approved work in the planner and calendar.";
 
 export const metadata: Metadata = {
   title: "RAW Business Workspace | Connected Small Business Software",
@@ -19,10 +19,12 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  ["01", "Know the customer. Keep the context.", "Bring customer details, notes, linked tasks and documents together. Pick up the next conversation with the information close at hand."],
-  ["02", "Build a clear equipment quote.", "Prepare rental quotes from connected equipment and source rates. Keep line items, rental periods and additional amounts visible as you work."],
-  ["03", "Give the work a place to move.", "Track tasks, priorities and work orders alongside the customers they belong to. Keep documents with the work instead of scattered across folders."],
-  ["04", "Put existing data to work.", "Bring in SQLite databases or CSV files, discover their structure and build SQL-backed reports. Export results as CSV when you need to work elsewhere."],
+  ["01", "Bring your AI into the work.", "Connect a supported assistant and approve its access to RAW tools. Ask for help while working with the business information on screen."],
+  ["02", "Keep the information you already have.", "Import supported database snapshots or table exports. Browse customer, equipment and billing information with its source date and identity available."],
+  ["03", "Add what your business needs.", "Save typed RAW fields alongside imported records. Keep delivery instructions, dispatch details and other additional information connected to the existing business record."],
+  ["04", "Ask questions. Inspect the answer.", "Build reusable reports from permitted information and approved business definitions. Open supporting records, keep useful views and review report history."],
+  ["05", "Give correspondence useful context.", "Read and summarize permitted messages, inspect related business information, and prepare replies for review. Sending remains a deliberate owner action."],
+  ["06", "Keep the next step connected.", "Let the assistant offer a follow-up, clarify its timing, and save approved tasks or calendar blocks. Priorities, dates and links keep daily work understandable."],
 ];
 
 const faqs = [
@@ -37,9 +39,9 @@ const structuredData = {
   "@context": "https://schema.org", "@graph": [
     { "@type": "SoftwareApplication", "@id": `${base}/raw-workspace#product`, name: "RAW Business Workspace", alternateName: "RAW Workspace", url: `${base}/raw-workspace`, description,
       applicationCategory: "BusinessApplication", operatingSystem: "Web browser", creator: { "@id": `${base}/#business` },
-      image: `${base}/products/raw-workspace/overview.png`, featureList: ["Connected customer records", "Equipment rental quotes from source rates", "Tasks and documents", "SQLite and CSV data reporting", "Configurable business modules"] },
+      image: `${base}/products/raw-workspace/overview.png`, featureList: ["Supported connected AI", "Imported business snapshots", "Linked RAW database fields", "Inspectable saved reports", "Email summary and reply preparation", "Approved task and calendar creation", "Equipment quotes from source rates"] },
     { "@type": "WebPage", "@id": `${base}/raw-workspace#page`, url: `${base}/raw-workspace`, name: "RAW Business Workspace", description, about: { "@id": `${base}/raw-workspace#product` }, isPartOf: { "@id": `${base}/#business` } },
-    { "@type": "VideoObject", name: "RAW — Your information. Useful work.", description: "A complete desktop demonstration of RAW's connected AI, inspectable reports, email summary and reply, and owner-reviewed task and calendar follow-up using fictional Pine Ridge Rental & Service data. Processing waits are condensed.", thumbnailUrl: `${base}/products/raw-workspace/raw-demo-poster.jpg`, uploadDate: "2026-10-23T00:00:00Z", duration: fullDemoMedia.duration_iso, contentUrl: `${base}/products/raw-workspace/raw-full-demo.mp4`, about: { "@id": `${base}/raw-workspace#product` } },
+    { "@type": "VideoObject", name: "RAW — Your information. Useful work.", description: "An actual desktop demonstration of supported connected AI, imported business information, added RAW database fields used in an AI answer, inspectable reports, email reply preparation, and approved task and calendar creation using fictional Pine Ridge Rental & Service data. Processing waits are condensed.", thumbnailUrl: `${base}/products/raw-workspace/raw-demo-poster.jpg`, uploadDate: "2026-10-23T00:00:00Z", duration: fullDemoMedia.duration_iso, contentUrl: `${base}/products/raw-workspace/raw-full-demo.mp4`, about: { "@id": `${base}/raw-workspace#product` } },
     { "@type": "FAQPage", mainEntity: faqs.map(({ q, a }) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) },
     { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: base }, { "@type": "ListItem", position: 2, name: "RAW Business Workspace", item: `${base}/raw-workspace` }] },
   ],
@@ -64,7 +66,7 @@ export default function RawWorkspace() {
 
     <section className="section workspace-film-section" id="see-it-in-action">
       <div className="shell">
-        <div className="section-heading"><p className="eyebrow">The full demo · {fullDemoMedia.duration_label}</p><h2>Your information. Useful work.</h2><p>Ask a real business question. Check the report, prepare a customer reply and schedule the next step.</p></div>
+        <div className="section-heading"><p className="eyebrow">The full demo · {fullDemoMedia.duration_label}</p><h2>Your information. Useful work.</h2><p>Bring your AI and business information together. Add what is missing, ask a question, prepare a reply and organize the next step.</p></div>
         <div className="workspace-video-frame">
           <video controls playsInline preload="none" poster="/products/raw-workspace/raw-demo-poster.jpg" width="1920" height="1080" aria-label="RAW Business Workspace full demonstration">
             <source src="/products/raw-workspace/raw-full-demo.mp4" type="video/mp4" />
@@ -72,9 +74,9 @@ export default function RawWorkspace() {
             Your browser does not support embedded video. <a href="/products/raw-workspace/raw-full-demo.mp4">Watch the full demonstration</a>.
           </video>
         </div>
-        <p className="workspace-caption">Actual RAW desktop interface and connected assistant results using fictional Pine Ridge Rental &amp; Service data. The owner reviews and saves the draft, task and calendar block. Provider sign-in was completed privately; processing waits are condensed. No email or invitation was sent.</p>
+        <p className="workspace-caption">Actual RAW interface and connected assistant results using fictional Pine Ridge Rental &amp; Service data. The owner saves added information and reviews the draft; the assistant creates the task and calendar block after approval. Provider sign-in was completed privately; processing waits are condensed. Imported snapshots and a read-only email sample are shown. No email or invitation was sent.</p>
         <p>Bring one recurring task and the software you use today. We will discuss the first useful improvement for your business.</p>
-        <div className="workspace-film-links"><a className="button button-primary" href={bookingLink} target="_blank" rel="noreferrer">Discuss your workflow with Chris <span aria-hidden="true">↗</span></a><a className="text-link" href="/products/raw-workspace/raw-demo-transcript.txt">Read the demo transcript</a><a className="text-link" href="/products/raw-workspace/raw-full-demo.vtt" download>Download English captions</a></div>
+        <div className="workspace-film-links"><a className="button button-primary" href={bookingLink} target="_blank" rel="noreferrer">Book a demo <span aria-hidden="true">↗</span></a><a className="text-link" href="/products/raw-workspace/raw-full-demo.mp4?download=1" download="RAW-full-demo.mp4">Download full demo MP4</a><a className="text-link" href="/products/raw-workspace/raw-demo-transcript.txt">Read the demo transcript</a><a className="text-link" href="/products/raw-workspace/raw-full-demo.vtt" download>Download English captions</a></div>
       </div>
     </section>
 

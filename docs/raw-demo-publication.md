@@ -1,110 +1,146 @@
-# RAW result-led website video publication
+# RAW connected-workspace films
 
-The revised films give useful results priority over setup and routine navigation.
-Each has independent narration, a distinct viewing poster, its own transcript
-and a real adjacent invitation to discuss a business workflow.
+The Ryan revision introduces RAW as a connected business workspace: supported
+AI, existing business information, added database fields, reports, email,
+planner and calendar work. Both films use actual Pine Ridge Rental & Service
+interface recordings and genuine assistant results, with independent scripts.
 
-| Placement | Public page | Film |
+| Placement | Page | Film |
 | --- | --- | --- |
-| Homepage | [Randall Automation Works](https://randallautomationworks.com/#workspace-offer-title) | 1:15 highlight |
-| RAW Business Workspace | [See it in action](https://randallautomationworks.com/raw-workspace#see-it-in-action) | 2:58 full demonstration |
+| Homepage | [Randall Automation Works](https://randallautomationworks.com/#workspace-offer-title) | 1:43 highlight, 102.912 seconds |
+| RAW Business Workspace | [Full demonstration](https://randallautomationworks.com/raw-workspace#see-it-in-action) | 3:33 full demo, 212.586 seconds |
 
-Both native players have controls, inline playback and default English captions.
-Playback starts after visitor interaction. The homepage's actual link opens the
-full demonstration. Fictional data and condensed processing waits are disclosed.
+Both players have native controls, inline playback, distinct viewing posters,
+default English captions and a transcript. They do not autoplay or download the
+MP4 before interaction. Real **Book a demo** and **Download MP4** links sit beside
+the players. The homepage's actual client link opens the full demonstration.
 
-## Demonstrated outcome
+## Verified product evidence
 
-The opening shows **961 active accounts**, followed by the genuine connected
-assistant inquiry, chart and contributing customer records. A narrower Pine Ridge
-view has **401** accounts; the original saved report remains available.
+The owner adds Delivery instructions for Alder Grove Landscaping: **Use the
+north gate. Call Maya 30 minutes before arrival.** A genuine AI tool call reads
+that saved field and combines it with existing customer information. The report
+inquiry returns **961 active accounts**, including 15 unknown types; its chart
+opens supporting records. The Pine Ridge variant has **401**, retaining the
+original report.
 
-Maya at Alder Grove Landscaping requests an excavator for three days starting
-**October 28, 2026**. The actual source rate is **$750/day**, giving a **$2,250 USD
-rental subtotal**. Availability, delivery, insurance and tax remain pending, and
-the quote total is visibly unconfirmed. The assistant reads the imported message,
-summarizes it and prepares reply wording using the reviewed quote. The owner
-reviews and saves the unsent draft, then saves a task and linked internal calendar
-block for **October 26, 10:00–10:30 America/Denver**, before the rental. Decisive
-save actions and their readable results remain in the edit.
+Maya requests three days starting **October 28th, 2026**. The listed $750/day
+rate gives a **$2,250 USD rental subtotal**; availability, delivery and other
+charges remain pending. The owner reviews the quote and editable unsent reply.
+The assistant offers a follow-up, asks when, and creates the approved
+high-priority personal task and **October 26th, 9–9:30 AM America/Denver**
+My-calendar block. Both stay linked to the customer and source email. The
+assistant's actual conversation is restored across pages.
 
-The full film also shows a **$180 discrepancy to investigate** between $84,000
-of rental charges and an $84,180 control; a dated **1,420-hour** equipment reading
-against a **1,350-hour** service target; and a genuinely completed scheduled report
-run with an inspectable result. The original weekday **08:00** schedule was
-restored afterward. No report email was delivered.
+The full film also shows the **$180 discrepancy to investigate**, a dated
+**1,420-hour reading** against a **1,350-hour service target**, and a completed
+recurring report run. A normal owner import replaces snapshot 2 with snapshot 3,
+correcting only a fictional telephone number while retaining all 1,201 rows,
+RAW fields and linked work. The completed import status and preserved record
+are visible. The original source export remains unchanged.
 
-## Media and deployment
+The proactive email follow-up is in
+[RAW PR 60](https://github.com/SAC-CS112-Randall-Christopher/sb_harness/pull/60),
+source `2f0fded11aefe20c4050b39091bcefd717257ce6`.
 
-The source delivery, both native edits, selected original WebMs/WAVs, captions,
-separate scripts and fictional service receipts are in `deliverables/raw-demo-result-led`
-in [DMPH PR #4](https://github.com/SAC-CS112-Randall-Christopher/DMPH/pull/4).
-The exact source commit and all eight asset hashes/byte counts are pinned in
-[raw-demo-media.json](raw-demo-media.json).
+## Media and safe publication
 
-Both MP4s fit the existing 25 MiB asset limit and are copied byte for byte from
-the reviewed 1080p/30 H.264/AAC exports. There is no additional website compression.
-The package checks original AAC packets, every frame, captions, complete decoding
-and actual fast-start atom order.
+The exact eight public assets come from DMPH
+`ae7d57c6675d1e4b2f6dcab294738025236c1027`,
+`deliverables/raw-workspace-connected/`, in
+[DMPH PR 4](https://github.com/SAC-CS112-Randall-Christopher/DMPH/pull/4).
+That delivery includes both MP4s, posters, captions, transcripts, original Ryan
+narration, selected recordings, portable native MLT edits and safe review
+evidence. All 236 manifested delivery files were checked against both working
+bytes and exact committed Git blobs.
 
-VoiceStudio uses installed KittenTTS **Hugo** at speed **0.92**, no later speech
-acceleration, and locally generated music at **−36 dB**. The preceding revision
-already used this engine/preset; the changes are the scripts, timing, story and
-framing. No new model, paid API, stock purchase, service or subscription was added.
-**New spend: $0.**
+Both MP4s are copied **byte for byte**, without further web compression:
+1080p/30 H.264, AAC 48 kHz stereo and fast-start. Sizes are **8,666,156** and
+**17,708,958 bytes**, within the existing asset limit. Caption counts are
+**27 / 58**. [raw-demo-media.json](raw-demo-media.json) pins source commit,
+all asset hashes, durations, frame counts and unchanged AAC-packet checks.
 
-The existing Worker is `randall-automation-works`. The sanitized
-[deployment receipt](raw-demo-deployment.json) records its deployed source commit,
-production version, 100% traffic assignment and prior rollback version. The
-protected gateway keeps routing priority and `keep_vars` preserves its bindings.
+The approved **Ryan** voice uses pinned local Qwen3-TTS 1.7B CustomVoice at
+natural speed. Dates are spoken with ordinal endings. Local FFmpeg and native
+MLT finish the edit; offline speech recognition supports review. The owner
+selected Ryan in the existing phone audition. **New spend: $0.**
 
-Only the two public MP4 paths use the existing content-hash-keyed native Cache
-API entries, populated from complete Assets streams. Cloudflare serves byte
-ranges without JavaScript buffering or manual slicing. Browser responses
-revalidate the stable URLs when films change. User credentials, cookies and
-queries do not enter the video cache.
+The two public MP4s retain the existing content-hash-keyed Cloudflare Cache API
+path. Native range responses do not buffer or slice films in JavaScript.
+`?download=1` adds a Content-Disposition attachment header only to the outgoing
+response, leaving shared playback cache entries intact. Credentials, cookies
+and visitor queries are not forwarded to the asset origin or shared cache.
 
-## Verification
+The existing `randall-automation-works` Worker and its protected gateway retain
+their configuration. `keep_vars` preserves existing authorized bindings. No
+new account, storage service, paid endpoint or hosting upgrade is introduced.
 
-See [preview verification](raw-demo-preview-verification.json),
-[live verification](raw-demo-live-verification.json) and
-[local check evidence](evidence/raw-demo-local-checks.txt) for actual-file proof.
+## Release checks
 
-The verified production build and all **28 tests** passed, with no failures or
-skips. ESLint and Wrangler dry run passed. Independent Codex review accepted the
-final films, all eight exact Git/source asset matches and all four preview
-layouts without a remaining material finding. The live custom-domain checks
-cover desktop/mobile default 43/18 caption cues, keyboard playback, exact range
-bytes, navigation, no autoplay or initial MP4 download, and no page errors.
-Both public films completed beginning-to-end playback at **1x**, reaching
-**74.538** and **178.346 seconds** with `ended: true` and no media errors.
-All eight complete HTTP response hashes match the reviewed package.
+The delivery passed complete decode, caption timing, chronological encoded
+frame inspection, decisive action inspection, offline speech recognition,
+desktop/390px captures, independent Codex review and full **1×** playback with
+exact served hashes. This source evidence is separate from website publication.
+
+For this release, the production build and all **29 tests** passed with no
+failures or skips. ESLint, artifact validation and Wrangler dry run passed.
+The local preview passed four desktop/390px playback cases, client navigation,
+default 27/58 captions, exact 206 bytes and all eight HTTP asset hashes. All four
+actual MP4 downloads completed with matching filenames, lengths and hashes.
+See `raw-demo-preview-verification.json` and `evidence/raw-demo-local-checks.txt`.
+
+Reproduce the browser checks with the actual preview or live custom domain:
 
 ```sh
 python scripts/check_raw_demo_publication.py \
   --base-url https://randallautomationworks.com --label live --complete
 ```
 
-The checker verifies all eight complete HTTP response hashes, desktop and 390px
-mobile layouts, default captions, native keyboard playback, exact 206 bytes,
-seeking and the actual homepage-to-full-demo link. `--complete` also plays both
-public films beginning to end at normal speed.
+The checker exercises desktop and 390px layouts, actual client navigation,
+default captions, keyboard playback, exact 206 range bytes, all eight complete
+HTTP hashes, and the actual MP4 download link/filename/bytes on both layouts.
+`--complete` plays both films beginning to end at normal speed. Current release
+results are recorded in `raw-demo-preview-verification.json`,
+`raw-demo-live-verification.json`, `raw-demo-deployment.json` and
+`evidence/raw-demo-local-checks.txt`.
 
-Mobile uses Chromium viewport/touch emulation, not physical phones or Safari.
-Dense source records are best inspected full screen. Playback, local speech
-recognition and loudness checks do not establish human voice preference or a
-physical-speaker listening test.
+The live custom domain passed all four cases and all four actual downloads;
+all eight complete HTTP asset hashes match the package. Both public films
+completed **1× playback**, ending at **102.912 / 212.586 seconds**, with no
+media or page errors. Independent Codex review accepted source, eight asset
+matches and all preview layouts. No hosted CI result is claimed.
 
-## Demonstration limits
+Production source is `0565eab3754b045c08ec07598d48386253a751b6`.
+Worker version `b6cf7eb0-75c6-4789-a6fa-20e313f5b355` receives **100%** of
+production traffic. The sanitized deployment receipt preserves the previous
+version `29ba0f91-51a3-470d-95ef-5730939f18c3` for rollback. These are observed
+deployment and live checks, separate from the local build.
 
-The incoming Gmail message is a **one-time read-only sample** with ongoing sync
-off. AI reads, summarizes, reports and prepares wording; the owner saves the
-draft, task and calendar block. No email, invitation, equipment reservation,
-source-system write or accounting certification is implied. Access restrictions
-remain active. Universal subscription compatibility and all-local AI processing
-are not claimed. Provider sign-in was completed privately.
+## Limits
 
-The source display correction is preserved in
-[RAW PR #59](https://github.com/SAC-CS112-Randall-Christopher/sb_harness/pull/59).
-The separate protected-studio password initialization still requires its hidden
-local prompt. Public video publication does not complete that setup.
+The email is a one-time **read-only sample**; no email or invitation is sent.
+The owner saves added information and reviews drafts; AI creates task/calendar
+work after approval. No equipment reservation, unconfirmed availability,
+automatic source-system write, accounting certification, universal subscription
+compatibility or all-local AI processing is claimed. Processing waits are
+condensed and disclosed. Report email delivery needs separate approval.
+
+Phone checks use Chromium viewport/touch emulation, not physical iPhone/Safari.
+Dense source records are best viewed full screen. Native controls may cover the
+small disclosure footer while paused; captions have their own top band.
+Playback and speech recognition do not establish a human listening review.
+
+The separate protected `/admin/dmph/` studio still needs the owner's hidden
+local initial-password prompt. Its anonymous route returns **503**, with
+no-store/private and noindex headers. The administrator is not initialized;
+the guarded studio service is inactive while VoiceStudio and the tunnel run.
+See `evidence/raw-demo-studio-status.json`. Video publication does not bypass
+that setup. On MAIN, initialize through the hidden prompt, then start:
+
+```powershell
+& C:\Projects\DMPH-local-studio\scripts\initialize_admin_windows.ps1
+& C:\Projects\DMPH-local-studio\scripts\manage_local_windows.ps1 -Action Start -Open
+```
+
+The account remains `DMPHstudio` and first login requires password replacement.
+Passwords belong only in hidden local prompts, never chat or command arguments.

@@ -64,6 +64,17 @@ test("honors a matching If-Range and drops ranges for changed representations an
   }
 });
 
+test("phone downloads use an attachment without contaminating the shared playback response", async () => {
+  const cached = new Response("video", { headers: { "Content-Type": "video/mp4" } });
+  const cache = { async match() { return cached.clone(); } };
+  const download = await publicDemoVideo(new Request(url + "?download=1"), {}, cache);
+  assert.equal(download.headers.get("Content-Disposition"), 'attachment; filename="raw-highlight.mp4"');
+  const playback = await publicDemoVideo(new Request(url), {}, cache);
+  assert.equal(playback.headers.get("Content-Disposition"), null);
+  assert.equal(cached.headers.get("Content-Disposition"), null);
+  assert.equal(await playback.text(), "video");
+});
+
 test("provides the verified artifact length when the Assets binding omits a wire length", async () => {
   let stored = false;
   const response = await publicDemoVideo(new Request(url), { ASSETS: { async fetch() {

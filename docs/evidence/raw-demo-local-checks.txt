@@ -1,46 +1,139 @@
-RAW result-led publication checks on MAIN
-Source media commit: 37ce8fc592b2e02ffcfa60c8155bb00b328057f0
-Deployed website source: 86c80e0775688895b889d81afd7fd7fd20cdda54
 
-Package:
-raw-highlight: 74.538 seconds, 7726243 bytes
-raw-full-demo: 178.346 seconds, 19787840 bytes
-Reviewed web package and exact media manifest written.
+> randall-automation-works@0.1.0 test
+> npm run build && node --test tests/*.test.mjs
 
-Verified build and Node tests:
-✔ discloses the currently observed website providers without launch placeholders (26.910484ms)
-✔ publishes integration readiness with consistent dates and acceptance evidence (55.876361ms)
-ℹ tests 28
+
+> randall-automation-works@0.1.0 build
+> bash scripts/build-verified.sh
+
+Running bounded vinext build...
+
+  vinext build  (Vite 8.0.13)
+
+[1/5] analyze client references...
+
+transforming...✓ 168 modules transformed.
+rendering chunks...
+[PLUGIN_TIMINGS] Your build spent significant time in plugins. Here is a breakdown:
+  - vinext:config (29%)
+  - vinext:jsx-in-js (20%)
+  - vinext:react-canary (13%)
+  - rsc:virtual-client-package (11%)
+  - vinext:image-imports (7%)
+See https://rolldown.rs/options/checks#plugintimings for more details.
+
+✓ built in 11.66s
+[2/5] analyze server references...
+
+transforming...✓ 61 modules transformed.
+rendering chunks...
+✓ built in 377ms
+[3/5] build rsc environment...
+
+transforming...✓ 174 modules transformed.
+rendering chunks...
+computing gzip size...
+✓ built in 2.08s
+[4/5] build client environment...
+
+transforming...✓ 68 modules transformed.
+rendering chunks...
+computing gzip size...
+[PLUGIN_TIMINGS] Your build spent significant time in plugins. Here is a breakdown:
+  - vinext:react-canary (45%)
+  - vite:prepare-out-dir (27%)
+See https://rolldown.rs/options/checks#plugintimings for more details.
+
+✓ built in 3.79s
+[5/5] build ssr environment...
+
+transforming...✓ 67 modules transformed.
+rendering chunks...
+computing gzip size...
+✓ built in 997ms
+
+  Route (app)
+  ┌ ? /
+  ├ ƒ /:slug
+  ├ ? /client-portal
+  ├ ? /demo-portal
+  ├ ? /demo-portal/organization
+  ├ ? /demo-portal/utility
+  ├ ? /gis-modernization
+  ├ ? /insights
+  ├ ? /insights/ai-automation-consultant-small-business
+  ├ ? /insights/ai-automation-for-small-business
+  ├ ? /insights/ai-integration-readiness-checklist
+  ├ ? /insights/first-ai-automation-project
+  ├ ? /insights/local-vs-hosted-ai-assistants
+  ├ ? /insights/prepare-sops-for-ai-assistant
+  ├ ? /insights/route-first-reason-when-needed
+  ├ ? /insights/workflow-automation-audit-small-business
+  └ ? /raw-workspace
+
+  ƒ Dynamic  ? Unknown
+
+  ? Some routes could not be classified. vinext currently uses static analysis
+    and cannot detect dynamic API usage (headers(), cookies(), etc.) at build time.
+    Automatic classification will be improved in a future release.
+
+  Build complete. Run `vinext start` to start the production server.
+
+Validated Sites artifact: ESM Worker, hosting manifest and unique compatibility flags are present.
+✔ does not intercept public website routes or nearby path names (45.611496ms)
+✔ the built website intercepts every private studio route and disallows indexing (73.490559ms)
+✔ fails closed without host settings and when the local host is offline (3.277725ms)
+✔ reports tunnel and host failures as an unavailable private studio (3.435918ms)
+✔ sets trusted gateway headers and preserves protected media range responses (1.653795ms)
+✔ forwards sign-in to the server and preserves scoped secure session cookies (4.234442ms)
+✔ rejects cross-origin changes, unsafe redirects, invalid origins and oversized uploads (5.218576ms)
+Public demo asset rejected {
+  name: 'raw-highlight.mp4',
+  length: '5',
+  type: 'video/mp4',
+  encoding: null
+}
+✔ limits shared video caching to the two reviewed public assets and GET/HEAD (44.498907ms)
+✔ fills a hash-versioned cache without forwarding private headers or arbitrary queries (6.913815ms)
+✔ honors a matching If-Range and drops ranges for changed representations and HEAD (2.748748ms)
+✔ phone downloads use an attachment without contaminating the shared playback response (3.583741ms)
+✔ provides the verified artifact length when the Assets binding omits a wire length (1.957744ms)
+✔ preserves failed source status and refuses mismatched or unavailable cached video (4.606755ms)
+✔ promotes the real RAW product with playable media and answerable product information (729.733035ms)
+✔ renders production branding without staging metadata (356.99698ms)
+✔ publishes code-first capabilities on Services and About pages (114.298326ms)
+✔ publishes production robots and sitemap URLs (51.49854ms)
+✔ publishes generalized workflow examples and founder expertise (104.064828ms)
+✔ explains AI setup, technical options and safety boundaries (92.316125ms)
+✔ publishes local and hosted AI deployment options under AI systems (109.500073ms)
+✔ renders the first Insights article as an indexable Article (89.179707ms)
+✔ keeps contact, booking and related service paths accessible (209.365536ms)
+✔ keeps all demo routes out of search with route-specific metadata (58.641685ms)
+✔ serves the existing fonts from public URLs without build paths (85.857124ms)
+✔ redirects production HTTP and www permanently while preserving path and query (7.731227ms)
+✔ preserves unique indexable metadata for every sitemap route (361.04834ms)
+✔ describes the Montrose organization and verified implementation experience (23.943949ms)
+✔ discloses the currently observed website providers without launch placeholders (19.910654ms)
+✔ publishes integration readiness with consistent dates and acceptance evidence (32.974555ms)
+ℹ tests 29
 ℹ suites 0
-ℹ pass 28
+ℹ pass 29
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 2231.369948
+ℹ duration_ms 1898.264708
 
-ESLint:
+ESLint: npm run lint passed (exit 0).
+Wrangler 4.92.0 deploy --dry-run passed: 80 asset files, ESM Worker, existing ASSETS binding.
+Preview: four desktop/390px cases, 27/58 caption cues, exact range bytes, client navigation and all eight complete HTTP hashes passed.
+Four actual MP4 downloads completed with matching filenames, byte counts and SHA-256 values.
+The local DMPH source films completed complete 1x playback; live publication has its own receipt.
+Phone means Chromium touch/viewport emulation, not physical iPhone/Safari. No new spend.
 
-> randall-automation-works@0.1.0 lint
-> bash scripts/sites-env.sh -- eslint . --ignore-pattern dist --ignore-pattern .next
-
-
-Wrangler dry run:
-✨ Read 73 files from the assets directory /mnt/c/Projects/RAW-Video-Publication/dist/client
-Total Upload: 1874.49 KiB / gzip: 348.06 KiB
-env.ASSETS         Assets
---dry-run: exiting now.
-
-Actual deployment:
-Uploaded randall-automation-works (11.48 sec)
-Deployed randall-automation-works triggers (0.61 sec)
-Current Version ID: 42fa0fe4-d3f1-450f-91c6-0becd105fb26
-
-Preview: four desktop/390px cases and all eight complete HTTP hashes passed.
-Independent Codex review: final media and packaged preview accepted; no material finding remains.
-Live results and complete playback are retained in docs/raw-demo-live-verification.json.
-New spend: $0. Existing hardware, authorization, models and hosting only.
-
-Live custom domain: four desktop/390px cases and all eight exact HTTP hashes passed.
-Both live files completed normal-speed playback (1x), with ended=true and no media/page error.
-Highlight: 74.538 seconds. Full demonstration: 178.346 seconds.
+Live custom domain: four playback/layout cases and four actual MP4 downloads passed; all eight complete HTTP hashes match.
+Both public films completed normal-speed 1x playback, ended=true, no media/page errors: 102.912 and 212.586 seconds.
+Production source: 0565eab3754b045c08ec07598d48386253a751b6
+Production version at 100 percent: b6cf7eb0-75c6-4789-a6fa-20e313f5b355
+Independent Codex source/preview review: accepted, no material finding remaining.
+Protected studio: anonymous 503, no-store/private, noindex; initial administrator unset and studio service guarded/inactive.

@@ -1,14 +1,14 @@
 {
   "worker": "randall-automation-works",
-  "source_commit": "86c80e0775688895b889d81afd7fd7fd20cdda54",
-  "deployment_id": "dd129fe6-b399-4c48-a85a-171c67b960ca",
-  "created_on": "2026-10-24T02:43:45.988657Z",
+  "source_commit": "0565eab3754b045c08ec07598d48386253a751b6",
+  "deployment_id": "b2da2c0c-c6b9-4202-8f32-3fd9d383d3b6",
+  "created_on": "2026-10-24T06:06:43.244593Z",
   "versions": [
     {
-      "version_id": "42fa0fe4-d3f1-450f-91c6-0becd105fb26",
+      "version_id": "b6cf7eb0-75c6-4789-a6fa-20e313f5b355",
       "percentage": 100
     }
   ],
-  "previous_version_id": "65e6df6c-604c-4fd0-beef-98b4dbb8147a",
+  "previous_version_id": "29ba0f91-51a3-470d-95ef-5730939f18c3",
   "new_spend_usd": 0
 }

@@ -1,26 +1,26 @@
 RAW — final narration transcript
 Fictional business: Pine Ridge Rental & Service
 
-00:00:00.000  Ask. Check. Act.
-961 active accounts. A chart you can explore. The customer records behind the answer.
+00:00:00.000  Your information. Useful work.
+A clear answer. A useful reply. A next step on the calendar. RAW brings your business information and your AI into the same workspace.
 
-00:00:08.667  Your information, with your assistant
-RAW connects your existing business information with your AI assistant. This example uses a connected ChatGPT subscription.
+00:00:11.733  Bring your AI and business information
+Keep the systems you rely on. Connect a supported assistant with approved access. Bring in customer, equipment and billing information. Here, Pine Ridge Rental uses imported snapshots of fictional business data.
 
-00:00:18.700  An answer you can inspect
-Ask for accounts by customer type. Inspect a group, then reopen the result in Reports.
+00:00:24.967  Add what your business needs
+Add what your old software is missing. We save delivery instructions alongside Alder Grove's existing customer record. Ask the assistant what the dispatcher needs to know, and it uses both the business facts and our new instructions.
 
-00:00:26.700  Maya needs a three-day rental
-Now Maya needs an excavator from October 28. She asks for a quote and delivery window.
+00:00:40.967  Ask questions. Check the answer.
+Ask for active customers by type, including unknown types. There are 961. Open the chart to inspect the supporting records, and keep the report to use again.
 
-00:00:34.167  A useful, reviewed reply
-The assistant prepares a reply using the $2,250 rental subtotal. We review and save the draft. Delivery and extra charges remain pending.
+00:00:55.967  Turn messages into useful replies
+Maya needs an excavator starting October 28th. Summarize her request, check the source rate, and prepare a reply the owner can review. This read-only email sample sends nothing.
 
-00:00:47.667  Save the follow-up
-Review the October 26 follow-up. Save the task and its linked calendar block, two days before the rental.
+00:01:09.700  Offer a next step. Save approved work.
+The assistant offers a follow-up. We approve October 26th at 9 AM. It saves a high-priority task and a half-hour calendar block, both linked to Maya's email.
 
-00:00:57.667  Work stays connected
-Useful answers and follow-ups stay with the business.
+00:01:24.700  Keep the next step connected
+The customer, added information, correspondence and next step stay connected, with the assistant available across pages.
 
-00:01:01.833  RAW Business Workspace
-RAW Business Workspace. Keep your systems. Turn information into useful work. Watch the full demo, or discuss your workflow with Chris.
+00:01:34.700  RAW Business Workspace
+Bring your AI into the business you already run. RAW Business Workspace. Book a demo.

@@ -1,53 +1,44 @@
 RAW — final narration transcript
 Fictional business: Pine Ridge Rental & Service
 
-00:00:00.000  An answer you can check
-Here's a useful answer: 961 active customer accounts, with a chart you can open to check the records behind it.
+00:00:00.000  Your information. Useful work.
+A business question becomes a report. A customer email becomes a useful next step. RAW brings your information and your AI into the work you already do.
 
-00:00:08.700  Keep the systems you rely on
-Keep the business software you rely on. RAW connects its information with your AI assistant, helping you understand the business and move work forward.
+00:00:10.600  Bring your AI
+Keep the systems you rely on. Start with a supported assistant and approve its access. Here, an existing ChatGPT subscription is already connected, ready to use the RAW tools we've permitted.
 
-00:00:19.267  A connected, permitted assistant
-This example uses an existing ChatGPT subscription, connected privately. The assistant works through the RAW tools we've permitted.
+00:00:22.967  Bring your business information
+Pine Ridge Rental has customers, equipment, rentals and billing records. This fictional business uses imported snapshots. Open a source, check its date, and browse the information already available to the business.
 
-00:00:29.067  Ask in ordinary language
-We asked for active accounts by customer type, including unknown types, and a chart.
+00:00:39.000  Add what your business needs
+Your existing software may not have a place for everything you need. Add delivery instructions in RAW's database, linked to the existing customer. For Alder Grove Landscaping, we save: use the north gate, and call Maya thirty minutes before arrival.
 
-00:00:35.133  961 active accounts
-RAW applies the approved definition. Homeowners lead the breakdown. All fifteen accounts without a customer type stay included.
+00:00:55.200  Use the information together
+Ask what the dispatcher needs to know about Alder Grove. The assistant reads the customer record and brings the existing business facts together with the delivery instructions we just saved. That extra information is now useful.
 
-00:00:45.367  Inspect the people behind the chart
-Open a group to inspect the customers behind it. The answer remains available in Reports.
+00:01:09.800  Ask questions. Build reports.
+You can ask bigger questions too. Show active customers by customer type, include unknown types, and give me a chart. RAW uses the approved business definition and returns 961 active accounts, including fifteen without a customer type.
 
-00:00:53.367  Keep both useful views
-Narrow the question to Pine Ridge: 401 accounts. Keep that view alongside the original, ready to use again.
+00:01:26.233  Check the answer. Keep both views.
+Open a chart group to inspect the supporting customers. Narrow the question to Pine Ridge: 401 accounts. Keep that view alongside the original. Both reports stay available to reopen, without starting the conversation again.
 
-00:01:02.667  Maya needs a three-day rental
-Now Maya at Alder Grove Landscaping needs an excavator for three days, starting October 28. She asks for a quote and delivery window.
+00:01:40.500  Bring customer context into email
+Now Maya needs a three-day excavator rental starting October 28th. Open her message and ask for a summary. The assistant identifies the request, the quote she needs, and the delivery details that still need confirming.
 
-00:01:14.500  Read and summarize the request
-The assistant reads her imported email and summarizes the request. This is a read-only sample, with ongoing mailbox sync off.
+00:01:55.567  Prepare a reply you can review
+For three days, the listed rate gives a $2,250 rental subtotal. Check the source, prepare the quote, and review an editable reply. Availability, delivery and other charges still need checking. This email is a read-only sample; nothing is sent here.
 
-00:01:23.933  A source-backed rental subtotal
-The source rate is $750 a day. Three days gives a $2,250 rental subtotal. Availability, delivery, insurance and tax still need confirmation.
+00:02:14.567  Let AI offer the next step
+The assistant also offers a follow-up and asks when it should happen. We approve a high-priority task and a half-hour block on My calendar: October 26th at 9 AM, before the rental starts. Then it saves the linked work.
 
-00:01:37.833  A useful reply, ready for owner review
-The assistant uses that quote to compose this reply. We review the wording in an editable draft and save it. Sending remains our decision.
+00:02:31.567  Keep the next step connected
+There is the task in the planner, and the appointment on the calendar. Both lead back to Maya's email. Minimize the assistant, move to another page, and restore the same conversation when you need it.
 
-00:01:48.600  Save the next step
-Next, we create a delivery confirmation task for October 26, two days before the rental, and save a thirty-minute calendar block.
+00:02:44.567  See what needs attention
+Spot other work that needs attention. Compare financial totals and investigate the $180 difference in the records. For equipment, a dated reading of 1,420 hours is beyond the 1,350-hour service target. You can see why maintenance is due.
 
-00:01:58.300  The customer and follow-up stay connected
-Here's Monday's ten o'clock follow-up, linked to the customer. The assistant stays available between pages.
+00:03:05.867  Keep useful work available
+Updated source snapshots preserve RAW-owned information and work. Saved reports retain their history. Use reusable date choices and configure recurring reports in RAW. Email delivery has a separate approval. The owner stays in control.
 
-00:02:07.300  Spot a difference that needs investigation
-RAW also highlights work needing attention. Rental charges total $84,000 against an $84,180 control: a $180 difference to investigate, with supporting records.
-
-00:02:22.667  See overdue service
-This machine reads 1,420 hours against a 1,350-hour service target. The dated reading makes the overdue work clear.
-
-00:02:32.567  Return to a generated report
-Saved reports keep their history. This scheduled report has actually run, and its result opens here in RAW. Email delivery requires separate approval.
-
-00:02:43.967  RAW Business Workspace
-Keep your existing systems. Turn their information into useful work with RAW Business Workspace. Bring one recurring task and the software you use. Let's discuss your workflow.
+00:03:22.067  RAW Business Workspace
+Keep what works. Add the information you need, bring your AI into the workflow, and make the business easier to run. RAW Business Workspace. Book a demo.
