@@ -1,0 +1,39 @@
+{
+  "observed_utc": "2026-10-24T03:48:03.0727915Z",
+  "source_commit": "bb05b9b",
+  "worker": "randall-automation-works",
+  "version": "f04680c2-a461-4d6d-b52e-f6387d2513b3",
+  "prior_version": "42fa0fe4-d3f1-450f-91c6-0becd105fb26",
+  "new_spend_usd": 0,
+  "website_tests_passed": 28,
+  "independent_review": "No material findings",
+  "public_download_proof": {
+    "page_url": "https://randallautomationworks.com/products/raw-workspace/voice-auditions/",
+    "http_status": 200,
+    "downloads": [
+      {
+        "url": "https://randallautomationworks.com/products/raw-workspace/voice-auditions/qwen3-aiden.mp3",
+        "bytes": 759789,
+        "sha256": "24f8adf591cf7973b608fb53f9e68e4711c1ac872fc4f7b8804716526cf31987",
+        "download_event": true,
+        "filename": "RAW-Aiden-voice-sample.mp3"
+      },
+      {
+        "url": "https://randallautomationworks.com/products/raw-workspace/voice-auditions/qwen3-ryan.mp3",
+        "bytes": 707949,
+        "sha256": "b218d35c6bed7e48f178ef1924c2585949b8a16109ccb922c583f89f3aafadc6",
+        "download_event": true,
+        "filename": "RAW-Ryan-voice-sample.mp3"
+      },
+      {
+        "url": "https://randallautomationworks.com/products/raw-workspace/voice-auditions/RAW-new-voice-samples.zip",
+        "bytes": 1372611,
+        "sha256": "d1dca9b5d6feab3133a23765507bfbe49b75df9a86d16096bde3974b6b34544e",
+        "download_event": true,
+        "filename": "RAW-new-voice-samples.zip"
+      }
+    ],
+    "mobile_viewport": 390,
+    "scope": "public anonymous HTTP and Chromium touch emulation; no physical Safari test claimed"
+  }
+}
