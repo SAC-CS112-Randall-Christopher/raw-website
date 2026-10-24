@@ -28,7 +28,8 @@ def seconds(stamp):
     h,m,s=map(float,stamp.split(':'));return h*3600+m*60+s
 
 media={'source_repository':'SAC-CS112-Randall-Christopher/DMPH','source_commit':args.source_commit,
-       'source_folder':'deliverables/'+source.name,'assets':{},'videos':{},'new_spend_usd':0}
+       'source_folder':'deliverables/'+source.name,'assets':{},'videos':{},'new_paid_api_usage':False,
+       'r2_billing':'Existing owner-authorized account; actual storage and request charges are determined by Cloudflare.'}
 for original,web in [('RAW-highlights','raw-highlight'),('RAW-business-demo','raw-full-demo')]:
     src=source/(original+'.mp4');dst=films/(web+'.mp4')
     reviewed=json.loads((source/(original+'-verification.json')).read_text())

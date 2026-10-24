@@ -13,14 +13,17 @@ Add what your old software is missing. We save delivery instructions alongside A
 00:00:37.767  Ask questions. Check the answer.
 Ask for active customers by type, including unknown types. There are 961. Open the chart to inspect the supporting records, and keep the report to use again.
 
-00:00:52.767  Turn messages into useful replies
+00:00:52.767  Bring your email inboxes together
+Bring your connected email inboxes into one place. Read and search your mail, with the customer context right beside it.
+
+00:01:01.667  Turn messages into useful replies
 Maya needs an excavator starting October 28th. Summarize her request, check the source rate, and prepare a reply the owner can review.
 
-00:01:03.767  Offer a next step. Save approved work.
+00:01:12.667  Offer a next step. Save approved work.
 The assistant offers a follow-up. We approve October 26th at 9 AM. It saves a high-priority task and a half-hour calendar block, both linked to Maya's email.
 
-00:01:18.767  Keep the next step connected
+00:01:27.667  Keep the next step connected
 The customer, added information, correspondence and next step stay connected, with the assistant available across pages.
 
-00:01:28.767  RAW Business Workspace
+00:01:37.667  RAW Business Workspace
 Bring your AI into the business you already run. RAW Business Workspace. Book a demo.

@@ -1,72 +1,73 @@
 {
   "source_repository": "SAC-CS112-Randall-Christopher/DMPH",
-  "source_commit": "b1de67e322a15365d7de80fbb28f563d8e702c99",
-  "source_folder": "deliverables/raw-workspace-connected",
+  "source_commit": "c30865067d3675942bd163f38191ea154c38dba0",
+  "source_folder": "deliverables/raw-workspace-polish",
   "assets": {
     "raw-highlight.mp4": {
-      "bytes": 7956375,
-      "sha256": "6aaebd51a71943e6bd189485213e1f7a93dad48bb27041d2d87a73c8cfc7747a"
+      "bytes": 8970882,
+      "sha256": "ec890311f4b9decc68a139791107ed2b288306431b555403c6ab02ff112e7e59"
     },
     "raw-full-demo.mp4": {
-      "bytes": 16841446,
-      "sha256": "ab08e2eb3346453829d91d9bb5fe96e24d7ba21306fb87175ae0e285c64e1906"
+      "bytes": 14966565,
+      "sha256": "f32d3410aaa93405a6fedaa575e8156fd7f6d92352592005f1346aa085b13a2a"
     },
     "raw-demo-poster.jpg": {
-      "bytes": 257480,
-      "sha256": "6ce2121cd78ed03be4b0d8602690199c52174ad1a857569b39bfae0c2cf7ca33"
+      "bytes": 244521,
+      "sha256": "edfd4ac3e3055e2118343883613a2a4ec844e8bd9db524758c2b87d3810c9397"
     },
     "raw-highlight-poster.jpg": {
-      "bytes": 222362,
-      "sha256": "ce946d1cbfd39b77c1cd23eb5680f071f9df4f3ec9fab4dc2c59d7ef26a47bb4"
+      "bytes": 217775,
+      "sha256": "a84eadfa62de6929ea2f0878264199c638079bac2781a13b908ad1e9797d719f"
     },
     "raw-highlight.vtt": {
-      "bytes": 2859,
-      "sha256": "8f4f8b0fbd9dadd7aff9a724fb005da767be5558678bb58e977067f2516190b5"
+      "bytes": 3108,
+      "sha256": "ac2ceaee8e549b4fff6e8e9c6dba9869488b187f51298eae9fb4a8a89ec68b9d"
     },
     "raw-full-demo.vtt": {
-      "bytes": 6404,
-      "sha256": "38857a7d10bbd823e005d8914fdd003936ca06a82c65fc2b3e66e4b9661b624f"
+      "bytes": 6653,
+      "sha256": "bb03da9d942b4d9211f91a7399a6a0aefeff4424cdcdb3f6dc5ff06a27cd5a7a"
     },
     "raw-demo-transcript.txt": {
-      "bytes": 3560,
-      "sha256": "77c08c4812259b81e8af7d982e5d0895a9da3803e0bdf661ee4842fdf53df747"
+      "bytes": 3730,
+      "sha256": "e791f2d4313a892da1a5bc3732fa737d7f154ccff35274d31d722c469550bae1"
     },
     "raw-highlight-transcript.txt": {
-      "bytes": 1637,
-      "sha256": "5ef06946f9310bd7240840d8cf783fd265933c63454a17d6340f4d07e14119e1"
+      "bytes": 1807,
+      "sha256": "c2849d48f70bd2045b91ba115e0a2708b3193e97f0cef9d2bb0b56b092bdea32"
     }
   },
   "videos": {
     "raw-highlight.mp4": {
-      "duration": 96.981,
-      "duration_iso": "PT1M37S",
-      "duration_label": "1 minutes 37 seconds",
-      "caption_cues": 26,
-      "frames": 2909,
+      "duration": 105.877,
+      "duration_iso": "PT1M46S",
+      "duration_label": "1 minutes 46 seconds",
+      "caption_cues": 28,
+      "frames": 3176,
       "video": "H.264 1920x1080 30fps yuv420p",
       "audio": "AAC 48kHz stereo",
       "fast_start": true,
       "complete_decode_passed": true,
       "source_file": "RAW-highlights.mp4",
-      "source_sha256": "6aaebd51a71943e6bd189485213e1f7a93dad48bb27041d2d87a73c8cfc7747a",
+      "source_sha256": "ec890311f4b9decc68a139791107ed2b288306431b555403c6ab02ff112e7e59",
       "audio_packets_unchanged": true,
-      "audio_sha256": "2c226d79a2bee4b72c05777706f7a48545afa1c3dbb0a5e164bc74c82120d913"
+      "audio_sha256": "bf18d89bc42b71e7254978d84348c5211a2f3d26e5b70a648319189905420510"
     },
     "raw-full-demo.mp4": {
-      "duration": 203.114,
-      "duration_iso": "PT3M23S",
-      "duration_label": "3 minutes 23 seconds",
-      "caption_cues": 55,
-      "frames": 6093,
+      "duration": 212.01,
+      "duration_iso": "PT3M32S",
+      "duration_label": "3 minutes 32 seconds",
+      "caption_cues": 57,
+      "frames": 6360,
       "video": "H.264 1920x1080 30fps yuv420p",
       "audio": "AAC 48kHz stereo",
       "fast_start": true,
       "complete_decode_passed": true,
       "source_file": "RAW-business-demo.mp4",
-      "source_sha256": "ab08e2eb3346453829d91d9bb5fe96e24d7ba21306fb87175ae0e285c64e1906",
+      "source_sha256": "f32d3410aaa93405a6fedaa575e8156fd7f6d92352592005f1346aa085b13a2a",
       "audio_packets_unchanged": true,
-      "audio_sha256": "4cefbc4fa4b8d8ccc6afe170e3c5a040da4558ec9e38dd24cc379bf4cdf457dd"
+      "audio_sha256": "6f43fa5280304c703ea9e6a5ed7bd7ec7737b666a98ac459452d2ff9f5c939d1"
     }
   },
-  "new_spend_usd": 0
+  "new_paid_api_usage": false,
+  "r2_billing": "Existing owner-authorized account; actual storage and request charges are determined by Cloudflare."
 }

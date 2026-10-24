@@ -88,7 +88,7 @@ export default function Home() {
 
       <section className="workspace-home-feature" aria-labelledby="workspace-offer-title">
         <div className="shell workspace-home-grid">
-          <div><p className="eyebrow">Featured product · RAW Business Workspace</p><h2 id="workspace-offer-title">Your business.<br />Connected.</h2><p>Bring your AI and existing business information together. Build reports, add information your software is missing, and turn email into reviewed replies and connected follow-up.</p><Link className="button button-primary" href="/raw-workspace">Explore RAW Workspace <span aria-hidden="true">↗</span></Link></div>
+          <div><p className="eyebrow">Featured product · RAW Business Workspace</p><h2 id="workspace-offer-title">Your business.<br />Connected.</h2><p>Bring your AI and existing business information together. Bring connected email inboxes into one interface, build reports, add information your software is missing, and keep reviewed replies and follow-up connected.</p><Link className="button button-primary" href="/raw-workspace">Explore RAW Workspace <span aria-hidden="true">↗</span></Link></div>
           <figure className="workspace-home-film">
             <div className="workspace-video-frame">
               <video controls playsInline preload="none" poster="/products/raw-workspace/raw-highlight-poster.jpg" width="1920" height="1080" aria-label="RAW Business Workspace highlight">

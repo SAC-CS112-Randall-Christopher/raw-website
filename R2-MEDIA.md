@@ -2,8 +2,10 @@
 
 Chris authorized a separate R2 media bucket and use of the existing account's
 R2 billing on 2026-10-24. The public films no longer need to fit the Workers
-static-assets 25 MiB per-file limit. This does not improve old source footage;
-the next edit still requires sharper captures and complete, readable framing.
+static-assets 25 MiB per-file limit. The subsequent sharp edit uses native
+DPR2/DPR3 lossless captures, complete readable regions and one final video
+encode. Its source package is DMPH `c30865067d3675942bd163f38191ea154c38dba0`,
+`deliverables/raw-workspace-polish/`; the website cutover has separate evidence.
 
 ## Configured resources
 
@@ -71,15 +73,22 @@ HTTPS are recorded in [docs/raw-r2-verification.json](docs/raw-r2-verification.j
 That receipt identifies whether it covers the R2 origin or the final website
 cutover; do not treat an origin-only receipt as a deployed website check.
 
-The production cutover is complete: source `bec63fca1782345825cc723bba6fc745da6eae7e`,
+The original hosting cutover completed at source `bec63fca1782345825cc723bba6fc745da6eae7e`,
 Worker version `e19bfba6-81d7-4c20-a27d-907204421e54` at 100 percent. The films
 are byte-identical to the previous reviewed release. Both complete real-time
 playbacks ended successfully, along with desktop/mobile captions, seeking,
 downloads and full hashes. See [live checks](docs/raw-r2-live.json),
 [preview checks](docs/raw-r2-preview.json) and the
 [deployment receipt](docs/raw-r2-deployment.json). The sharper film edit and
-new voice auditions are separate work; this hosting cutover does not represent
-a newly finished edit.
+new voice auditions are separate work; those original hosting receipts do not
+represent the newer film revision.
+
+The newer accepted films are 105.877s / 212.010s with 28 / 57 cues. They explicitly
+show the connected-inbox workflow and retain Ryan with ordinal dates. Source and
+website MP4s are byte-identical; public R2 full hashes and ranges pass before any
+Worker change. The source delivery also preserves original narration and links
+to verified lossless MLT edit archives. Uncropped account settings remain private.
+Production publication will be recorded separately from these source/origin checks.
 
 The owner requested another local voice comparison. Five matched-volume MP3/WAV
 auditions are available at

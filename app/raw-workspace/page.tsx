@@ -66,7 +66,7 @@ export default function RawWorkspace() {
 
     <section className="section workspace-film-section" id="see-it-in-action">
       <div className="shell">
-        <div className="section-heading"><p className="eyebrow">The full demo · {fullDemoMedia.duration_label}</p><h2>Your information. Useful work.</h2><p>Bring your AI and business information together. Add what is missing, ask a question, prepare a reply and organize the next step.</p></div>
+        <div className="section-heading"><p className="eyebrow">The full demo · {fullDemoMedia.duration_label}</p><h2>Your information. Useful work.</h2><p>Bring your AI, business information and connected email inboxes into one workspace. Add what is missing, ask a question, prepare a reply and organize the next step.</p></div>
         <div className="workspace-video-frame">
           <video controls playsInline preload="none" poster="/products/raw-workspace/raw-demo-poster.jpg" width="1920" height="1080" aria-label="RAW Business Workspace full demonstration">
             <source src="/products/raw-workspace/raw-full-demo.mp4" type="video/mp4" />
