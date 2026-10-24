@@ -52,7 +52,8 @@ test("promotes the real RAW product with playable media and answerable product i
   for (const markup of [html, homepage]) {
     const links = [...markup.matchAll(/<div class="workspace-film-links">([\s\S]*?)<\/div>/g)].map(m => m[1]).join(' ');
     assert.match(links, /href="https:\/\/calendar\.app\.google\/Qwnjw6tS5TdDo5Hh7"/);
-    assert.match(links, /Discuss your workflow with Chris/, "The invitation beside the player is a real link");
+    assert.match(links, /Book a demo/, "The invitation beside the player is a real link");
+    assert.match(links, /raw-(?:highlight|full-demo)\.mp4\?download=1/, "The film has a direct MP4 download beside the player");
   }
   assert.match(await sitemap.text(), /https:\/\/randallautomationworks.com\/raw-workspace/);
   for (const asset of ["overview.png", "quotes.png", "video-poster.png", "social-card.png", "captions.vtt", "raw-workspace-landscape.mp4"]) {

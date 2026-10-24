@@ -72,6 +72,21 @@ def inspect_player(page, name, duration, cues, label):
     print(json.dumps(record), flush=True)
 
 
+def inspect_download(page, name, label):
+    link=page.get_by_role('link',name='Download highlight MP4' if name=='raw-highlight.mp4' else 'Download full demo MP4',exact=True)
+    assert link.get_attribute('href')=='/products/raw-workspace/'+name+'?download=1'
+    with page.expect_download(timeout=60000) as pending:
+        link.click()
+    download=pending.value
+    assert download.failure() is None
+    assert download.suggested_filename.lower()==name
+    path=Path(download.path())
+    actual={'bytes':path.stat().st_size,'sha256':hashlib.sha256(path.read_bytes()).hexdigest()}
+    assert actual==manifest['assets'][name],(name,actual)
+    result.setdefault('downloads',[]).append({'label':label,'file':name,'suggested_filename':download.suggested_filename,**actual})
+    print(label+': actual MP4 download matches the reviewed film',flush=True)
+
+
 with sync_playwright() as pw:
     browser = pw.chromium.launch(executable_path=args.chromium, headless=True,
                                  args=['--no-sandbox', '--disable-dev-shm-usage'])
@@ -85,12 +100,14 @@ with sync_playwright() as pw:
         assert response.status == 200
         inspected=media['raw-highlight.mp4']
         inspect_player(page, 'raw-highlight.mp4', inspected['duration'], inspected['caption_cues'], label + '-highlight')
+        inspect_download(page,'raw-highlight.mp4',label+'-highlight-download')
         # Follow the actual Next/Vinext client link, so a retained old media
         # element or incorrect source after navigation cannot pass this check.
         page.get_by_role('link', name='Watch the full demo').click()
         page.wait_for_url(base + '/raw-workspace#see-it-in-action')
         inspected=media['raw-full-demo.mp4']
         inspect_player(page, 'raw-full-demo.mp4', inspected['duration'], inspected['caption_cues'], label + '-full-demo')
+        inspect_download(page,'raw-full-demo.mp4',label+'-full-download')
         for name in ['raw-demo-poster.jpg', 'raw-highlight-poster.jpg', 'raw-full-demo.vtt', 'raw-highlight.vtt', 'raw-demo-transcript.txt', 'raw-highlight-transcript.txt']:
             status = page.evaluate('async path=>(await fetch(path,{signal:AbortSignal.timeout(20000)})).status', '/products/raw-workspace/' + name)
             assert status == 200, (name, status)

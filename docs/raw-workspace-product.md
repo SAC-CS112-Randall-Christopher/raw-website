@@ -1,46 +1,48 @@
 # RAW Business Workspace offer
 
-The public product page is `/raw-workspace`, with a featured homepage placement,
-main navigation and footer links. The page uses the existing booking and contact
-paths. No product price or self-service signup availability is asserted.
+The product page is `/raw-workspace`, with a featured homepage placement and
+main-navigation/footer links. It uses the existing booking/contact paths. No
+price or self-service signup availability is asserted. Contact consent,
+honeypot and fallback behavior remain intact.
 
-At the owner's request, the homepage now embeds the finished **80-second
-highlight** and `/raw-workspace#see-it-in-action` embeds the **3:59 full demo**.
-Both use the actual RAW desktop interface and fictional Pine Ridge Rental &
-Service data. Provider authorization happened privately; the verified connected
-assistant used the existing eligible ChatGPT subscription. Processing waits are
-condensed and labeled. The assistant supplied reply wording in chat; the owner
-copied it into an editable unsent capture draft and created the follow-up.
-No email was sent. Recurring delivery and universal subscription compatibility
-are not claimed.
+The homepage embeds the **1:43 highlight**; the product page embeds the
+**3:33 full demo**. Both use actual Pine Ridge Rental & Service recordings,
+genuine connected AI answers and owner-approved **Ryan** narration. The films
+connect existing business information, RAW-owned database fields, inspectable
+reports, contextual email drafts, planner tasks and calendar blocks.
 
-Current film source: DMPH commit `e233f2a0366861c05e4101bda5fcc94f2ab3ed27`,
-`deliverables/raw-demo-video/`, reviewed in DMPH PR #4. The filmed application is
-`sb_harness` feature `df00f4742a7f1d3512dc18bae316e27a51f5ca38` plus the verified
-timestamp/source-scope fixes at `c3a3864f83ad36d749394fa7812dec59ea99df1f`
-(sb_harness PR #58). Existing still screenshots remain actual captures from
-`453aa5ccb844dbc26a64979393e6266d52b6d43a` with synthetic records.
+AI reads the newly saved delivery instructions, answers the 961-account inquiry,
+and offers a follow-up from Maya's message. After owner approval it creates the
+personal task and October 26th, 9–9:30 AM Denver calendar block, before the
+October 28th rental. The owner reviews the $2,250 rental subtotal and editable
+unsent reply. Availability, delivery and unconfirmed charges remain pending.
+The imported email sample sends nothing. Source refresh preserves RAW-owned
+fields and linked work.
 
-The media pipeline and full capture provenance are in the user's DMPH
-repository. Website asset hashes, source hashes, exact durations/frame counts
-and unchanged audio-packet proof are in `docs/raw-demo-media.json`. The page includes
-SoftwareApplication, FAQPage, VideoObject and breadcrumb structured data plus
-unique canonical and social metadata. This makes the product information
-explicit and accessible; it is not a guarantee of indexing or AI citations.
+Current film source is DMPH
+`ae7d57c6675d1e4b2f6dcab294738025236c1027`,
+`deliverables/raw-workspace-connected/` (DMPH PR 4). The filmed application is
+`2f0fded11aefe20c4050b39091bcefd717257ce6` (RAW PR 60), retaining the existing
+fictional business and earlier data. Existing still screenshots remain actual
+captures from `453aa5ccb844dbc26a64979393e6266d52b6d43a` with synthetic records.
 
-Assets are served from `public/products/raw-workspace/` through the site's
-existing Cloudflare static assets. No new hosting, storage binding, account,
-analytics service or paid media dependency was added. Both players use native
-controls, inline playback, `preload="none"`, a poster and default English WebVTT
-captions; they do not autoplay. The full transcript is linked on both pages.
-Both videos are 1080p H.264/AAC with fast-start metadata. The highlight is the
-exact reviewed export. The full demo is a 24,454,900-byte web derivative made
-with FFmpeg/libx264 slow CRF 22 and copied AAC audio; it retains all 7,170 frames,
-239.018 seconds and the original audio packets. This fits the existing
-[25 MiB static-asset limit](https://developers.cloudflare.com/workers/platform/limits/#static-assets).
-All promotional copy avoids trials and pilots.
+The media pipeline, original narration/footage, native edits and safe service
+receipts live in DMPH. `docs/raw-demo-media.json` pins all eight exact public
+assets and their source commit. Both MP4s are byte-identical to the reviewed
+1080p/30 H.264/AAC fast-start exports, with 3,087 / 6,377 frames and unchanged
+AAC packets. Each fits the existing Cloudflare asset limit.
 
-Run `npm test` for the production artifact and all rendered-page checks. The
-product test checks the destination, page copy, metadata, visible FAQ/schema
-agreement, both player destinations, captions and byte-exact packaged assets.
-Live deployment/browser results are recorded in `docs/raw-demo-publication.md`.
+Players have controls, inline playback, `preload="none"`, distinct viewing
+posters and default English captions. Each has its own transcript and actual
+MP4 attachment download link. They do not autoplay. The structured product,
+FAQ, video and breadcrumb data match visible content and media metadata;
+this does not guarantee search indexing or AI citations.
+
+No new hosting, account, storage binding, analytics service or paid dependency
+was added. The existing Worker, booking/contact paths and protected gateway
+are preserved. Promotional copy avoids trials and pilots.
+
+Run `npm test` for the production artifact and rendered-page/asset checks.
+The browser checker verifies desktop/mobile playback, caption/range bytes,
+actual downloads, client navigation and exact full HTTP hashes. Deployment
+and live results are recorded in [raw-demo-publication.md](raw-demo-publication.md).

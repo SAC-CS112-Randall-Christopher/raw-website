@@ -44,7 +44,7 @@ const highlightVideo = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
   name: "RAW Business Workspace — Answers you can use",
-  description: `An ${Math.round(highlightMedia.duration)}-second highlight of the actual RAW desktop interface: a real AI inquiry, report results, email reply and owner-reviewed calendar follow-up, using fictional Pine Ridge Rental & Service data. Processing waits are condensed.`,
+  description: `A ${Math.round(highlightMedia.duration)}-second overview of the actual RAW workspace: connected AI, imported business information, added database fields, inspectable reports, email and approved task/calendar creation. Fictional Pine Ridge Rental & Service data; processing waits condensed.`,
   thumbnailUrl: "https://randallautomationworks.com/products/raw-workspace/raw-highlight-poster.jpg",
   uploadDate: "2026-10-23T00:00:00Z",
   duration: highlightMedia.duration_iso,
@@ -88,7 +88,7 @@ export default function Home() {
 
       <section className="workspace-home-feature" aria-labelledby="workspace-offer-title">
         <div className="shell workspace-home-grid">
-          <div><p className="eyebrow">Featured product · RAW Business Workspace</p><h2 id="workspace-offer-title">Your business.<br />Connected.</h2><p>Connect your existing business information with your AI assistant. Ask questions, inspect the records and turn answers into useful work.</p><Link className="button button-primary" href="/raw-workspace">Explore RAW Workspace <span aria-hidden="true">↗</span></Link></div>
+          <div><p className="eyebrow">Featured product · RAW Business Workspace</p><h2 id="workspace-offer-title">Your business.<br />Connected.</h2><p>Bring your AI and existing business information together. Build reports, add information your software is missing, and turn email into reviewed replies and connected follow-up.</p><Link className="button button-primary" href="/raw-workspace">Explore RAW Workspace <span aria-hidden="true">↗</span></Link></div>
           <figure className="workspace-home-film">
             <div className="workspace-video-frame">
               <video controls playsInline preload="none" poster="/products/raw-workspace/raw-highlight-poster.jpg" width="1920" height="1080" aria-label="RAW Business Workspace highlight">
@@ -98,7 +98,7 @@ export default function Home() {
               </video>
             </div>
             <figcaption>{Math.round(highlightMedia.duration)}-second highlight · Actual RAW interface with fictional Pine Ridge business data. Processing waits are condensed.</figcaption>
-            <div className="workspace-film-links"><Link className="text-link" href="/raw-workspace#see-it-in-action">Watch the full demo <span aria-hidden="true">→</span></Link><a className="text-link" href={bookingLink} target="_blank" rel="noreferrer">Discuss your workflow with Chris <span aria-hidden="true">↗</span></a><a className="text-link" href="/products/raw-workspace/raw-highlight-transcript.txt">Read the highlight transcript</a></div>
+            <div className="workspace-film-links"><Link className="text-link" href="/raw-workspace#see-it-in-action">Watch the full demo <span aria-hidden="true">→</span></Link><a className="text-link" href="/products/raw-workspace/raw-highlight.mp4?download=1" download="RAW-highlight.mp4">Download highlight MP4</a><a className="text-link" href={bookingLink} target="_blank" rel="noreferrer">Book a demo <span aria-hidden="true">↗</span></a><a className="text-link" href="/products/raw-workspace/raw-highlight-transcript.txt">Read the highlight transcript</a></div>
           </figure>
         </div>
       </section>

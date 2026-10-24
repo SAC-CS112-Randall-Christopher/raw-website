@@ -48,7 +48,10 @@ for original,web in [('RAW-highlights','raw-highlight'),('RAW-business-demo','ra
     assert [video['width'],video['height']]==[1920,1080] and video['pix_fmt']=='yuv420p'
     assert video['r_frame_rate']=='30/1' and audio['sample_rate']=='48000' and audio['channels']==2
     assert int(video['nb_frames'])==reviewed['frames'] and abs(duration-reviewed['duration'])<.05
-    assert (65<=duration<=75) if web=='raw-highlight' else (150<=duration<=180)
+    story_name='highlight-story.json' if web=='raw-highlight' else 'story.json'
+    story=json.loads((source/story_name).read_text())
+    minimum,maximum=story['duration_bounds']
+    assert 30<=minimum<=maximum<=240 and minimum<=duration<=maximum
     subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-i',str(dst),'-f','null','-'],check=True)
     blob=dst.read_bytes();assert blob.index(b'moov')<blob.index(b'mdat')
     original_audio=audio_hash(src);assert audio_hash(dst)==original_audio
