@@ -4,11 +4,11 @@
     {
       "label": "desktop-highlight",
       "src": "https://randallautomationworks.com/products/raw-workspace/raw-highlight.mp4",
-      "duration": 80.042,
+      "duration": 88.704,
       "width": 1920,
       "height": 1080,
       "english_captions": {
-        "cues": 21,
+        "cues": 19,
         "mode": "showing"
       },
       "range_status": 206,
@@ -21,11 +21,11 @@
     {
       "label": "desktop-full-demo",
       "src": "https://randallautomationworks.com/products/raw-workspace/raw-full-demo.mp4",
-      "duration": 239.018,
+      "duration": 223.082,
       "width": 1920,
       "height": 1080,
       "english_captions": {
-        "cues": 63,
+        "cues": 49,
         "mode": "showing"
       },
       "range_status": 206,
@@ -38,11 +38,11 @@
     {
       "label": "mobile-highlight",
       "src": "https://randallautomationworks.com/products/raw-workspace/raw-highlight.mp4",
-      "duration": 80.042,
+      "duration": 88.704,
       "width": 1920,
       "height": 1080,
       "english_captions": {
-        "cues": 21,
+        "cues": 19,
         "mode": "showing"
       },
       "range_status": 206,
@@ -55,11 +55,11 @@
     {
       "label": "mobile-full-demo",
       "src": "https://randallautomationworks.com/products/raw-workspace/raw-full-demo.mp4",
-      "duration": 239.018,
+      "duration": 223.082,
       "width": 1920,
       "height": 1080,
       "english_captions": {
-        "cues": 63,
+        "cues": 49,
         "mode": "showing"
       },
       "range_status": 206,
@@ -72,18 +72,50 @@
   ],
   "page_errors": [],
   "browser": "151.0.7922.34",
+  "exact_public_assets": [
+    {
+      "name": "raw-highlight.mp4",
+      "bytes": 8372432,
+      "sha256": "615db04bd75b102f1756efb9d6b57b95326767f10fea852135a94301eee431c6"
+    },
+    {
+      "name": "raw-full-demo.mp4",
+      "bytes": 20139719,
+      "sha256": "151c6205c6f91d7527bcbc8771082c01062f6f13a53dd86709a8d133e44671f8"
+    },
+    {
+      "name": "raw-demo-poster.jpg",
+      "bytes": 40729,
+      "sha256": "510b30effcdae08ddd224de2ab59be3a130d7313f43ea71d838c127435b9dd6d"
+    },
+    {
+      "name": "raw-highlight.vtt",
+      "bytes": 1673,
+      "sha256": "153d3bd03be396bacb363adbc5004eaedc0c1c7bf9e0e2b4840c530394316e3a"
+    },
+    {
+      "name": "raw-full-demo.vtt",
+      "bytes": 4410,
+      "sha256": "7920d89dce3eef7d781b6ab487de5e4f274da6fba26e3292f6c2cb7ee3aba28f"
+    },
+    {
+      "name": "raw-demo-transcript.txt",
+      "bytes": 3595,
+      "sha256": "c22798a020f8515aad1e6a7ee20a14a64a20e7b2f5fe154aa70a3fc42721bb49"
+    }
+  ],
   "complete_normal_speed_playback": {
     "final": [
       {
         "src": "https://randallautomationworks.com/products/raw-workspace/raw-highlight.mp4",
-        "time": 80.042,
+        "time": 88.704,
         "ended": true,
         "rate": 1,
         "error": null
       },
       {
         "src": "https://randallautomationworks.com/products/raw-workspace/raw-full-demo.mp4",
-        "time": 239.018,
+        "time": 223.082,
         "ended": true,
         "rate": 1,
         "error": null
@@ -91,18 +123,18 @@
     ],
     "progress": [
       {
-        "elapsed": 30.04,
+        "elapsed": 30.17,
         "players": [
           {
             "src": "https://randallautomationworks.com/products/raw-workspace/raw-highlight.mp4",
-            "time": 31.336327,
+            "time": 31.43008,
             "ended": false,
             "rate": 1,
             "error": null
           },
           {
             "src": "https://randallautomationworks.com/products/raw-workspace/raw-full-demo.mp4",
-            "time": 29.96188,
+            "time": 30.034108,
             "ended": false,
             "rate": 1,
             "error": null
@@ -110,18 +142,18 @@
         ]
       },
       {
-        "elapsed": 60.13,
+        "elapsed": 60.34,
         "players": [
           {
             "src": "https://randallautomationworks.com/products/raw-workspace/raw-highlight.mp4",
-            "time": 61.338105,
+            "time": 61.598233,
             "ended": false,
             "rate": 1,
             "error": null
           },
           {
             "src": "https://randallautomationworks.com/products/raw-workspace/raw-full-demo.mp4",
-            "time": 59.969562,
+            "time": 60.214049,
             "ended": false,
             "rate": 1,
             "error": null
@@ -129,18 +161,18 @@
         ]
       },
       {
-        "elapsed": 90.26,
+        "elapsed": 90.53,
         "players": [
           {
             "src": "https://randallautomationworks.com/products/raw-workspace/raw-highlight.mp4",
-            "time": 80.042,
+            "time": 88.704,
             "ended": true,
             "rate": 1,
             "error": null
           },
           {
             "src": "https://randallautomationworks.com/products/raw-workspace/raw-full-demo.mp4",
-            "time": 90.009076,
+            "time": 90.398938,
             "ended": false,
             "rate": 1,
             "error": null
@@ -148,18 +180,18 @@
         ]
       },
       {
-        "elapsed": 120.48,
+        "elapsed": 120.75,
         "players": [
           {
             "src": "https://randallautomationworks.com/products/raw-workspace/raw-highlight.mp4",
-            "time": 80.042,
+            "time": 88.704,
             "ended": true,
             "rate": 1,
             "error": null
           },
           {
             "src": "https://randallautomationworks.com/products/raw-workspace/raw-full-demo.mp4",
-            "time": 120.25092,
+            "time": 120.535168,
             "ended": false,
             "rate": 1,
             "error": null
@@ -167,18 +199,18 @@
         ]
       },
       {
-        "elapsed": 150.55,
+        "elapsed": 150.93,
         "players": [
           {
             "src": "https://randallautomationworks.com/products/raw-workspace/raw-highlight.mp4",
-            "time": 80.042,
+            "time": 88.704,
             "ended": true,
             "rate": 1,
             "error": null
           },
           {
             "src": "https://randallautomationworks.com/products/raw-workspace/raw-full-demo.mp4",
-            "time": 150.332291,
+            "time": 150.751611,
             "ended": false,
             "rate": 1,
             "error": null
@@ -186,18 +218,18 @@
         ]
       },
       {
-        "elapsed": 180.58,
+        "elapsed": 181.32,
         "players": [
           {
             "src": "https://randallautomationworks.com/products/raw-workspace/raw-highlight.mp4",
-            "time": 80.042,
+            "time": 88.704,
             "ended": true,
             "rate": 1,
             "error": null
           },
           {
             "src": "https://randallautomationworks.com/products/raw-workspace/raw-full-demo.mp4",
-            "time": 180.35904,
+            "time": 181.145403,
             "ended": false,
             "rate": 1,
             "error": null
@@ -205,18 +237,18 @@
         ]
       },
       {
-        "elapsed": 210.71,
+        "elapsed": 211.54,
         "players": [
           {
             "src": "https://randallautomationworks.com/products/raw-workspace/raw-highlight.mp4",
-            "time": 80.042,
+            "time": 88.704,
             "ended": true,
             "rate": 1,
             "error": null
           },
           {
             "src": "https://randallautomationworks.com/products/raw-workspace/raw-full-demo.mp4",
-            "time": 210.559009,
+            "time": 211.37963,
             "ended": false,
             "rate": 1,
             "error": null
