@@ -100,9 +100,21 @@ The checker exercises desktop and 390px layouts, actual client navigation,
 default captions, keyboard playback, exact 206 range bytes, all eight complete
 HTTP hashes, and the actual MP4 download link/filename/bytes on both layouts.
 `--complete` plays both films beginning to end at normal speed. Current release
-results belong in `raw-demo-preview-verification.json`,
+results are recorded in `raw-demo-preview-verification.json`,
 `raw-demo-live-verification.json`, `raw-demo-deployment.json` and
-`evidence/raw-demo-local-checks.txt`; an older receipt is not proof of this release.
+`evidence/raw-demo-local-checks.txt`.
+
+The live custom domain passed all four cases and all four actual downloads;
+all eight complete HTTP asset hashes match the package. Both public films
+completed **1× playback**, ending at **102.912 / 212.586 seconds**, with no
+media or page errors. Independent Codex review accepted source, eight asset
+matches and all preview layouts. No hosted CI result is claimed.
+
+Production source is `0565eab3754b045c08ec07598d48386253a751b6`.
+Worker version `b6cf7eb0-75c6-4789-a6fa-20e313f5b355` receives **100%** of
+production traffic. The sanitized deployment receipt preserves the previous
+version `29ba0f91-51a3-470d-95ef-5730939f18c3` for rollback. These are observed
+deployment and live checks, separate from the local build.
 
 ## Limits
 
@@ -119,4 +131,16 @@ small disclosure footer while paused; captions have their own top band.
 Playback and speech recognition do not establish a human listening review.
 
 The separate protected `/admin/dmph/` studio still needs the owner's hidden
-local initial-password prompt. Video publication does not bypass that setup.
+local initial-password prompt. Its anonymous route returns **503**, with
+no-store/private and noindex headers. The administrator is not initialized;
+the guarded studio service is inactive while VoiceStudio and the tunnel run.
+See `evidence/raw-demo-studio-status.json`. Video publication does not bypass
+that setup. On MAIN, initialize through the hidden prompt, then start:
+
+```powershell
+& C:\Projects\DMPH-local-studio\scripts\initialize_admin_windows.ps1
+& C:\Projects\DMPH-local-studio\scripts\manage_local_windows.ps1 -Action Start -Open
+```
+
+The account remains `DMPHstudio` and first login requires password replacement.
+Passwords belong only in hidden local prompts, never chat or command arguments.

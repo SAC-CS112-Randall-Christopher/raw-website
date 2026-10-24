@@ -1,0 +1,21 @@
+Independent Codex review accepted the publication source and preview.
+
+All eight public files were independently hashed against the manifest and
+DMPH source ae7d57c6675d1e4b2f6dcab294738025236c1027. They retain the accepted
+full c8acfdb5607e488c395ef74df6ffbc8b9ac7a48d8d415d8182d92b0c90ebaad6 and
+highlight 5cd98fe17917c8059696b0db1dc7cb87c4c34ac7804324017b95cdd90d768457.
+
+Review covered page copy, structured metadata, source/manifest, current docs,
+attachment/cache behavior, browser checker/tests and all four preview images.
+Four preview cases and four actual downloads agree with the reviewed bytes;
+default 27/58 cues, ranges, seeking and client navigation pass without errors.
+
+Attachment headers modify only a new outgoing Headers object. Worker routing,
+private gateway, Wrangler and Vite configuration have no diff. The private
+gateway remains ahead of the two whitelisted public MP4 paths.
+
+No material finding remains. Fictional/imported/read-only/owner approval and
+Chromium emulation limits are retained. Live publication is separately proved
+by raw-demo-deployment.json and raw-demo-live-verification.json, not inferred
+from this source/preview review. No physical iPhone/Safari or human listening
+acceptance is claimed.

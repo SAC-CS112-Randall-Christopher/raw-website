@@ -1,0 +1,12 @@
+{
+  "url": "https://randallautomationworks.com/admin/dmph/",
+  "status": 503,
+  "robots": "noindex, nofollow, noarchive",
+  "cache_control": "no-store, private",
+  "scope": "Anonymous GET only; no sign-in, password or private media requested",
+  "administrator_initialized": false,
+  "studio_service": "inactive, guarded until hidden setup",
+  "voice_service": "running",
+  "tunnel_service": "running",
+  "production_version": "b6cf7eb0-75c6-4789-a6fa-20e313f5b355"
+}

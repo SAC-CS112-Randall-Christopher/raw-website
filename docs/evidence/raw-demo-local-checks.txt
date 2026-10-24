@@ -130,3 +130,10 @@ Preview: four desktop/390px cases, 27/58 caption cues, exact range bytes, client
 Four actual MP4 downloads completed with matching filenames, byte counts and SHA-256 values.
 The local DMPH source films completed complete 1x playback; live publication has its own receipt.
 Phone means Chromium touch/viewport emulation, not physical iPhone/Safari. No new spend.
+
+Live custom domain: four playback/layout cases and four actual MP4 downloads passed; all eight complete HTTP hashes match.
+Both public films completed normal-speed 1x playback, ended=true, no media/page errors: 102.912 and 212.586 seconds.
+Production source: 0565eab3754b045c08ec07598d48386253a751b6
+Production version at 100 percent: b6cf7eb0-75c6-4789-a6fa-20e313f5b355
+Independent Codex source/preview review: accepted, no material finding remaining.
+Protected studio: anonymous 503, no-store/private, noindex; initial administrator unset and studio service guarded/inactive.
