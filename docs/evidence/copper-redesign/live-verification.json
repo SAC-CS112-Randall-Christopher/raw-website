@@ -1,0 +1,90 @@
+{
+  "assetStatus": 200,
+  "videoRanges": [
+    {
+      "name": "raw-highlight.mp4",
+      "status": 206,
+      "range": [
+        "bytes 0-63/8823342"
+      ],
+      "length": 64
+    },
+    {
+      "name": "raw-full-demo.mp4",
+      "status": 206,
+      "range": [
+        "bytes 0-63/16116583"
+      ],
+      "length": 64
+    }
+  ],
+  "assetHash": "BA3CC63872DEC2397043812CA934715C3B2E0430555A63C470BCB5507B908658",
+  "version": "1998110e-1741-4eb4-89a6-26ea58386741",
+  "source": "2670e86745de751a5875c10d998f9a71ea1e9208",
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "newBrand": true,
+      "cache": null,
+      "robots": null
+    },
+    {
+      "path": "/raw-workspace",
+      "status": 200,
+      "newBrand": true,
+      "cache": null,
+      "robots": null
+    },
+    {
+      "path": "/services",
+      "status": 200,
+      "newBrand": true,
+      "cache": null,
+      "robots": null
+    },
+    {
+      "path": "/workflow-automation-examples",
+      "status": 200,
+      "newBrand": true,
+      "cache": null,
+      "robots": null
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "newBrand": true,
+      "cache": null,
+      "robots": null
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "newBrand": true,
+      "cache": null,
+      "robots": null
+    },
+    {
+      "path": "/admin/dmph/login.html",
+      "status": 200,
+      "newBrand": false,
+      "cache": [
+        "no-store, private"
+      ],
+      "robots": [
+        "noindex, nofollow, noarchive"
+      ]
+    },
+    {
+      "path": "/admin/dmph/api/state",
+      "status": 401,
+      "newBrand": false,
+      "cache": [
+        "no-store, private"
+      ],
+      "robots": [
+        "noindex, nofollow, noarchive"
+      ]
+    }
+  ]
+}

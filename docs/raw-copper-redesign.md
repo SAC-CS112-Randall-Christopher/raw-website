@@ -1,0 +1,74 @@
+# RAW copper website redesign
+
+The website now centers RAW Business Workspace and three useful starting points: office/customer work, reporting/automation, and GIS/field workflows. The owner's supplied RAW artwork sets the charcoal, copper and muted-blue identity. Detailed reading pages retain a light, high-contrast canvas.
+
+## Refinement after owner feedback
+
+The owner liked the direction but wanted the card's aesthetic rather than the literal card, and flagged repeated information. The homepage now uses a native typographic hero, one short explanation and the existing genuine RAW walkthrough immediately below. The literal card, service labels, repeated introductory section and their unused styles are removed. The card image is also removed from shipped public assets; its original provenance remains in Git history and the first-pass notes below.
+
+Current official sites inspected in the browser and through their public pages:
+
+- [Linear](https://linear.app/): restrained dark layout, strong opening hierarchy and prominent product interface.
+- [Claude](https://claude.com/): concise opening message, generous spacing and warm visual restraint.
+- [n8n](https://n8n.io/): concrete workflow presentation with focused calls to action.
+
+These informed composition and content hierarchy. No third-party images, claims, customer marks or page code were copied.
+
+Verification for this refinement: production build, artifact validation, both complete public video hashes, all 29 tests, lint and independent source review pass. Browser checks at 320, 360, 390, 430, 768, 1024 and 1280 pixels found no horizontal overflow or out-of-bounds main content, one H1 and no card image. The walkthrough anchor settles below the sticky header; playback reached 4.81 seconds at readyState 4 without a media error. The mobile menu closes on navigation, the Solutions page and return-home navigation work, and no browser console errors were observed.
+
+The owner's phone screenshot showed a cropped desktop composition. Before this refinement, the live page already emitted the correct device-width viewport metadata and rendered a single column at 390px in the available browser. That specific phone/browser state was not reproduced, so no verified device-specific root cause or resolution is claimed. This pass has browser-width evidence, not physical Android-device acceptance. Contact delivery and authenticated studio workflows were not repeated.
+
+Evidence: [desktop](evidence/copper-refinement/home-desktop.jpg), [full desktop](evidence/copper-refinement/home-desktop-full.jpg), [phone](evidence/copper-refinement/home-mobile.jpg), [responsive measurements](evidence/copper-refinement/responsive-layout.json), [playback](evidence/copper-refinement/playback.json).
+
+Published refinement: source `14c6ac66739288b4015d1ff8a1d12f559787ce49`, Cloudflare version `4b335662-53c4-48b0-8467-3ef145015943`. All six public core routes return 200; the homepage presents the revised product heading without the card. The studio login remains available and its API rejects unauthenticated requests with 401. [Live checks](evidence/copper-refinement/live-verification.json), [published desktop](evidence/copper-refinement/home-live-desktop.jpg), [published phone width](evidence/copper-refinement/home-live-mobile.jpg). The existing draft PR #25 remains unmerged.
+
+## Scope
+
+- Rebuilt the homepage around the brand statement, actual product highlight, three opportunities, direct founder relationship and consultation.
+- Shortened Services (now labeled Solutions), Examples, About and Contact introductions; removed decorative diagrams from these core headers.
+- Reduced the product feature list to three clear stages while preserving actual screenshots, both reviewed films, captions, transcripts, downloads and the existing approved public film descriptions.
+- Reduced primary navigation to Workspace, Solutions, Examples and About. Existing specialist routes, SEO metadata, sitemap and policy pages remain available.
+- Added RAW Business Workspace to contact interests. Adapter, consent, honeypot, required fields and direct-contact fallback remain unchanged.
+- Fixed the phone menu remaining open across client navigation. Native details/summary semantics remain; Escape closes and restores summary focus.
+
+## Source and dependency
+
+Base: `f46f67fd91598c6b22ff0fd39a73ce0d085ef72b`, branch `feat/raw-connected-films`, draft PR #24. This is the current published film lane. `main` at `0ef1c49` does not include that live work, so this redesign stacks above #24 instead of regressing the deployed films or protected studio gateway. No upstream PR is merged by this work.
+
+The supplied `RAW_front_Vistaprint_FULL_BLEED.jpg` is copied unchanged to `public/images/raw-copper-brand.jpg` (152,535 bytes; SHA-256 `ba3cc63872dec2397043812ca934715c3b2e0430555a63c470bcb5507b908658`). The artwork is owner-supplied branding, not a product screenshot. All product media remains the existing real interface material.
+
+## Verification
+
+- `npm test`: verified production build, artifact validator, complete public R2 media hashes and all 29 tests pass.
+- `npm run lint`: passes without warnings after removing temporary generated typecheck files.
+- `wrangler deploy --dry-run --config wrangler.jsonc`: passes; no duplicate compatibility flags.
+- Production-style local Worker preview: six core pages at 390px; desktop core routes at 1280px; one H1 per route, no measured horizontal overflow, no completed broken images.
+- Browser: primary navigation, homepage demo anchor, phone menu navigation closure, Escape/summary focus, product FAQ, and required contact validation checked. An empty inquiry is blocked on Name; name/email/message/consent remain required. No contact inquiry sent; inbox delivery is not reverified.
+- Both existing video routes start in the local Worker preview with `readyState=4`. The full demo advanced to 6.94 seconds without media error. This is a playback smoke check, not a repeat of complete film acceptance. Existing media bytes pass their SHA-256 verification.
+- No browser console errors observed in the inspected preview.
+- Independent source review completed. One approved-copy consistency finding was repaired; focused re-review found no material issues. Final mobile-menu and header simplification also received independent review.
+
+Standalone `tsc --noEmit` is not green in the existing repository setup: Cloudflare ambient types are not generated by default. Generating local Wrangler types resolves those ambient errors but leaves the unchanged optional `db/index.ts` expecting a `DB` binding not configured in this website. No fictitious binding or unrelated database change was introduced. The website build, lint and tests above are green.
+
+## Visual evidence
+
+- [Published desktop homepage](evidence/copper-redesign/home-live-desktop.jpg)
+- [Published route, asset, video and access checks](evidence/copper-redesign/live-verification.json)
+- [Desktop homepage](evidence/copper-redesign/home-desktop.jpg)
+- [Complete desktop page](evidence/copper-redesign/home-desktop-full.jpg)
+- [Complete phone page](evidence/copper-redesign/home-mobile.jpg)
+- [Phone route measurements](evidence/copper-redesign/mobile-layout.json)
+- [Desktop route measurements](evidence/copper-redesign/desktop-layout.json)
+- [Full demo playback smoke check](evidence/copper-redesign/full-demo-start.json)
+
+## Publication of the first pass
+
+Published to the existing Cloudflare Worker and custom domain at https://randallautomationworks.com/ from source commit `2670e86745de751a5875c10d998f9a71ea1e9208`. Deployment version: `1998110e-1741-4eb4-89a6-26ea58386741`. Previous version retained for rollback: `4f73711e-5e1c-47f9-baf1-55014b6df035`.
+
+The live homepage was inspected in the browser. All six core routes return HTTP 200 with the new brand shell. The public brand image returns HTTP 200 with the expected source hash; both video routes return HTTP 206 for valid byte ranges. The protected studio still serves its login page and rejects unauthenticated API state requests with HTTP 401, with private/no-store and noindex headers retained. Existing Worker variables were preserved during publication. These are public delivery and access checks; authenticated studio behavior and contact inbox delivery were not exercised.
+
+Draft PR [#25](https://github.com/SAC-CS112-Randall-Christopher/raw-website/pull/25) preserves the redesign above draft #24. Neither pull request was merged.
+
+## Lane housekeeping
+
+The isolated redesign checkout is retained while the draft PR and review remain active. Existing worktrees were audited: #21 remains open; older #14/#16/#18 are merged. Root and #16 have untracked owner instruction files; other lanes' runtime/ownership needs are not established here, so they were not forcibly retired. Root checkout and unrelated work are preserved. No new branch was merged.

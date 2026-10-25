@@ -62,6 +62,7 @@ export function ContactForm() {
           I’m interested in
           <select name="service" defaultValue="">
             <option value="" disabled>Select a service</option>
+            <option>RAW Business Workspace</option>
             <option>Workflow or AI readiness assessment</option>
             <option>Small automation pilot</option>
             <option>Reporting or document automation</option>

@@ -28,14 +28,13 @@ test("promotes the real RAW product with playable media and answerable product i
   for (const item of faq.mainEntity) assert.ok(html.includes(item.name));
   assert.match(html, /<video[^>]+controls/);
   assert.match(html, /raw-full-demo\.vtt/);
-  assert.match(html, /raw-demo-transcript\.txt/);
-  assert.match(html, /Follow Pine Ridge Rental/);
+  assert.match(html, /See how RAW could fit your business/);
   assert.doesNotMatch(html, /24 seconds|PT24S/);
   assert.match(html, /calendar\.app\.google\/Qwnjw6tS5TdDo5Hh7/);
   const mainText = html.match(/<main[^>]*>([\s\S]*?)<\/main>/)[1].replace(/<script[^>]*>[\s\S]*?<\/script>/g, "").replace(/<[^>]+>/g, " ");
   assert.doesNotMatch(mainText, /\b(trials?|pilots?|early access)\b/i);
   const homepage = await home.text();
-  assert.match(homepage, /Featured product · RAW Business Workspace/);
+  assert.match(homepage, /Meet RAW Business Workspace/);
   assert.match(homepage, /Explore RAW Workspace/);
   assert.match(homepage, /<video[^>]+controls[^>]+preload="none"/);
   assert.match(homepage, /raw-highlight\.mp4/);
@@ -48,12 +47,11 @@ test("promotes the real RAW product with playable media and answerable product i
   assert.equal(highlight.contentUrl, "https://randallautomationworks.com/products/raw-workspace/raw-highlight.mp4");
   assert.equal(highlight.thumbnailUrl, "https://randallautomationworks.com/products/raw-workspace/raw-highlight-poster.jpg");
   assert.notEqual(highlight.thumbnailUrl, video.thumbnailUrl, "Each cut has a viewing poster suited to its story");
-  assert.match(homepage, /raw-highlight-transcript\.txt/);
   for (const markup of [html, homepage]) {
     const links = [...markup.matchAll(/<div class="workspace-film-links">([\s\S]*?)<\/div>/g)].map(m => m[1]).join(' ');
     assert.match(links, /href="https:\/\/calendar\.app\.google\/Qwnjw6tS5TdDo5Hh7"/);
     assert.match(links, /Book a demo/, "The invitation beside the player is a real link");
-    assert.match(links, /raw-(?:highlight|full-demo)\.mp4\?download=1/, "The film has a direct MP4 download beside the player");
+    assert.doesNotMatch(links, /download|transcript/i, "Player actions stay focused on viewing and booking");
   }
   assert.match(await sitemap.text(), /https:\/\/randallautomationworks.com\/raw-workspace/);
   for (const asset of ["overview.png", "quotes.png", "video-poster.png", "social-card.png", "captions.vtt", "raw-workspace-landscape.mp4"]) {
