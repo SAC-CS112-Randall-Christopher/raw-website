@@ -62,6 +62,12 @@ export const pages: PageContent[] = [
         "intro": "Python automation, SQL reporting, C# integrations, JSON and APIs, or Visual Basic and VBA: use the tool that fits the work. AI helps with language and documents where it adds value.",
         "cards": [
           {
+            "title": "Before the assistant acts",
+            "text": "Set approval boundaries and test changed proposals, duplicate attempts and uncertain outcomes.",
+            "href": "/insights/ai-assistant-action-approval",
+            "linkLabel": "Review action approvals"
+          },
+          {
             "title": "Before connecting business systems",
             "text": "Confirm access, record ownership, freshness and failure handling.",
             "href": "/insights/ai-integration-readiness-checklist",

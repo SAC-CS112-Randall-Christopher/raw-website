@@ -1,0 +1,277 @@
+{
+  "name": "raw",
+  "origin": "http://127.0.0.1:4173",
+  "canonical": "https://randallautomationworks.com",
+  "route": "/insights/ai-assistant-action-approval",
+  "index": "/insights",
+  "incoming": [
+    "/insights",
+    "/services"
+  ],
+  "anchor": "example",
+  "metadata": {
+    "title": "AI Assistant Action Approvals | Randall Automation Works",
+    "description": "Set clear approval rules for a business AI assistant: separate drafts from actions, review the exact change, and handle uncertain results without duplicates.",
+    "canonical": "https://randallautomationworks.com/insights/ai-assistant-action-approval",
+    "robots": "index, follow",
+    "h1": 1,
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "AI Assistant Approvals: Decide What It Can Do Before It Acts",
+        "description": "Set clear approval rules for a business AI assistant: separate drafts from actions, review the exact change, and handle uncertain results without duplicates.",
+        "datePublished": "2026-10-25",
+        "dateModified": "2026-10-25",
+        "mainEntityOfPage": "https://randallautomationworks.com/insights/ai-assistant-action-approval",
+        "image": "https://randallautomationworks.com/opengraph-image.png",
+        "author": {
+          "@type": "Person",
+          "name": "Chris Randall",
+          "url": "https://randallautomationworks.com/about"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://randallautomationworks.com/#business",
+          "name": "Randall Automation Works",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://randallautomationworks.com/logo-horizontal.svg"
+          }
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://randallautomationworks.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Insights",
+            "item": "https://randallautomationworks.com/insights"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AI Assistant Approvals: Decide What It Can Do Before It Acts",
+            "item": "https://randallautomationworks.com/insights/ai-assistant-action-approval"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://randallautomationworks.com/#business",
+        "name": "Randall Automation Works",
+        "legalName": "Randall Automation Works LLC",
+        "url": "https://randallautomationworks.com",
+        "image": "https://randallautomationworks.com/opengraph-image.png",
+        "logo": "https://randallautomationworks.com/logo-horizontal.svg",
+        "email": "chris@randallautomationworks.com",
+        "telephone": "+1-970-787-2161",
+        "location": {
+          "@type": "Place",
+          "name": "Montrose, Colorado"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Chris Randall",
+          "jobTitle": "Founder",
+          "description": "Utility operations and technology specialist with hands-on experience in Python, SQL, JSON integration, Visual Basic, GIS, IT infrastructure, cybersecurity, agentic workflows, RAG knowledge systems and responsible AI configuration."
+        },
+        "description": "Practical code-first automation, responsible AI and systems integration for Western Colorado small businesses, utilities and local organizations.",
+        "areaServed": [
+          "Montrose",
+          "Grand Junction",
+          "Delta",
+          "Ouray",
+          "Ridgway",
+          "Gunnison",
+          "Telluride",
+          "Glenwood Springs",
+          "Durango",
+          "Cortez"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Automation and AI services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "SoftwareApplication",
+                "name": "RAW Business Workspace",
+                "url": "https://randallautomationworks.com/raw-workspace",
+                "applicationCategory": "BusinessApplication",
+                "description": "Connected customer records, equipment quotes, tasks, documents and reporting, configured around your small business."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AI assistant and LLM setup",
+                "provider": {
+                  "@id": "https://randallautomationworks.com/#business"
+                },
+                "areaServed": "Western Colorado"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Workflow automation",
+                "provider": {
+                  "@id": "https://randallautomationworks.com/#business"
+                },
+                "areaServed": "Western Colorado"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Python automation",
+                "provider": {
+                  "@id": "https://randallautomationworks.com/#business"
+                },
+                "areaServed": "Western Colorado"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "SQL reporting",
+                "provider": {
+                  "@id": "https://randallautomationworks.com/#business"
+                },
+                "areaServed": "Western Colorado"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "API and systems integration",
+                "provider": {
+                  "@id": "https://randallautomationworks.com/#business"
+                },
+                "areaServed": "Western Colorado"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "GIS workflow automation",
+                "provider": {
+                  "@id": "https://randallautomationworks.com/#business"
+                },
+                "areaServed": "Western Colorado"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AI readiness assessment",
+                "provider": {
+                  "@id": "https://randallautomationworks.com/#business"
+                },
+                "areaServed": "Western Colorado"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "links": [
+      "/",
+      "/insights",
+      "#boundaries",
+      "#approval",
+      "#example",
+      "#uncertain",
+      "#evaluation",
+      "#next-step",
+      "https://learn.microsoft.com/en-us/graph/api/user-sendmail?view=graph-rest-1.0",
+      "/insights/ai-integration-readiness-checklist",
+      "/services",
+      "/raw-workspace#see-it-in-action",
+      "/contact"
+    ],
+    "time": "2026-10-25",
+    "emDash": false
+  },
+  "linkChecks": [
+    [
+      "/",
+      200
+    ],
+    [
+      "/insights",
+      200
+    ],
+    [
+      "/insights/ai-integration-readiness-checklist",
+      200
+    ],
+    [
+      "/services",
+      200
+    ],
+    [
+      "/raw-workspace#see-it-in-action",
+      200
+    ],
+    [
+      "/contact",
+      200
+    ]
+  ],
+  "views": [
+    {
+      "width": 1440,
+      "height": 900,
+      "overflow": {
+        "viewport": 1440,
+        "doc": 1440,
+        "body": 1440
+      },
+      "anchorNavigation": true,
+      "keyboardFocus": "A"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "overflow": {
+        "viewport": 390,
+        "doc": 390,
+        "body": 390
+      },
+      "anchorNavigation": true,
+      "keyboardFocus": "A"
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "overflow": {
+        "viewport": 360,
+        "doc": 360,
+        "body": 360
+      },
+      "anchorNavigation": true,
+      "keyboardFocus": "A"
+    }
+  ],
+  "errors": [],
+  "status": "pass"
+}

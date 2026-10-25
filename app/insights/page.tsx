@@ -47,10 +47,20 @@ export default function InsightsPage() {
           <div className="section-heading split-heading">
             <div>
               <p className="eyebrow">Latest guide</p>
-              <h2>Check the connection before accepting the pilot.</h2>
+              <h2>Decide what the assistant can do before it acts.</h2>
             </div>
-            <p>Verify API or export access, define the data contract and test failures before connecting AI to business software.</p>
+            <p>Separate drafts from actions, inspect the exact change and test what happens when confirmation is lost.</p>
           </div>
+
+          <Link className="article-card" href="/insights/ai-assistant-action-approval">
+            <div className="article-card-number" aria-hidden="true">09</div>
+            <div>
+              <p className="article-kicker"><time dateTime="2026-10-25">October 25, 2026</time></p>
+              <h2>AI Assistant Approvals: Decide What It Can Do Before It Acts</h2>
+              <p>Use a synthetic office-to-field handoff to review action boundaries, changed proposals and uncertain outcomes before accepting an assistant workflow.</p>
+              <span className="article-card-link">Read the article <span aria-hidden="true">&rarr;</span></span>
+            </div>
+          </Link>
 
           <Link className="article-card" href="/insights/ai-integration-readiness-checklist">
             <div className="article-card-number" aria-hidden="true">08</div>
