@@ -1,21 +1,18 @@
 # RAW public video storage
 
-Chris authorized a separate R2 media bucket and use of the existing account's
-R2 billing on 2026-10-24. The public films no longer need to fit the Workers
-static-assets 25 MiB per-file limit. The subsequent sharp edit uses native
-DPR2/DPR3 lossless captures, complete readable regions and one final video
-encode. The owner subsequently selected **option B, conversational Ryan**. Its
-accepted 1:48 highlight / 3:48 full-demo source is DMPH
-`230a443b2b42c6163ebf95a6aa1afe2a2d0f291b`,
-`deliverables/raw-workspace-ryan-b/`. The website copies all eight assets
-unchanged; new origin/publication receipts use the `raw-ryan-b-*` prefix.
-Both films and both lossless edit archives already pass complete public R2
-hashes and exact ranges. Website cutover has separate preview/deployment/live
-evidence and must not be inferred from origin availability alone.
+Chris authorized this public R2 media bucket and use of existing R2 billing on
+2026-10-24. The films have no Workers static-assets 25 MiB size target. The
+current 1:36 highlight / 3:33 full demo use native DPR2/DPR3 lossless desktop
+captures and one final H.264 encode, retaining the approved **option B,
+conversational Ryan**. The former slide-like visual edit was rejected.
 
-The new films are now live and both completed normal-speed public playback.
-See the [current production record](docs/raw-ryan-b-publication.md) for exact
-source/deployment pins, hosted checks, downloads and independent review.
+Current DMPH source is `afec167490a8b6b6855c032c722c999bd655c6f2`,
+`deliverables/raw-workflow-demo/`. All eight website assets are copied unchanged.
+Both movies, both portable MLT edit archives and original narration have
+verified complete public R2 SHA-256 hashes. See the
+[current production record](docs/raw-workflow-publication.md) for separate
+preview/deployment/live evidence; origin availability alone does not establish
+website publication. Earlier immutable objects and historical receipts remain.
 
 ## Configured resources
 
