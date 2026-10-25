@@ -39,45 +39,24 @@
 .workspace-detail-section.workspace-detail-section { background: #eeece7; }
 .workspace-film-links .text-link { line-height: 1.6; }
 
-.raw-hero { background: #0c1011; color: #f4f0e9; overflow: hidden; }
-.raw-hero-grid { display: grid; grid-template-columns: 1fr 1.06fr; gap: 25px; align-items: center; min-height: 660px; padding-block: 74px; }
-.raw-hero-copy { position: relative; z-index: 1; }
-.raw-hero .eyebrow { color: #d6a37e; font-size: 10px; letter-spacing: .18em; margin-bottom: 28px; }
-.raw-hero h1 { font-size: clamp(46px, 4.4vw, 67px); line-height: 1.08; letter-spacing: -.058em; margin: 0; max-width: 650px; font-weight: 500; }
+.raw-hero { background: radial-gradient(ellipse at 50% 55%, #21323a66, transparent 60%), #0c1011; color: #f4f0e9; padding-bottom: 64px; }
+.raw-hero-copy { text-align: center; padding-block: 88px 54px; }
+.raw-hero .eyebrow { color: #d6a37e; font-size: 11px; letter-spacing: .16em; margin-bottom: 24px; }
+.raw-hero h1 { font-size: clamp(42px, 5.7vw, 78px); line-height: 1.1; letter-spacing: -.06em; margin: 0 auto; max-width: 1150px; font-weight: 500; text-wrap: balance; }
 .raw-hero h1 em { font-style: normal; color: #dfad86; }
-.raw-hero-intro { font-size: 17px; line-height: 1.8; color: #b9bfc0; max-width: 500px; margin: 28px 0 0; }
-.raw-hero .button-row { align-items: center; gap: 28px; margin-top: 32px; }
-.raw-watch-link { font-size: 13px; border-bottom: 1px solid #536873; padding-block: 10px; }
+.raw-hero-intro { font-size: 18px; line-height: 1.75; color: #b9bfc0; max-width: 580px; margin: 25px auto 0; }
+.raw-hero .button-row { justify-content: center; align-items: center; gap: 28px; margin-top: 28px; }
+.raw-watch-link { font-size: 14px; border-bottom: 1px solid #536873; padding-block: 10px; }
 .raw-watch-link span { margin-left: 12px; color: #82b2c7; }
-.raw-location { display: flex; align-items: center; gap: 9px; color: #9eaaae; font-size: 11px; margin-top: 37px; }
-.raw-location > span, .raw-status-dot { width: 5px; height: 5px; display: inline-block; border-radius: 50%; background: #86b3c7; flex-shrink: 0; }
-.raw-brand-art { margin: 0 -36px 0 0; position: relative; }
-.raw-brand-art img { width: 100%; height: auto; mask-image: linear-gradient(to right, transparent, black 7%, black 95%, transparent); }
-.raw-brand-art figcaption { color: #929da0; font-size: 9px; text-align: center; letter-spacing: .15em; text-transform: uppercase; margin-top: 22px; }
-.raw-brand-art figcaption span { color: #bd865d; margin-inline: 10px; }
-.raw-hero-bottom { display: flex; align-items: center; justify-content: space-between; gap: 25px; border-top: 1px solid #ffffff1c; padding-block: 23px; color: #a7b0b3; font-size: 10px; letter-spacing: .12em; }
-.raw-hero-bottom a { font-size: 11px; letter-spacing: .02em; }
-.raw-hero-bottom a span { margin-left: 28px; color: #e1b08a; }
-
-.raw-product { background: #151b1d; color: #eae7e2; border-bottom: 1px solid #ffffff16; }
-.raw-product-heading { display: flex; justify-content: space-between; gap: 24px; align-items: baseline; margin-bottom: 34px; }
-.raw-product-heading .eyebrow { color: #dfad86; font-size: 10px; margin: 0; }
-.raw-section-index { font-size: 9px; letter-spacing: .14em; color: #a4b0b5; }
-.raw-product-grid { display: grid; grid-template-columns: .78fr 1.22fr; gap: 70px; align-items: center; }
-.raw-product h2 { margin: 0; font-size: clamp(38px, 4vw, 57px); line-height: 1.1; letter-spacing: -.05em; }
-.raw-product h2 em { color: #dfad86; font-style: normal; }
-.raw-product-grid > div > p { max-width: 460px; margin: 24px 0; font-size: 16px; color: #b9c1c4; }
-.raw-product-points { list-style: none; margin: 0; padding: 0; font-size: 13px; }
-.raw-product-points li { padding: 12px 0; border-bottom: 1px solid #ffffff16; }
-.raw-product-points li::before { content: '↗'; color: #78aac1; margin-right: 15px; }
-.raw-product .text-link { color: #e5b48f; border-color: #805e46; font-size: 13px; }
-.raw-player-label { display: flex; align-items: center; gap: 9px; padding: 14px 18px; border: 1px solid #ffffff26; border-bottom: 0; color: #c4cbce; font-size: 9px; letter-spacing: .12em; }
-.raw-player-label > span:last-child { margin-left: auto; }
-.raw-product .workspace-video-frame { border-radius: 0; border: 1px solid #ffffff26; box-shadow: 0 20px 60px #0003; }
-.raw-product .workspace-home-film { margin: 0; min-width: 0; }
-.raw-product .workspace-home-film figcaption { color: #a9b5b9; font-size: 10px; margin-top: 15px; line-height: 1.7; }
-.raw-product .workspace-film-links { gap: 8px 20px; }
-.raw-product .workspace-film-links .text-link { font-size: 11px; margin-top: 10px; }
+.raw-product-showcase { max-width: 1100px; scroll-margin-top: 112px; }
+.raw-product-heading { display: flex; justify-content: space-between; gap: 20px; align-items: baseline; margin-bottom: 17px; }
+.raw-product-heading h2 { margin: 0; font-size: 17px; font-weight: 500; letter-spacing: -.02em; }
+.raw-product-heading > span { color: #a9b5b9; font-size: 12px; flex-shrink: 0; }
+.raw-product-showcase .workspace-video-frame { border-radius: 12px; border-color: #c79a7359; box-shadow: 0 24px 80px #0005; background: #101719; }
+.raw-product-showcase .workspace-home-film figcaption { color: #a9b5b9; font-size: 11px; margin-top: 17px; }
+.raw-product-showcase .workspace-film-links { gap: 12px 24px; margin-top: 14px; }
+.raw-product-showcase .text-link { color: #dec1a9; border-color: #805e46; font-size: 12px; margin-top: 0; }
+.raw-hero :focus-visible { outline-color: #dfad86; }
 
 .raw-section-heading { display: grid; grid-template-columns: 1.15fr .85fr; align-items: end; gap: 90px; margin-bottom: 60px; }
 .raw-section-heading h2, .raw-approach h2 { font-size: clamp(38px, 4vw, 57px); line-height: 1.1; letter-spacing: -.055em; margin: 0; }
@@ -102,30 +81,14 @@
 .raw-approach li p { color: var(--muted); font-size: 14px; margin: 9px 0 0; }
 
 @media (max-width: 1100px) {
-  .raw-hero-grid { min-height: 570px; padding-block: 55px; grid-template-columns: 1fr 1fr; }
-  .raw-brand-art { margin-right: -15px; }
-  .raw-hero h1 { font-size: 48px; }
-  .raw-product-grid { gap: 35px; }
   .raw-approach-grid { gap: 55px; }
   .raw-opportunity-list article { gap: 25px; }
   .footer-grid.footer-grid { gap: 25px; }
 }
 @media (max-width: 800px) {
-  .raw-hero-grid { grid-template-columns: 1fr; gap: 32px; padding-block: 52px 30px; }
-  .raw-hero h1 { font-size: clamp(43px, 7vw, 64px); max-width: 650px; }
-  .raw-hero-intro { font-size: 16px; }
-  .raw-brand-art { margin: 0; max-width: 650px; }
-  .raw-brand-art figcaption { margin-top: 12px; font-size: 8px; }
-  .raw-brand-art figcaption span { margin-inline: 5px; }
-  .raw-location { margin-top: 25px; }
-  .raw-hero-bottom { font-size: 8px; }
-  .raw-hero-bottom a { font-size: 10px; }
-  .raw-hero-bottom a span { margin-left: 5px; }
-  .raw-product-grid, .raw-section-heading, .raw-approach-grid { grid-template-columns: 1fr; gap: 36px; }
-  .raw-section-index { display: none; }
-  .raw-product h2 { font-size: 44px; }
-  .raw-product-grid > div > p { max-width: 650px; }
-  .raw-product-points { max-width: 600px; }
+  .raw-hero-copy { padding-block: 58px 42px; }
+  .raw-hero-intro { font-size: 16px; max-width: 490px; }
+  .raw-section-heading, .raw-approach-grid { grid-template-columns: 1fr; gap: 36px; }
   .raw-section-heading { margin-bottom: 35px; gap: 20px; }
   .raw-opportunity-list article { grid-template-columns: 24px 1fr; gap: 15px; padding-block: 30px; }
   .raw-opportunity-list article > div:last-child { grid-column: 2; }
@@ -142,7 +105,17 @@
   .brand-monogram { font-size: 29px; }
   .raw-hero .eyebrow { font-size: 9px; }
   .raw-hero .button-row { gap: 18px; }
-  .raw-hero-bottom { flex-direction: column; align-items: flex-start; gap: 10px; }
   .raw-opportunity-list h3 { font-size: 24px; }
-  .raw-product-heading .eyebrow { font-size: 9px; }
+  .raw-hero { padding-bottom: 42px; }
+  .raw-hero-copy { padding-block: 45px 38px; }
+  .raw-hero h1 { font-size: clamp(35px, 9vw, 43px); }
+  .raw-hero .eyebrow { margin-bottom: 20px; }
+  .raw-hero-intro { font-size: 15px; margin-top: 22px; }
+  .raw-hero .button { padding: 14px 18px; font-size: 13px; gap: 12px; }
+  .raw-product-heading { flex-direction: column; gap: 3px; margin-bottom: 13px; }
+  .raw-product-heading h2 { font-size: 15px; }
+  .raw-product-heading > span { font-size: 11px; }
+  .raw-product-showcase .workspace-video-frame { border-radius: 7px; }
+  .raw-product-showcase .workspace-film-links { gap: 10px 20px; }
+  .raw-product-showcase .text-link { font-size: 11px; }
 }

@@ -36,9 +36,9 @@ test("renders production branding without staging metadata", async () => {
   assert.match(html, productionCanonical);
   assert.match(html, /Your software works/);
   assert.match(html, /We make it work together/);
-  assert.match(html, /src="\/images\/raw-copper-brand.jpg"/);
-  const hero = await readFile(new URL("../dist/client/images/raw-copper-brand.jpg", import.meta.url));
-  assert.equal(hero.readUInt16BE(0), 0xffd8, "Owner-supplied JPEG is packaged");
+  assert.doesNotMatch(html, /raw-copper-brand\.jpg|raw-brand-art/);
+  assert.match(html, /Meet RAW Business Workspace/);
+  assert.match(html, /<meta name="viewport" content="width=device-width, initial-scale=1"/);
   assert.match(html, /Actual RAW interface/);
   assert.match(html, /Custom reporting, integrations and GIS work are scoped around your systems/);
   const nav = html.match(/<nav class="desktop-nav"[^>]*>([\s\S]*?)<\/nav>/)?.[1];

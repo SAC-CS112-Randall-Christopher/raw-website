@@ -35,7 +35,7 @@ test("promotes the real RAW product with playable media and answerable product i
   const mainText = html.match(/<main[^>]*>([\s\S]*?)<\/main>/)[1].replace(/<script[^>]*>[\s\S]*?<\/script>/g, "").replace(/<[^>]+>/g, " ");
   assert.doesNotMatch(mainText, /\b(trials?|pilots?|early access)\b/i);
   const homepage = await home.text();
-  assert.match(homepage, /Featured product · RAW Business Workspace/);
+  assert.match(homepage, /Meet RAW Business Workspace/);
   assert.match(homepage, /Explore RAW Workspace/);
   assert.match(homepage, /<video[^>]+controls[^>]+preload="none"/);
   assert.match(homepage, /raw-highlight\.mp4/);

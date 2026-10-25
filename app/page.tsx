@@ -49,39 +49,24 @@ export default function Home() {
     <main id="main-content">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(highlightVideo).replace(/</g, "\\u003c") }} />
       <section className="raw-hero">
-        <div className="shell raw-hero-grid">
-          <div className="raw-hero-copy">
-            <p className="eyebrow">Independent thinking. Connected systems.</p>
+        <div className="shell raw-hero-copy">
+            <p className="eyebrow">Practical AI. Connected systems.</p>
             <h1>Your software works.<br /><em>We make it work together.</em></h1>
-            <p className="raw-hero-intro">Bring your business information, AI and everyday work together. Practical software and automation, built around the way you operate.</p>
+            <p className="raw-hero-intro">Your business information, email and AI in one place to work. Built around the tools you already use.</p>
             <div className="button-row"><Link className="button button-primary" href="/raw-workspace">Explore RAW Workspace <span aria-hidden="true">↗</span></Link><a className="raw-watch-link" href="#workspace-demo">Watch it work <span aria-hidden="true">↓</span></a></div>
-            <p className="raw-location"><span aria-hidden="true" /> Built in Montrose, Colorado. Working with you.</p>
-          </div>
-          <figure className="raw-brand-art">
-            {/* Owner-supplied brand artwork, displayed without alteration. */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/raw-copper-brand.jpg" width={1280} height={768} alt="RAW — Randall Automation Works. Copper lettering on dark stone with blue circuit details." fetchPriority="high" />
-            <figcaption>AI integration <span> / </span> Business automation <span> / </span> Custom software</figcaption>
-          </figure>
         </div>
-        <div className="shell raw-hero-bottom"><span>YOUR TOOLS. YOUR INFORMATION. CONNECTED.</span><a href="#workspace-demo">See what that looks like <span aria-hidden="true">↓</span></a></div>
-      </section>
-
-      <section className="raw-product section" id="workspace-demo" aria-labelledby="workspace-offer-title">
-        <div className="shell raw-product-heading"><p className="eyebrow">Featured product · RAW Business Workspace</p><span className="raw-section-index">01 / BUILT BY RAW</span></div>
-        <div className="shell raw-product-grid">
-          <div><h2 id="workspace-offer-title">Less scattered.<br /><em>More connected.</em></h2><p>Keep the software you rely on. RAW brings supported business information, connected inboxes and your AI assistant into one place to work.</p><ul className="raw-product-points"><li>Ask a question. Inspect the records.</li><li>Prepare a reply with useful context.</li><li>Review and save the next step.</li></ul><Link className="text-link" href="/raw-workspace">Inside RAW Workspace <span aria-hidden="true">↗</span></Link></div>
+        <section className="shell raw-product-showcase" id="workspace-demo" aria-labelledby="workspace-offer-title">
+          <div className="raw-product-heading"><h2 id="workspace-offer-title">Meet RAW Business Workspace</h2><span>See it in action · {Math.floor(highlightMedia.duration / 60)}:{String(Math.round(highlightMedia.duration) % 60).padStart(2, "0")}</span></div>
           <figure className="workspace-home-film">
-            <div className="raw-player-label"><span className="raw-status-dot" /> PRODUCT WALKTHROUGH <span>{Math.round(highlightMedia.duration)} SECONDS</span></div>
             <div className="workspace-video-frame"><video controls playsInline preload="none" poster="/products/raw-workspace/raw-highlight-poster.jpg" width="1920" height="1080" aria-label="RAW Business Workspace highlight"><source src="/products/raw-workspace/raw-highlight.mp4" type="video/mp4" /><track kind="captions" src="/products/raw-workspace/raw-highlight.vtt" srcLang="en" label="English" default />Your browser does not support embedded video. <a href="/products/raw-workspace/raw-highlight.mp4">Watch the highlight</a>.</video></div>
-            <figcaption>Actual RAW interface · See your information, AI and daily work come together. Processing waits are condensed.</figcaption>
-            <div className="workspace-film-links"><Link className="text-link" href="/raw-workspace#see-it-in-action">Watch the full demo →</Link><a className="text-link" href="/products/raw-workspace/raw-highlight.mp4?download=1" download="RAW-highlight.mp4">Download highlight MP4</a><a className="text-link" href={bookingLink} target="_blank" rel="noreferrer">Book a demo ↗</a><a className="text-link" href="/products/raw-workspace/raw-highlight-transcript.txt">Read the highlight transcript</a></div>
+            <figcaption>Actual RAW interface. Processing waits are condensed.</figcaption>
+            <div className="workspace-film-links"><Link className="text-link" href="/raw-workspace#see-it-in-action">Watch the full demo <span aria-hidden="true">↗</span></Link><a className="text-link" href={bookingLink} target="_blank" rel="noreferrer">Book a demo <span aria-hidden="true">↗</span></a><a className="text-link" href="/products/raw-workspace/raw-highlight-transcript.txt">Read transcript</a><a className="text-link" href="/products/raw-workspace/raw-highlight.mp4?download=1" download="RAW-highlight.mp4">Download video</a></div>
           </figure>
-        </div>
+        </section>
       </section>
 
       <section className="raw-opportunities section">
-        <div className="shell"><div className="raw-section-heading"><div><p className="eyebrow">A few good places to start</p><h2>Better connections.<br />Useful possibilities.</h2></div><p>Start with the work that keeps getting stuck between people, programs and spreadsheets.</p></div>
+        <div className="shell"><div className="raw-section-heading"><div><p className="eyebrow">A few good places to start</p><h2>Where could this help?</h2></div><p>Start with the work that keeps getting stuck between people, programs and spreadsheets.</p></div>
           <div className="raw-opportunity-list">{opportunities.map(item => <article key={item.number}><span className="raw-number">{item.number}</span><div><p className="eyebrow">{item.tag}</p><h3>{item.title}</h3></div><div><p>{item.text}</p><Link className="text-link" href={item.href}>{item.link} <span aria-hidden="true">↗</span></Link></div></article>)}</div>
           <p className="raw-scope-note">RAW Workspace is the product you can see today. Custom reporting, integrations and GIS work are scoped around your systems.</p>
         </div>

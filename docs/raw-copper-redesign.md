@@ -2,6 +2,24 @@
 
 The website now centers RAW Business Workspace and three useful starting points: office/customer work, reporting/automation, and GIS/field workflows. The owner's supplied RAW artwork sets the charcoal, copper and muted-blue identity. Detailed reading pages retain a light, high-contrast canvas.
 
+## Refinement after owner feedback
+
+The owner liked the direction but wanted the card's aesthetic rather than the literal card, and flagged repeated information. The homepage now uses a native typographic hero, one short explanation and the existing genuine RAW walkthrough immediately below. The literal card, service labels, repeated introductory section and their unused styles are removed. The card image is also removed from shipped public assets; its original provenance remains in Git history and the first-pass notes below.
+
+Current official sites inspected in the browser and through their public pages:
+
+- [Linear](https://linear.app/): restrained dark layout, strong opening hierarchy and prominent product interface.
+- [Claude](https://claude.com/): concise opening message, generous spacing and warm visual restraint.
+- [n8n](https://n8n.io/): concrete workflow presentation with focused calls to action.
+
+These informed composition and content hierarchy. No third-party images, claims, customer marks or page code were copied.
+
+Verification for this refinement: production build, artifact validation, both complete public video hashes, all 29 tests, lint and independent source review pass. Browser checks at 320, 360, 390, 430, 768, 1024 and 1280 pixels found no horizontal overflow or out-of-bounds main content, one H1 and no card image. The walkthrough anchor settles below the sticky header; playback reached 4.81 seconds at readyState 4 without a media error. The mobile menu closes on navigation, the Solutions page and return-home navigation work, and no browser console errors were observed.
+
+The owner's phone screenshot showed a cropped desktop composition. Before this refinement, the live page already emitted the correct device-width viewport metadata and rendered a single column at 390px in the available browser. That specific phone/browser state was not reproduced, so no verified device-specific root cause or resolution is claimed. This pass has browser-width evidence, not physical Android-device acceptance. Contact delivery and authenticated studio workflows were not repeated.
+
+Evidence: [desktop](evidence/copper-refinement/home-desktop.jpg), [full desktop](evidence/copper-refinement/home-desktop-full.jpg), [phone](evidence/copper-refinement/home-mobile.jpg), [responsive measurements](evidence/copper-refinement/responsive-layout.json), [playback](evidence/copper-refinement/playback.json).
+
 ## Scope
 
 - Rebuilt the homepage around the brand statement, actual product highlight, three opportunities, direct founder relationship and consultation.
@@ -41,7 +59,7 @@ Standalone `tsc --noEmit` is not green in the existing repository setup: Cloudfl
 - [Desktop route measurements](evidence/copper-redesign/desktop-layout.json)
 - [Full demo playback smoke check](evidence/copper-redesign/full-demo-start.json)
 
-## Publication
+## Publication of the first pass
 
 Published to the existing Cloudflare Worker and custom domain at https://randallautomationworks.com/ from source commit `2670e86745de751a5875c10d998f9a71ea1e9208`. Deployment version: `1998110e-1741-4eb4-89a6-26ea58386741`. Previous version retained for rollback: `4f73711e-5e1c-47f9-baf1-55014b6df035`.
 
