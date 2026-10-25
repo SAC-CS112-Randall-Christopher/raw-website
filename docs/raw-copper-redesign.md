@@ -32,12 +32,22 @@ Standalone `tsc --noEmit` is not green in the existing repository setup: Cloudfl
 
 ## Visual evidence
 
+- [Published desktop homepage](evidence/copper-redesign/home-live-desktop.jpg)
+- [Published route, asset, video and access checks](evidence/copper-redesign/live-verification.json)
 - [Desktop homepage](evidence/copper-redesign/home-desktop.jpg)
 - [Complete desktop page](evidence/copper-redesign/home-desktop-full.jpg)
 - [Complete phone page](evidence/copper-redesign/home-mobile.jpg)
 - [Phone route measurements](evidence/copper-redesign/mobile-layout.json)
 - [Desktop route measurements](evidence/copper-redesign/desktop-layout.json)
 - [Full demo playback smoke check](evidence/copper-redesign/full-demo-start.json)
+
+## Publication
+
+Published to the existing Cloudflare Worker and custom domain at https://randallautomationworks.com/ from source commit `2670e86745de751a5875c10d998f9a71ea1e9208`. Deployment version: `1998110e-1741-4eb4-89a6-26ea58386741`. Previous version retained for rollback: `4f73711e-5e1c-47f9-baf1-55014b6df035`.
+
+The live homepage was inspected in the browser. All six core routes return HTTP 200 with the new brand shell. The public brand image returns HTTP 200 with the expected source hash; both video routes return HTTP 206 for valid byte ranges. The protected studio still serves its login page and rejects unauthenticated API state requests with HTTP 401, with private/no-store and noindex headers retained. Existing Worker variables were preserved during publication. These are public delivery and access checks; authenticated studio behavior and contact inbox delivery were not exercised.
+
+Draft PR [#25](https://github.com/SAC-CS112-Randall-Christopher/raw-website/pull/25) preserves the redesign above draft #24. Neither pull request was merged.
 
 ## Lane housekeeping
 
