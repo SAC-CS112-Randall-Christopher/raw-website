@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description,
     url: canonicalPath,
     publishedTime: "2026-08-30T00:00:00-06:00",
-    modifiedTime: "2026-08-30T00:00:00-06:00",
+    modifiedTime: "2026-10-25T00:00:00-06:00",
     authors: ["Chris Randall"],
     images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Randall Automation Works" }],
   },
@@ -45,7 +45,7 @@ const articleData = {
   headline: title,
   description,
   datePublished: "2026-08-30",
-  dateModified: "2026-08-30",
+  dateModified: "2026-10-25",
   mainEntityOfPage: `${siteUrl}${canonicalPath}`,
   image: `${siteUrl}/opengraph-image.png`,
   author: {
@@ -74,43 +74,31 @@ const breadcrumbData = {
   ],
 };
 
+const faqItems = [
+  {
+    "question": "What is a workflow automation audit?",
+    "answer": "It is a structured review of how work moves through people, documents and software. The audit identifies repeatable bottlenecks, measures their impact and recommends the smallest appropriate fix—whether that is process cleanup, integration, conventional automation, AI or custom software."
+  },
+  {
+    "question": "Which workflow should a small business automate first?",
+    "answer": "Choose work that repeats frequently, consumes meaningful time, has a clear correct outcome and can be reviewed safely. Customer intake, recurring reporting, document routing, scheduling handoffs, system synchronization and structured follow-up are common candidates."
+  },
+  {
+    "question": "Does an automation audit always lead to a software project?",
+    "answer": "No. A useful audit may conclude that the best next step is to remove a redundant approval, standardize an intake form, use a feature already included in existing software or improve a report before building anything new."
+  },
+  {
+    "question": "When should AI be part of the workflow?",
+    "answer": "Use AI when the bottleneck genuinely involves variable language, unstructured documents, classification, summarization, drafting or knowledge retrieval. Keep clear rules, permissions and human review around consequential outputs."
+  }
+] as const;
+
 const faqData = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is a workflow automation audit?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A workflow automation audit maps how work currently moves through people, documents, software, approvals, and exceptions, then identifies which bottlenecks are worth fixing and whether the right solution is process cleanup, integration, deterministic automation, AI, or custom software.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Which workflow should a small business automate first?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Start with a workflow that repeats often, consumes meaningful time, has clear inputs and outputs, creates measurable delay or rework, and can be reviewed safely. Avoid starting with a rare, ambiguous, or high-consequence process that the team cannot describe consistently.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Does a workflow automation audit always recommend AI?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No. Many bottlenecks are better solved with clearer procedures, database queries, API integrations, validation rules, or lightweight scripts. AI is most useful when a justified part of the workflow involves language, documents, classification, summarization, or knowledge retrieval.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do you measure whether workflow automation worked?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Baseline the current workflow before changing it. Track measures such as employee minutes, elapsed turnaround, duplicate entry, correction rate, missed handoffs, exception volume, customer response time, and ongoing software or review cost, then compare the same measures during the pilot.",
-      },
-    },
-  ],
+  mainEntity: faqItems.map(({ question, answer }) => ({
+    "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer },
+  })),
 };
 
 export default function WorkflowAutomationAuditArticle() {
@@ -294,17 +282,13 @@ export default function WorkflowAutomationAuditArticle() {
             <section id="faq">
               <h2>Common workflow automation audit questions</h2>
 
-              <h3>What is a workflow automation audit?</h3>
-              <p>It is a structured review of how work moves through people, documents and software. The audit identifies repeatable bottlenecks, measures their impact and recommends the smallest appropriate fix—whether that is process cleanup, integration, conventional automation, AI or custom software.</p>
+              <h3>{faqItems[0].question}</h3><p>{faqItems[0].answer}</p>
 
-              <h3>Which workflow should a small business automate first?</h3>
-              <p>Choose work that repeats frequently, consumes meaningful time, has a clear correct outcome and can be reviewed safely. Customer intake, recurring reporting, document routing, scheduling handoffs, system synchronization and structured follow-up are common candidates.</p>
+              <h3>{faqItems[1].question}</h3><p>{faqItems[1].answer}</p>
 
-              <h3>Does an automation audit always lead to a software project?</h3>
-              <p>No. A useful audit may conclude that the best next step is to remove a redundant approval, standardize an intake form, use a feature already included in existing software or improve a report before building anything new.</p>
+              <h3>{faqItems[2].question}</h3><p>{faqItems[2].answer}</p>
 
-              <h3>When should AI be part of the workflow?</h3>
-              <p>Use AI when the bottleneck genuinely involves variable language, unstructured documents, classification, summarization, drafting or knowledge retrieval. Keep clear rules, permissions and human review around consequential outputs.</p>
+              <h3>{faqItems[3].question}</h3><p>{faqItems[3].answer}</p>
             </section>
 
             <section className="article-conclusion">

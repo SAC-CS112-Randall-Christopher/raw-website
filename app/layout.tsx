@@ -53,6 +53,7 @@ const structuredData = {
   location: { "@type": "Place", name: "Montrose, Colorado" },
   founder: {
     "@type": "Person",
+    "@id": `${siteUrl}/about#chris-randall`,
     name: "Chris Randall",
     jobTitle: "Founder",
     description:
@@ -98,6 +99,12 @@ const structuredData = {
   },
 };
 
+const websiteSchema = {
+  "@context": "https://schema.org", "@type": "WebSite", "@id": `${siteUrl}/#website`,
+  name: "Randall Automation Works", url: siteUrl, inLanguage: "en-US",
+  publisher: { "@id": `${siteUrl}/#business` },
+};
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
@@ -111,6 +118,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema).replace(/</g, "\\u003c") }} />
       </body>
     </html>
   );
