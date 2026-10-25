@@ -34,19 +34,18 @@ test("renders production branding without staging metadata", async () => {
   const html = await response.text();
   assert.match(html, productionTitle);
   assert.match(html, productionCanonical);
-  assert.match(html, /Bring your business into the automated era/i);
-  assert.match(html, /Illustration of a Western Colorado valley/);
-  assert.match(html, /width=640,quality=82,format=auto,onerror=redirect\/images\/hero-western-colorado-2026\.png 640w/);
-  const hero = await readFile(new URL("../dist/client/images/hero-western-colorado-2026.png", import.meta.url));
-  assert.equal(hero.readUInt32BE(16), 1672);
-  assert.equal(hero.readUInt32BE(20), 941);
-  assert.match(html, /AI assistants &amp; LLM setup/i);
-  assert.match(html, /Front-office AI helper/i);
-  assert.match(html, /rule-based C# code with multiple language models/i);
+  assert.match(html, /Your software works/);
+  assert.match(html, /We make it work together/);
+  assert.match(html, /src="\/images\/raw-copper-brand.jpg"/);
+  const hero = await readFile(new URL("../dist/client/images/raw-copper-brand.jpg", import.meta.url));
+  assert.equal(hero.readUInt16BE(0), 0xffd8, "Owner-supplied JPEG is packaged");
+  assert.match(html, /Actual RAW interface/);
+  assert.match(html, /Custom reporting, integrations and GIS work are scoped around your systems/);
+  const nav = html.match(/<nav class="desktop-nav"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
+  assert.ok(nav);
+  assert.equal((nav.match(/<a /g) ?? []).length, 5, "Four primary pages and one booking link");
+  for (const path of ["/raw-workspace", "/services", "/workflow-automation-examples", "/about"]) assert.ok(nav.includes(`href="${path}"`));
   assert.match(html, /href="\/responsible-ai-and-security"/i);
-  assert.match(html, /href="\/local-ai-deployments"/i);
-  assert.match(html, /href="\/hosted-ai-deployments"/i);
-  assert.match(html, /No autonomous infrastructure control/i);
   assert.match(html, /free 30-minute consultation/i);
   assert.match(html, /paid assessment/i);
   assert.doesNotMatch(html, /AI agents \+ RAG|solution-fit-card/i);
@@ -74,7 +73,7 @@ test("publishes code-first capabilities on Services and About pages", async () =
   assert.equal(servicesResponse.status, 200);
   assert.equal(aboutResponse.status, 200);
   assert.match(services, /Code-first automation and systems integration/i);
-  assert.match(services, /From problem to working system/i);
+  assert.match(services, /Three ways to move work forward/i);
   assert.match(services, /Python automation/i);
   assert.match(services, /Visual Basic and VBA/i);
   assert.match(services, /Code-first automation and systems integration[\s\S]*Bring the workflow that keeps causing friction/i);
@@ -131,7 +130,7 @@ test("publishes generalized workflow examples and founder expertise", async () =
   assert.equal(examplesResponse.status, 200);
   assert.equal(expertiseResponse.status, 200);
   assert.match(examples, /Recurring customer-notification lists/i);
-  assert.match(examples, /Remove the avoidable friction/i);
+  assert.match(examples, /Three opportunities to discuss/i);
   assert.match(examples, /Asset and business-data reconciliation/i);
   assert.match(examples, /not published client case studies/i);
   assert.match(expertise, /Python/i);
@@ -343,7 +342,7 @@ test("preserves unique indexable metadata for every sitemap route", async () => 
   }
 });
 
-test("describes the Montrose organization and verified implementation experience", async () => {
+test("describes the Montrose organization and distinguishes product proof from opportunities", async () => {
   const html = await renderReviewPage("/");
   const schema = [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)].map((match) => JSON.parse(match[1]));
   const organization = schema.find((item) => item["@type"] === "Organization");
@@ -356,11 +355,10 @@ test("describes the Montrose organization and verified implementation experience
   assert.equal(workspace.itemOffered.url, "https://randallautomationworks.com/raw-workspace");
   assert.doesNotMatch(html, /ProfessionalService/);
   const examples = await renderReviewPage("/workflow-automation-examples");
-  assert.match(examples, /Two implementations from my own work/);
-  assert.match(examples, /Front-office AI helper/);
-  assert.match(examples, /SDK integration/);
-  assert.match(examples, /Deterministic C#/);
-  assert.match(examples, /task and workload/);
+  assert.match(examples, /actual RAW desktop interface/);
+  assert.match(examples, /not published client case studies/);
+  assert.match(examples, /Processing waits are condensed/);
+  assert.match(examples, /href="\/raw-workspace#see-it-in-action"/);
 });
 
 test("discloses the currently observed website providers without launch placeholders", async () => {

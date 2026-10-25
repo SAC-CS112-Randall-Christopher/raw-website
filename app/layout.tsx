@@ -3,6 +3,7 @@ import { FontPreloads } from "../components/font-preloads";
 import { Footer, Header } from "../components/site-shell";
 import "./fonts.css";
 import "./globals.css";
+import "./raw-brand.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://randallautomationworks.com";
 
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "Randall Automation Works",
     url: "/",
-    title: "Bring your business into the automated era.",
+    title: "Your software works. We make it work together.",
     description:
       "Custom AI assistants and connected workflows, based in Montrose and serving Western Colorado businesses and utilities.",
     images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Randall Automation Works" }],

@@ -19,12 +19,9 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  ["01", "Bring your AI into the work.", "Connect a supported assistant and approve its access to RAW tools. Ask for help while working with the business information on screen."],
-  ["02", "Keep the information you already have.", "Import supported database snapshots or table exports. Browse customer, equipment and billing information with its source date and identity available."],
-  ["03", "Add what your business needs.", "Save typed RAW fields alongside imported records. Keep delivery instructions, dispatch details and other additional information connected to the existing business record."],
-  ["04", "Ask questions. Inspect the answer.", "Build reusable reports from permitted information and approved business definitions. Open supporting records, keep useful views and review report history."],
-  ["05", "Give correspondence useful context.", "Read and summarize permitted messages, inspect related business information, and prepare useful replies with the customer context already at hand."],
-  ["06", "Keep the next step connected.", "Let the assistant offer a follow-up, clarify its timing, and save approved tasks or calendar blocks. Priorities, dates and links keep daily work understandable."],
+  ["01", "Connect your information.", "Bring supported snapshots, table exports and connected inboxes into one workspace. Keep source details visible and add linked RAW fields where your business needs more context."],
+  ["02", "Ask. Inspect. Understand.", "Work with a supported AI assistant to explore permitted records and build reusable reports. Open the information behind an answer before putting it to use."],
+  ["03", "Turn an answer into useful work.", "Prepare a customer reply, clarify the follow-up and review tasks or calendar blocks before saving. Keep the next step connected to the work."],
 ];
 
 const faqs = [
@@ -80,7 +77,7 @@ export default function RawWorkspace() {
       </div>
     </section>
 
-    <section className="section"><div className="shell"><div className="section-heading"><p className="eyebrow">Built around the work</p><h2>The right details.<br />Right where you need them.</h2></div><div className="workspace-feature-grid">{features.map(([n, title, text]) => <article key={n}><span>{n}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
+    <section className="section"><div className="shell"><div className="section-heading"><p className="eyebrow">Built around the work</p><h2>From information<br />to a useful next step.</h2></div><div className="workspace-feature-grid">{features.map(([n, title, text]) => <article key={n}><span>{n}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
 
     <section className="section workspace-detail-section"><div className="shell workspace-detail-grid"><figure>
       {/* eslint-disable-next-line @next/next/no-img-element */}
