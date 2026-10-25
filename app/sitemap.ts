@@ -8,7 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const updatedPages = new Set(["services", "workflow-automation-examples", "local-ai-deployments", "privacy", "terms"]);
   return [
     { url: base, changeFrequency: "monthly", priority: 1, lastModified: "2026-10-23" },
-    { url: `${base}/raw-workspace`, changeFrequency: "monthly", priority: .9, lastModified: "2026-10-23" },
+    { url: `${base}/raw-workspace`, changeFrequency: "monthly", priority: .9, lastModified: "2026-10-25" },
+    { url: `${base}/raw-workspace/demo`, changeFrequency: "monthly", priority: .8, lastModified: "2026-10-25" },
     ...indexablePages.map((page) => ({
       url: `${base}/${page.slug}`,
       changeFrequency: "monthly" as const,
@@ -21,9 +22,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/insights/local-vs-hosted-ai-assistants`, changeFrequency: "monthly", priority: .9, lastModified: "2026-10-11" },
     { url: `${base}/insights/prepare-sops-for-ai-assistant`, changeFrequency: "monthly", priority: .9, lastModified: "2026-10-04" },
     { url: `${base}/insights/route-first-reason-when-needed`, changeFrequency: "monthly", priority: .9, lastModified: "2026-09-30" },
-    { url: `${base}/insights/ai-automation-consultant-small-business`, changeFrequency: "monthly", priority: .9, lastModified: "2026-09-13" },
-    { url: `${base}/insights/workflow-automation-audit-small-business`, changeFrequency: "monthly", priority: .9, lastModified: "2026-08-30" },
-    { url: `${base}/insights/ai-automation-for-small-business`, changeFrequency: "monthly", priority: .9, lastModified: "2026-08-16" },
+    { url: `${base}/insights/ai-automation-consultant-small-business`, changeFrequency: "monthly", priority: .9, lastModified: "2026-10-25" },
+    { url: `${base}/insights/workflow-automation-audit-small-business`, changeFrequency: "monthly", priority: .9, lastModified: "2026-10-25" },
+    { url: `${base}/insights/ai-automation-for-small-business`, changeFrequency: "monthly", priority: .9, lastModified: "2026-10-25" },
     { url: `${base}/insights/first-ai-automation-project`, changeFrequency: "monthly", priority: .8, lastModified: "2026-07-18" },
   ];
 }

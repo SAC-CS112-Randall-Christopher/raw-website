@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description,
     url: canonicalPath,
     publishedTime: "2026-08-16T00:00:00-06:00",
-    modifiedTime: "2026-08-16T00:00:00-06:00",
+    modifiedTime: "2026-10-25T00:00:00-06:00",
     authors: ["Chris Randall"],
     images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Randall Automation Works" }],
   },
@@ -45,7 +45,7 @@ const articleData = {
   headline: title,
   description,
   datePublished: "2026-08-16",
-  dateModified: "2026-08-16",
+  dateModified: "2026-10-25",
   mainEntityOfPage: `${siteUrl}${canonicalPath}`,
   image: `${siteUrl}/opengraph-image.png`,
   author: {
@@ -74,43 +74,31 @@ const breadcrumbData = {
   ],
 };
 
+const faqItems = [
+  {
+    "question": "What should a small business automate first?",
+    "answer": "Start with a recurring workflow that has clear inputs and outputs, consumes meaningful staff effort and can be reviewed by someone who knows what correct looks like. Lead routing, intake, reporting, document handling and system synchronization are common candidates."
+  },
+  {
+    "question": "Does small business automation require AI?",
+    "answer": "No. Many of the highest-value automations are conventional integrations and rules. AI earns a role when it helps with language, variable documents, classification, summarization or knowledge retrieval that fixed rules do not handle well."
+  },
+  {
+    "question": "How do you measure ROI from workflow automation?",
+    "answer": "Measure the current workflow before building. Compare employee time, turnaround, rework, dropped handoffs, error rates and total operating cost before and during the pilot. Include the cost of ongoing review and maintenance."
+  },
+  {
+    "question": "Can a small business start without replacing its current software?",
+    "answer": "Often, yes. A focused automation can connect the systems already in place, remove duplicated handling and expose where a replacement would actually create value. Replacing the core system should be a separate decision, not an automatic requirement."
+  }
+] as const;
+
 const faqData = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What should a small business automate first?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Start with a recurring, rules-based workflow that consumes meaningful staff time, has clear inputs and outputs, and can be reviewed by a person. Lead routing, intake, recurring reporting, document handling, scheduling handoffs, and data synchronization are common strong candidates.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Does small business automation require AI?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No. Many valuable automations are deterministic workflows that move data, validate fields, trigger notifications, or generate reports. AI is most useful when the workflow includes language, documents, classification, summarization, or other work that is difficult to express with fixed rules alone.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do you measure ROI from workflow automation?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Measure the current workflow before building. Track staff time, elapsed turnaround, rework, missed handoffs, error rates, and software cost. After the pilot, compare the same measures and include ongoing review and maintenance time in the result.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What work should not be fully automated?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Keep accountable human review where decisions are safety-critical, legally consequential, financially material, highly sensitive, or dependent on context that the system cannot reliably observe. Automation should make responsibility clearer rather than hiding it.",
-      },
-    },
-  ],
+  mainEntity: faqItems.map(({ question, answer }) => ({
+    "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer },
+  })),
 };
 
 export default function SmallBusinessAutomationArticle() {
@@ -268,17 +256,13 @@ export default function SmallBusinessAutomationArticle() {
 
             <section id="faq">
               <h2>Common questions about AI automation for small business</h2>
-              <h3>What should a small business automate first?</h3>
-              <p>Start with a recurring workflow that has clear inputs and outputs, consumes meaningful staff effort and can be reviewed by someone who knows what correct looks like. Lead routing, intake, reporting, document handling and system synchronization are common candidates.</p>
+              <h3>{faqItems[0].question}</h3><p>{faqItems[0].answer}</p>
 
-              <h3>Does small business automation require AI?</h3>
-              <p>No. Many of the highest-value automations are conventional integrations and rules. AI earns a role when it helps with language, variable documents, classification, summarization or knowledge retrieval that fixed rules do not handle well.</p>
+              <h3>{faqItems[1].question}</h3><p>{faqItems[1].answer}</p>
 
-              <h3>How do you measure ROI from workflow automation?</h3>
-              <p>Measure the current workflow before building. Compare employee time, turnaround, rework, dropped handoffs, error rates and total operating cost before and during the pilot. Include the cost of ongoing review and maintenance.</p>
+              <h3>{faqItems[2].question}</h3><p>{faqItems[2].answer}</p>
 
-              <h3>Can a small business start without replacing its current software?</h3>
-              <p>Often, yes. A focused automation can connect the systems already in place, remove duplicated handling and expose where a replacement would actually create value. Replacing the core system should be a separate decision, not an automatic requirement.</p>
+              <h3>{faqItems[3].question}</h3><p>{faqItems[3].answer}</p>
             </section>
 
             <section>

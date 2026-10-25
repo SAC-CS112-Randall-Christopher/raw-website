@@ -48,6 +48,11 @@ button, a, summary, input, select, textarea { -webkit-tap-highlight-color: trans
 .skip-link:focus { top: 16px; }
 
 .shell { width: min(calc(100% - 48px), var(--max-width)); margin-inline: auto; }
+.demo-watch h1 { max-width: 900px; margin: 18px 0 24px; color: var(--blue-dark); font-size: clamp(36px, 4.5vw, 64px); line-height: 1.12; letter-spacing: -.035em; }
+.demo-watch .lead { max-width: 850px; margin-bottom: 32px; color: var(--muted); font-size: 19px; line-height: 1.7; }
+.demo-watch .workspace-video-frame { margin: 28px 0 20px; }
+.demo-watch p { line-height: 1.7; }
+.demo-watch-transcript { max-width: 850px; }
 
 .site-header {
   position: sticky; top: 0; z-index: 100;
