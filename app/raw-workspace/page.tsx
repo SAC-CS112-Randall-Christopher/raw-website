@@ -63,7 +63,7 @@ export default function RawWorkspace() {
 
     <section className="section workspace-film-section" id="see-it-in-action">
       <div className="shell">
-        <div className="section-heading"><p className="eyebrow">The full demo · {fullDemoMedia.duration_label}</p><h2>Your information. Useful work.</h2><p>Bring your AI, business information and connected email inboxes into one workspace. Add what is missing, ask a question, prepare a reply and organize the next step.</p></div>
+        <div className="section-heading"><p className="eyebrow">The full demo</p><h2>Your information. Useful work.</h2><p>Bring your AI, business information and connected email inboxes into one workspace. Add what is missing, ask a question, prepare a reply and organize the next step.</p></div>
         <div className="workspace-video-frame">
           <video controls controlsList="nodownload" playsInline preload="none" poster="/products/raw-workspace/raw-demo-poster.jpg" width="1920" height="1080" aria-label="RAW Business Workspace full demonstration">
             <source src="/products/raw-workspace/raw-full-demo.mp4" type="video/mp4" />
@@ -71,9 +71,11 @@ export default function RawWorkspace() {
             Your browser does not support embedded video. <a href="/products/raw-workspace/raw-full-demo.mp4">Watch the full demonstration</a>.
           </video>
         </div>
-        <p className="workspace-caption">Follow Pine Ridge Rental &amp; Service from connected business information to a useful report, a reviewed reply and a scheduled next step. See added customer details work alongside existing records, with the assistant available across pages. Processing waits are condensed.</p>
-        <p>Bring one recurring task and the software you use today. We will discuss the first useful improvement for your business.</p>
-        <div className="workspace-film-links"><a className="button button-primary" href={bookingLink} target="_blank" rel="noreferrer">Book a demo <span aria-hidden="true">↗</span></a></div>
+        <p className="workspace-caption">Actual RAW interface. Processing waits are condensed.</p>
+        <div className="workspace-demo-invitation">
+          <p>See how RAW could fit your business.</p>
+          <div className="workspace-film-links"><a className="button button-primary" href={bookingLink} target="_blank" rel="noreferrer">Book a demo <span aria-hidden="true">↗</span></a></div>
+        </div>
       </div>
     </section>
 

@@ -56,7 +56,7 @@ export default function Home() {
             <div className="button-row"><Link className="button button-primary" href="/raw-workspace">Explore RAW Workspace <span aria-hidden="true">↗</span></Link><a className="raw-watch-link" href="#workspace-demo">Watch it work <span aria-hidden="true">↓</span></a></div>
         </div>
         <section className="shell raw-product-showcase" id="workspace-demo" aria-labelledby="workspace-offer-title">
-          <div className="raw-product-heading"><h2 id="workspace-offer-title">Meet RAW Business Workspace</h2><span>See it in action · {Math.floor(highlightMedia.duration / 60)}:{String(Math.round(highlightMedia.duration) % 60).padStart(2, "0")}</span></div>
+          <div className="raw-product-heading"><h2 id="workspace-offer-title">Meet RAW Business Workspace</h2></div>
           <figure className="workspace-home-film">
             <div className="workspace-video-frame"><video controls controlsList="nodownload" playsInline preload="none" poster="/products/raw-workspace/raw-highlight-poster.jpg" width="1920" height="1080" aria-label="RAW Business Workspace highlight"><source src="/products/raw-workspace/raw-highlight.mp4" type="video/mp4" /><track kind="captions" src="/products/raw-workspace/raw-highlight.vtt" srcLang="en" label="English" default />Your browser does not support embedded video. <a href="/products/raw-workspace/raw-highlight.mp4">Watch the highlight</a>.</video></div>
             <figcaption>Actual RAW interface. Processing waits are condensed.</figcaption>
