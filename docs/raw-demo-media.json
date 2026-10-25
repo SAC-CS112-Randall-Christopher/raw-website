@@ -1,71 +1,71 @@
 {
   "source_repository": "SAC-CS112-Randall-Christopher/DMPH",
-  "source_commit": "230a443b2b42c6163ebf95a6aa1afe2a2d0f291b",
-  "source_folder": "deliverables/raw-workspace-ryan-b",
+  "source_commit": "afec167490a8b6b6855c032c722c999bd655c6f2",
+  "source_folder": "deliverables/raw-workflow-demo",
   "assets": {
     "raw-highlight.mp4": {
-      "bytes": 8823342,
-      "sha256": "fdcd3895f3c32fcfae1248a970f8fc94e1a9287ea289c0cc6f7f0dc263a72e38"
+      "bytes": 8769387,
+      "sha256": "5cd983b6d0e3554008e74bdfb7540fc659e33e3107fece0784e8940faac94c8c"
     },
     "raw-full-demo.mp4": {
-      "bytes": 16116583,
-      "sha256": "bc9777869a39dc3be2a4b9a3048221349bf10db78872fbff50dcaf3abc9681fc"
+      "bytes": 19529356,
+      "sha256": "01dcb2d3f4895208cb33ec06de32961fbff0d8110605a9106b79e349aed98bd5"
     },
     "raw-demo-poster.jpg": {
-      "bytes": 244539,
-      "sha256": "443cee36cefd367cdf1ed1cda8dbd321113cbef7fca60e924caea85052f3c021"
+      "bytes": 283380,
+      "sha256": "b4bf2c188e72b9cc9cb0d75149ff4c830f515bbb43499813436487d64c0889d9"
     },
     "raw-highlight-poster.jpg": {
-      "bytes": 217794,
-      "sha256": "7ce37d064b0de3b6b0e55fe42ba2cae004c9384524bb46c2e7b869e5a25beef0"
+      "bytes": 135608,
+      "sha256": "aa849572126b7755a59f9bc2c60c4b64b05f1277168b728c818ddea64e2ab3a6"
     },
     "raw-highlight.vtt": {
-      "bytes": 3108,
-      "sha256": "657dee2adefe9184bd5d8d1703b01cefd2d96d249d2489392c7fd9898defc699"
+      "bytes": 2945,
+      "sha256": "cde6cab4a6a3ed3fb0fc9223c1aa9e32bb65f421a0841aeb437518d870afee2a"
     },
     "raw-full-demo.vtt": {
-      "bytes": 6653,
-      "sha256": "7ca51cc6a578a754571214b8ae4b05c884c436d431070ea0569a122b4e4d0e2c"
+      "bytes": 6202,
+      "sha256": "61e0df98de8aa677cf9ebdce910160a33b29a44ce1a91ce82b9d5de1d563a156"
     },
     "raw-demo-transcript.txt": {
-      "bytes": 3730,
-      "sha256": "317bdd392ff3c5868657fc26707ef5df5d1d72a7cf880834db0bdd2234a06e6e"
+      "bytes": 3474,
+      "sha256": "653eb8d14a6ffd23d58a2495007defe0458b65a0f3b3338b917c95afaee64a32"
     },
     "raw-highlight-transcript.txt": {
-      "bytes": 1807,
-      "sha256": "0b51ae1611cdd919951b7277e7d3c176173180201a531b26f457277c1520334f"
+      "bytes": 1653,
+      "sha256": "cc759ecd64e3e2ac03715f6448e6fc0d9f04134126748f229adb2dfd113bad5a"
     }
   },
   "videos": {
     "raw-highlight.mp4": {
-      "duration": 108.266667,
-      "duration_iso": "PT1M48S",
-      "duration_label": "1 minutes 48 seconds",
-      "caption_cues": 28,
-      "frames": 3248,
+      "duration": 95.68,
+      "duration_iso": "PT1M36S",
+      "duration_label": "1 minutes 36 seconds",
+      "caption_cues": 27,
+      "frames": 2870,
       "video": "H.264 1920x1080 30fps yuv420p",
       "audio": "AAC 48kHz stereo",
       "fast_start": true,
       "complete_decode_passed": true,
       "source_file": "RAW-highlights.mp4",
-      "source_sha256": "fdcd3895f3c32fcfae1248a970f8fc94e1a9287ea289c0cc6f7f0dc263a72e38",
+      "source_sha256": "5cd983b6d0e3554008e74bdfb7540fc659e33e3107fece0784e8940faac94c8c",
       "audio_packets_unchanged": true,
-      "audio_sha256": "6d463fd19d73d70bc7278fdc4b059521fdb2bdae30d8c001f10b0e93516bfa95"
+      "audio_sha256": "d73b25daa9f85ada3304a9950eaaeb83cf6162f701d71a7a525b72cd7610c5b1"
     },
     "raw-full-demo.mp4": {
-      "duration": 227.669,
-      "duration_iso": "PT3M48S",
-      "duration_label": "3 minutes 48 seconds",
-      "caption_cues": 57,
-      "frames": 6830,
+      "duration": 213.44,
+      "duration_iso": "PT3M33S",
+      "duration_label": "3 minutes 33 seconds",
+      "caption_cues": 53,
+      "frames": 6403,
       "video": "H.264 1920x1080 30fps yuv420p",
       "audio": "AAC 48kHz stereo",
       "fast_start": true,
       "complete_decode_passed": true,
       "source_file": "RAW-business-demo.mp4",
-      "source_sha256": "bc9777869a39dc3be2a4b9a3048221349bf10db78872fbff50dcaf3abc9681fc",
+      "source_sha256": "01dcb2d3f4895208cb33ec06de32961fbff0d8110605a9106b79e349aed98bd5",
       "audio_packets_unchanged": true,
-      "audio_sha256": "73f21d20b84cd23580ea28e0afbe75445d4e78adc2a1585ab0abfa74316f2469"
+      "audio_sha256": "77f3cd55f71c8d90bd6d658c8a3d92bae305509b50ab40c144bb158226814410"
     }
   },
   "new_paid_api_usage": false,
