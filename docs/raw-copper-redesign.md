@@ -20,6 +20,8 @@ The owner's phone screenshot showed a cropped desktop composition. Before this r
 
 Evidence: [desktop](evidence/copper-refinement/home-desktop.jpg), [full desktop](evidence/copper-refinement/home-desktop-full.jpg), [phone](evidence/copper-refinement/home-mobile.jpg), [responsive measurements](evidence/copper-refinement/responsive-layout.json), [playback](evidence/copper-refinement/playback.json).
 
+Published refinement: source `14c6ac66739288b4015d1ff8a1d12f559787ce49`, Cloudflare version `4b335662-53c4-48b0-8467-3ef145015943`. All six public core routes return 200; the homepage presents the revised product heading without the card. The studio login remains available and its API rejects unauthenticated requests with 401. [Live checks](evidence/copper-refinement/live-verification.json), [published desktop](evidence/copper-refinement/home-live-desktop.jpg), [published phone width](evidence/copper-refinement/home-live-mobile.jpg). The existing draft PR #25 remains unmerged.
+
 ## Scope
 
 - Rebuilt the homepage around the brand statement, actual product highlight, three opportunities, direct founder relationship and consultation.
