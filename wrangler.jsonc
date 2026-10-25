@@ -3,9 +3,14 @@
   "name": "randall-automation-works",
   "main": "dist/server/index.js",
   "compatibility_date": "2026-05-15",
+  "compatibility_flags": ["nodejs_compat"],
   "assets": {
     "binding": "ASSETS",
-    "directory": "dist/client"
+    "directory": "dist/client",
+    "run_worker_first": [
+      "/products/raw-workspace/raw-highlight.mp4",
+      "/products/raw-workspace/raw-full-demo.mp4"
+    ]
   },
   "observability": {
     "enabled": true

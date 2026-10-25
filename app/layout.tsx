@@ -3,6 +3,7 @@ import { FontPreloads } from "../components/font-preloads";
 import { Footer, Header } from "../components/site-shell";
 import "./fonts.css";
 import "./globals.css";
+import "./raw-brand.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://randallautomationworks.com";
 
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "Randall Automation Works",
     url: "/",
-    title: "Bring your business into the automated era.",
+    title: "Your software works. We make it work together.",
     description:
       "Custom AI assistants and connected workflows, based in Montrose and serving Western Colorado businesses and utilities.",
     images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Randall Automation Works" }],
@@ -52,6 +53,7 @@ const structuredData = {
   location: { "@type": "Place", name: "Montrose, Colorado" },
   founder: {
     "@type": "Person",
+    "@id": `${siteUrl}/about#chris-randall`,
     name: "Chris Randall",
     jobTitle: "Founder",
     description:
@@ -97,6 +99,12 @@ const structuredData = {
   },
 };
 
+const websiteSchema = {
+  "@context": "https://schema.org", "@type": "WebSite", "@id": `${siteUrl}/#website`,
+  name: "Randall Automation Works", url: siteUrl, inLanguage: "en-US",
+  publisher: { "@id": `${siteUrl}/#business` },
+};
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
@@ -110,6 +118,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema).replace(/</g, "\\u003c") }} />
       </body>
     </html>
   );

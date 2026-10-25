@@ -1,0 +1,31 @@
+{
+  "verified_at": "2026-10-25T02:59:35.491Z",
+  "source_commit": "1fed501c1b1b8414388396f6bc483eaa3fb9d6b4",
+  "deployment": "647ce37d-6f6f-4677-b3fe-8d9b3f93649d",
+  "versions": [
+    {
+      "version_id": "a16eaa23-fe24-4eac-9ed5-c1d5d803f0bb",
+      "percentage": 100
+    }
+  ],
+  "created_on": "2026-10-25T02:58:33.07122Z",
+  "checks": [
+    {
+      "path": "/admin/dmph/login.html",
+      "status": 200,
+      "expected": 200,
+      "cache_control": "private, no-store",
+      "robots": "noindex, nofollow, noarchive",
+      "anonymous_request": true
+    },
+    {
+      "path": "/admin/dmph/api/state",
+      "status": 401,
+      "expected": 401,
+      "cache_control": "private, no-store",
+      "robots": "noindex, nofollow, noarchive",
+      "anonymous_request": true
+    }
+  ],
+  "owner_state_changed": false
+}

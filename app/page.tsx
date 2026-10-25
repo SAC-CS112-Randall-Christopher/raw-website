@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { bookingLink } from "../components/site-shell";
-import { implementationExamples } from "./service-examples";
+import demoMedia from "../docs/raw-demo-media.json";
 
 // Include the homepage in route metadata so client history restores its head.
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "Randall Automation Works",
     url: "/",
-    title: "Bring your business into the automated era.",
+    title: "Your software works. We make it work together.",
     description: "Custom AI assistants and connected workflows, based in Montrose and serving Western Colorado businesses and utilities.",
     images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Randall Automation Works" }],
   },
@@ -26,112 +26,55 @@ export const metadata: Metadata = {
   },
 };
 
-const services = [
-  { title: "AI assistants & LLM setup", text: "Get an AI assistant configured for your team's work, with the right information, tools and review steps. Local or hosted options.", href: "/responsible-ai-and-security", link: "Explore AI setup" },
-  { title: "Workflow automation", text: "Connect the software you already use. Cut repeated data entry, prepare reports and keep routine handoffs moving.", href: "/services", link: "Explore automation" },
-  { title: "GIS & field operations", text: "Bring field forms, inspections and asset information into the office workflows that depend on them.", href: "/gis-and-field-operations", link: "Explore GIS services" },
-];
+const highlightMedia = demoMedia.videos['raw-highlight.mp4'];
+const highlightVideo = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: "RAW Business Workspace — Answers you can use",
+  description: `A ${Math.round(highlightMedia.duration)}-second overview of RAW Business Workspace: connected AI, imported business information, added database fields, inspectable reports, email and approved task/calendar creation. Processing waits condensed.`,
+  thumbnailUrl: "https://randallautomationworks.com/products/raw-workspace/raw-highlight-poster.jpg",
+  uploadDate: "2026-10-24T00:00:00Z",
+  duration: highlightMedia.duration_iso,
+  contentUrl: "https://randallautomationworks.com/products/raw-workspace/raw-highlight.mp4",
+};
 
-const process = [
-  ["01", "Talk through the work", "Bring one repetitive task to a free 30-minute consultation. We'll discuss what happens today and whether there's a useful next step."],
-  ["02", "Define the solution", "Agree on the workflow, deliverables, price and success measures before building. A paid assessment can help when the scope needs more work."],
-  ["03", "Test, hand over, support", "Try the system with your team, document how it works and train the people using it. Add ongoing support if you need it."],
+const opportunities = [
+  { number: "01", tag: "OFFICE & CUSTOMER WORK", title: "One customer. The whole picture.", text: "Bring customer records, correspondence and next steps into a connected workspace. Prepare a reply with the context close at hand.", href: "/raw-workspace", link: "Meet RAW Workspace" },
+  { number: "02", tag: "REPORTING & AUTOMATION", title: "Build the report. Skip the repeat work.", text: "Turn approved database records and exports into repeatable reports. Use clear rules for routine steps and AI to help explore the information.", href: "/workflow-automation-examples", link: "Explore the opportunities" },
+  { number: "03", tag: "GIS & FIELD OPERATIONS", title: "Connect the field to the office.", text: "Link inspections, mapped assets and follow-up. Give the next person the information they need to keep work moving.", href: "/gis-and-field-operations", link: "Explore field workflows" },
 ];
 
 export default function Home() {
   return (
     <main id="main-content">
-      <section className="home-hero">
-        <div className="shell hero-grid">
-          <div className="hero-copy reveal">
-            <p className="eyebrow">AI setup & workflow automation <span>•</span> Montrose, Colorado</p>
-            <h1>Bring your business into the automated era.</h1>
-            <p className="hero-intro">Custom AI assistants and connected workflows that take repetitive work off your plate. Based in Montrose, serving businesses across Western Colorado.</p>
-            <div className="button-row">
-              <a className="button button-primary" href={bookingLink} target="_blank" rel="noreferrer">Book a free consultation</a>
-              <Link className="button button-secondary" href="/responsible-ai-and-security">Explore AI setup</Link>
-            </div>
-            <p className="hero-founder">Work directly with Chris Randall, founder of Randall Automation Works.</p>
-          </div>
-          <div className="hero-visual">
-            {/* Cloudflare serves responsive variants, with the original as fallback. */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/cdn-cgi/image/width=1600,quality=82,format=auto,onerror=redirect/images/hero-western-colorado-2026.png"
-              srcSet="/cdn-cgi/image/width=640,quality=82,format=auto,onerror=redirect/images/hero-western-colorado-2026.png 640w, /cdn-cgi/image/width=1024,quality=82,format=auto,onerror=redirect/images/hero-western-colorado-2026.png 1024w, /cdn-cgi/image/width=1600,quality=82,format=auto,onerror=redirect/images/hero-western-colorado-2026.png 1600w"
-              sizes="(max-width: 1050px) 100vw, 54vw"
-              alt="Illustration of a Western Colorado valley with pasture, a stream, cottonwoods and distant mountains"
-              width={1672}
-              height={941}
-              loading="eager"
-              fetchPriority="high"
-              decoding="async"
-            />
-            <div className="topo-lines" aria-hidden="true" />
-          </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(highlightVideo).replace(/</g, "\\u003c") }} />
+      <section className="raw-hero">
+        <div className="shell raw-hero-copy">
+            <p className="eyebrow">Practical AI. Connected systems.</p>
+            <h1>Your software works.<br /><em>We make it work together.</em></h1>
+            <p className="raw-hero-intro">Your business information, email and AI in one place to work. Built around the tools you already use.</p>
+            <div className="button-row"><Link className="button button-primary" href="/raw-workspace">Explore RAW Workspace <span aria-hidden="true">↗</span></Link><a className="raw-watch-link" href="#workspace-demo">Watch it work <span aria-hidden="true">↓</span></a></div>
+        </div>
+        <section className="shell raw-product-showcase" id="workspace-demo" aria-labelledby="workspace-offer-title">
+          <div className="raw-product-heading"><h2 id="workspace-offer-title">Meet RAW Business Workspace</h2></div>
+          <figure className="workspace-home-film">
+            <div className="workspace-video-frame"><video controls controlsList="nodownload" playsInline preload="none" poster="/products/raw-workspace/raw-highlight-poster.jpg" width="1920" height="1080" aria-label="RAW Business Workspace highlight"><source src="/products/raw-workspace/raw-highlight.mp4" type="video/mp4" /><track kind="captions" src="/products/raw-workspace/raw-highlight.vtt" srcLang="en" label="English" default />Your browser does not support embedded video. <a href="/products/raw-workspace/raw-highlight.mp4">Watch the highlight</a>.</video></div>
+            <figcaption>Actual RAW interface. Processing waits are condensed.</figcaption>
+            <div className="workspace-film-links"><Link className="text-link" href="/raw-workspace#see-it-in-action">Watch the full demo <span aria-hidden="true">↗</span></Link><a className="text-link" href={bookingLink} target="_blank" rel="noreferrer">Book a demo <span aria-hidden="true">↗</span></a></div>
+          </figure>
+        </section>
+      </section>
+
+      <section className="raw-opportunities section">
+        <div className="shell"><div className="raw-section-heading"><div><p className="eyebrow">A few good places to start</p><h2>Where could this help?</h2></div><p>Start with the work that keeps getting stuck between people, programs and spreadsheets.</p></div>
+          <div className="raw-opportunity-list">{opportunities.map(item => <article key={item.number}><span className="raw-number">{item.number}</span><div><p className="eyebrow">{item.tag}</p><h3>{item.title}</h3></div><div><p>{item.text}</p><Link className="text-link" href={item.href}>{item.link} <span aria-hidden="true">↗</span></Link></div></article>)}</div>
+          <p className="raw-scope-note">RAW Workspace is the product you can see today. Custom reporting, integrations and GIS work are scoped around your systems.</p>
         </div>
       </section>
 
-      <section className="workspace-home-feature" aria-labelledby="workspace-offer-title">
-        <div className="shell workspace-home-grid">
-          <div><p className="eyebrow">Featured product · RAW Business Workspace</p><h2 id="workspace-offer-title">Your business.<br />Connected.</h2><p>Customers, equipment quotes, tasks, documents and reporting. One workspace, configured around the way your business runs.</p><Link className="button button-primary" href="/raw-workspace">Explore RAW Workspace <span aria-hidden="true">↗</span></Link></div>
-          <Link className="workspace-home-screen" href="/raw-workspace" aria-label="Explore RAW Business Workspace">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/products/raw-workspace/overview.png" width={1600} height={1000} loading="lazy" alt="RAW Business Workspace home screen with sample customers, quotes and tasks" />
-            <span>Actual interface · Sample business data</span>
-          </Link>
-        </div>
-      </section>
+      <section className="section raw-approach"><div className="shell raw-approach-grid"><div><p className="eyebrow">Real work. Real understanding.</p><h2>Built with you.<br />For the way you work.</h2><p>I’m Chris Randall. My background spans utility operations, GIS, IT and office systems. I build practical connections between the tools people depend on.</p><Link className="text-link" href="/about">Meet the person behind RAW <span aria-hidden="true">↗</span></Link></div><ol><li><span>01</span><div><h3>Start with one workflow.</h3><p>A free 30-minute consultation to understand the task, the people and the software involved.</p></div></li><li><span>02</span><div><h3>Agree on the useful result.</h3><p>Define the scope, price and ongoing costs. A paid assessment can help with more complex work.</p></div></li><li><span>03</span><div><h3>Build, test and hand over.</h3><p>Try it with your team. Document the process. Add support when you need it.</p></div></li></ol></div></section>
 
-      <section className="section services-section">
-        <div className="shell">
-          <div className="section-heading"><p className="eyebrow">How I can help</p><h2>Less busywork. More room to run your business.</h2></div>
-          <div className="service-grid">
-            {services.map((service, index) => <article className="service-card" key={service.href}><span>{String(index + 1).padStart(2, "0")}</span><h3>{service.title}</h3><p>{service.text}</p><Link className="text-link" href={service.href}>{service.link} <span aria-hidden="true">→</span></Link></article>)}
-          </div>
-        </div>
-      </section>
-
-      <section className="section problem-section">
-        <div className="shell">
-          <div className="section-heading"><p className="eyebrow">Implementation experience</p><h2>Two ways I&apos;ve put AI to work.</h2><p>Examples from my own implementation work, described without client details.</p></div>
-          <div className="card-grid problem-grid">
-            {implementationExamples.map((example) => <article className="problem-card" key={example.title}><span className="card-line" /><h3>{example.title}</h3><p>{example.text}</p></article>)}
-          </div>
-          <Link className="text-link" href="/workflow-automation-examples">Explore workflow ideas <span aria-hidden="true">→</span></Link>
-        </div>
-      </section>
-
-      <section className="section utility-feature">
-        <div className="shell utility-grid">
-          <div>
-            <p className="eyebrow eyebrow-light">Local knowledge. Technical experience.</p>
-            <h2>Built with an understanding of real operations.</h2>
-            <p>My background spans utility operations, GIS, IT and administrative systems. I work with small businesses, utilities and field teams across Western Colorado.</p>
-            <Link className="button button-sand" href="/expertise">Meet Chris & explore the experience</Link>
-          </div>
-          <div className="safe-path">
-            <p className="safe-label">Utilities & special districts</p>
-            <p>Connect reporting, asset records and office work while qualified people stay in charge.</p>
-            <p className="boundary-note">No autonomous infrastructure control or write-enabled AI access to operational systems.</p>
-            <Link className="button button-sand" href="/utilities-and-special-districts">Explore utility services</Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="section process-section">
-        <div className="shell">
-          <div className="section-heading"><p className="eyebrow">A clear place to start</p><h2>One workflow at a time.</h2></div>
-          <ol className="process-list">
-            {process.map(([number, title, text]) => <li key={number}><span>{number}</span><div><h3>{title}</h3><p>{text}</p></div></li>)}
-          </ol>
-          <p className="process-note">We&apos;ll use straightforward code where clear rules are enough, and AI where language or documents make it useful.</p>
-        </div>
-      </section>
-
-      <section className="cta-section">
-        <div className="shell cta-inner"><div><p className="eyebrow eyebrow-light">Let&apos;s talk</p><h2>What would you like off your plate?</h2><p>Bring one task, a question or an idea. Start with a free 30-minute conversation.</p><Link className="cta-message" href="/contact">Prefer email? Send a message <span aria-hidden="true">→</span></Link></div><a className="button button-sand" href={bookingLink} target="_blank" rel="noreferrer">Book a free consultation</a></div>
-      </section>
+      <section className="cta-section"><div className="shell cta-inner"><div><p className="eyebrow eyebrow-light">Let’s connect the dots.</p><h2>What should work<br />better together?</h2><p>Bring one task. We’ll find a useful place to start.</p><Link className="cta-message" href="/contact">Prefer email? Send a message →</Link></div><a className="button button-sand" href={bookingLink} target="_blank" rel="noreferrer">Book a free consultation <span aria-hidden="true">↗</span></a></div></section>
     </main>
   );
 }

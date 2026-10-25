@@ -1,0 +1,14 @@
+{
+  "worker": "randall-automation-works",
+  "source_commit": "ec36dd8a96c79732b6c4f5f97d91dc1ee54d4d35",
+  "deployment_id": "f970b87f-6575-4419-acab-20f0961d0fef",
+  "created_on": "2026-10-24T14:16:34.599739Z",
+  "versions": [
+    {
+      "version_id": "519a2143-daa8-4ba7-980a-80789a992669",
+      "percentage": 100
+    }
+  ],
+  "previous_version_id": "b6cf7eb0-75c6-4789-a6fa-20e313f5b355",
+  "new_spend_usd": 0
+}

@@ -1,0 +1,117 @@
+
+> randall-automation-works@0.1.0 test
+> npm run build && node --test tests/*.test.mjs
+
+
+> randall-automation-works@0.1.0 build
+> bash scripts/build-verified.sh
+
+Running bounded vinext build...
+
+  vinext build  (Vite 8.0.13)
+
+[1/5] analyze client references...
+transforming...✓ 168 modules transformed.
+rendering chunks...
+[PLUGIN_TIMINGS] Your build spent significant time in plugins. Here is a breakdown:
+  - vinext:jsx-in-js (35%)
+  - vinext:config (27%)
+  - vinext:react-canary (11%)
+  - vite:css (7%)
+  - rsc:virtual-client-package (7%)
+See https://rolldown.rs/options/checks#plugintimings for more details.
+
+✓ built in 22.39s
+[2/5] analyze server references...
+transforming...✓ 61 modules transformed.
+rendering chunks...
+✓ built in 299ms
+[3/5] build rsc environment...
+transforming...✓ 174 modules transformed.
+rendering chunks...
+computing gzip size...
+✓ built in 2.05s
+[4/5] build client environment...
+transforming...✓ 68 modules transformed.
+rendering chunks...
+computing gzip size...
+✓ built in 2.75s
+[5/5] build ssr environment...
+transforming...✓ 67 modules transformed.
+rendering chunks...
+computing gzip size...
+✓ built in 733ms
+
+  Route (app)
+  ┌ ? /
+  ├ ƒ /:slug
+  ├ ? /client-portal
+  ├ ? /demo-portal
+  ├ ? /demo-portal/organization
+  ├ ? /demo-portal/utility
+  ├ ? /gis-modernization
+  ├ ? /insights
+  ├ ? /insights/ai-automation-consultant-small-business
+  ├ ? /insights/ai-automation-for-small-business
+  ├ ? /insights/ai-integration-readiness-checklist
+  ├ ? /insights/first-ai-automation-project
+  ├ ? /insights/local-vs-hosted-ai-assistants
+  ├ ? /insights/prepare-sops-for-ai-assistant
+  ├ ? /insights/route-first-reason-when-needed
+  ├ ? /insights/workflow-automation-audit-small-business
+  └ ? /raw-workspace
+
+  ƒ Dynamic  ? Unknown
+
+  ? Some routes could not be classified. vinext currently uses static analysis
+    and cannot detect dynamic API usage (headers(), cookies(), etc.) at build time.
+    Automatic classification will be improved in a future release.
+
+  Build complete. Run `vinext start` to start the production server.
+
+Validated Sites artifact: ESM Worker, hosting manifest and unique compatibility flags are present.
+✔ does not intercept public website routes or nearby path names (38.491685ms)
+✔ the built website intercepts every private studio route and disallows indexing (85.828373ms)
+✔ fails closed without host settings and when the local host is offline (4.049157ms)
+✔ reports tunnel and host failures as an unavailable private studio (3.31558ms)
+✔ sets trusted gateway headers and preserves protected media range responses (1.283301ms)
+✔ forwards sign-in to the server and preserves scoped secure session cookies (2.613697ms)
+✔ rejects cross-origin changes, unsafe redirects, invalid origins and oversized uploads (2.599107ms)
+Public demo asset rejected {
+  name: 'raw-highlight.mp4',
+  length: '5',
+  type: 'video/mp4',
+  encoding: null
+}
+✔ limits shared video caching to the two reviewed public assets and GET/HEAD (41.372519ms)
+✔ fills a hash-versioned cache without forwarding private headers or arbitrary queries (5.584659ms)
+✔ honors a matching If-Range and drops ranges for changed representations and HEAD (2.887889ms)
+✔ phone downloads use an attachment without contaminating the shared playback response (3.391426ms)
+✔ provides the verified artifact length when the Assets binding omits a wire length (1.711438ms)
+✔ preserves failed source status and refuses mismatched or unavailable cached video (4.023718ms)
+✔ promotes the real RAW product with playable media and answerable product information (662.225729ms)
+✔ renders production branding without staging metadata (338.144061ms)
+✔ publishes code-first capabilities on Services and About pages (106.091639ms)
+✔ publishes production robots and sitemap URLs (55.081897ms)
+✔ publishes generalized workflow examples and founder expertise (98.524725ms)
+✔ explains AI setup, technical options and safety boundaries (72.884815ms)
+✔ publishes local and hosted AI deployment options under AI systems (80.469041ms)
+✔ renders the first Insights article as an indexable Article (69.282895ms)
+✔ keeps contact, booking and related service paths accessible (192.154816ms)
+✔ keeps all demo routes out of search with route-specific metadata (50.7804ms)
+✔ serves the existing fonts from public URLs without build paths (70.318492ms)
+✔ redirects production HTTP and www permanently while preserving path and query (7.173269ms)
+✔ preserves unique indexable metadata for every sitemap route (310.179531ms)
+✔ describes the Montrose organization and verified implementation experience (21.039866ms)
+✔ discloses the currently observed website providers without launch placeholders (21.998206ms)
+✔ publishes integration readiness with consistent dates and acceptance evidence (41.817536ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1689.024468
+
+Additional observed checks: ESLint passed; artifact validation passed in the production build; Wrangler 4.92.0 dry-run passed with 80 assets. Four local desktop/390px cases and four real MP4 attachment downloads passed with matching bytes and hashes.

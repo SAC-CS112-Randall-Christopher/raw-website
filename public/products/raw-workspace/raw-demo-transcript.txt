@@ -1,0 +1,44 @@
+RAW — final narration transcript
+Pine Ridge Rental & Service
+
+00:00:00.000  Ask a business question
+How many active customers do we have? Ask your AI in RAW, and get an answer you can check. Here are 961 active accounts, grouped by customer type, including the ones missing a type.
+
+00:00:15.800  Check the answer. Keep both views.
+Open a chart group to inspect the supporting customers. Narrow the question to Pine Ridge: 401 accounts. Keep that view alongside the original. Both reports stay available to reopen, without starting the conversation again.
+
+00:00:36.900  Bring your AI
+Keep the systems you rely on. Start with a supported assistant and approve its access. Here, an existing ChatGPT subscription is already connected, ready to use the RAW tools we've permitted.
+
+00:00:50.867  Bring your business information
+Pine Ridge Rental has customers, equipment, rentals and billing records. Bring that information into RAW. Open a source, check its date, and browse the records your business already has.
+
+00:01:02.267  Bring your email inboxes together
+Bring your connected email inboxes into one place. Read and search your mail, with the customer context right beside it.
+
+00:01:11.267  Bring customer context into email
+Now Maya needs a three-day excavator rental starting October 28th. Open her message and ask for a summary. The assistant identifies the request, the quote she needs, and the delivery details that still need confirming.
+
+00:01:27.800  Add what your business needs
+Your rental system doesn't have a place for everything. In RAW's database, add the information your team needs beside the customer record. Here, we keep the site instructions and add Maya's preferred delivery window: eight to ten in the morning.
+
+00:01:45.800  Use the information together
+Ask what the dispatcher needs to know about Alder Grove. The assistant reads the customer record and brings the existing business facts together with the delivery instructions we just saved. That extra information is now useful.
+
+00:01:59.933  Let your AI prepare the reply
+Ask your AI to draft a reply, using Maya's request and the rental rate. For three days, that's a $2,250 rental subtotal. Take its draft, make your changes, and save it when you're ready.
+
+00:02:17.933  Let AI offer the next step
+The assistant also offers a follow-up and asks when it should happen. We approve a high-priority task and a half-hour block on My calendar: October 26th at 9 AM, before the rental starts. Then it saves the linked work.
+
+00:02:31.733  See the work in your day
+Here's the task in the planner, with its priority and due date. Open the calendar block, then go straight back to Maya's email. The assistant comes with you, so you can pick up where you left off.
+
+00:02:48.733  See what needs attention
+Spot other work that needs attention. Compare financial totals and investigate the $180 difference in the records. For equipment, a dated reading of 1,420 hours is beyond the 1,350-hour service target. You can see why maintenance is due.
+
+00:03:05.100  Keep useful answers working
+Bring in fresh information without losing your customer notes or follow-ups. Keep the reports you use, choose dates like last month, and schedule them to run again. Here's a recurring report that's already completed.
+
+00:03:22.100  RAW Business Workspace
+Keep what works. Add the information you need, bring your AI into the workflow, and make the business easier to run. RAW Business Workspace. Book a demo.

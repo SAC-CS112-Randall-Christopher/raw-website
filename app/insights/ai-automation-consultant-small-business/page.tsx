@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description,
     url: canonicalPath,
     publishedTime: "2026-09-13T00:00:00-06:00",
-    modifiedTime: "2026-09-13T00:00:00-06:00",
+    modifiedTime: "2026-10-25T00:00:00-06:00",
     authors: ["Chris Randall"],
     images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Randall Automation Works" }],
   },
@@ -46,7 +46,7 @@ const articleData = {
   headline: title,
   description,
   datePublished: "2026-09-13",
-  dateModified: "2026-09-13",
+  dateModified: "2026-10-25",
   mainEntityOfPage: `${siteUrl}${canonicalPath}`,
   image: `${siteUrl}/opengraph-image.png`,
   author: { "@type": "Person", name: "Chris Randall", url: `${siteUrl}/about` },
@@ -68,43 +68,31 @@ const breadcrumbData = {
   ],
 };
 
+const faqItems = [
+  {
+    "question": "What does an AI automation consultant do for a small business?",
+    "answer": "They should map the current workflow, identify the right level of intervention, design and implement the solution, verify it against representative work, and leave the client with clear ownership, operating boundaries and recovery procedures."
+  },
+  {
+    "question": "When should I hire a consultant instead of buying software?",
+    "answer": "When the workflow crosses systems, depends on custom business rules, requires meaningful integration or security design, or is expensive enough that a wrong platform decision would create substantial rework."
+  },
+  {
+    "question": "How should I compare proposals?",
+    "answer": "Compare how specifically each proposal describes your workflow, the measurable outcome, the data and systems involved, the division between human and automated work, the failure modes, total lifecycle cost and what you own after launch."
+  },
+  {
+    "question": "Does the project need AI?",
+    "answer": "Not necessarily. Use deterministic software for deterministic problems. Add AI only where variable language, documents, images, classification, summarization or similar inputs make it materially useful."
+  }
+] as const;
+
 const faqData = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What does an AI automation consultant do for a small business?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "An AI automation consultant should map the current workflow, identify where rules, integrations, software or AI can reduce measurable friction, design the smallest safe solution, implement it against the business's existing systems where practical, and verify the result with clear success measures and recovery paths.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "When should a small business hire an automation consultant instead of buying software?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Consulting is most useful when the problem crosses multiple systems, depends on company-specific rules, requires custom integration, has meaningful security or data concerns, or is expensive enough that choosing the wrong product would cost more than first designing the workflow correctly.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How should a small business evaluate an AI automation proposal?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The proposal should identify the workflow, current baseline, systems involved, data boundaries, automation and AI responsibilities, human review points, exception handling, implementation scope, ownership, support expectations, and measurable acceptance criteria. Avoid proposals built around a tool before the operating problem is defined.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Does every workflow automation project need AI?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No. Deterministic rules, database queries, APIs, forms, validation, scheduled jobs and conventional software often solve a workflow more reliably and cheaply. AI is appropriate where language, documents, classification, summarization, extraction or other variable inputs create a real advantage.",
-      },
-    },
-  ],
+  mainEntity: faqItems.map(({ question, answer }) => ({
+    "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer },
+  })),
 };
 
 export default function AiAutomationConsultantGuide() {
@@ -282,14 +270,10 @@ export default function AiAutomationConsultantGuide() {
 
             <section id="faq">
               <h2>Common questions</h2>
-              <h3>What does an AI automation consultant do for a small business?</h3>
-              <p>They should map the current workflow, identify the right level of intervention, design and implement the solution, verify it against representative work, and leave the client with clear ownership, operating boundaries and recovery procedures.</p>
-              <h3>When should I hire a consultant instead of buying software?</h3>
-              <p>When the workflow crosses systems, depends on custom business rules, requires meaningful integration or security design, or is expensive enough that a wrong platform decision would create substantial rework.</p>
-              <h3>How should I compare proposals?</h3>
-              <p>Compare how specifically each proposal describes your workflow, the measurable outcome, the data and systems involved, the division between human and automated work, the failure modes, total lifecycle cost and what you own after launch.</p>
-              <h3>Does the project need AI?</h3>
-              <p>Not necessarily. Use deterministic software for deterministic problems. Add AI only where variable language, documents, images, classification, summarization or similar inputs make it materially useful.</p>
+              <h3>{faqItems[0].question}</h3><p>{faqItems[0].answer}</p>
+              <h3>{faqItems[1].question}</h3><p>{faqItems[1].answer}</p>
+              <h3>{faqItems[2].question}</h3><p>{faqItems[2].answer}</p>
+              <h3>{faqItems[3].question}</h3><p>{faqItems[3].answer}</p>
             </section>
           </div>
         </div>

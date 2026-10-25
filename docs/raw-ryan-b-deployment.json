@@ -1,0 +1,34 @@
+{
+  "worker": "randall-automation-works",
+  "source_commit": "f14bc04857ae963abc5f86acb7e047a30e7982a7",
+  "source_repository": "SAC-CS112-Randall-Christopher/raw-website",
+  "delivery_source_commit": "230a443b2b42c6163ebf95a6aa1afe2a2d0f291b",
+  "delivery_source_folder": "deliverables/raw-workspace-ryan-b",
+  "deployment_id": "ad1480ea-178c-4574-801b-15d309633b6a",
+  "created_on": "2026-10-24T22:59:53.799027Z",
+  "versions": [
+    {
+      "version_id": "4f73711e-5e1c-47f9-baf1-55014b6df035",
+      "percentage": 100
+    }
+  ],
+  "previous_version_id": "170dfcf3-2ba5-4180-a6bd-1c1ccc97149d",
+  "r2_bucket": "randall-automation-works-media",
+  "r2_origin": "https://media.randallautomationworks.com",
+  "owner_authorized_existing_r2_billing": true,
+  "new_paid_ai_api_usage": false,
+  "assets": {
+    "raw-highlight.mp4": {
+      "duration_seconds": 108.266667,
+      "bytes": 8823342,
+      "sha256": "fdcd3895f3c32fcfae1248a970f8fc94e1a9287ea289c0cc6f7f0dc263a72e38"
+    },
+    "raw-full-demo.mp4": {
+      "duration_seconds": 227.669,
+      "bytes": 16116583,
+      "sha256": "bc9777869a39dc3be2a4b9a3048221349bf10db78872fbff50dcaf3abc9681fc"
+    }
+  },
+  "confirmed_after_source_hosted_checks": true,
+  "final_traffic_observed_at": "2026-10-24T23:05:27.0588131+00:00"
+}

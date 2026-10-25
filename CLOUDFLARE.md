@@ -14,8 +14,8 @@ repository and use:
 | Production branch | `main` |
 | Root directory | `/` |
 | Build command | `npm run build` |
-| Deploy command | `npx wrangler deploy` |
-| Non-production deploy command | `npx wrangler versions upload` |
+| Deploy command | `npm run deploy` |
+| Non-production deploy command | `npm run verify:videos --if-present && npx wrangler versions upload` |
 
 The `.node-version` file pins the Workers Builds environment to Node.js
 22.16.0. Cloudflare installs the locked npm dependencies before running the
@@ -58,6 +58,41 @@ npx wrangler deploy --dry-run
 
 For an authenticated local deployment, run `npm run deploy`.
 
+RAW films now use the separate public R2 bucket described in [R2-MEDIA.md](R2-MEDIA.md).
+The build command verifies the full public video objects against the reviewed
+manifest after producing the artifact. Both the documented production and
+preview Workers Builds paths therefore run that guard before uploading a Worker.
+Keep the Workers Builds commands above consistent with the account settings;
+a raw `wrangler deploy` without a verified build bypasses that check.
+The non-production command remains compatible with older branches that contain
+only static films and do not define `verify:videos`.
+
+The existing OAuth session could read the Worker and configure R2 but returned
+403 for the Workers Builds triggers endpoint on 2026-10-24. No hosted trigger
+settings were changed. The guard is consequently part of this branch's `build`
+script, covering the existing documented `npm run build` hosted path without
+requiring a broader credential or a global change to older branches.
+
+On 2026-10-23 the DMPH feature gateway was deployed to the existing Worker
+using MAIN's authorized Wrangler account. The matching named tunnel, origin
+CNAME and two private gateway bindings are configured. Actual custom-domain
+fixture login, required password replacement, narration/export, protected
+downloads, restart and offline-host checks passed. See [DMPH-STUDIO.md](DMPH-STUDIO.md)
+for the remaining owner password input and current 503 availability state.
+
+On Windows, build and test in the existing WSL/Linux runtime. Keep Linux Node
+dependencies separate from any native Windows installation. The build helpers
+preserve the host's real home and XDG configuration directories so the normal
+authorized Wrangler session remains usable; only build scratch files and npm
+cache are redirected. Text files use LF endings for Bash/WSL compatibility.
+The root deployment configuration is the single source of `nodejs_compat`,
+matching the existing production Worker. Do not also add that flag through
+the Vite plugin override: the plugin concatenates those arrays, and Cloudflare
+rejects duplicate flags with code 10021. Artifact validation now checks the
+generated Wrangler configuration for missing or duplicate compatibility flags
+before an upload. This caught and reproduced the failed preview upload from
+commit `b3fc27a` locally; the Vite override was removed to correct its cause.
+
 ## HTTPS redirect review
 
 The Worker now redirects HTTP requests for the production hostname to HTTPS
@@ -66,8 +101,11 @@ canonical apex redirect when a `www` request reaches the Worker. Local preview
 hostnames remain usable. The existing dashboard-managed `www` redirect is
 unchanged.
 
-The current `assets` configuration serves matching static files before Worker
-code. To cover HTTP asset requests too, Chris approved an apex-only Cloudflare edge
+The `assets` configuration serves matching static files before Worker code,
+except for the two published RAW MP4 paths listed in `assets.run_worker_first`.
+Those paths use the native Cache API for verified byte-range playback; see
+[RAW video publication](docs/raw-demo-publication.md). To cover HTTP asset
+requests too, Chris approved an apex-only Cloudflare edge
 redirect rule. No dashboard settings have been changed in this checkout.
 
 Approved Single Redirect rule:

@@ -1,0 +1,30 @@
+{
+  "observed_on": "2026-10-24",
+  "delivery_source_commit": "230a443b2b42c6163ebf95a6aa1afe2a2d0f291b",
+  "delivery_source_folder": "deliverables/raw-workspace-ryan-b",
+  "commands": [
+    {
+      "command": "npm test",
+      "exit_code": 0,
+      "production_build": "passed",
+      "artifact_validation": "passed",
+      "complete_public_r2_movie_hashes": "passed",
+      "tests": 29,
+      "failures": 0,
+      "skipped": 0
+    },
+    {
+      "command": "npm run lint",
+      "exit_code": 0
+    },
+    {
+      "command": "wrangler deploy --config wrangler.jsonc --dry-run",
+      "exit_code": 0,
+      "wrangler": "4.92.0"
+    }
+  ],
+  "preview_receipt": "raw-ryan-b-preview.json",
+  "origin_receipt": "raw-ryan-b-origin.json",
+  "independent_source_review": "All eight website assets match working delivery and exact source Git blobs; gateway, CSP, configuration and application code unchanged.",
+  "website_live_cutover": "Separate deployment and live receipts required."
+}

@@ -1,0 +1,19 @@
+{
+  "baseRefName": "codex/raw-copper-redesign-20261024",
+  "headRefName": "feat/raw-workflow-films",
+  "headRefOid": "1fed501c1b1b8414388396f6bc483eaa3fb9d6b4",
+  "isDraft": true,
+  "statusCheckRollup": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-25T02:58:52Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://dash.cloudflare.com/dc34c5b1bb899c50b220159b42d35752/workers/services/view/randall-automation-works/production/builds/73b9fb3e-6d9d-42c9-b50a-f808db941b18",
+      "name": "Workers Builds: randall-automation-works",
+      "startedAt": "2026-10-25T02:58:52Z",
+      "status": "COMPLETED",
+      "workflowName": ""
+    }
+  ],
+  "url": "https://github.com/SAC-CS112-Randall-Christopher/raw-website/pull/26"
+}
