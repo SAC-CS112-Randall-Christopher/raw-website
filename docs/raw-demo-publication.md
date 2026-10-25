@@ -1,8 +1,10 @@
 # Current RAW film publication
 
-The selected Ryan B films supersede the release below. Use the
-[current production record](raw-ryan-b-publication.md) and `raw-ryan-b-*`
-receipts for the verified 1:48 highlight / 3:48 full demo and working downloads.
+The rebuilt connected-workflow films supersede the releases below. Use the
+[current production record](raw-workflow-publication.md) and `raw-workflow-*`
+receipts for the 1:36 highlight / 3:33 full demo and working phone downloads.
+The approved conversational Ryan B voice is retained; the visual edit and
+scripts are rebuilt.
 
 # Previous connected-workspace films — historical
 

@@ -73,10 +73,12 @@ def inspect_player(page, name, duration, cues, label):
 
 
 def inspect_download(page, name, label):
-    link=page.get_by_role('link',name='Download highlight MP4' if name=='raw-highlight.mp4' else 'Download full demo MP4',exact=True)
-    assert link.get_attribute('href')=='/products/raw-workspace/'+name+'?download=1'
+    # Public pages intentionally offer viewing and booking. Verify the direct
+    # owner handoff URL as a real browser download without adding a public UI
+    # action or restoring the owner's removed transcript/download links.
+    address=base+'/products/raw-workspace/'+name+'?download=1'
     with page.expect_download(timeout=60000) as pending:
-        link.click()
+        page.evaluate('(url)=>location.assign(url)',address)
     download=pending.value
     assert download.failure() is None
     assert download.suggested_filename.lower()==name

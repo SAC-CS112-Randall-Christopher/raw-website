@@ -1,4 +1,9 @@
-# Selected Ryan B films — current production
+# Previous Ryan B films — historical
+
+The owner rejected this release's slide-like visual edit. The selected voice
+remains approved. The [rebuilt workflow films](raw-workflow-publication.md)
+now replace these videos; use that record and its exact receipts for current
+production. The observations below describe this earlier release only.
 
 Published October 24, 2026. The owner's selected conversational Ryan B narration
 is live in the 1:48 homepage highlight and 3:48 RAW Business Workspace demo.

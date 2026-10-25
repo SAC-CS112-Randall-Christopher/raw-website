@@ -17,6 +17,8 @@ test("the demo watch page exposes the unchanged public transcript, captions and 
   const html = await render("/raw-workspace/demo");
   const manifest = JSON.parse(await readFile(new URL("../docs/raw-demo-media.json", import.meta.url)));
   const transcript = JSON.parse(await readFile(new URL("../lib/raw-demo-transcript.json", import.meta.url)));
+  const currentPublicTranscript = await readFile(new URL("../public/products/raw-workspace/raw-demo-transcript.txt", import.meta.url), "utf8");
+  assert.equal(transcript.join("\n\n"), currentPublicTranscript.trim(), "watch transcript follows the actual currently released film");
   const video = schemas(html).find(node => node["@type"] === "VideoObject");
   assert.equal(video.duration, manifest.videos["raw-full-demo.mp4"].duration_iso);
   assert.equal(video.transcript, transcript.join("\n\n"));

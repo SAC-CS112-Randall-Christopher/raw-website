@@ -54,6 +54,7 @@ export default async function InteriorPage({ params }: { params: Promise<{ slug:
   if (!page) notFound();
   const isAiSystemPage = aiSystemPages.some((item) => item.href === `/${slug}`);
   const isAiSystemChild = slug === "local-ai-deployments" || slug === "hosted-ai-deployments";
+  const isCorePage = ["services", "workflow-automation-examples", "about", "contact"].includes(slug);
 
   const breadcrumbData = {
     "@context": "https://schema.org",
@@ -81,7 +82,7 @@ export default async function InteriorPage({ params }: { params: Promise<{ slug:
           <div><p className="eyebrow">{page.eyebrow}</p><h1>{page.title}</h1></div>
           <div className="page-hero-side">
             <p className="lead">{page.lead}</p>
-            <PageHeroVisual slug={slug} />
+            {!isCorePage && <PageHeroVisual slug={slug} />}
           </div>
         </div>
       </section>

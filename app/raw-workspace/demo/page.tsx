@@ -11,7 +11,7 @@ const media = demoMedia.videos["raw-full-demo.mp4"];
 const video = {
   "@context": "https://schema.org", "@type": "VideoObject", "@id": `${base}${path}#video`,
   name: title, description, url: `${base}${path}`, duration: media.duration_iso,
-  uploadDate: "2026-10-24T00:00:00Z", thumbnailUrl: `${base}/products/raw-workspace/raw-demo-poster.jpg`,
+  uploadDate: "2026-10-25T02:58:33Z", thumbnailUrl: `${base}/products/raw-workspace/raw-demo-poster.jpg`,
   contentUrl: `${base}/products/raw-workspace/raw-full-demo.mp4`, inLanguage: "en-US",
   transcript: transcript.join("\n\n"), about: { "@id": `${base}/raw-workspace#product` },
   publisher: { "@id": `${base}/#business` }, isPartOf: { "@id": `${base}/#website` },
@@ -32,13 +32,13 @@ export default function RawDemoPage() {
       <p className="eyebrow"><Link href="/raw-workspace">RAW Business Workspace</Link> · Desktop demonstration</p>
       <h1>See your information become useful work.</h1>
       <p className="lead">Watch the actual RAW Business Workspace interface, then read the same walkthrough below. The demonstration uses fictional business data and synthetic narration. Processing waits are condensed.</p>
-      <div className="workspace-video-frame"><video controls playsInline preload="none" poster="/products/raw-workspace/raw-demo-poster.jpg" width="1920" height="1080" aria-label="RAW Business Workspace desktop demonstration">
+      <div className="workspace-video-frame"><video controls controlsList="nodownload" playsInline preload="none" poster="/products/raw-workspace/raw-demo-poster.jpg" width="1920" height="1080" aria-label="RAW Business Workspace desktop demonstration">
         <source src="/products/raw-workspace/raw-full-demo.mp4" type="video/mp4" />
         <track kind="captions" src="/products/raw-workspace/raw-full-demo.vtt" srcLang="en" label="English" default />
         Your browser does not support embedded video. <a href="/products/raw-workspace/raw-full-demo.mp4">Watch the demonstration</a>.
       </video></div>
-      <p>{media.duration_label} · Actual interface · Fictional sample data</p>
-      <p><a href="#transcript">Read the transcript</a> · <Link href="/raw-workspace">Capabilities and setup questions</Link> · <Link href="/contact">Discuss your business workflow</Link></p>
+      <p>Actual interface · Fictional sample data</p>
+      <p><Link href="/raw-workspace">Capabilities and setup questions</Link> · <Link href="/contact">Discuss your business workflow</Link></p>
     </div></section>
     <section className="section" id="transcript"><div className="shell article-body demo-watch-transcript">
       <p className="eyebrow">Same demonstration, readable text</p><h2>Demonstration transcript</h2>

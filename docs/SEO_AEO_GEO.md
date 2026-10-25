@@ -1,30 +1,39 @@
-# Public discovery fixes — October 25, 2026
+# Public discovery release — October 25, 2026
 
-This branch starts from `feat/raw-connected-films` (`f46f67f`), preserving the
-approved Ryan B films, content-addressed R2 origin, private DMPH gateway and
-current marketing site. Cached `main` (`0ef1c49`) is older than the live media.
-The separate pending redesign/article branch is not included.
+Release through the existing GitHub → Cloudflare Workers Builds connection.
+An executor-side Cloudflare login and MAIN are not requirements for that route.
+Promote the tested PR to `main`, observe its actual Cloudflare check run and
+verify the changed public URLs. A successful GitHub merge alone is not live proof.
 
-The actual public audit covered all 27 URLs in the live sitemap. Three older
-articles had FAQ schema that paraphrased/differed from the visible answers. They
-now render both from the same reviewed text; publication dates stay intact and
-modification dates reflect this edit. Organization, founder, WebSite and product
-identities are connected using stable IDs. No ratings, customer results or
-unverified product integrations were added.
+## Preserve the actual production baseline
 
-`/raw-workspace/demo` makes the existing full film the primary page content with
-the same public transcript, captions, verified duration and fictional-data /
-synthetic-narration disclosure. It is linked from the product page and sitemap.
-Video/media files, narration and R2 delivery are unchanged.
+The initial SEO branch used older `feat/raw-connected-films` (`f46f67f`). A fresh
+release inspection found that current production already serves the Copper
+design and workflow films from `feat/raw-workflow-films` (`9c26036`). Those
+already-live revisions are now integrated without rewriting either owner branch.
+The separate action-approval article branch is not included.
 
-The live homepage still reported a 96-second highlight in JSON-LD during the
-audit, despite its 108-second caption. This branch's existing manifest-driven
-source correctly uses `PT1M48S`; a deployment and actual live recheck are required.
-This document does not claim live fixes, search indexing or AI citations.
+Correction: live `PT1M36S` highlight metadata was valid for the current 95.680s
+film; comparing it with the older 108-second local film was not a defect finding.
+The current full film is 213.440s. Both exact films, captions, posters, source
+manifest and delivery configuration are preserved. The new watch-page transcript
+is regenerated from this film's existing public text, not the superseded cut.
 
-## Local verification
+## SEO changes
 
-After the documented pinned install:
+Three older articles now share visible/schema FAQ text, with original publication
+dates preserved and modification dates reflecting this edit. Stable business,
+founder, website and product identities describe actual published information.
+No ratings, customer results, new integrations or accounting claims were invented.
+
+`/raw-workspace/demo` provides a focused watch page and readable current transcript,
+captions and matching video metadata. It is linked below the product information
+and from the sitemap. Existing watching/booking actions stay in place; download
+buttons and transcript-download actions are not restored to the product players.
+The protected DMPH gateway, bindings, contact integration and current films stay
+unchanged. No new infrastructure or paid service is required.
+
+## Verification
 
 ```sh
 bash scripts/build-verified.sh
@@ -32,24 +41,13 @@ node --test --test-isolation=none --test-reporter=spec tests/*.test.mjs
 npm run lint
 ```
 
-The production Worker build and 32 tests passed, including unique metadata for
-28 indexable routes, visible FAQ equality, public transcript, media-manifest
-durations and private studio controls. The two unchanged local films were
-independently checked with SHA-256 and ffprobe. Full remote R2 downloads in
-`npm run verify:videos` were not repeated for metadata/transcript-only changes;
-do not describe that check as a new remote media verification. Desktop/mobile
-review uses the production Worker and local assets without third-party requests.
+The production Worker build, artifact validation, 32 tests and lint pass on the
+reconciled source. Tests cover 28 sitemap routes, FAQ visibility, the readable
+transcript matching the current public source, manifest-derived durations and
+private gateway controls. Desktop/mobile watch-page review uses production HTML
+and local assets, with nonlocal/movie transfers blocked. Before release, the
+existing full remote media-integrity guard must pass through Workers Builds.
 
-## Existing-host activation
-
-The tracked Sites project returned `NOT_FOUND` in this session; Cloudflare CLI
-authentication is absent. No deployment or replacement Site was made. On MAIN,
-local Codex should inspect current git/PR state, use the existing authenticated
-hosting account and the repository's verified deploy procedure, preserve all
-gateway/media bindings, and confirm the existing no-added-cost entitlement.
-Do not provision or purchase services to finish this edit.
-
-After authorized publication, verify `/raw-workspace/demo`, `/sitemap.xml`, all
-three corrected insight articles and the actual homepage `VideoObject.duration`.
-Run DMPH's bounded `site-audit` command and retain a new live receipt. Indexing,
-real AI answers/referrals and inquiry results require separate observations.
+After publication, rerun DMPH `site-audit` and verify the new page, actual company
+identity, corrected FAQ text and current `PT1M36S` / `PT3M33S` metadata. Search
+indexing, consumer AI citations and commercial outcomes require separate evidence.

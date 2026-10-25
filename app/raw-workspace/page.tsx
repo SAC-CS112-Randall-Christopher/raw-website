@@ -19,12 +19,9 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  ["01", "Bring your AI into the work.", "Connect a supported assistant and approve its access to RAW tools. Ask for help while working with the business information on screen."],
-  ["02", "Keep the information you already have.", "Import supported database snapshots or table exports. Browse customer, equipment and billing information with its source date and identity available."],
-  ["03", "Add what your business needs.", "Save typed RAW fields alongside imported records. Keep delivery instructions, dispatch details and other additional information connected to the existing business record."],
-  ["04", "Ask questions. Inspect the answer.", "Build reusable reports from permitted information and approved business definitions. Open supporting records, keep useful views and review report history."],
-  ["05", "Give correspondence useful context.", "Read and summarize permitted messages, inspect related business information, and prepare useful replies with the customer context already at hand."],
-  ["06", "Keep the next step connected.", "Let the assistant offer a follow-up, clarify its timing, and save approved tasks or calendar blocks. Priorities, dates and links keep daily work understandable."],
+  ["01", "Connect your information.", "Bring supported snapshots, table exports and connected inboxes into one workspace. Keep source details visible and add linked RAW fields where your business needs more context."],
+  ["02", "Ask. Inspect. Understand.", "Work with a supported AI assistant to explore permitted records and build reusable reports. Open the information behind an answer before putting it to use."],
+  ["03", "Turn an answer into useful work.", "Prepare a customer reply, clarify the follow-up and review tasks or calendar blocks before saving. Keep the next step connected to the work."],
 ];
 
 const faqs = [
@@ -66,27 +63,31 @@ export default function RawWorkspace() {
 
     <section className="section workspace-film-section" id="see-it-in-action">
       <div className="shell">
-        <div className="section-heading"><p className="eyebrow">The full demo · {fullDemoMedia.duration_label}</p><h2>Your information. Useful work.</h2><p>Bring your AI, business information and connected email inboxes into one workspace. Add what is missing, ask a question, prepare a reply and organize the next step.</p></div>
+        <div className="section-heading"><p className="eyebrow">The full demo</p><h2>Your information. Useful work.</h2><p>Bring your AI, business information and connected email inboxes into one workspace. Add what is missing, ask a question, prepare a reply and organize the next step.</p></div>
         <div className="workspace-video-frame">
-          <video controls playsInline preload="none" poster="/products/raw-workspace/raw-demo-poster.jpg" width="1920" height="1080" aria-label="RAW Business Workspace full demonstration">
+          <video controls controlsList="nodownload" playsInline preload="none" poster="/products/raw-workspace/raw-demo-poster.jpg" width="1920" height="1080" aria-label="RAW Business Workspace full demonstration">
             <source src="/products/raw-workspace/raw-full-demo.mp4" type="video/mp4" />
             <track kind="captions" src="/products/raw-workspace/raw-full-demo.vtt" srcLang="en" label="English" default />
             Your browser does not support embedded video. <a href="/products/raw-workspace/raw-full-demo.mp4">Watch the full demonstration</a>.
           </video>
         </div>
-        <p className="workspace-caption">Follow Pine Ridge Rental &amp; Service from connected business information to a useful report, a reviewed reply and a scheduled next step. See added customer details work alongside existing records, with the assistant available across pages. Processing waits are condensed.</p>
-        <p>Bring one recurring task and the software you use today. We will discuss the first useful improvement for your business.</p>
-        <div className="workspace-film-links"><a className="button button-primary" href={bookingLink} target="_blank" rel="noreferrer">Book a demo <span aria-hidden="true">↗</span></a><a className="text-link" href="/products/raw-workspace/raw-full-demo.mp4?download=1" download="RAW-full-demo.mp4">Download full demo MP4</a><a className="text-link" href="/products/raw-workspace/raw-demo-transcript.txt">Read the demo transcript</a><a className="text-link" href="/products/raw-workspace/raw-full-demo.vtt" download>Download English captions</a></div>
+        <p className="workspace-caption">Actual RAW interface. Processing waits are condensed.</p>
+        <div className="workspace-demo-invitation">
+          <p>See how RAW could fit your business.</p>
+          <div className="workspace-film-links"><a className="button button-primary" href={bookingLink} target="_blank" rel="noreferrer">Book a demo <span aria-hidden="true">↗</span></a></div>
+        </div>
       </div>
     </section>
 
-    <section className="section"><div className="shell"><div className="section-heading"><p className="eyebrow">Built around the work</p><h2>The right details.<br />Right where you need them.</h2></div><div className="workspace-feature-grid">{features.map(([n, title, text]) => <article key={n}><span>{n}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
+    <section className="section"><div className="shell"><div className="section-heading"><p className="eyebrow">Built around the work</p><h2>From information<br />to a useful next step.</h2></div><div className="workspace-feature-grid">{features.map(([n, title, text]) => <article key={n}><span>{n}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
 
     <section className="section workspace-detail-section"><div className="shell workspace-detail-grid"><figure>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/products/raw-workspace/quotes.png" width={1600} height={1000} loading="lazy" alt="Actual equipment quote screen with source rates and rental line items" /><figcaption>Build a quote from connected equipment and source rates</figcaption></figure><div><p className="eyebrow">For the way your business runs</p><h2>A workspace.<br />Your way of working.</h2><p>Rental desk, service team or growing small business: the work is different. Your workspace should reflect that.</p><p>Choose the modules that matter, connect the information you use, and give the people doing the work a clear place to start.</p><Link className="text-link" href="/contact">Discuss your configuration <span aria-hidden="true">→</span></Link></div></div></section>
 
     <section className="section"><div className="shell workspace-faq"><div><p className="eyebrow">A few useful answers</p><h2>Get to know<br />RAW Workspace.</h2></div><div>{faqs.map(({ q, a }) => <details key={q}><summary>{q}<span aria-hidden="true">+</span></summary><p>{a}</p></details>)}</div></div></section>
+
+    <section className="section"><div className="shell"><Link className="text-link" href="/raw-workspace/demo">Explore the desktop demonstration <span aria-hidden="true">→</span></Link></div></section>
 
     <section className="cta-section"><div className="shell cta-inner"><div><p className="eyebrow eyebrow-light">RAW Business Workspace</p><h2>Bring your business together.</h2><p>Tell Chris about the customers, data and daily work you want to connect.</p><Link className="cta-message" href="/contact">Send a message <span aria-hidden="true">→</span></Link></div><a className="button button-sand" href={bookingLink} target="_blank" rel="noreferrer">Talk about your workspace <span aria-hidden="true">↗</span></a></div></section>
   </main>;

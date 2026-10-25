@@ -1,0 +1,78 @@
+{
+  "source": "14c6ac66739288b4015d1ff8a1d12f559787ce49",
+  "version": "4b335662-53c4-48b0-8467-3ef145015943",
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "cardReferenced": false,
+      "refinedHeading": true,
+      "cache": null,
+      "robots": null
+    },
+    {
+      "path": "/raw-workspace",
+      "status": 200,
+      "cardReferenced": false,
+      "refinedHeading": false,
+      "cache": null,
+      "robots": null
+    },
+    {
+      "path": "/services",
+      "status": 200,
+      "cardReferenced": false,
+      "refinedHeading": false,
+      "cache": null,
+      "robots": null
+    },
+    {
+      "path": "/workflow-automation-examples",
+      "status": 200,
+      "cardReferenced": false,
+      "refinedHeading": false,
+      "cache": null,
+      "robots": null
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "cardReferenced": false,
+      "refinedHeading": false,
+      "cache": null,
+      "robots": null
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "cardReferenced": false,
+      "refinedHeading": false,
+      "cache": null,
+      "robots": null
+    },
+    {
+      "path": "/admin/dmph/login.html",
+      "status": 200,
+      "cardReferenced": false,
+      "refinedHeading": false,
+      "cache": [
+        "no-store, private"
+      ],
+      "robots": [
+        "noindex, nofollow, noarchive"
+      ]
+    },
+    {
+      "path": "/admin/dmph/api/state",
+      "status": 401,
+      "cardReferenced": false,
+      "refinedHeading": false,
+      "cache": [
+        "no-store, private"
+      ],
+      "robots": [
+        "noindex, nofollow, noarchive"
+      ]
+    }
+  ]
+}

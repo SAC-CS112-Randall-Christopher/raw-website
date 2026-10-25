@@ -1,0 +1,72 @@
+[
+  {
+    "cardImages": 0,
+    "clientWidth": 305,
+    "h1Count": 1,
+    "overflow": [],
+    "scrollWidth": 305,
+    "url": "http://127.0.0.1:4176/",
+    "viewport": "width=device-width, initial-scale=1",
+    "width": 320
+  },
+  {
+    "cardImages": 0,
+    "clientWidth": 345,
+    "h1Count": 1,
+    "overflow": [],
+    "scrollWidth": 345,
+    "url": "http://127.0.0.1:4176/",
+    "viewport": "width=device-width, initial-scale=1",
+    "width": 360
+  },
+  {
+    "cardImages": 0,
+    "clientWidth": 375,
+    "h1Count": 1,
+    "overflow": [],
+    "scrollWidth": 375,
+    "url": "http://127.0.0.1:4176/",
+    "viewport": "width=device-width, initial-scale=1",
+    "width": 390
+  },
+  {
+    "cardImages": 0,
+    "clientWidth": 415,
+    "h1Count": 1,
+    "overflow": [],
+    "scrollWidth": 415,
+    "url": "http://127.0.0.1:4176/",
+    "viewport": "width=device-width, initial-scale=1",
+    "width": 430
+  },
+  {
+    "cardImages": 0,
+    "clientWidth": 753,
+    "h1Count": 1,
+    "overflow": [],
+    "scrollWidth": 753,
+    "url": "http://127.0.0.1:4176/",
+    "viewport": "width=device-width, initial-scale=1",
+    "width": 768
+  },
+  {
+    "cardImages": 0,
+    "clientWidth": 1009,
+    "h1Count": 1,
+    "overflow": [],
+    "scrollWidth": 1009,
+    "url": "http://127.0.0.1:4176/",
+    "viewport": "width=device-width, initial-scale=1",
+    "width": 1024
+  },
+  {
+    "cardImages": 0,
+    "clientWidth": 1265,
+    "h1Count": 1,
+    "overflow": [],
+    "scrollWidth": 1265,
+    "url": "http://127.0.0.1:4176/",
+    "viewport": "width=device-width, initial-scale=1",
+    "width": 1280
+  }
+]
