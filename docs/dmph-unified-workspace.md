@@ -31,9 +31,13 @@ Code `c823d97c7ffe50b19d84b6a5c807d248df2ed2ce` is deployed as Worker version
 The companion DMPH source is `61c838ce94a8eeb5827a40050a37b9f213475485`.
 
 Studio-to-Social succeeded in the owner's already-signed-in browser without a
-second password. The browser connection restarted before the reverse trip and
-native mobile/composer checks completed. Those acceptance checks remain open;
+second password. After the browser connection restarted, the owner completed
+the normal Studio → Social → Editor workflow on their phone and confirmed
+**both directions work**. Native composer and mobile-menu checks remain open;
 both HTTP directions pass fixture tests. The public Social entry was checked
 at desktop and measured 390px width without page-level horizontal overflow.
 The DMPH receipt contains screenshot and preservation evidence. No profile was
 connected, post published or paid API usage enabled by this change.
+
+Workers Builds passed at receipt head `3bcf7a4`; the deployment was separately
+read back and still serves the reviewed version above at 100%.
