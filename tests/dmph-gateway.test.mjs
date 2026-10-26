@@ -69,6 +69,7 @@ test('permits only the fixed Social form destination on the Studio launch docume
     const result = await studioGateway(new Request(base + path), env, async () => new Response('fixture'));
     const formAction = result.headers.get('Content-Security-Policy').split('form-action ')[1];
     assert.equal(formAction, "'self'" + (path === '/social.html' ? ' https://social.randallautomationworks.com' : ''));
+    assert.equal(result.headers.get('Referrer-Policy'),path === '/social.html' ? 'strict-origin-when-cross-origin' : 'same-origin');
   }
 });
 
