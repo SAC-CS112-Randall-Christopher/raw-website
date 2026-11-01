@@ -52,3 +52,18 @@ test("brand and website identities stay connected without exposing private route
   assert.match(sitemap, /\/raw-workspace\/demo<\/loc>/);
   assert.doesNotMatch(sitemap, /\/admin\//);
 });
+
+test("pilot acceptance guide keeps synthetic results bounded and has discovery links", async () => {
+  const route = "/insights/ai-assistant-pilot-acceptance-tests";
+  const html = await render(route);
+  const article = schemas(html).find(node => node["@type"] === "Article");
+  assert.equal(article.datePublished, "2026-11-01");
+  assert.equal(article.dateModified, "2026-11-01");
+  assert.equal(article.mainEntityOfPage, `https://randallautomationworks.com${route}`);
+  assert.match(html, /synthetic worked example/);
+  assert.match(html, /a RAW benchmark/);
+  assert.match(html, /not a recommended sample size/);
+  assert.match(html, /mark it as exposed/);
+  for (const path of ["/services", "/contact", "/raw-workspace", "/insights/ai-integration-readiness-checklist", "/insights/ai-assistant-action-approval"]) assert.ok(html.includes(`href="${path}"`));
+  for (const path of ["/services", "/insights"]) assert.ok((await render(path)).includes(`href="${route}"`));
+});
