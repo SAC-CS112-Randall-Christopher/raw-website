@@ -47,10 +47,12 @@ export default function InsightsPage() {
           <div className="section-heading split-heading">
             <div>
               <p className="eyebrow">Latest guide</p>
-              <h2>Decide what the assistant can do before it acts.</h2>
+              <h2>Test the assistant before expanding its role.</h2>
             </div>
-            <p>Separate drafts from actions, inspect the exact change and test what happens when confirmation is lost.</p>
+            <p>Use a small case pack to check source-backed answers, missing evidence and the work left for your reviewer.</p>
           </div>
+
+          <Link className="article-card" href="/insights/ai-assistant-pilot-acceptance-tests"><div className="article-card-number" aria-hidden="true">10</div><div><p className="article-kicker"><time dateTime="2026-11-01">November 1, 2026</time> · Pilot acceptance</p><h2>How to Test an AI Assistant Pilot Before You Roll It Out</h2><p>Prepare source-backed cases, preserve failures and measure review effort before making a bounded rollout decision.</p><span className="article-card-link">Read the guide <span aria-hidden="true">→</span></span></div></Link>
 
           <Link className="article-card" href="/insights/ai-assistant-action-approval">
             <div className="article-card-number" aria-hidden="true">09</div>
