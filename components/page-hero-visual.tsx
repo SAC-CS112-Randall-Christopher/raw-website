@@ -60,12 +60,6 @@ const visuals: Record<string, HeroVisualSpec> = {
     nodes: ["Manual re-entry", "Focused automation", "Reviewable output"],
     kind: "compare",
   },
-  expertise: {
-    label: "Integrated technical toolkit",
-    footer: "The workflow determines the technology",
-    nodes: ["Python", "SQL", "APIs", "GIS", "AI systems"],
-    kind: "toolkit",
-  },
   "how-engagements-work": {
     label: "Measured engagement path",
     footer: "Expand only when the result justifies it",

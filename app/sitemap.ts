@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${base}/${page.slug}`,
       changeFrequency: "monthly" as const,
       ...(updatedPages.has(page.slug) ? { lastModified: ["services", "workflow-automation-examples", "about", "contact"].includes(page.slug) ? "2026-11-12" : page.slug === "local-ai-deployments" ? "2026-10-11" : "2026-09-30" } : {}),
-      priority: ["services", "utilities-and-special-districts", "small-businesses", "gis-and-field-operations", "responsible-ai-and-security", "local-ai-deployments", "hosted-ai-deployments", "workflow-automation-examples", "expertise"].includes(page.slug) ? .8 : .6,
+      priority: ["services", "utilities-and-special-districts", "small-businesses", "gis-and-field-operations", "responsible-ai-and-security", "local-ai-deployments", "hosted-ai-deployments", "workflow-automation-examples", "about"].includes(page.slug) ? .8 : .6,
     })),
     { url: `${base}/gis-modernization`, changeFrequency: "monthly", priority: .9 },
     { url: `${base}/insights`, changeFrequency: "weekly", priority: .7, lastModified: "2026-10-25" },
