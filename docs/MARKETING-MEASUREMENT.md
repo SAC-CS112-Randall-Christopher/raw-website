@@ -32,7 +32,7 @@ Only approved public paths and fixed event/category values are accepted. No raw 
 
 The browser uses session storage for a public landing path and broad source category. Global Privacy Control and Do Not Track disable this measurement and the extra inquiry-attribution fields. Public preview hosts do not generate events. The collector accepts same-origin production-host JSON only, limits payload size, rejects extra fields, and keeps test counters in a separate environment.
 
-Use `?measurement_test=1` on a production page for a deliberate browser check; those events are stored as `environment = 'test'`. Do not submit synthetic inquiries to the live Formspree endpoint. Provider success/failure and analytics failures are exercised with mocks in `tests/marketing.test.mjs`. No personal test data is sent externally.
+Use `?measurement_test=1` on a production page for a deliberate browser check; those events are stored as `environment = 'test'`. The test flag follows navigation in the same browser session. Close the test tab when finished, or visit a public page with `?measurement_test=0` to return that session to ordinary measurement. Do not submit synthetic inquiries to the live Formspree endpoint. Provider success/failure and analytics failures are exercised with mocks in `tests/marketing.test.mjs`. No personal test data is sent externally.
 
 Infrastructure: existing Cloudflare Worker plus one small aggregate-only D1 database. The schema is `db/marketing-metrics.sql`, and the binding is in root `wrangler.jsonc`. The table is initialized before publication. Rollback of website code does not remove counters. No credentials are embedded in the browser and no private-gateway settings are changed.
 
