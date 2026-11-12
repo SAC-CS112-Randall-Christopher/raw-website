@@ -15,7 +15,7 @@ export const marketingEvents = ["page_view", "inquiry_success", "booking_click",
 export const marketingChannels = ["google", "bing", "other_search", "connected_frontiers", "social", "referral", "direct"] as const;
 export const marketingCampaigns = ["none", "gis-field", "small-business", "small-business-guide"] as const;
 export type MarketingEvent = typeof marketingEvents[number];
-export type MarketingContext = { landing: string; channel: typeof marketingChannels[number] };
+export type MarketingContext = { landing: string; channel: typeof marketingChannels[number]; test: boolean };
 
 export function publicMarketingPath(path: string): string | null {
   const clean = path === "/" ? path : path.replace(/\/+$/, "");

@@ -108,6 +108,19 @@ test("rapid duplicate submits deliver one inquiry", async () => {
   assert.equal(h.statuses.filter(s => s === "submitting").length, 1);
 });
 
+test("a deliberate test session stays isolated after internal navigation", () => {
+  const h = formHarness(true);
+  h.context.window.location.search = "?measurement_test=1";
+  h.client.recordMarketingEvent("page_view");
+  h.context.window.location.pathname = "/";
+  h.context.window.location.search = "";
+  h.client.recordMarketingEvent("booking_click");
+  assert.ok(h.calls.every(call => JSON.parse(call.options.body).test === true));
+  h.context.window.location.search = "?measurement_test=0";
+  h.client.recordMarketingEvent("page_view");
+  assert.equal(JSON.parse(h.calls.at(-1).options.body).test, false);
+});
+
 test("public measurement paths stay aligned with the canonical sitemap", async () => {
   const { default: worker } = await import("../dist/server/index.js");
   const ctx = { waitUntil() {}, passThroughOnException() {} };
