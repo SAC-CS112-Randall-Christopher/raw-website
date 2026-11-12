@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { MarketingMeasurement } from "../components/marketing-measurement";
 import { FontPreloads } from "../components/font-preloads";
 import { Footer, Header } from "../components/site-shell";
 import "./fonts.css";
@@ -111,6 +112,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body>
         <FontPreloads />
+        <MarketingMeasurement />
         <a className="skip-link" href="#main-content">Skip to content</a>
         <Header />
         {children}

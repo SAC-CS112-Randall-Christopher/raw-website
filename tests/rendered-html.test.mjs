@@ -350,7 +350,7 @@ test("preserves unique indexable metadata for every sitemap route", async () => 
     assert.doesNotMatch(metaContent(html, "robots") ?? "", /noindex/, path);
     assert.equal((html.match(/<h1\b/g) ?? []).length, 1, path);
   }
-  for (const [path, date] of [["workflow-automation-examples", "2026-11-12"], ["insights", "2026-10-25"], ["services", "2026-11-12"], ["insights/ai-assistant-action-approval", "2026-11-12"], ["insights/ai-integration-readiness-checklist", "2026-10-18"], ["local-ai-deployments", "2026-10-11"], ["insights/local-vs-hosted-ai-assistants", "2026-10-11"], ["insights/prepare-sops-for-ai-assistant", "2026-10-04"], ["privacy", "2026-09-30"], ["terms", "2026-09-30"]]) {
+  for (const [path, date] of [["workflow-automation-examples", "2026-11-12"], ["insights", "2026-10-25"], ["services", "2026-11-12"], ["insights/ai-assistant-action-approval", "2026-11-12"], ["insights/ai-integration-readiness-checklist", "2026-10-18"], ["local-ai-deployments", "2026-10-11"], ["insights/local-vs-hosted-ai-assistants", "2026-10-11"], ["insights/prepare-sops-for-ai-assistant", "2026-10-04"], ["privacy", "2026-11-12"], ["terms", "2026-09-30"]]) {
     assert.match(sitemap, new RegExp(`<loc>https://randallautomationworks\\.com/${path}</loc>\\s*<lastmod>${date}</lastmod>`), path);
   }
 });
@@ -379,7 +379,7 @@ test("discloses the currently observed website providers without launch placehol
   const terms = await renderReviewPage("/terms");
   assert.match(privacy, /Randall Automation Works LLC/);
   assert.match(terms, /Randall Automation Works LLC/);
-  assert.match(privacy, /Cloudflare Web Analytics beacon is active/);
+  assert.match(privacy, /Cloudflare Web Analytics measures/);
   assert.match(privacy, /Formspree/);
   assert.match(privacy, /Google Calendar/);
   assert.match(privacy, /chris@randallautomationworks\.com/);

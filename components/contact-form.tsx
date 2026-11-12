@@ -1,32 +1,54 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
+
+import { marketingContext, recordMarketingEvent } from "../lib/marketing-client";
+import { marketingCampaign } from "../lib/marketing-events";
 
 const FORM_ENDPOINT = "https://formspree.io/f/mpqvpoza";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
+  const inFlight = useRef(false);
+  const serviceRef = useRef<HTMLSelectElement>(null);
+  useEffect(() => {
+    const choice = new URLSearchParams(window.location.search).get("service");
+    if (serviceRef.current && choice === "gis") serviceRef.current.value = "GIS or field operations";
+    if (serviceRef.current && choice === "automation") serviceRef.current.value = "Small automation pilot";
+  }, []);
+
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
-    if (!form.reportValidity()) return;
+    if (inFlight.current || !form.reportValidity()) return;
+    inFlight.current = true;
 
     setStatus("submitting");
 
     try {
+      const data = new FormData(form);
+      const context = marketingContext();
+      if (context) {
+        data.set("website_landing_page", context.landing);
+        data.set("website_source", context.channel);
+        data.set("website_service_link", marketingCampaign(window.location.search));
+      }
       const response = await fetch(FORM_ENDPOINT, {
         method: "POST",
-        body: new FormData(form),
+        body: data,
         headers: { Accept: "application/json" },
       });
 
       if (!response.ok) throw new Error("Form submission failed");
 
+      recordMarketingEvent("inquiry_success");
       form.reset();
       setStatus("success");
     } catch {
       setStatus("error");
+    } finally {
+      inFlight.current = false;
     }
   }
 
@@ -60,7 +82,7 @@ export function ContactForm() {
       <div className="form-row">
         <label>
           I’m interested in
-          <select name="service" defaultValue="">
+          <select name="service" ref={serviceRef} defaultValue="">
             <option value="" disabled>Select a service</option>
             <option>Connected Frontiers workspace setup</option>
             <option>Workflow or AI readiness assessment</option>
