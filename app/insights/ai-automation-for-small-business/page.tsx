@@ -137,6 +137,7 @@ export default function SmallBusinessAutomationArticle() {
               <a href="#measure-roi">Measure ROI honestly</a>
               <a href="#keep-human">What should stay human</a>
               <a href="#pilot">A practical pilot</a>
+              <a href="#choose-your-start">Choose a starting point</a>
               <a href="#faq">Common questions</a>
             </nav>
           </aside>
@@ -254,6 +255,17 @@ export default function SmallBusinessAutomationArticle() {
               <p>If you are unsure which workflow is worth starting with, the earlier guide on <Link href="/insights/first-ai-automation-project">choosing a practical first AI automation project</Link> provides a six-test screening framework. You can also review <Link href="/workflow-automation-examples">workflow automation examples</Link> for concrete patterns.</p>
             </section>
 
+            <section id="choose-your-start">
+              <h2>Turn a useful idea into a scoped first project</h2>
+              <p>If repeated entry, missed follow-up or recurring reports sound familiar, the <Link href="/small-businesses">small-business workflow automation service</Link> explains what a first project includes and how we measure the result.</p>
+              <div className="article-callout">
+                <h3>Choose the starting point that fits your team</h3>
+                <p>For a shared place to manage client work, explore <a href="https://connectedfrontiers.com/industries/professional-services/">Connected Frontiers for client delivery and approvals</a>. For service visits and office follow-up, review the <a href="https://connectedfrontiers.com/industries/field-service/">field-service workspace</a>. We’ll confirm the available modules and connections against your actual needs.</p>
+                <p>Already have software that works? A focused report, spreadsheet improvement or integration may be enough. <Link href="/contact?service=automation&amp;from=small-business-guide">Discuss one workflow with Chris</Link> before choosing a platform.</p>
+              </div>
+              <p>When location and mapped assets are part of the work, see <Link href="/gis-and-field-operations">ArcGIS Field Maps, Survey123, QGIS and GPS/GNSS services</Link>.</p>
+            </section>
+
             <section id="faq">
               <h2>Common questions about AI automation for small business</h2>
               <h3>{faqItems[0].question}</h3><p>{faqItems[0].answer}</p>
@@ -281,7 +293,7 @@ export default function SmallBusinessAutomationArticle() {
             <h2>Map it before you buy another tool.</h2>
             <p>Bring the current process, the systems involved and the result you need. We can determine whether automation is justified and what the smallest reliable pilot should look like.</p>
           </div>
-          <Link className="button button-sand" href="/contact">Schedule an initial conversation</Link>
+          <Link className="button button-sand" href="/contact?service=automation&amp;from=small-business-guide">Discuss your first workflow</Link>
         </div>
       </section>
     </main>

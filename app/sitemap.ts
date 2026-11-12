@@ -5,13 +5,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://randallautomationworks.com";
   const indexablePages = pages.filter((page) => page.indexable !== false);
   // Dates record actual content edits, rather than the time of each build.
-  const updatedPages = new Set(["services", "workflow-automation-examples", "about", "contact", "local-ai-deployments", "privacy", "terms"]);
+  const updatedPages = new Set(["services", "workflow-automation-examples", "about", "contact", "gis-and-field-operations", "small-businesses", "local-ai-deployments", "privacy", "terms"]);
   return [
     { url: base, changeFrequency: "monthly", priority: 1, lastModified: "2026-11-12" },
     ...indexablePages.map((page) => ({
       url: `${base}/${page.slug}`,
       changeFrequency: "monthly" as const,
-      ...(updatedPages.has(page.slug) ? { lastModified: ["services", "workflow-automation-examples", "about", "contact"].includes(page.slug) ? "2026-11-12" : page.slug === "local-ai-deployments" ? "2026-10-11" : "2026-09-30" } : {}),
+      ...(updatedPages.has(page.slug) ? { lastModified: ["services", "workflow-automation-examples", "about", "contact", "gis-and-field-operations", "small-businesses", "privacy"].includes(page.slug) ? "2026-11-12" : page.slug === "local-ai-deployments" ? "2026-10-11" : "2026-09-30" } : {}),
       priority: ["services", "utilities-and-special-districts", "small-businesses", "gis-and-field-operations", "responsible-ai-and-security", "local-ai-deployments", "hosted-ai-deployments", "workflow-automation-examples", "about"].includes(page.slug) ? .8 : .6,
     })),
     { url: `${base}/gis-modernization`, changeFrequency: "monthly", priority: .9 },

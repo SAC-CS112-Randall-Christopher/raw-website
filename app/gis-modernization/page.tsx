@@ -7,7 +7,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://randallautomationwo
 export const metadata: Metadata = {
   title: "GIS Modernization & ArcGIS Implementation | Western Colorado",
   description:
-    "Modernize legacy GIS systems or implement a new ArcGIS environment with Survey123, maintenance databases, field data collection, asset history and CIP forecasting.",
+    "Modernize legacy GIS systems or implement a new ArcGIS environment with Survey123, Field Maps, GPS/GNSS data, maintenance databases, asset history and CIP forecasting.",
   alternates: { canonical: "/gis-modernization" },
   robots: { index: true, follow: true },
   openGraph: {
@@ -112,6 +112,12 @@ export default function GisModernizationPage() {
                     ArcGIS provides the spatial view, field workflow and decision-support layer.
                   </p>
                 </aside>
+              </section>
+
+              <section className="content-section">
+                <h2>Connect QGIS, Trimble and GPS/GNSS data with the GIS foundation</h2>
+                <p>Existing QGIS projects, GeoPackage files, shapefiles, spreadsheets and Trimble GPS/GNSS records can all be part of a modernization review. Check coordinate reference systems, asset identifiers, attributes and available accuracy metadata before moving or joining data.</p>
+                <p>For mobile collection, we review ArcGIS Field Maps, Survey123 and the equipment your crew already uses. Required accuracy, offline conditions, correction services and licensing help determine the right setup. <Link href="/gis-and-field-operations">Explore GIS field collection, inspections and GPS workflows</Link> for a focused first project.</p>
               </section>
 
               <section className="content-section">
