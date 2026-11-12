@@ -77,8 +77,8 @@ test("publishes code-first capabilities on Services and About pages", async () =
   assert.match(services, /Python automation/i);
   assert.match(services, /Visual Basic and VBA/i);
   assert.match(services, /Code-first automation and systems integration[\s\S]*Bring the workflow that keeps causing friction/i);
-  assert.match(about, /Python scripting and workflow automation/i);
-  assert.match(about, /JSON, API and structured-data connections/i);
+  assert.match(about, /Python scripting/i);
+  assert.match(about, /JSON, APIs and SDKs/i);
 });
 
 test("publishes production robots and sitemap URLs", async () => {
@@ -105,7 +105,8 @@ test("publishes production robots and sitemap URLs", async () => {
   assert.match(robots, /https:\/\/randallautomationworks\.com\/sitemap\.xml/i);
   assert.match(sitemap, /https:\/\/randallautomationworks\.com\/utilities-and-special-districts/i);
   assert.match(sitemap, /https:\/\/randallautomationworks\.com\/workflow-automation-examples/i);
-  assert.match(sitemap, /https:\/\/randallautomationworks\.com\/expertise/i);
+  assert.doesNotMatch(sitemap, /https:\/\/randallautomationworks\.com\/expertise/i);
+  assert.match(sitemap, /https:\/\/randallautomationworks\.com\/about/i);
   assert.match(sitemap, /https:\/\/randallautomationworks\.com\/local-ai-deployments/i);
   assert.match(sitemap, /https:\/\/randallautomationworks\.com\/hosted-ai-deployments/i);
   assert.match(sitemap, /https:\/\/randallautomationworks\.com\/insights<\/loc>/i);
@@ -120,28 +121,40 @@ test("publishes generalized workflow examples and founder expertise", async () =
   const env = { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } };
   const ctx = { waitUntil() {}, passThroughOnException() {} };
 
-  const [examplesResponse, expertiseResponse] = await Promise.all([
+  const [examplesResponse, aboutResponse] = await Promise.all([
     worker.fetch(new Request("http://localhost/workflow-automation-examples", { headers: { accept: "text/html" } }), env, ctx),
-    worker.fetch(new Request("http://localhost/expertise", { headers: { accept: "text/html" } }), env, ctx),
+    worker.fetch(new Request("http://localhost/about", { headers: { accept: "text/html" } }), env, ctx),
   ]);
   const examples = await examplesResponse.text();
-  const expertise = await expertiseResponse.text();
+  const about = await aboutResponse.text();
 
   assert.equal(examplesResponse.status, 200);
-  assert.equal(expertiseResponse.status, 200);
+  assert.equal(aboutResponse.status, 200);
   assert.match(examples, /Recurring customer-notification lists/i);
   assert.match(examples, /Three opportunities to discuss/i);
   assert.match(examples, /Asset and business-data reconciliation/i);
   assert.match(examples, /not published client case studies/i);
-  assert.match(expertise, /Python/i);
-  assert.match(expertise, /Integrated technical toolkit/i);
-  assert.match(expertise, /JSON, APIs and SDKs/i);
-  assert.match(expertise, /Agentic workflow orchestration/i);
-  assert.match(expertise, /Model Context Protocol/i);
-  assert.match(expertise, /Retrieval-augmented generation|RAG/i);
-  assert.match(expertise, /Web maps and spatial application integration/i);
-  assert.match(expertise, /GIS, assets and field operations/i);
-  assert.doesNotMatch(`${examples}\n${expertise}`, /Tri-County Water/i);
+  assert.match(about, /Python/i);
+  assert.match(about, /SQL reporting, JSON, APIs and SDKs/i);
+  assert.match(about, /GIS, assets and field operations/i);
+  assert.match(about, /growing family/i);
+  assert.match(about, /roots in Montrose, Colorado/i);
+  assert.match(about, /plumbing, office administration, accounts payable and receivable, project management/i);
+  assert.match(about, /bartending and serving/i);
+  assert.doesNotMatch(about, /href="\/expertise"/);
+  for (const path of ["/expertise", "/expertise/"]) {
+    for (const method of ["GET", "HEAD"]) {
+      let response = await worker.fetch(new Request(`http://localhost${path}`, {method}), env, ctx);
+      assert.equal(response.status, 308, `${method} ${path}`);
+      // The framework normalizes a trailing slash before resolving the route.
+      if (response.headers.get("Location") === "/expertise") {
+        response = await worker.fetch(new Request("http://localhost/expertise", {method}), env, ctx);
+        assert.equal(response.status, 308);
+      }
+      assert.equal(response.headers.get("Location"), "https://randallautomationworks.com/about");
+    }
+  }
+  assert.doesNotMatch(`${examples}\n${about}`, /Tri-County Water/i);
 });
 
 test("explains AI setup, technical options and safety boundaries", async () => {
@@ -320,7 +333,7 @@ test("redirects production HTTP and www permanently while preserving path and qu
 test("preserves unique indexable metadata for every sitemap route", async () => {
   const sitemap = await renderReviewPage("/sitemap.xml");
   const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-  assert.equal(urls.length, 27);
+  assert.equal(urls.length, 26);
   assert.equal(new Set(urls).size, urls.length);
   const titles = new Set();
   const descriptions = new Set();
@@ -398,7 +411,7 @@ test("publishes integration readiness with consistent dates and acceptance evide
 test("all current public pages retire the old product brand and keep a small-business discovery path", async () => {
   const sitemap = await renderReviewPage("/sitemap.xml");
   const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1]);
-  assert.equal(urls.length, 27);
+  assert.equal(urls.length, 26);
   for (const url of urls) {
     const html = await renderReviewPage(new URL(url).pathname);
     assert.doesNotMatch(html, /RAW (?:Business Workspace|Workspace|Harness)/, url);

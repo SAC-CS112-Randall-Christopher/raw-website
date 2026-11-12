@@ -387,45 +387,6 @@ export const pages: PageContent[] = [
     ]
   },
   {
-    slug: "expertise", navLabel: "Expertise", metaTitle: "AI, Automation, GIS & Systems Expertise | Chris Randall", eyebrow: "Technical and operational expertise",
-    title: "Technical depth shaped by the way organizations actually operate.",
-    lead: "Chris Randall brings together software, data, GIS, infrastructure, security, administration and field experience to design automation that employees can understand and maintain.",
-    metaDescription: "Chris Randall's expertise in agentic AI workflows, RAG, MCP and SDK integrations, Python, SQL, JSON APIs, GIS, IT infrastructure and responsible automation.",
-    aside: "Expertise is described from hands-on experience without identifying an employer, publishing internal systems or claiming certifications, partnerships or client results that have not been established.",
-    sections: [
-      { heading: "Software, data and integration", intro: "The technology is selected after the workflow is understood.", cards: [
-        { label: "Deterministic automation", title: "Python", text: "File processing, validation, scheduled tasks, data transformation, reporting and focused utilities with predictable outcomes and practical ongoing cost." },
-        { label: "Operational information", title: "SQL", text: "Queries, views, reconciliation, exports and management reporting that make existing database information more useful without replacing the source system." },
-        { label: "Structured connections", title: "JSON, APIs and SDKs", text: "Move approved information among web services, business applications and automation tools using documented, replaceable interfaces." },
-        { label: "Established office workflows", title: "Visual Basic and VBA", text: "Improve Windows, Excel and Office processes when a familiar tool offers the clearest maintainable solution." },
-      ] },
-      { heading: "GIS, assets and field operations", intro: "Spatial data is treated as part of the operational workflow—not an isolated map.", bullets: ["GIS data design, maintenance and reporting", "Field forms, mobile collection and inspection workflows", "Coordinate transformation and GPS-data processing", "Asset identifiers and business-system connections", "Data-quality checks and reconciliation", "Work-order, document and photo connections", "Field-to-office exception handling", "Employee training and practical adoption"] },
-      { heading: "AI systems and agentic workflow engineering", intro: "Modern AI capability comes from configuring the complete system around the model—not simply writing a prompt.", cards: [
-        { label: "Models + structured outputs", title: "Model and prompt configuration", text: "Select models for the task, define system behavior, build reusable prompt templates and require schemas that ordinary software can validate and use." },
-        { label: "Agents + tools + approvals", title: "Agentic workflow orchestration", text: "Design bounded agents that retrieve information, call approved tools, maintain task state, handle exceptions and pause for human approval at defined points." },
-        { label: "RAG + embeddings + metadata", title: "Knowledge and retrieval systems", text: "Build permission-aware internal search and question-answering workflows grounded in approved SOPs, policies, technical records and organizational documentation." },
-        { label: "MCP + APIs + SDKs", title: "Tool and application integration", text: "Connect AI workflows with approved databases, business applications, document systems and specialized tools through Model Context Protocol (MCP), APIs and software development kits with scoped, documented permissions." },
-        { label: "Schemas + validators + guardrails", title: "Reliable outputs and exception handling", text: "Constrain outputs, verify required fields and business rules, surface uncertainty and route incomplete or unusual results to the appropriate employee." },
-        { label: "Test sets + traces + usage", title: "Evaluation, monitoring and cost control", text: "Use representative test cases, versioned configurations and workflow traces to monitor quality, failures, latency and ongoing model or service cost." },
-      ] },
-      { heading: "Web maps and spatial application integration", intro: "Mapping expertise includes the applications, services and data connections around the map—not only the visible layers.", bullets: ["Interactive web maps and role-appropriate map views", "Spatial APIs and GIS SDK integration", "Feature services, layers, attributes and attachments", "Coordinate systems, transformation and GPS processing", "Field forms, mobile collection and offline handoffs", "Spatial queries, validation and exception reporting", "Connections among assets, work orders, documents and business records", "Permission-aware publishing and data ownership"] },
-      { heading: "IT infrastructure and organizational resilience", intro: "Automation depends on reliable identity, access, storage, recovery and documentation.", cards: [
-        { label: "Core systems", title: "Servers, identity and access", text: "Windows infrastructure, role-based access, shared information, device workflows and least-privilege practices for small organizations." },
-        { label: "Continuity", title: "Backup, recovery and documentation", text: "System inventories, restoration runbooks, migration planning and verification that make critical knowledge less dependent on one person." },
-        { label: "Connections", title: "Networks and business systems", text: "Practical troubleshooting and integration across office, field and administrative technology with attention to ownership and dependencies." },
-        { label: "Adoption", title: "Training and employee support", text: "Translate technical changes into role-specific procedures, clear expectations and workflows employees can correct when exceptions occur." },
-      ] },
-      { heading: "Operations and administration", intro: "Hands-on experience with the work around the technology helps prevent technically elegant solutions that fail in practice.", bullets: ["Utility and field operations", "Customer service and billing processes", "Administrative reporting and document handling", "Work-order completion and follow-through", "Payroll and accounts-payable process support", "Employee onboarding and SOP development", "Management and board information preparation", "Institutional-knowledge preservation"] },
-      { heading: "Responsible AI and automation architecture", intro: "AI is one component in a broader automation toolkit, and advanced capability is paired with explicit operational boundaries.", cards: [
-        { label: "Appropriate-tool selection", title: "Code first when the rules are clear", text: "A small Python program, SQL report or API connection may offer greater consistency and lower ongoing cost than an AI-dependent workflow." },
-        { label: "AI where interpretation helps", title: "Documents, language and knowledge", text: "AI can support summaries, classification, retrieval, draft communications and multi-step knowledge work when sources, configuration and human review remain visible." },
-        { label: "Secure integration", title: "Permissions and information boundaries", text: "Use client-owned accounts, least privilege, read-only access where practical and clear controls around retention and third-party services." },
-        { label: "Operational responsibility", title: "Human review and OT separation", text: "Consequential outputs remain reviewable, and operational reporting stays deliberately separated from infrastructure control." },
-      ], callout: { title: "Broad capability, clearly bounded", text: "Randall Automation Works does not replace licensed engineering, legal, accounting, regulatory, cybersecurity or qualified operator judgment. Specialized work is scoped honestly and referred when it falls outside established capability." } },
-      { heading: "How this expertise serves Western Colorado", intro: "Small organizations often need someone who can move comfortably between an employee’s daily process, a database, a GIS layer, a server and a management report. That cross-functional perspective helps find the smallest dependable improvement instead of defaulting to a large replacement project." },
-    ],
-  },
-  {
     slug: "how-engagements-work", navLabel: "How Engagements Work", metaTitle: "How Engagements Work | Randall Automation Works", eyebrow: "How engagements work",
     title: "A measured path from operational problem to useful system.",
     lead: "Begin with a clear question, test the idea in a controlled scope and expand only after employees and results support it.",
@@ -444,52 +405,76 @@ export const pages: PageContent[] = [
   {
     "slug": "about",
     "navLabel": "About",
-    "metaTitle": "About Chris Randall | Randall Automation Works",
+    "metaTitle": "About Chris Randall | Automation & GIS in Montrose, CO",
     "eyebrow": "The person behind RAW",
-    "title": "Technology makes sense when you understand the work.",
-    "lead": "I’m Chris Randall, founder of Randall Automation Works in Montrose, Colorado. I connect software, information and the people who rely on them.",
-    "metaDescription": "Meet Chris Randall, founder of Randall Automation Works. Practical experience across utility operations, IT, GIS and business automation in Western Colorado.",
-    "aside": "Based in Montrose. Serving businesses, utilities and field teams across Western Colorado.",
+    "title": "A practical background. A personal commitment.",
+    "lead": "I’m Chris Randall, founder of Randall Automation Works. My growing family and I are putting down roots in Montrose, Colorado, and I’m building a business around helping people make their everyday work run better.",
+    "metaDescription": "Meet Chris Randall in Montrose, Colorado. A background in plumbing, customer service, business operations, IT and GIS shapes his practical approach to automation.",
+    "aside": "Based in Montrose. Building lasting relationships with businesses, utilities and field teams across Western Colorado.",
     "sections": [
       {
-        "heading": "Built on operational experience.",
-        "intro": "My background spans utility operations, office administration, IT and GIS. That means understanding both the systems behind a report and the person who needs to act on it.",
-        "bullets": [
-          "Utility operations and administrative workflows",
-          "GIS, assets and field-to-office information",
-          "Python scripting and workflow automation",
-          "SQL reporting and business-system integration",
-          "JSON, API and structured-data connections",
-          "Employee training and practical documentation"
+        "heading": "Putting down roots in Montrose.",
+        "intro": "My family is a big part of why I’m building Randall Automation Works. As our family grows and we establish our roots here, I want to build something lasting: a business that supports our life in Montrose and does useful work for the people and organizations around us."
+      },
+      {
+        "heading": "Experience on both sides of the counter.",
+        "intro": "My path into technology has included plumbing, office administration, accounts payable and receivable, project management, and customer service—including bartending and serving. I’ve worked in the field, behind a desk and face to face with customers. That range has taught me to listen, adapt and understand what people need to get through a busy day.",
+        "cards": [
+          {
+            "title": "Field work and follow-through",
+            "text": "Plumbing and utility operations have shaped my appreciation for practical solutions, clear information and the handoff between the people in the field and the people in the office."
+          },
+          {
+            "title": "The business behind the work",
+            "text": "Administration, AP/AR and project management have given me a close view of the records, details, deadlines and coordination that keep an organization moving."
+          },
+          {
+            "title": "People come first",
+            "text": "Bartending, serving and customer service taught me to stay attentive under pressure, communicate clearly and work with people from all walks of life."
+          }
         ]
       },
       {
-        "heading": "The approach, made tangible.",
-        "intro": "Connected Frontiers brings that thinking into a product: connected information, useful context and reviewed next steps in one place.",
+        "heading": "Technical depth with everyday context.",
+        "intro": "Along the way, I’ve developed specialized experience in IT, GIS, software and automation. I enjoy figuring out how systems work and connecting them in ways that make sense to the people using them.",
         "cards": [
           {
-            "title": "See what I’m building",
-            "text": "Explore Connected Frontiers, the business workspace built by Randall Automation Works, and find a practical starting point for your team.",
-            "href": "https://connectedfrontiers.com/platform/",
-            "linkLabel": "Meet Connected Frontiers"
+            "title": "Software, data and automation",
+            "text": "Python scripting, C# integrations, SQL reporting, JSON, APIs and SDKs, plus Visual Basic and VBA for established office workflows. The goal is useful connections and less repetitive work."
+          },
+          {
+            "title": "GIS, assets and field operations",
+            "text": "Web maps, spatial data, field forms and asset records that connect field observations with office reporting, planning and follow-up."
+          },
+          {
+            "title": "Practical AI systems",
+            "text": "Assistants that search approved information, help with documents and support defined workflows, with appropriate permissions and human review. I use AI where it helps and straightforward code where the rules are clear."
+          },
+          {
+            "title": "Reliable systems and handoffs",
+            "text": "IT infrastructure, access controls, backup and recovery, employee training and practical documentation. A useful improvement should keep working after the initial setup."
           }
         ]
       },
       {
         "heading": "A direct working relationship.",
-        "intro": "You work with me from the first conversation through the handoff. We define what success looks like, choose a tool that fits, and test it with the people doing the work.",
+        "intro": "When you work with RAW, you work with me—from the first conversation through testing and handoff. You don’t need a technical vocabulary or a polished project brief. Tell me what takes too long, what keeps getting missed or what you wish worked better. We’ll talk it through, agree on a realistic scope and build from there."
+      },
+      {
+        "heading": "What I’m building.",
+        "intro": "Connected Frontiers brings that same perspective into a business workspace: helping people, information and everyday work fit together. Custom automation, reporting and GIS projects start with the same question—what would make the work easier for your team?",
         "cards": [
           {
-            "title": "Technical background",
-            "text": "More detail on software, GIS, AI systems, infrastructure and operational experience.",
-            "href": "/expertise",
-            "linkLabel": "Explore the experience"
+            "title": "Connected Frontiers",
+            "text": "Explore the workspace and industry workflows, with hands-on setup and integration help from RAW.",
+            "href": "https://connectedfrontiers.com/platform/",
+            "linkLabel": "Explore Connected Frontiers"
           },
           {
             "title": "How a project works",
-            "text": "Clear scope, agreed costs, testing, documentation and optional support.",
+            "text": "A clear scope, agreed costs, testing with your team, documentation and optional ongoing support.",
             "href": "/how-engagements-work",
-            "linkLabel": "The working process"
+            "linkLabel": "See the working process"
           }
         ]
       }
