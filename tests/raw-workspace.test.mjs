@@ -4,56 +4,22 @@ import { createHash } from "node:crypto";
 import test from "node:test";
 const media = JSON.parse(await readFile(new URL("../docs/raw-demo-media.json", import.meta.url), "utf8"));
 
-test("promotes the real RAW product with playable media and answerable product information", async () => {
+test("promotes Connected Frontiers and preserves existing media for old links", async () => {
   const { default: worker } = await import("../dist/server/index.js");
   const env = { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } };
   const ctx = { waitUntil() {}, passThroughOnException() {} };
   const request = (path) => worker.fetch(new Request(`https://randallautomationworks.com${path}`), env, ctx);
-  const [page, home, sitemap] = await Promise.all([request("/raw-workspace"), request("/"), request("/sitemap.xml")]);
-  assert.equal(page.status, 200);
-  const html = await page.text();
-  assert.match(html, /RAW Business Workspace/);
-  assert.match(html, /Keep the software you rely on/);
-  assert.match(html, /application\/ld\+json/);
-  const scripts = [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)].map((m) => JSON.parse(m[1]));
-  const graph = scripts.find((s) => s["@graph"])["@graph"];
-  const product = graph.find((s) => s["@type"] === "SoftwareApplication");
-  assert.equal(product.name, "RAW Business Workspace");
-  assert.equal(product.url, "https://randallautomationworks.com/raw-workspace");
-  assert.equal(product.offers, undefined, "No invented pricing");
-  const video = graph.find((s) => s["@type"] === "VideoObject");
-  assert.equal(video.duration, media.videos['raw-full-demo.mp4'].duration_iso);
-  assert.equal(video.contentUrl, "https://randallautomationworks.com/products/raw-workspace/raw-full-demo.mp4");
-  const faq = graph.find((s) => s["@type"] === "FAQPage");
-  for (const item of faq.mainEntity) assert.ok(html.includes(item.name));
-  assert.match(html, /<video[^>]+controls/);
-  assert.match(html, /raw-full-demo\.vtt/);
-  assert.match(html, /See how RAW could fit your business/);
-  assert.doesNotMatch(html, /24 seconds|PT24S/);
-  assert.match(html, /calendar\.app\.google\/Qwnjw6tS5TdDo5Hh7/);
-  const mainText = html.match(/<main[^>]*>([\s\S]*?)<\/main>/)[1].replace(/<script[^>]*>[\s\S]*?<\/script>/g, "").replace(/<[^>]+>/g, " ");
-  assert.doesNotMatch(mainText, /\b(trials?|pilots?|early access)\b/i);
-  const homepage = await home.text();
-  assert.match(homepage, /Meet RAW Business Workspace/);
-  assert.match(homepage, /Explore RAW Workspace/);
-  assert.match(homepage, /<video[^>]+controls[^>]+preload="none"/);
-  assert.match(homepage, /raw-highlight\.mp4/);
-  assert.match(homepage, /raw-highlight\.vtt/);
-  assert.match(homepage, /\/raw-workspace#see-it-in-action/);
-  assert.doesNotMatch(homepage, /<video[^>]+autoplay/);
-  const homeScripts = [...homepage.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)].map((m) => JSON.parse(m[1]));
-  const highlight = homeScripts.find((s) => s["@type"] === "VideoObject");
-  assert.equal(highlight.duration, media.videos['raw-highlight.mp4'].duration_iso);
-  assert.equal(highlight.contentUrl, "https://randallautomationworks.com/products/raw-workspace/raw-highlight.mp4");
-  assert.equal(highlight.thumbnailUrl, "https://randallautomationworks.com/products/raw-workspace/raw-highlight-poster.jpg");
-  assert.notEqual(highlight.thumbnailUrl, video.thumbnailUrl, "Each cut has a viewing poster suited to its story");
-  for (const markup of [html, homepage]) {
-    const links = [...markup.matchAll(/<div class="workspace-film-links">([\s\S]*?)<\/div>/g)].map(m => m[1]).join(' ');
-    assert.match(links, /href="https:\/\/calendar\.app\.google\/Qwnjw6tS5TdDo5Hh7"/);
-    assert.match(links, /Book a demo/, "The invitation beside the player is a real link");
-    assert.doesNotMatch(links, /download|transcript/i, "Player actions stay focused on viewing and booking");
+  for (const path of ["/raw-workspace", "/raw-workspace/", "/raw-workspace/demo", "/raw-workspace/demo/?contact=private"]) {
+    const page = await request(path);
+    assert.equal(page.status, 308, path);
+    assert.equal(page.headers.get("Location"), "https://connectedfrontiers.com/platform/");
   }
-  assert.match(await sitemap.text(), /https:\/\/randallautomationworks.com\/raw-workspace/);
+  const homepage = await (await request("/")).text();
+  assert.match(homepage, /Connected Frontiers/);
+  for (const target of ["https://connectedfrontiers.com/", "https://connectedfrontiers.com/platform/", "https://connectedfrontiers.com/industries/", "https://connectedfrontiers.com/how-it-works/"]) assert.ok(homepage.includes(`href="${target}"`), target);
+  assert.doesNotMatch(homepage, /RAW Business Workspace|RAW Workspace|RAW Harness|<video/);
+  assert.match(homepage, /href="\/small-businesses"/);
+  assert.doesNotMatch(await (await request("/sitemap.xml")).text(), /\/raw-workspace/);
   for (const asset of ["overview.png", "quotes.png", "video-poster.png", "social-card.png", "captions.vtt", "raw-workspace-landscape.mp4"]) {
     const file = new URL(`../dist/client/products/raw-workspace/${asset}`, import.meta.url);
     assert.ok((await stat(file)).size > 0, asset);

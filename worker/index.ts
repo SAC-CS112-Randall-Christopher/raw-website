@@ -2,6 +2,7 @@
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
 import { canonicalRedirect } from "../lib/canonical-redirect";
+import { legacyProductRedirect } from "../lib/legacy-product-redirect";
 import { studioGateway } from "../lib/dmph-gateway.mjs";
 import { publicDemoVideo } from "../lib/public-demo-video.mjs";
 
@@ -34,6 +35,9 @@ const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const redirect = canonicalRedirect(request);
     if (redirect) return redirect;
+
+    const legacy = legacyProductRedirect(request);
+    if (legacy) return legacy;
 
     const url = new URL(request.url);
     const studio = await studioGateway(request, env);

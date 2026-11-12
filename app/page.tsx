@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { bookingLink } from "../components/site-shell";
-import demoMedia from "../docs/raw-demo-media.json";
 
 // Include the homepage in route metadata so client history restores its head.
 export const metadata: Metadata = {
@@ -26,20 +25,8 @@ export const metadata: Metadata = {
   },
 };
 
-const highlightMedia = demoMedia.videos['raw-highlight.mp4'];
-const highlightVideo = {
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  name: "RAW Business Workspace — Answers you can use",
-  description: `A ${Math.round(highlightMedia.duration)}-second overview of RAW Business Workspace: connected AI, imported business information, added database fields, inspectable reports, email and approved task/calendar creation. Processing waits condensed.`,
-  thumbnailUrl: "https://randallautomationworks.com/products/raw-workspace/raw-highlight-poster.jpg",
-  uploadDate: "2026-10-24T00:00:00Z",
-  duration: highlightMedia.duration_iso,
-  contentUrl: "https://randallautomationworks.com/products/raw-workspace/raw-highlight.mp4",
-};
-
 const opportunities = [
-  { number: "01", tag: "OFFICE & CUSTOMER WORK", title: "One customer. The whole picture.", text: "Bring customer records, correspondence and next steps into a connected workspace. Prepare a reply with the context close at hand.", href: "/raw-workspace", link: "Meet RAW Workspace" },
+  { number: "01", tag: "OFFICE & CUSTOMER WORK", title: "One customer. The whole picture.", text: "Bring priorities, shared information and next steps into a workspace shaped around your team.", href: "https://connectedfrontiers.com/platform/", link: "Explore Connected Frontiers" },
   { number: "02", tag: "REPORTING & AUTOMATION", title: "Build the report. Skip the repeat work.", text: "Turn approved database records and exports into repeatable reports. Use clear rules for routine steps and AI to help explore the information.", href: "/workflow-automation-examples", link: "Explore the opportunities" },
   { number: "03", tag: "GIS & FIELD OPERATIONS", title: "Connect the field to the office.", text: "Link inspections, mapped assets and follow-up. Give the next person the information they need to keep work moving.", href: "/gis-and-field-operations", link: "Explore field workflows" },
 ];
@@ -47,28 +34,34 @@ const opportunities = [
 export default function Home() {
   return (
     <main id="main-content">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(highlightVideo).replace(/</g, "\\u003c") }} />
       <section className="raw-hero">
         <div className="shell raw-hero-copy">
             <p className="eyebrow">Practical AI. Connected systems.</p>
             <h1>Your software works.<br /><em>We make it work together.</em></h1>
-            <p className="raw-hero-intro">Your business information, email and AI in one place to work. Built around the tools you already use.</p>
-            <div className="button-row"><Link className="button button-primary" href="/raw-workspace">Explore RAW Workspace <span aria-hidden="true">↗</span></Link><a className="raw-watch-link" href="#workspace-demo">Watch it work <span aria-hidden="true">↓</span></a></div>
+            <p className="raw-hero-intro">Practical automation, connected business information and software shaped around the people doing the work. Start with one useful improvement.</p>
+            <div className="button-row"><a className="button button-primary" href="https://connectedfrontiers.com/">Explore Connected Frontiers <span aria-hidden="true">↗</span></a><a className="raw-watch-link" href={bookingLink} target="_blank" rel="noreferrer">Talk through your workflow <span aria-hidden="true">↗</span></a></div>
         </div>
-        <section className="shell raw-product-showcase" id="workspace-demo" aria-labelledby="workspace-offer-title">
-          <div className="raw-product-heading"><h2 id="workspace-offer-title">Meet RAW Business Workspace</h2></div>
-          <figure className="workspace-home-film">
-            <div className="workspace-video-frame"><video controls controlsList="nodownload" playsInline preload="none" poster="/products/raw-workspace/raw-highlight-poster.jpg" width="1920" height="1080" aria-label="RAW Business Workspace highlight"><source src="/products/raw-workspace/raw-highlight.mp4" type="video/mp4" /><track kind="captions" src="/products/raw-workspace/raw-highlight.vtt" srcLang="en" label="English" default />Your browser does not support embedded video. <a href="/products/raw-workspace/raw-highlight.mp4">Watch the highlight</a>.</video></div>
-            <figcaption>Actual RAW interface. Processing waits are condensed.</figcaption>
-            <div className="workspace-film-links"><Link className="text-link" href="/raw-workspace#see-it-in-action">Watch the full demo <span aria-hidden="true">↗</span></Link><a className="text-link" href={bookingLink} target="_blank" rel="noreferrer">Book a demo <span aria-hidden="true">↗</span></a></div>
-          </figure>
+        <section className="shell connected-product" id="connected-frontiers" aria-labelledby="connected-frontiers-title">
+          <div className="connected-product-copy">
+            <p className="eyebrow">Connected Frontiers · A platform by RAW</p>
+            <h2 id="connected-frontiers-title">Your Business.<br /><em>Connected.</em></h2>
+            <p>A cloud-hosted workspace that brings your people, business information and daily work together. Start fresh, discuss moving a workflow or connect the tools you already use.</p>
+            <div className="button-row"><a className="button button-primary" href="https://connectedfrontiers.com/platform/">Explore the platform <span aria-hidden="true">↗</span></a><a className="text-link" href="https://connectedfrontiers.com/industries/">Find your industry <span aria-hidden="true">↗</span></a></div>
+          </div>
+          <div className="connected-product-details">
+            <p className="connected-product-kicker">A clearer place to start each day</p>
+            <article><span>01</span><div><h3>Bring the work together</h3><p>Explore tasks, shared documents, dashboards and reporting around your team’s priorities.</p></div></article>
+            <article><span>02</span><div><h3>Make it fit your business</h3><p>Start with familiar industry workflows, then shape the setup with hands-on help from RAW.</p></div></article>
+            <article><span>03</span><div><h3>Build on what works</h3><p>Review useful software connections and choose where optional AI can help.</p></div></article>
+            <a className="text-link" href="https://connectedfrontiers.com/how-it-works/">See how we get you started <span aria-hidden="true">↗</span></a>
+          </div>
         </section>
       </section>
 
       <section className="raw-opportunities section">
         <div className="shell"><div className="raw-section-heading"><div><p className="eyebrow">A few good places to start</p><h2>Where could this help?</h2></div><p>Start with the work that keeps getting stuck between people, programs and spreadsheets.</p></div>
           <div className="raw-opportunity-list">{opportunities.map(item => <article key={item.number}><span className="raw-number">{item.number}</span><div><p className="eyebrow">{item.tag}</p><h3>{item.title}</h3></div><div><p>{item.text}</p><Link className="text-link" href={item.href}>{item.link} <span aria-hidden="true">↗</span></Link></div></article>)}</div>
-          <p className="raw-scope-note">RAW Workspace is the product you can see today. Custom reporting, integrations and GIS work are scoped around your systems.</p>
+          <p className="raw-scope-note">Explore Connected Frontiers for your business workspace. Custom reporting, integrations and GIS work are scoped around your systems.</p>
         </div>
       </section>
 
