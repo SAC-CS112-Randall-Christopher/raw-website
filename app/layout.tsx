@@ -45,6 +45,7 @@ const structuredData = {
   "@id": `${siteUrl}/#business`,
   name: "Randall Automation Works",
   legalName: "Randall Automation Works LLC",
+  brand: { "@type": "Brand", name: "Connected Frontiers", url: "https://connectedfrontiers.com/" },
   url: siteUrl,
   image: `${siteUrl}/opengraph-image.png`,
   logo: `${siteUrl}/logo-horizontal.svg`,
@@ -77,7 +78,7 @@ const structuredData = {
     "@type": "OfferCatalog",
     name: "Automation and AI services",
     itemListElement: [
-      { "@type": "Offer", itemOffered: { "@type": "SoftwareApplication", name: "RAW Business Workspace", url: `${siteUrl}/raw-workspace`, applicationCategory: "BusinessApplication", description: "Connected customer records, equipment quotes, tasks, documents and reporting, configured around your small business." } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Connected Frontiers workspace setup", url: "https://connectedfrontiers.com/", description: "Business workspace configuration and systems integration with Randall Automation Works.", provider: { "@id": `${siteUrl}/#business` } } },
       ...[
       "AI assistant and LLM setup",
       "Workflow automation",

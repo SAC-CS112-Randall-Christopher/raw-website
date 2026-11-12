@@ -10,18 +10,18 @@ export const pages: PageContent[] = [
     "eyebrow": "Solutions",
     "title": "Connect what you have. Build what’s missing.",
     "lead": "A connected workspace, a recurring report or a better field handoff. Start with one useful change.",
-    "metaDescription": "RAW Business Workspace, custom business automation and GIS integration for Western Colorado. Practical solutions around the software you already use.",
-    "aside": "Start with RAW Workspace when it fits. Scope a focused integration when your work needs something different.",
+    "metaDescription": "Connected Frontiers, custom business automation and GIS integration for Western Colorado. Practical solutions around the software you already use.",
+    "aside": "Start with Connected Frontiers when it fits. Scope a focused integration when your work needs something different.",
     "sections": [
       {
         "heading": "Three ways to move work forward",
         "cards": [
           {
             "label": "01 / Connected office",
-            "title": "RAW Business Workspace",
-            "text": "Bring supported business information, customer context, correspondence and follow-up together. See the actual product before discussing your configuration.",
-            "href": "/raw-workspace",
-            "linkLabel": "Explore the workspace"
+            "title": "Connected Frontiers",
+            "text": "Bring tasks, documents, dashboards and follow-up together. Explore industry workflows and discuss a setup shaped around your team.",
+            "href": "https://connectedfrontiers.com/platform/",
+            "linkLabel": "Explore Connected Frontiers"
           },
           {
             "label": "02 / Reporting & automation",
@@ -322,19 +322,19 @@ export const pages: PageContent[] = [
     "metaTitle": "Connected Work Examples | Randall Automation Works",
     "eyebrow": "Examples & opportunities",
     "title": "See it working. See where it could fit.",
-    "lead": "One real product demonstration. Three focused opportunities for the work around it.",
-    "metaDescription": "Watch RAW Business Workspace in action and explore reporting, customer follow-up and GIS opportunities for your business.",
-    "aside": "See RAW in a product demonstration. The opportunities below are generalized workflow patterns, not published client case studies.",
+    "lead": "A connected business workspace and three focused opportunities to make everyday work easier.",
+    "metaDescription": "Explore Connected Frontiers and practical reporting, customer follow-up and GIS opportunities for your business.",
+    "aside": "Explore the workspace on connectedfrontiers.com. The opportunities below are generalized workflow patterns, not published client case studies.",
     "sections": [
       {
-        "heading": "In the product: from question to next step",
-        "intro": "Watch RAW use connected business information to prepare an answer, a customer reply and reviewed follow-up. Follow Pine Ridge Rental & Service through the actual RAW desktop interface.",
+        "heading": "A workspace shaped around your business",
+        "intro": "Connected Frontiers brings people, business information and daily work together. Start with your team’s workflow and agree the capabilities, software connections and setup that fit.",
         "cards": [
           {
-            "title": "RAW Business Workspace",
-            "text": "Inspect the report, check the supporting information and review the draft and next step before saving. Processing waits are condensed.",
-            "href": "/raw-workspace#see-it-in-action",
-            "linkLabel": "Watch the full demonstration"
+            "title": "Connected Frontiers",
+            "text": "Explore tasks, documents, dashboards and reporting, with industry-focused starting points and hands-on setup support.",
+            "href": "https://connectedfrontiers.com/platform/",
+            "linkLabel": "Explore the platform"
           }
         ]
       },
@@ -465,13 +465,13 @@ export const pages: PageContent[] = [
       },
       {
         "heading": "The approach, made tangible.",
-        "intro": "RAW Business Workspace brings that thinking into a product: connected information, useful context and reviewed next steps in one place.",
+        "intro": "Connected Frontiers brings that thinking into a product: connected information, useful context and reviewed next steps in one place.",
         "cards": [
           {
             "title": "See what I’m building",
-            "text": "Explore the actual workspace and watch a complete product demonstration.",
-            "href": "/raw-workspace",
-            "linkLabel": "Meet RAW Workspace"
+            "text": "Explore Connected Frontiers, the business workspace built by Randall Automation Works, and find a practical starting point for your team.",
+            "href": "https://connectedfrontiers.com/platform/",
+            "linkLabel": "Meet Connected Frontiers"
           }
         ]
       },

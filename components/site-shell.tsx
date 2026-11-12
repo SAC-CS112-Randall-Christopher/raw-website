@@ -8,7 +8,7 @@ const contactPhoneLink = "tel:+19707872161";
 export const bookingLink = "https://calendar.app.google/Qwnjw6tS5TdDo5Hh7";
 
 export const primaryNav = [
-  { href: "/raw-workspace", label: "RAW Workspace" },
+  { href: "https://connectedfrontiers.com/", label: "Connected Frontiers" },
   { href: "/services", label: "Solutions" },
   { href: "/workflow-automation-examples", label: "Examples" },
   { href: "/about", label: "About" },
@@ -56,7 +56,7 @@ export function Footer() {
         </div>
         <div>
           <h2>Explore</h2>
-          <Link href="/raw-workspace">RAW Business Workspace</Link>
+          <a href="https://connectedfrontiers.com/">Connected Frontiers</a>
           <Link href="/services">Solutions</Link>
           <Link href="/workflow-automation-examples">Examples & opportunities</Link>
           <Link href="/how-engagements-work">How engagements work</Link>
@@ -65,6 +65,7 @@ export function Footer() {
         </div>
         <div>
           <h2>Specialties</h2>
+          <Link href="/small-businesses">Small-business automation</Link>
           <Link href="/utilities-and-special-districts">Utilities & special districts</Link>
           <Link href="/gis-modernization">GIS modernization</Link>
           <Link href="/responsible-ai-and-security">AI setup & security</Link>

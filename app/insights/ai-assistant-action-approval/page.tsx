@@ -6,18 +6,19 @@ const canonicalPath = "/insights/ai-assistant-action-approval";
 const title = "AI Assistant Approvals: Decide What It Can Do Before It Acts";
 const description = "Set clear approval rules for a business AI assistant: separate drafts from actions, review the exact change, and handle uncertain results without duplicates.";
 const publicationDate = "2026-10-25";
+const modificationDate = "2026-11-12";
 
 export const metadata: Metadata = {
   title: { absolute: "AI Assistant Action Approvals | Randall Automation Works" }, description,
   alternates: { canonical: canonicalPath }, robots: { index: true, follow: true },
   openGraph: { type: "article", locale: "en_US", siteName: "Randall Automation Works", title, description, url: canonicalPath,
-    publishedTime: publicationDate, modifiedTime: publicationDate, authors: ["Chris Randall"],
+    publishedTime: publicationDate, modifiedTime: modificationDate, authors: ["Chris Randall"],
     images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Randall Automation Works" }] },
   twitter: { card: "summary_large_image", title, description, images: ["/opengraph-image.png"] },
 };
 const articleData = {
   "@context": "https://schema.org", "@type": "Article", headline: title, description,
-  datePublished: publicationDate, dateModified: publicationDate,
+  datePublished: publicationDate, dateModified: modificationDate,
   mainEntityOfPage: `${siteUrl}${canonicalPath}`, image: `${siteUrl}/opengraph-image.png`,
   author: { "@type": "Person", name: "Chris Randall", url: `${siteUrl}/about` },
   publisher: { "@type": "Organization", "@id": `${siteUrl}/#business`, name: "Randall Automation Works",
@@ -105,7 +106,7 @@ export default function ActionApprovalGuide() {
             </section>
             <section id="next-step"><h2>Bring one action you want help with</h2>
               <p>Write down the trigger, required information, proposed change, allowed approver and consequence of getting it wrong. Bring a fictional example and the names of the systems involved. That is enough to start an informed discussion without sharing customer records.</p>
-              <p>Explore <Link href="/services">RAW&apos;s automation and integration services</Link> or watch the public <Link href="/raw-workspace#see-it-in-action">RAW Business Workspace demonstration</Link>. The demonstration shows a particular workflow with review steps; the acceptance tests in this guide are evaluation criteria, not a claim that every connected system or automated action is currently supported. Confirm the exact configuration and action boundaries during scoping.</p>
+              <p>Explore <Link href="/services">RAW&apos;s automation and integration services</Link> or the <a href="https://connectedfrontiers.com/platform/">Connected Frontiers business workspace</a>. Discuss the workflow, supported connections and action boundaries during scoping, then use the acceptance tests in this guide to evaluate the agreed setup.</p>
               <p>Microsoft documentation checked October 25, 2026. Confirm current behavior for the provider and account selected for the actual project.</p>
             </section>
           </div>

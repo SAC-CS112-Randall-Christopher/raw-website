@@ -1,5 +1,4 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 const { default: worker } = await import("../dist/server/index.js");
@@ -13,22 +12,18 @@ const render = async path => {
 const schemas = html => [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)].map(m => JSON.parse(m[1]));
 const text = html => html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "").replace(/<[^>]+>/g, " ").replace(/&(?:amp|quot|#x27);/g, " ").replace(/[^\p{L}\p{N}]+/gu, " ").toLowerCase().trim();
 
-test("the demo watch page exposes the unchanged public transcript, captions and verified duration", async () => {
-  const html = await render("/raw-workspace/demo");
-  const manifest = JSON.parse(await readFile(new URL("../docs/raw-demo-media.json", import.meta.url)));
-  const transcript = JSON.parse(await readFile(new URL("../lib/raw-demo-transcript.json", import.meta.url)));
-  const currentPublicTranscript = await readFile(new URL("../public/products/raw-workspace/raw-demo-transcript.txt", import.meta.url), "utf8");
-  assert.equal(transcript.join("\n\n"), currentPublicTranscript.trim(), "watch transcript follows the actual currently released film");
-  const video = schemas(html).find(node => node["@type"] === "VideoObject");
-  assert.equal(video.duration, manifest.videos["raw-full-demo.mp4"].duration_iso);
-  assert.equal(video.transcript, transcript.join("\n\n"));
-  for (const paragraph of transcript) assert.ok(text(html).includes(text(paragraph)), "transcript is readable without scripts");
-  assert.match(html, /<video[^>]*preload="none"/);
-  assert.match(html, /raw-full-demo\.vtt/);
-  assert.match(html, /fictional business data and synthetic narration/);
-  assert.match(html, /https:\/\/randallautomationworks.com\/raw-workspace\/demo/);
-  const homeVideo = schemas(await render("/")).find(node => node["@type"] === "VideoObject");
-  assert.equal(homeVideo.duration, manifest.videos["raw-highlight.mp4"].duration_iso);
+test("retired product routes redirect only safe requests to the relevant new product page", async () => {
+  for (const path of ["/raw-workspace", "/raw-workspace/demo"]) {
+    for (const method of ["GET", "HEAD"]) {
+      const response = await worker.fetch(new Request(`https://randallautomationworks.com${path}?email=private`, {method}), env, ctx);
+      assert.equal(response.status, 308);
+      assert.equal(response.headers.get("Location"), "https://connectedfrontiers.com/platform/");
+    }
+    const response = await worker.fetch(new Request(`https://randallautomationworks.com${path}`, {method:"POST",body:"private"}), env, ctx);
+    assert.equal(response.status, 405);
+    assert.equal(response.headers.get("Location"), null);
+  }
+  assert.equal((await worker.fetch(new Request("https://randallautomationworks.com/raw-workspace-unrelated"),env,ctx)).status,404);
 });
 
 test("FAQ structured answers are exactly supported by visible article text", async () => {
@@ -49,6 +44,7 @@ test("brand and website identities stay connected without exposing private route
   assert.equal(website.publisher["@id"], "https://randallautomationworks.com/#business");
   assert.equal(website["@id"], "https://randallautomationworks.com/#website");
   const sitemap = await render("/sitemap.xml");
-  assert.match(sitemap, /\/raw-workspace\/demo<\/loc>/);
+  assert.doesNotMatch(sitemap, /\/raw-workspace/);
+  assert.match(sitemap, /\/insights\/ai-assistant-action-approval<\/loc>/);
   assert.doesNotMatch(sitemap, /\/admin\//);
 });

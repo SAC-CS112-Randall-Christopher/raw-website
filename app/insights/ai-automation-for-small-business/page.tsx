@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description,
     url: canonicalPath,
     publishedTime: "2026-08-16T00:00:00-06:00",
-    modifiedTime: "2026-10-25T00:00:00-06:00",
+    modifiedTime: "2026-11-12T00:00:00-06:00",
     authors: ["Chris Randall"],
     images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Randall Automation Works" }],
   },
@@ -45,7 +45,7 @@ const articleData = {
   headline: title,
   description,
   datePublished: "2026-08-16",
-  dateModified: "2026-10-25",
+  dateModified: "2026-11-12",
   mainEntityOfPage: `${siteUrl}${canonicalPath}`,
   image: `${siteUrl}/opengraph-image.png`,
   author: {

@@ -37,14 +37,14 @@ test("renders production branding without staging metadata", async () => {
   assert.match(html, /Your software works/);
   assert.match(html, /We make it work together/);
   assert.doesNotMatch(html, /raw-copper-brand\.jpg|raw-brand-art/);
-  assert.match(html, /Meet RAW Business Workspace/);
+  assert.match(html, /Connected Frontiers/);
   assert.match(html, /<meta name="viewport" content="width=device-width, initial-scale=1"/);
-  assert.match(html, /Actual RAW interface/);
+  assert.doesNotMatch(html, /RAW Business Workspace|RAW Workspace|RAW Harness/);
   assert.match(html, /Custom reporting, integrations and GIS work are scoped around your systems/);
   const nav = html.match(/<nav class="desktop-nav"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
   assert.ok(nav);
   assert.equal((nav.match(/<a /g) ?? []).length, 5, "Four primary pages and one booking link");
-  for (const path of ["/raw-workspace", "/services", "/workflow-automation-examples", "/about"]) assert.ok(nav.includes(`href="${path}"`));
+  for (const path of ["https://connectedfrontiers.com/", "/services", "/workflow-automation-examples", "/about"]) assert.ok(nav.includes(`href="${path}"`));
   assert.match(html, /href="\/responsible-ai-and-security"/i);
   assert.match(html, /free 30-minute consultation/i);
   assert.match(html, /paid assessment/i);
@@ -320,7 +320,7 @@ test("redirects production HTTP and www permanently while preserving path and qu
 test("preserves unique indexable metadata for every sitemap route", async () => {
   const sitemap = await renderReviewPage("/sitemap.xml");
   const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-  assert.equal(urls.length, 29);
+  assert.equal(urls.length, 27);
   assert.equal(new Set(urls).size, urls.length);
   const titles = new Set();
   const descriptions = new Set();
@@ -337,7 +337,7 @@ test("preserves unique indexable metadata for every sitemap route", async () => 
     assert.doesNotMatch(metaContent(html, "robots") ?? "", /noindex/, path);
     assert.equal((html.match(/<h1\b/g) ?? []).length, 1, path);
   }
-  for (const [path, date] of [["workflow-automation-examples", "2026-10-04"], ["insights", "2026-10-25"], ["services", "2026-10-25"], ["insights/ai-assistant-action-approval", "2026-10-25"], ["insights/ai-integration-readiness-checklist", "2026-10-18"], ["local-ai-deployments", "2026-10-11"], ["insights/local-vs-hosted-ai-assistants", "2026-10-11"], ["insights/prepare-sops-for-ai-assistant", "2026-10-04"], ["privacy", "2026-09-30"], ["terms", "2026-09-30"]]) {
+  for (const [path, date] of [["workflow-automation-examples", "2026-11-12"], ["insights", "2026-10-25"], ["services", "2026-11-12"], ["insights/ai-assistant-action-approval", "2026-11-12"], ["insights/ai-integration-readiness-checklist", "2026-10-18"], ["local-ai-deployments", "2026-10-11"], ["insights/local-vs-hosted-ai-assistants", "2026-10-11"], ["insights/prepare-sops-for-ai-assistant", "2026-10-04"], ["privacy", "2026-09-30"], ["terms", "2026-09-30"]]) {
     assert.match(sitemap, new RegExp(`<loc>https://randallautomationworks\\.com/${path}</loc>\\s*<lastmod>${date}</lastmod>`), path);
   }
 });
@@ -351,14 +351,14 @@ test("describes the Montrose organization and distinguishes product proof from o
   assert.equal(organization.location.name, "Montrose, Colorado");
   assert.equal(organization.address, undefined);
   assert.ok(organization.hasOfferCatalog.itemListElement.every((offer) => ["Service", "SoftwareApplication"].includes(offer.itemOffered["@type"])));
-  const workspace = organization.hasOfferCatalog.itemListElement.find((offer) => offer.itemOffered.name === "RAW Business Workspace");
-  assert.equal(workspace.itemOffered.url, "https://randallautomationworks.com/raw-workspace");
+  const workspace = organization.hasOfferCatalog.itemListElement.find((offer) => offer.itemOffered.name === "Connected Frontiers workspace setup");
+  assert.equal(workspace.itemOffered.url, "https://connectedfrontiers.com/");
   assert.doesNotMatch(html, /ProfessionalService/);
   const examples = await renderReviewPage("/workflow-automation-examples");
-  assert.match(examples, /actual RAW desktop interface/);
+  assert.match(examples, /Connected Frontiers/);
   assert.match(examples, /not published client case studies/);
-  assert.match(examples, /Processing waits are condensed/);
-  assert.match(examples, /href="\/raw-workspace#see-it-in-action"/);
+  assert.doesNotMatch(examples, /RAW Business Workspace|RAW Workspace|RAW Harness/);
+  assert.match(examples, /href="https:\/\/connectedfrontiers\.com\/platform\/"/);
 });
 
 test("discloses the currently observed website providers without launch placeholders", async () => {
@@ -392,4 +392,18 @@ test("publishes integration readiness with consistent dates and acceptance evide
   for (const source of ["https://learn.microsoft.com/en-us/graph/delta-query-overview", "https://learn.microsoft.com/en-us/graph/throttling"]) assert.ok(html.includes(`href="${source}"`));
   for (const incoming of ["/insights", "/services"]) assert.ok((await renderReviewPage(incoming)).includes(`href="${path}"`));
   for (const destination of ["/services", "/workflow-automation-examples", "/how-engagements-work", "/contact"]) assert.ok(html.includes(`href="${destination}"`));
+});
+
+
+test("all current public pages retire the old product brand and keep a small-business discovery path", async () => {
+  const sitemap = await renderReviewPage("/sitemap.xml");
+  const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1]);
+  assert.equal(urls.length, 27);
+  for (const url of urls) {
+    const html = await renderReviewPage(new URL(url).pathname);
+    assert.doesNotMatch(html, /RAW (?:Business Workspace|Workspace|Harness)/, url);
+    assert.match(html, /href="\/small-businesses"/, url);
+    assert.match(html, /href="https:\/\/connectedfrontiers\.com\/"/, url);
+  }
+  assert.match(await renderReviewPage("/contact"), /Connected Frontiers workspace setup/);
 });
