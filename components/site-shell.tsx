@@ -65,6 +65,7 @@ export function Footer() {
         </div>
         <div>
           <h2>Specialties</h2>
+          <Link href="/small-businesses">Small-business automation</Link>
           <Link href="/utilities-and-special-districts">Utilities & special districts</Link>
           <Link href="/gis-modernization">GIS modernization</Link>
           <Link href="/responsible-ai-and-security">AI setup & security</Link>
