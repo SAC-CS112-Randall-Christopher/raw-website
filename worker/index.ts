@@ -1,11 +1,14 @@
 /** Cloudflare Worker entry point for the vinext-starter template. */
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
+import { collectMarketingEvent } from "../lib/marketing-collector";
 import { canonicalRedirect } from "../lib/canonical-redirect";
+import { legacyProductRedirect } from "../lib/legacy-product-redirect";
 import { studioGateway } from "../lib/dmph-gateway.mjs";
 import { publicDemoVideo } from "../lib/public-demo-video.mjs";
 
 interface Env {
+  MARKETING_METRICS?: D1Database;
   DMPH_STUDIO_ORIGIN?: string;
   DMPH_GATEWAY_TOKEN?: string;
   ASSETS: Fetcher;
@@ -35,7 +38,12 @@ const worker = {
     const redirect = canonicalRedirect(request);
     if (redirect) return redirect;
 
+    const legacy = legacyProductRedirect(request);
+    if (legacy) return legacy;
+
     const url = new URL(request.url);
+    if (url.pathname === "/api/marketing-events") return collectMarketingEvent(request, env.MARKETING_METRICS);
+
     const studio = await studioGateway(request, env);
     if (studio) return studio;
     const video = await publicDemoVideo(request);

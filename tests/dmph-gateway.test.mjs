@@ -63,3 +63,38 @@ test('rejects cross-origin changes, unsafe redirects, invalid origins and oversi
   for (const origin of ['http://studio-origin.example', 'https://randallautomationworks.com', 'https://user:pass@studio-origin.example']) assert.equal((await studioGateway(new Request(base + '/login.html'), { ...env, DMPH_STUDIO_ORIGIN: origin })).status, 503);
   assert.equal((await studioGateway(new Request(base + '/api/footage', { method: 'POST', headers: { Origin: 'https://randallautomationworks.com', 'Content-Length': '100000000' } }), env)).status, 413);
 });
+
+test('permits only the fixed Social form destination on the Studio launch document', async () => {
+  for (const path of ['/social.html', '/editor.html', '/login.html']) {
+    const result = await studioGateway(new Request(base + path), env, async () => new Response('fixture'));
+    const formAction = result.headers.get('Content-Security-Policy').split('form-action ')[1];
+    assert.equal(formAction, "'self'" + (path === '/social.html' ? ' https://social.randallautomationworks.com' : ''));
+    assert.equal(result.headers.get('Referrer-Policy'),path === '/social.html' ? 'strict-origin-when-cross-origin' : 'same-origin');
+  }
+});
+
+test('only the exact Social return endpoint accepts a bounded form POST from Social', async () => {
+  const body = 'code=' + 'a'.repeat(43);
+  const headers = { Origin: 'https://social.randallautomationworks.com', 'Content-Type': 'application/x-www-form-urlencoded' };
+  let forwarded = 0;
+  const upstream = async request => {
+    forwarded++;
+    assert.equal(request.url, 'https://studio-origin.example/auth/launch');
+    assert.equal(request.headers.get('Origin'), headers.Origin);
+    assert.equal(await request.text(), body);
+    return new Response(null, { status: 303, headers: { Location: '/admin/dmph/editor.html', 'Set-Cookie': 'dmph_session=fixture; HttpOnly; Secure; SameSite=Strict; Path=/admin/dmph/' } });
+  };
+  const result = await studioGateway(new Request(base + '/auth/launch', { method: 'POST', body, headers }), env, upstream);
+  assert.equal(result.status, 303);assert.match(result.headers.get('Set-Cookie'), /HttpOnly; Secure/);
+  for (const path of ['/api/auth/login', '/api/auth/password', '/api/jobs', '/auth/launch?unexpected=1', '/auth/launch/']) {
+    assert.equal((await studioGateway(new Request(base + path, { method: 'POST', body, headers }), env, upstream)).status, 403);
+  }
+  for (const origin of ['https://attacker.example', 'https://social.randallautomationworks.com.attacker.example', 'null']) {
+    assert.equal((await studioGateway(new Request(base + '/auth/launch', { method: 'POST', body, headers: { ...headers, Origin: origin } }), env, upstream)).status, 403);
+  }
+  for (const payload of ['code=invalid', body + '&code=' + 'b'.repeat(43), 'x'.repeat(513)]) {
+    assert.ok([400, 413].includes((await studioGateway(new Request(base + '/auth/launch', { method: 'POST', body: payload, headers }), env, upstream)).status));
+  }
+  assert.equal((await studioGateway(new Request(base + '/auth/launch', { method: 'POST', body, headers: { ...headers, 'Content-Type': 'application/json' } }), env, upstream)).status, 400);
+  assert.equal(forwarded, 1);
+});

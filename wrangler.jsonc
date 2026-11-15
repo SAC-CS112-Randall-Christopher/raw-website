@@ -12,6 +12,11 @@
       "/products/raw-workspace/raw-full-demo.mp4"
     ]
   },
+  "d1_databases": [{
+    "binding": "MARKETING_METRICS",
+    "database_name": "raw-marketing-metrics",
+    "database_id": "42a6aa4e-c5a0-4b2f-ad94-710fe145393d"
+  }],
   "observability": {
     "enabled": true
   },

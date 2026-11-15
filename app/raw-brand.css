@@ -122,3 +122,19 @@
   .raw-product-showcase .workspace-film-links { gap: 10px 20px; }
   .raw-product-showcase .text-link { font-size: 11px; }
 }
+
+/* Connected Frontiers is the product; RAW remains the consultancy. */
+.connected-product { display:grid; grid-template-columns:1.1fr 1fr; gap:64px; padding:48px; border:1px solid #547b795c; border-radius:12px; background:linear-gradient(135deg,#132c2d,#111b20); }
+.connected-product h2 { font-size:clamp(36px,4vw,56px); line-height:1.1; letter-spacing:-.045em; font-weight:500; margin:0 0 22px; }
+.connected-product h2 em { font-style:normal; color:#9ed9ca; }
+.connected-product-copy > p:not(.eyebrow) { color:#c4d3d0; font-size:16px; line-height:1.8; }
+.connected-product .button-row { justify-content:flex-start; flex-wrap:wrap; gap:18px; }
+.connected-product .text-link { color:#a9dfd1; font-size:13px; margin-top:0; border-color:#547b79; }
+.connected-product-kicker { margin:0 0 8px; color:#a9c4c0; font-size:11px; letter-spacing:.08em; text-transform:uppercase; }
+.connected-product-details article { display:flex; gap:20px; padding:20px 0; border-bottom:1px solid #ffffff1a; }
+.connected-product-details article > span { font-size:11px; color:#dfad86; padding-top:4px; }
+.connected-product-details h3 { margin:0 0 7px; font-size:19px; font-weight:550; }
+.connected-product-details article p { margin:0; color:#b9ceca; font-size:14px; line-height:1.7; }
+.connected-product-details > .text-link { display:inline-block; margin-top:24px; }
+@media(max-width:800px) { .connected-product { grid-template-columns:1fr; gap:30px; padding:30px; } }
+@media(max-width:480px) { .connected-product { padding:25px 22px; width:calc(100% - 32px); } .connected-product .button-row { gap:18px; align-items:flex-start; flex-direction:column; } }

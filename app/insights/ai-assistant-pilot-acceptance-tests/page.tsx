@@ -5,7 +5,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://randallautomationwo
 const canonicalPath = "/insights/ai-assistant-pilot-acceptance-tests";
 const title = "How to Test an AI Assistant Pilot Before You Roll It Out";
 const description = "Build a small acceptance pack for a business AI assistant: check source-backed answers, missing information, reviewer effort and a clear rollout decision.";
-const publicationDate = "2026-11-01";
+const publicationDate = "2026-11-15";
 
 export const metadata: Metadata = {
   title: { absolute: "AI Assistant Pilot Acceptance Tests | Randall Automation Works" }, description,
@@ -41,7 +41,7 @@ export default function PilotAcceptanceGuide() {
           <nav className="breadcrumbs" aria-label="Breadcrumb"><Link href="/">Home</Link><span aria-hidden="true">/</span><Link href="/insights">Insights</Link></nav>
           <p className="eyebrow">Business assistants &amp; pilot evaluation</p><h1>{title}</h1>
           <p className="article-deck">Bring a small set of questions the seller has not rehearsed. Judge the answers against known evidence, record the work left for your employee and decide what still needs fixing.</p>
-          <div className="article-byline"><span>By Chris Randall</span><span aria-hidden="true">&bull;</span><time dateTime={publicationDate}>November 1, 2026</time></div>
+          <div className="article-byline"><span>By Chris Randall</span><span aria-hidden="true">&bull;</span><time dateTime={publicationDate}>November 15, 2026</time></div>
         </div></header>
         <div className="shell article-layout">
           <aside className="article-toc" aria-label="Article contents"><p className="article-toc-title">In this guide</p><nav>
@@ -50,6 +50,7 @@ export default function PilotAcceptanceGuide() {
           <div className="article-body">
             <p className="article-intro">You have seen an assistant find a job note and produce a clear answer. Before paying to roll it out across a Western Colorado office, ask a narrower question: can it handle the questions your staff actually ask, including the ones it should not answer?</p>
             <p>A repeatable acceptance pack helps you compare the pilot with your current process. It also separates a good demonstration from evidence about an agreed workload. This guide focuses on read-only answers and drafts. Connections and permissions need their own <Link href="/insights/ai-integration-readiness-checklist">integration readiness checks</Link>; sending messages or changing records needs separate <Link href="/insights/ai-assistant-action-approval">action approval tests</Link>.</p>
+            <p>This checklist is RAW&apos;s practical proposal for a bounded pilot, not a certification or an official acceptance standard. It follows the evaluation principles in the <a href="https://airc.nist.gov/airmf-resources/playbook/measure/">NIST AI RMF Measure playbook</a>: document test sets, metrics and tools; test in conditions relevant to deployment; and state the limits of what the results establish.</p>
             <section id="decision"><h2>1. Define the task before counting correct answers</h2>
               <p>Choose one employee role and one job: for example, helping an office coordinator locate the current approved procedure. Write down the approved sources, what a useful answer must contain and what remains the employee&apos;s responsibility. Keep estimates, commitments and instructions outside that scope unless they have been explicitly evaluated.</p>
               <p>Agree on acceptance criteria before the vendor sees the test questions. Include source accuracy, correct refusal or clarification, permissions and the effort required to check the answer. Decide which failures stop rollout regardless of the overall score. Revealing a restricted record or inventing a customer commitment should not disappear inside a high average.</p>
@@ -85,12 +86,13 @@ export default function PilotAcceptanceGuide() {
             <section id="retest"><h2>5. Keep a few cases out of the tuning loop</h2>
               <p>Split the pack into examples the implementer can use to improve the setup and a separate acceptance set the implementer has not rehearsed. Keep expected answers away from the assistant&apos;s retrieval sources. Otherwise it may repeat the answer key rather than solve the task.</p>
               <p>After a fix, rerun the failed cases and previously passing cases that the change could affect. Record the model, configuration, source revisions and test date so results remain attributable. If an acceptance case is exposed during debugging, mark it as exposed and add a new comparable case for the next independent check. Do not quietly reuse it as unseen evidence.</p>
+              <p>The <a href="https://developers.openai.com/api/docs/guides/evaluation-best-practices">OpenAI evaluation best-practices guide</a> also recommends task-specific tests, human judgment and coverage of typical, edge and adversarial cases. These are evaluation methods, not a requirement to buy a particular evaluation tool.</p>
               <p>For variable outputs, agree on repeated runs and record every result. Selecting the best of several attempts hides inconsistency. More attempts on the same narrow pack also do not establish coverage of new kinds of work.</p>
             </section>
             <section id="handoff"><h2>6. Make a bounded rollout decision</h2>
               <p>End with one of three decisions: accept the demonstrated scope, fix named issues and retest, or stop the pilot. Write down excluded tasks, unresolved cases, the person who can pause use and what changes trigger another check. A new source, model or permission setup may invalidate part of the earlier evidence.</p>
               <p>Ask for the case pack, results, operating instructions and ownership of the configuration as part of the handoff. Begin with the evaluated role and task rather than immediately adding more records or letting drafts become automatic actions.</p>
-              <p><Link href="/services">RAW&apos;s automation and integration services</Link> can start with a scoped workflow discussion. The public <Link href="/raw-workspace">RAW Business Workspace demonstration</Link> illustrates a particular workflow; it does not establish results on your documents or promise every test behavior described here. Bring a fictional task, your existing software names and the acceptance decision you need to make.</p>
+              <p><Link href="/services">RAW&apos;s automation and integration services</Link> can start with a scoped workflow discussion. For the current product overview, see <a href="https://connectedfrontiers.com/platform/">Connected Frontiers</a>. A product overview does not establish results on your documents or promise every test behavior described here. Bring a fictional task, your existing software names and the acceptance decision you need to make.</p>
             </section>
           </div>
         </div>

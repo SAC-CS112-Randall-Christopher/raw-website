@@ -10,18 +10,18 @@ export const pages: PageContent[] = [
     "eyebrow": "Solutions",
     "title": "Connect what you have. Build what’s missing.",
     "lead": "A connected workspace, a recurring report or a better field handoff. Start with one useful change.",
-    "metaDescription": "RAW Business Workspace, custom business automation and GIS integration for Western Colorado. Practical solutions around the software you already use.",
-    "aside": "Start with RAW Workspace when it fits. Scope a focused integration when your work needs something different.",
+    "metaDescription": "Connected Frontiers, custom business automation and GIS integration for Western Colorado. Practical solutions around the software you already use.",
+    "aside": "Start with Connected Frontiers when it fits. Scope a focused integration when your work needs something different.",
     "sections": [
       {
         "heading": "Three ways to move work forward",
         "cards": [
           {
             "label": "01 / Connected office",
-            "title": "RAW Business Workspace",
-            "text": "Bring supported business information, customer context, correspondence and follow-up together. See the actual product before discussing your configuration.",
-            "href": "/raw-workspace",
-            "linkLabel": "Explore the workspace"
+            "title": "Connected Frontiers",
+            "text": "Bring tasks, documents, dashboards and follow-up together. Explore industry workflows and discuss a setup shaped around your team.",
+            "href": "https://connectedfrontiers.com/platform/",
+            "linkLabel": "Explore Connected Frontiers"
           },
           {
             "label": "02 / Reporting & automation",
@@ -98,32 +98,189 @@ export const pages: PageContent[] = [
     ],
   },
   {
-    slug: "small-businesses", navLabel: "Small Businesses", metaTitle: "Small-Business AI Automation | Randall Automation Works", eyebrow: "Small-business automation",
-    title: "Fewer dropped handoffs. Less repetitive administration. Better-supported employees.",
-    lead: "Practical improvements for Western Colorado businesses that have outgrown informal processes but do not need an enterprise transformation project.",
-    metaDescription: "Practical Python, SQL, systems integration and AI workflow automation for Western Colorado small businesses and local organizations.",
-    aside: "The best first project is usually visible, repetitive and easy for employees to evaluate.",
-    sections: [
-      { heading: "Where small teams feel the strain", intro: "When every employee wears several hats, scattered information and manual follow-up create more risk than they appear to.", bullets: ["Customer information arrives through several channels", "The same details are entered more than once", "Follow-ups depend on individual memory", "Reports require manual spreadsheet assembly", "Policies and answers are difficult to locate", "Experienced employees become workflow bottlenecks"] },
-      { heading: "Customer intake and follow-up", intro: "Create a clearer path from a new inquiry to the next responsible person.", cards: [{ title: "Intake", text: "Standardize information from forms, email or calls without complicating the customer experience." }, { title: "Routing", text: "Send the right details to the right person and surface missing information before work stalls." }, { title: "Follow-up", text: "Prepare reminders, status updates and draft communications for employee review." }, { title: "Visibility", text: "Give managers a clearer view of open requests, aging items and recurring exceptions." }] },
-      { heading: "Administrative operations", intro: "Connect familiar tools instead of replacing them unnecessarily.", bullets: ["Document routing and file naming", "Recurring internal reports", "Scheduling and task follow-up", "Email and communication workflows", "Spreadsheet and database connections", "Small Python, SQL or Visual Basic tools for rule-based work", "JSON and API connections between approved applications", "Shared-drive and knowledge organization"] },
-      { heading: "Keep the solution proportional", intro: "A small organization should not inherit enterprise-level cost and complexity for a workflow that can be solved clearly with focused code.", callout: { title: "Automation first. AI where useful.", text: "If a dependable Python script, SQL report, JSON connection or Visual Basic tool solves the problem, that may be the right answer. AI is reserved for work where language, unstructured information or flexible interpretation adds meaningful value." } },
-      { heading: "Organizations this can fit", intro: "The approach is designed for local organizations with practical work and limited capacity for drawn-out consulting projects.", bullets: ["Contractors and skilled trades", "Engineering, surveying and GIS firms", "Property-management businesses", "Agricultural businesses", "Professional and administrative offices", "Nonprofits and membership organizations"] },
-      { heading: "Employee-supportive implementation", intro: "The people doing the work should help shape the workflow and evaluate whether it actually helps.", callout: { title: "Automate avoidable workload—not accountability", text: "The aim is to remove repetitive steps, make handoffs clearer and give employees better information while preserving human judgment and customer relationships." } },
-    ],
+    "slug": "small-businesses",
+    "navLabel": "Small Businesses",
+    "metaTitle": "Small-Business Workflow Automation in Montrose, CO | RAW",
+    "eyebrow": "Small-business workflow automation",
+    "title": "Less re-entering. Better follow-up. Reports you can use.",
+    "lead": "Connect the forms, inboxes, spreadsheets and business software your team already uses. Randall Automation Works helps small businesses in Montrose, Grand Junction and Western Colorado start with one recurring problem and a clear way to measure improvement.",
+    "metaDescription": "Small-business workflow automation in Montrose and Western Colorado: customer follow-up, recurring reports, spreadsheet integration and Connected Frontiers setup.",
+    "aside": "Bring one real example of the work: the starting information, the tools involved and what a useful result should look like.",
+    "sections": [
+      {
+        "heading": "Three practical places to start",
+        "intro": "These are examples of work we can scope together, rather than published client results or promises of a particular saving.",
+        "cards": [
+          {
+            "title": "Stop entering the same details twice",
+            "text": "An inquiry arrives in a form or inbox, then someone copies it into a spreadsheet and creates a task. A focused integration can check required details, prepare the record and assign the next step. Staff review missing information and duplicates."
+          },
+          {
+            "title": "Make customer follow-up visible",
+            "text": "Track who owns each request, what is waiting and when to follow up. Prepare reminders and communication drafts while your team stays responsible for customer commitments."
+          },
+          {
+            "title": "Build the recurring report once",
+            "text": "Combine approved spreadsheet or database exports into a repeatable report. Check totals and exceptions against the source, then give the responsible employee a reviewable summary."
+          }
+        ]
+      },
+      {
+        "heading": "Choose a workspace or a focused connection",
+        "intro": "You can start with a shared workspace, move one workflow into it or connect existing tools. The right choice depends on where the information lives and who needs to act.",
+        "cards": [
+          {
+            "title": "A shared place for the work",
+            "text": "Explore Connected Frontiers when tasks, documents, reporting and handoffs need a common home. Review the proposed setup and available connections before deciding what to move.",
+            "href": "https://connectedfrontiers.com/industries/professional-services/",
+            "linkLabel": "Explore client delivery and approvals"
+          },
+          {
+            "title": "Field visits and follow-up",
+            "text": "For service teams, connect visit preparation, missing information and office follow-through. GPS collection and GIS integration can be scoped separately when locations or mapped assets matter.",
+            "href": "https://connectedfrontiers.com/industries/field-service/",
+            "linkLabel": "Explore field-service workflows"
+          },
+          {
+            "title": "Keep a useful system in place",
+            "text": "A Python script, SQL report, spreadsheet improvement or API connection may solve the problem without replacing core software. We review exports, permissions and vendor access first.",
+            "href": "/workflow-automation-examples",
+            "linkLabel": "See focused automation examples"
+          }
+        ]
+      },
+      {
+        "heading": "What a first project includes",
+        "bullets": [
+          "One agreed workflow, the people involved and its current starting point",
+          "A review of existing software, exports, permissions and required connections",
+          "A written scope covering deliverables, price, ongoing costs and responsibilities",
+          "Testing with representative records, missing information and failure cases",
+          "Employee review, operating instructions, training and a clear recovery path"
+        ],
+        "callout": {
+          "title": "Measure the work before and after",
+          "text": "Compare time per task, turnaround, corrections, overdue follow-ups and total running cost. Establish the baseline with your team; no percentage saving is assumed."
+        }
+      },
+      {
+        "heading": "Does this need AI?",
+        "intro": "Often it does not. Use ordinary automation for clear rules and predictable records. AI can help with variable documents, internal search and draft summaries when it adds value and people can review the result.",
+        "cards": [
+          {
+            "title": "Seven workflows to evaluate",
+            "text": "Use the practical guide to choose work worth automating and understand what should stay human.",
+            "href": "/insights/ai-automation-for-small-business",
+            "linkLabel": "Read the small-business automation guide"
+          },
+          {
+            "title": "Discuss one recurring problem",
+            "text": "Tell Chris what happens today, which tools you use and where work gets delayed. Start with a free 30-minute conversation.",
+            "href": "/contact?service=automation&from=small-business",
+            "linkLabel": "Discuss your workflow"
+          }
+        ]
+      }
+    ]
   },
   {
-    slug: "gis-and-field-operations", navLabel: "GIS & Field Operations", metaTitle: "GIS & Field Operations Automation | Randall Automation Works", eyebrow: "GIS & field operations",
-    title: "Connect what happens in the field with what the office needs to know.",
-    lead: "Improve field-form processing, inspection workflows, asset reporting and data-quality review without separating GIS from the people who use it.",
-    metaDescription: "GIS workflow automation, field data processing, inspections, work-order support and asset information integration in Western Colorado.",
-    aside: "GIS is most valuable when asset information, field observations and business workflows reinforce one another.",
-    sections: [
-      { heading: "Field-to-office workflows", intro: "Reduce the delay and rework between collecting information and using it.", bullets: ["Process approved mobile forms and attachments", "Route incomplete or unusual records for review", "Prepare field-activity summaries", "Connect inspection results with responsible staff", "Standardize recurring notifications", "Document each handoff and exception path"] },
-      { heading: "Asset-information workflows", intro: "Bring spatial and business information together carefully, with ownership and source systems clearly defined.", cards: [{ title: "GIS reporting", text: "Turn asset and location information into recurring, audience-appropriate summaries." }, { title: "Data quality", text: "Identify missing attributes, suspicious values, duplicates and records that need human review." }, { title: "Work-order support", text: "Connect approved asset identifiers and field context with maintenance or service workflows." }, { title: "Document connections", text: "Improve the path between GIS features and relevant photos, forms, as-builts or technical records." }] },
-      { heading: "Practical integration", intro: "GIS does not need to become the system of record for every detail. Good integration respects where information belongs.", bullets: ["Define authoritative systems and record ownership", "Use stable identifiers where possible", "Limit write access and automate conservatively", "Log changes and exceptions", "Preserve a human correction path", "Document dependencies and recovery steps"] },
-      { heading: "Human-reviewed outputs", intro: "Automated checks and summaries are most useful when employees can understand what happened and correct it.", callout: { title: "Exceptions should become easier to see—not easier to hide", text: "The workflow should show source records, reasons for flags and the person responsible for review." } },
-    ],
+    "slug": "gis-and-field-operations",
+    "navLabel": "GIS & Field Operations",
+    "metaTitle": "ArcGIS, Survey123, QGIS & GPS Field Work | Montrose, CO",
+    "eyebrow": "GIS, GPS & field operations",
+    "title": "Bring field records, mapped assets and office work together.",
+    "lead": "Practical GIS services for utilities, special districts and field teams in Montrose and Western Colorado. Configure ArcGIS Field Maps and Survey123, work with QGIS, and connect Trimble GPS/GNSS collection to useful asset records, inspections and reports.",
+    "metaDescription": "ArcGIS Field Maps, Survey123, QGIS and Trimble GPS/GNSS field work in Montrose and Western Colorado. Asset mapping, inspections, data cleanup and GIS integration.",
+    "aside": "Start with the map, field form, GPS equipment or recurring report you use today. We’ll identify the missing connection and agree on a practical scope.",
+    "sections": [
+      {
+        "heading": "GIS tools shaped around the work",
+        "cards": [
+          {
+            "title": "ArcGIS Field Maps",
+            "text": "Configure web maps, asset layers, field forms and editing permissions for mobile data collection. Review offline map areas, sync behavior and GPS/GNSS location settings against the team’s equipment and workflow."
+          },
+          {
+            "title": "ArcGIS Survey123",
+            "text": "Build inspection and maintenance forms with required fields, conditional questions, photos and asset references. Survey123 Connect and XLSForm can support more specific form requirements and related-record workflows."
+          },
+          {
+            "title": "ArcGIS Pro, ArcGIS Online and dashboards",
+            "text": "Prepare spatial data, publish appropriate layers, organize web maps and create reporting views. Review ArcGIS Enterprise connections against the existing environment, access and licensing."
+          },
+          {
+            "title": "QGIS and spatial data cleanup",
+            "text": "Work with QGIS projects, GeoPackage, shapefiles, GeoJSON and approved spatial databases such as PostGIS. Review coordinate reference systems, attributes, geometry and exports so records can be reused reliably."
+          },
+          {
+            "title": "Trimble GPS/GNSS field work",
+            "text": "Collect and update GIS asset locations with Trimble equipment, then review coordinates, attributes and available accuracy metadata before bringing records into ArcGIS or QGIS. Scope receiver, correction-service and software requirements around the accuracy the work needs."
+          },
+          {
+            "title": "GIS data integration and automation",
+            "text": "Connect stable asset IDs, inspection records, work orders, photos and approved business-system exports. Use repeatable Python, SQL and API workflows for validation, reporting and exception review."
+          }
+        ]
+      },
+      {
+        "heading": "What the field-to-office workflow can look like",
+        "intro": "These examples describe workflows we can design and test together. Your existing systems, permissions and data quality determine the final scope.",
+        "cards": [
+          {
+            "title": "An inspection that reaches the right person",
+            "text": "A technician completes a Survey123 inspection tied to a mapped asset. Required information is checked, exceptions are routed for review and staff can see the next responsible person instead of searching separate inboxes."
+          },
+          {
+            "title": "An asset location with usable context",
+            "text": "GPS/GNSS collection captures the asset and its attributes. The office reviews location quality, coordinate systems and missing details before the information is added to an asset inventory or maintenance map."
+          },
+          {
+            "title": "Maintenance history that supports planning",
+            "text": "Link approved inspection and repair records to asset IDs, then prepare recurring condition and activity summaries. Managers can trace priorities back to records when reviewing maintenance and capital improvement plans."
+          }
+        ]
+      },
+      {
+        "heading": "Useful for field teams across Western Colorado",
+        "intro": "Projects can support water and wastewater utilities, special districts, public works, contractors, property-maintenance teams and organizations managing mapped assets. Common starting points include asset inventory, condition assessments, valve and hydrant inspections, maintenance records, mobile forms and field-to-office reporting.",
+        "cards": [
+          {
+            "title": "Modernize the GIS foundation",
+            "text": "Review legacy maps, spreadsheets, maintenance history and ArcGIS setup before connecting additional workflows.",
+            "href": "/gis-modernization",
+            "linkLabel": "Explore GIS modernization"
+          },
+          {
+            "title": "Coordinate the work around a visit",
+            "text": "Connected Frontiers focuses on visit readiness and follow-up. Discuss a scoped GIS connection when maps and field records need to support that broader workflow.",
+            "href": "https://connectedfrontiers.com/industries/field-service/",
+            "linkLabel": "Explore Connected Frontiers for field service"
+          }
+        ]
+      },
+      {
+        "heading": "Start with one field workflow",
+        "bullets": [
+          "Review a representative form, layer, asset record or report with your team",
+          "Agree on required attributes, location accuracy, permissions and the source system",
+          "Configure and test the workflow with real equipment and representative records",
+          "Check missing data, offline/sync behavior where relevant and exception handling",
+          "Document the process, train staff and define support and recovery responsibilities"
+        ],
+        "callout": {
+          "title": "Match location accuracy to the job",
+          "text": "GPS/GNSS accuracy depends on equipment, corrections, conditions and configuration. GIS asset mapping is scoped separately from licensed boundary surveying or engineering work."
+        },
+        "cards": [
+          {
+            "title": "Talk through your GIS or GPS project",
+            "text": "Bring the tools you use today and the result your crew or office needs. Start with a free 30-minute conversation with Chris.",
+            "href": "/contact?service=gis&from=gis-field",
+            "linkLabel": "Discuss your field workflow"
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "responsible-ai-and-security",
@@ -328,19 +485,19 @@ export const pages: PageContent[] = [
     "metaTitle": "Connected Work Examples | Randall Automation Works",
     "eyebrow": "Examples & opportunities",
     "title": "See it working. See where it could fit.",
-    "lead": "One real product demonstration. Three focused opportunities for the work around it.",
-    "metaDescription": "Watch RAW Business Workspace in action and explore reporting, customer follow-up and GIS opportunities for your business.",
-    "aside": "See RAW in a product demonstration. The opportunities below are generalized workflow patterns, not published client case studies.",
+    "lead": "A connected business workspace and three focused opportunities to make everyday work easier.",
+    "metaDescription": "Explore Connected Frontiers and practical reporting, customer follow-up and GIS opportunities for your business.",
+    "aside": "Explore the workspace on connectedfrontiers.com. The opportunities below are generalized workflow patterns, not published client case studies.",
     "sections": [
       {
-        "heading": "In the product: from question to next step",
-        "intro": "Watch RAW use connected business information to prepare an answer, a customer reply and reviewed follow-up. Follow Pine Ridge Rental & Service through the actual RAW desktop interface.",
+        "heading": "A workspace shaped around your business",
+        "intro": "Connected Frontiers brings people, business information and daily work together. Start with your team’s workflow and agree the capabilities, software connections and setup that fit.",
         "cards": [
           {
-            "title": "RAW Business Workspace",
-            "text": "Inspect the report, check the supporting information and review the draft and next step before saving. Processing waits are condensed.",
-            "href": "/raw-workspace#see-it-in-action",
-            "linkLabel": "Watch the full demonstration"
+            "title": "Connected Frontiers",
+            "text": "Explore tasks, documents, dashboards and reporting, with industry-focused starting points and hands-on setup support.",
+            "href": "https://connectedfrontiers.com/platform/",
+            "linkLabel": "Explore the platform"
           }
         ]
       },
@@ -393,45 +550,6 @@ export const pages: PageContent[] = [
     ]
   },
   {
-    slug: "expertise", navLabel: "Expertise", metaTitle: "AI, Automation, GIS & Systems Expertise | Chris Randall", eyebrow: "Technical and operational expertise",
-    title: "Technical depth shaped by the way organizations actually operate.",
-    lead: "Chris Randall brings together software, data, GIS, infrastructure, security, administration and field experience to design automation that employees can understand and maintain.",
-    metaDescription: "Chris Randall's expertise in agentic AI workflows, RAG, MCP and SDK integrations, Python, SQL, JSON APIs, GIS, IT infrastructure and responsible automation.",
-    aside: "Expertise is described from hands-on experience without identifying an employer, publishing internal systems or claiming certifications, partnerships or client results that have not been established.",
-    sections: [
-      { heading: "Software, data and integration", intro: "The technology is selected after the workflow is understood.", cards: [
-        { label: "Deterministic automation", title: "Python", text: "File processing, validation, scheduled tasks, data transformation, reporting and focused utilities with predictable outcomes and practical ongoing cost." },
-        { label: "Operational information", title: "SQL", text: "Queries, views, reconciliation, exports and management reporting that make existing database information more useful without replacing the source system." },
-        { label: "Structured connections", title: "JSON, APIs and SDKs", text: "Move approved information among web services, business applications and automation tools using documented, replaceable interfaces." },
-        { label: "Established office workflows", title: "Visual Basic and VBA", text: "Improve Windows, Excel and Office processes when a familiar tool offers the clearest maintainable solution." },
-      ] },
-      { heading: "GIS, assets and field operations", intro: "Spatial data is treated as part of the operational workflow—not an isolated map.", bullets: ["GIS data design, maintenance and reporting", "Field forms, mobile collection and inspection workflows", "Coordinate transformation and GPS-data processing", "Asset identifiers and business-system connections", "Data-quality checks and reconciliation", "Work-order, document and photo connections", "Field-to-office exception handling", "Employee training and practical adoption"] },
-      { heading: "AI systems and agentic workflow engineering", intro: "Modern AI capability comes from configuring the complete system around the model—not simply writing a prompt.", cards: [
-        { label: "Models + structured outputs", title: "Model and prompt configuration", text: "Select models for the task, define system behavior, build reusable prompt templates and require schemas that ordinary software can validate and use." },
-        { label: "Agents + tools + approvals", title: "Agentic workflow orchestration", text: "Design bounded agents that retrieve information, call approved tools, maintain task state, handle exceptions and pause for human approval at defined points." },
-        { label: "RAG + embeddings + metadata", title: "Knowledge and retrieval systems", text: "Build permission-aware internal search and question-answering workflows grounded in approved SOPs, policies, technical records and organizational documentation." },
-        { label: "MCP + APIs + SDKs", title: "Tool and application integration", text: "Connect AI workflows with approved databases, business applications, document systems and specialized tools through Model Context Protocol (MCP), APIs and software development kits with scoped, documented permissions." },
-        { label: "Schemas + validators + guardrails", title: "Reliable outputs and exception handling", text: "Constrain outputs, verify required fields and business rules, surface uncertainty and route incomplete or unusual results to the appropriate employee." },
-        { label: "Test sets + traces + usage", title: "Evaluation, monitoring and cost control", text: "Use representative test cases, versioned configurations and workflow traces to monitor quality, failures, latency and ongoing model or service cost." },
-      ] },
-      { heading: "Web maps and spatial application integration", intro: "Mapping expertise includes the applications, services and data connections around the map—not only the visible layers.", bullets: ["Interactive web maps and role-appropriate map views", "Spatial APIs and GIS SDK integration", "Feature services, layers, attributes and attachments", "Coordinate systems, transformation and GPS processing", "Field forms, mobile collection and offline handoffs", "Spatial queries, validation and exception reporting", "Connections among assets, work orders, documents and business records", "Permission-aware publishing and data ownership"] },
-      { heading: "IT infrastructure and organizational resilience", intro: "Automation depends on reliable identity, access, storage, recovery and documentation.", cards: [
-        { label: "Core systems", title: "Servers, identity and access", text: "Windows infrastructure, role-based access, shared information, device workflows and least-privilege practices for small organizations." },
-        { label: "Continuity", title: "Backup, recovery and documentation", text: "System inventories, restoration runbooks, migration planning and verification that make critical knowledge less dependent on one person." },
-        { label: "Connections", title: "Networks and business systems", text: "Practical troubleshooting and integration across office, field and administrative technology with attention to ownership and dependencies." },
-        { label: "Adoption", title: "Training and employee support", text: "Translate technical changes into role-specific procedures, clear expectations and workflows employees can correct when exceptions occur." },
-      ] },
-      { heading: "Operations and administration", intro: "Hands-on experience with the work around the technology helps prevent technically elegant solutions that fail in practice.", bullets: ["Utility and field operations", "Customer service and billing processes", "Administrative reporting and document handling", "Work-order completion and follow-through", "Payroll and accounts-payable process support", "Employee onboarding and SOP development", "Management and board information preparation", "Institutional-knowledge preservation"] },
-      { heading: "Responsible AI and automation architecture", intro: "AI is one component in a broader automation toolkit, and advanced capability is paired with explicit operational boundaries.", cards: [
-        { label: "Appropriate-tool selection", title: "Code first when the rules are clear", text: "A small Python program, SQL report or API connection may offer greater consistency and lower ongoing cost than an AI-dependent workflow." },
-        { label: "AI where interpretation helps", title: "Documents, language and knowledge", text: "AI can support summaries, classification, retrieval, draft communications and multi-step knowledge work when sources, configuration and human review remain visible." },
-        { label: "Secure integration", title: "Permissions and information boundaries", text: "Use client-owned accounts, least privilege, read-only access where practical and clear controls around retention and third-party services." },
-        { label: "Operational responsibility", title: "Human review and OT separation", text: "Consequential outputs remain reviewable, and operational reporting stays deliberately separated from infrastructure control." },
-      ], callout: { title: "Broad capability, clearly bounded", text: "Randall Automation Works does not replace licensed engineering, legal, accounting, regulatory, cybersecurity or qualified operator judgment. Specialized work is scoped honestly and referred when it falls outside established capability." } },
-      { heading: "How this expertise serves Western Colorado", intro: "Small organizations often need someone who can move comfortably between an employee’s daily process, a database, a GIS layer, a server and a management report. That cross-functional perspective helps find the smallest dependable improvement instead of defaulting to a large replacement project." },
-    ],
-  },
-  {
     slug: "how-engagements-work", navLabel: "How Engagements Work", metaTitle: "How Engagements Work | Randall Automation Works", eyebrow: "How engagements work",
     title: "A measured path from operational problem to useful system.",
     lead: "Begin with a clear question, test the idea in a controlled scope and expand only after employees and results support it.",
@@ -450,52 +568,76 @@ export const pages: PageContent[] = [
   {
     "slug": "about",
     "navLabel": "About",
-    "metaTitle": "About Chris Randall | Randall Automation Works",
+    "metaTitle": "About Chris Randall | Automation & GIS in Montrose, CO",
     "eyebrow": "The person behind RAW",
-    "title": "Technology makes sense when you understand the work.",
-    "lead": "I’m Chris Randall, founder of Randall Automation Works in Montrose, Colorado. I connect software, information and the people who rely on them.",
-    "metaDescription": "Meet Chris Randall, founder of Randall Automation Works. Practical experience across utility operations, IT, GIS and business automation in Western Colorado.",
-    "aside": "Based in Montrose. Serving businesses, utilities and field teams across Western Colorado.",
+    "title": "A practical background. A personal commitment.",
+    "lead": "I’m Chris Randall, founder of Randall Automation Works. My growing family and I are putting down roots in Montrose, Colorado, and I’m building a business around helping people make their everyday work run better.",
+    "metaDescription": "Meet Chris Randall in Montrose, Colorado. A background in plumbing, customer service, business operations, IT and GIS shapes his practical approach to automation.",
+    "aside": "Based in Montrose. Building lasting relationships with businesses, utilities and field teams across Western Colorado.",
     "sections": [
       {
-        "heading": "Built on operational experience.",
-        "intro": "My background spans utility operations, office administration, IT and GIS. That means understanding both the systems behind a report and the person who needs to act on it.",
-        "bullets": [
-          "Utility operations and administrative workflows",
-          "GIS, assets and field-to-office information",
-          "Python scripting and workflow automation",
-          "SQL reporting and business-system integration",
-          "JSON, API and structured-data connections",
-          "Employee training and practical documentation"
+        "heading": "Putting down roots in Montrose.",
+        "intro": "My family is a big part of why I’m building Randall Automation Works. As our family grows and we establish our roots here, I want to build something lasting: a business that supports our life in Montrose and does useful work for the people and organizations around us."
+      },
+      {
+        "heading": "Experience on both sides of the counter.",
+        "intro": "My path into technology has included plumbing, office administration, accounts payable and receivable, project management, and customer service—including bartending and serving. I’ve worked in the field, behind a desk and face to face with customers. That range has taught me to listen, adapt and understand what people need to get through a busy day.",
+        "cards": [
+          {
+            "title": "Field work and follow-through",
+            "text": "Plumbing and utility operations have shaped my appreciation for practical solutions, clear information and the handoff between the people in the field and the people in the office."
+          },
+          {
+            "title": "The business behind the work",
+            "text": "Administration, AP/AR and project management have given me a close view of the records, details, deadlines and coordination that keep an organization moving."
+          },
+          {
+            "title": "People come first",
+            "text": "Bartending, serving and customer service taught me to stay attentive under pressure, communicate clearly and work with people from all walks of life."
+          }
         ]
       },
       {
-        "heading": "The approach, made tangible.",
-        "intro": "RAW Business Workspace brings that thinking into a product: connected information, useful context and reviewed next steps in one place.",
+        "heading": "Technical depth with everyday context.",
+        "intro": "Along the way, I’ve developed specialized experience in IT, GIS, software and automation. I enjoy figuring out how systems work and connecting them in ways that make sense to the people using them.",
         "cards": [
           {
-            "title": "See what I’m building",
-            "text": "Explore the actual workspace and watch a complete product demonstration.",
-            "href": "/raw-workspace",
-            "linkLabel": "Meet RAW Workspace"
+            "title": "Software, data and automation",
+            "text": "Python scripting, C# integrations, SQL reporting, JSON, APIs and SDKs, plus Visual Basic and VBA for established office workflows. The goal is useful connections and less repetitive work."
+          },
+          {
+            "title": "GIS, assets and field operations",
+            "text": "Web maps, spatial data, field forms and asset records that connect field observations with office reporting, planning and follow-up."
+          },
+          {
+            "title": "Practical AI systems",
+            "text": "Assistants that search approved information, help with documents and support defined workflows, with appropriate permissions and human review. I use AI where it helps and straightforward code where the rules are clear."
+          },
+          {
+            "title": "Reliable systems and handoffs",
+            "text": "IT infrastructure, access controls, backup and recovery, employee training and practical documentation. A useful improvement should keep working after the initial setup."
           }
         ]
       },
       {
         "heading": "A direct working relationship.",
-        "intro": "You work with me from the first conversation through the handoff. We define what success looks like, choose a tool that fits, and test it with the people doing the work.",
+        "intro": "When you work with RAW, you work with me—from the first conversation through testing and handoff. You don’t need a technical vocabulary or a polished project brief. Tell me what takes too long, what keeps getting missed or what you wish worked better. We’ll talk it through, agree on a realistic scope and build from there."
+      },
+      {
+        "heading": "What I’m building.",
+        "intro": "Connected Frontiers brings that same perspective into a business workspace: helping people, information and everyday work fit together. Custom automation, reporting and GIS projects start with the same question—what would make the work easier for your team?",
         "cards": [
           {
-            "title": "Technical background",
-            "text": "More detail on software, GIS, AI systems, infrastructure and operational experience.",
-            "href": "/expertise",
-            "linkLabel": "Explore the experience"
+            "title": "Connected Frontiers",
+            "text": "Explore the workspace and industry workflows, with hands-on setup and integration help from RAW.",
+            "href": "https://connectedfrontiers.com/platform/",
+            "linkLabel": "Explore Connected Frontiers"
           },
           {
             "title": "How a project works",
-            "text": "Clear scope, agreed costs, testing, documentation and optional support.",
+            "text": "A clear scope, agreed costs, testing with your team, documentation and optional ongoing support.",
             "href": "/how-engagements-work",
-            "linkLabel": "The working process"
+            "linkLabel": "See the working process"
           }
         ]
       }
@@ -535,14 +677,14 @@ export const pages: PageContent[] = [
     aside: "Website service information reviewed September 30, 2026. Contact: chris@randallautomationworks.com or (970) 787-2161.",
     sections: [
       { heading: "Information you provide", intro: "The contact form asks for your name, email and message. Organization, phone and service interest are optional; you can also select a location. The form asks for permission to use the information to respond to your inquiry." },
-      { heading: "Contact and scheduling services", intro: "When you send the contact form, the submission is sent to Formspree. The booking links open Google Calendar, where you can choose a consultation time. You can also contact Chris directly by email or phone." },
+      { heading: "Contact and scheduling services", intro: "When you send the contact form, the submission is sent to Formspree. The booking links open Google Calendar, where you can choose a consultation time. An inquiry may include its public landing page, broad traffic source and the service link used so Chris can understand the context of your request. You can also contact Chris directly by email or phone." },
       { heading: "Sensitive information", intro: "Do not submit passwords, authentication codes, protected health information, payment-card information, confidential customer records or sensitive operational and infrastructure data." },
-      { heading: "Current service providers", intro: "This website uses Cloudflare for hosting and Web Analytics, Formspree for contact-form delivery, and Google Calendar for consultation booking. These services have their own privacy policies.", cards: [
+      { heading: "Current service providers", intro: "This website uses Cloudflare for hosting, Web Analytics and aggregate website event counts, Formspree for contact-form delivery, and Google Calendar for consultation booking. These services have their own privacy policies.", cards: [
         { title: "Cloudflare", text: "Website hosting and Web Analytics.", href: "https://www.cloudflare.com/privacypolicy/", linkLabel: "Cloudflare privacy policy" },
         { title: "Formspree", text: "Contact-form submissions.", href: "https://formspree.io/legal/privacy-policy/", linkLabel: "Formspree privacy policy" },
         { title: "Google", text: "Calendar consultation bookings.", href: "https://policies.google.com/privacy", linkLabel: "Google privacy policy" },
       ] },
-      { heading: "Website analytics", intro: "A Cloudflare Web Analytics beacon is active on this site. It measures website traffic and page performance. Cloudflare describes its data collection in the documentation linked below.", cards: [
+      { heading: "Website analytics", intro: "Cloudflare Web Analytics measures website traffic and page performance. Separate aggregate counts record page views, successful form acknowledgments, booking-link clicks and Connected Frontiers link clicks, grouped by public page and a broad source category. These event counts do not include form contents, names, email addresses, IP addresses, full referral URLs, search queries or visitor identifiers. A browser-session entry remembers only the public landing page and broad source category; it ends with the session. Global Privacy Control and Do Not Track preferences disable these separate event counts. Booking-link clicks do not confirm an appointment. Test events are kept separate from ordinary traffic.", cards: [
         { title: "Cloudflare Web Analytics data collection", text: "Details from the analytics provider about the information its beacon collects.", href: "https://developers.cloudflare.com/web-analytics/data-metrics/data-origin-and-collection/", linkLabel: "Read the data-collection documentation" },
       ] },
       { heading: "Questions about information handling", intro: "Contact chris@randallautomationworks.com or (970) 787-2161 to ask about information you have submitted, its handling or retention, or a correction or deletion request. Do not include sensitive records in the request." },

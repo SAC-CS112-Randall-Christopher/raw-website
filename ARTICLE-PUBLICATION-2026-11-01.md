@@ -1,17 +1,15 @@
-# RAW weekly article: November 1, 2026
+# RAW pilot acceptance article: November 15, 2026
 
-Idempotency key: raw-website/2026-11-01/ai-assistant-pilot-acceptance-tests
-Status: draft; not published. Publication requires browser QA, exact-head hosting checks, merge and live readback.
+Resumes the existing November 1 draft in PR #30; no duplicate article.
+Status: draft pending final browser QA and exact-head hosting checks. Not published.
 
-Topic: How to Test an AI Assistant Pilot Before You Roll It Out
+Title: How to Test an AI Assistant Pilot Before You Roll It Out
 Intended URL: https://randallautomationworks.com/insights/ai-assistant-pilot-acceptance-tests
-Reader: Western Colorado business owner evaluating a read-only assistant pilot.
-Buying question: Does this pilot handle our questions and exceptions well enough to justify a bounded rollout?
-Contribution: source-backed case pack, expected behavior, independent acceptance cases, exposed-case handling, reviewer effort and attributable results. Complements rather than replaces integration and action-approval guides.
-Destination: /services and /contact; relevant public /raw-workspace demonstration is explicitly not evidence of results on the buyer's records.
+Reader: a business owner deciding whether a bounded read-only assistant pilot is ready for rollout.
+Contribution: a synthetic case pack, evidence-backed expected behavior, held-out acceptance cases, exposed-case handling, reviewer effort and a bounded decision. Complements the existing integration-readiness and action-approval guides.
 
-Current main, article inventory, earlier publication receipts, service/product copy and pending PRs reviewed. Base: 29b71526aaea6538f0883d47c143be975f0d6f07. Existing design, homepage, media, dependencies, hosting and unrelated owner PRs unchanged. No private information, claimed customers or measured RAW results. All worked records and numerical counts are explicitly synthetic. No search-volume, ranking or Search Console claim.
+Reconciled with main 0aca29290d528d9518a66ef535de8588d233c196. Changes are limited to the article, its Insights and Services incoming links, sitemap, corresponding tests and registration in the existing measurement route allowlist. Current branding, private routes, public assets, privacy, measurement behavior, dependencies and hosting configuration are preserved. The retired product demonstration is not presented as evidence for Connected Frontiers.
 
-Cloud-only checks: clean pinned dependency installation; full production build/artifact validator and existing remote video hash guard passed; existing 32 tests passed, then 33 passed with an article-specific metadata/disclaimer/incoming-link test. Lint and diff whitespace checks passed. Independent editorial and scope review passed. Dates agree across visible article, Article metadata, index and sitemap; only changed service/index pages receive modification dates.
+Primary methodology sources reviewed November 15: NIST AI RMF Measure playbook (https://airc.nist.gov/airmf-resources/playbook/measure/) and OpenAI evaluation best practices (https://developers.openai.com/api/docs/guides/evaluation-best-practices). The checklist is expressly a practical proposal, not a certification. All worked records and numbers are synthetic, with no customer, savings, ranking or product-feature claims. Current product link: https://connectedfrontiers.com/platform/.
 
-Browser gate pending: local Chromium cannot launch due to sandbox socket restriction; escalation wrapper fails before execution. Documented cloud browser cannot reach local preview (connection refused). Use existing automatic branch preview if available; otherwise keep draft. Never infer visual success from static tests.
+Validation: locked dependency installation, production build, artifact validation, remote media integrity checks, all 42 tests and lint passed. Metadata, canonical, indexability, 27 sitemap URLs, consistent publication dates, incoming links, retired-route exclusion and measurement route alignment are covered by tests. Browser QA and final remote hosting checks remain pending; no real forms or appointments were submitted.
