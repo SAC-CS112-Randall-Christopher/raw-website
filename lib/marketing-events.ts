@@ -4,7 +4,7 @@ export const marketingPaths = [
   "/gis-and-field-operations", "/gis-modernization", "/responsible-ai-and-security",
   "/local-ai-deployments", "/hosted-ai-deployments", "/workflow-automation-examples",
   "/how-engagements-work", "/about", "/contact", "/frequently-asked-questions",
-  "/privacy", "/terms", "/insights", "/insights/ai-assistant-action-approval", "/insights/ai-assistant-pilot-acceptance-tests",
+  "/privacy", "/terms", "/insights", "/insights/offline-field-inspection-sync-checklist", "/insights/ai-assistant-action-approval", "/insights/ai-assistant-pilot-acceptance-tests",
   "/insights/ai-integration-readiness-checklist", "/insights/local-vs-hosted-ai-assistants",
   "/insights/prepare-sops-for-ai-assistant", "/insights/route-first-reason-when-needed",
   "/insights/ai-automation-consultant-small-business", "/insights/workflow-automation-audit-small-business",

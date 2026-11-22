@@ -273,6 +273,12 @@ export const pages: PageContent[] = [
         },
         "cards": [
           {
+            "title": "Test offline inspections before rollout",
+            "text": "Use a sample field record to verify that it reaches the office with the right asset ID, attachment and follow-up after reconnection.",
+            "href": "/insights/offline-field-inspection-sync-checklist",
+            "linkLabel": "Read the offline inspection checklist"
+          },
+          {
             "title": "Talk through your GIS or GPS project",
             "text": "Bring the tools you use today and the result your crew or office needs. Start with a free 30-minute conversation with Chris.",
             "href": "/contact?service=gis&from=gis-field",

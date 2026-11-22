@@ -333,7 +333,7 @@ test("redirects production HTTP and www permanently while preserving path and qu
 test("preserves unique indexable metadata for every sitemap route", async () => {
   const sitemap = await renderReviewPage("/sitemap.xml");
   const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-  assert.equal(urls.length, 27);
+  assert.equal(urls.length, 28);
   assert.equal(new Set(urls).size, urls.length);
   const titles = new Set();
   const descriptions = new Set();
@@ -350,7 +350,7 @@ test("preserves unique indexable metadata for every sitemap route", async () => 
     assert.doesNotMatch(metaContent(html, "robots") ?? "", /noindex/, path);
     assert.equal((html.match(/<h1\b/g) ?? []).length, 1, path);
   }
-  for (const [path, date] of [["workflow-automation-examples", "2026-11-12"], ["insights", "2026-11-15"], ["services", "2026-11-15"], ["insights/ai-assistant-pilot-acceptance-tests", "2026-11-15"], ["insights/ai-assistant-action-approval", "2026-11-12"], ["insights/ai-integration-readiness-checklist", "2026-10-18"], ["local-ai-deployments", "2026-10-11"], ["insights/local-vs-hosted-ai-assistants", "2026-10-11"], ["insights/prepare-sops-for-ai-assistant", "2026-10-04"], ["privacy", "2026-11-12"], ["terms", "2026-09-30"]]) {
+  for (const [path, date] of [["workflow-automation-examples", "2026-11-12"], ["insights", "2026-11-22"], ["gis-and-field-operations", "2026-11-22"], ["insights/offline-field-inspection-sync-checklist", "2026-11-22"], ["services", "2026-11-15"], ["insights/ai-assistant-pilot-acceptance-tests", "2026-11-15"], ["insights/ai-assistant-action-approval", "2026-11-12"], ["insights/ai-integration-readiness-checklist", "2026-10-18"], ["local-ai-deployments", "2026-10-11"], ["insights/local-vs-hosted-ai-assistants", "2026-10-11"], ["insights/prepare-sops-for-ai-assistant", "2026-10-04"], ["privacy", "2026-11-12"], ["terms", "2026-09-30"]]) {
     assert.match(sitemap, new RegExp(`<loc>https://randallautomationworks\\.com/${path}</loc>\\s*<lastmod>${date}</lastmod>`), path);
   }
 });
@@ -411,7 +411,7 @@ test("publishes integration readiness with consistent dates and acceptance evide
 test("all current public pages retire the old product brand and keep a small-business discovery path", async () => {
   const sitemap = await renderReviewPage("/sitemap.xml");
   const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1]);
-  assert.equal(urls.length, 27);
+  assert.equal(urls.length, 28);
   for (const url of urls) {
     const html = await renderReviewPage(new URL(url).pathname);
     assert.doesNotMatch(html, /RAW (?:Business Workspace|Workspace|Harness)/, url);
