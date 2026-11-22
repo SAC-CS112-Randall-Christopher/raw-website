@@ -47,10 +47,12 @@ export default function InsightsPage() {
           <div className="section-heading split-heading">
             <div>
               <p className="eyebrow">Latest guide</p>
-              <h2>Test the assistant before expanding its role.</h2>
+              <h2>Prove the field record reaches the office.</h2>
             </div>
-            <p>Use a small case pack to check source-backed answers, missing evidence and the work left for your reviewer.</p>
+            <p>Test capture, reconnect and office follow-up before accepting an offline inspection rollout.</p>
           </div>
+
+          <Link className="article-card" href="/insights/offline-field-inspection-sync-checklist"><div className="article-card-number" aria-hidden="true">11</div><div><p className="article-kicker"><time dateTime="2026-11-22">November 22, 2026</time> · GIS field inspections</p><h2>How to Test Offline Field Inspections Before Rollout</h2><p>Test one map or survey with ordinary crew accounts, then verify the right asset, photo and office follow-up after sync.</p><span className="article-card-link">Read the guide <span aria-hidden="true">→</span></span></div></Link>
 
           <Link className="article-card" href="/insights/ai-assistant-pilot-acceptance-tests"><div className="article-card-number" aria-hidden="true">10</div><div><p className="article-kicker"><time dateTime="2026-11-15">November 15, 2026</time> · Pilot acceptance</p><h2>How to Test an AI Assistant Pilot Before You Roll It Out</h2><p>Prepare source-backed cases, preserve failures and measure review effort before making a bounded rollout decision.</p><span className="article-card-link">Read the guide <span aria-hidden="true">→</span></span></div></Link>
 

@@ -66,3 +66,17 @@ test("pilot acceptance guide keeps synthetic results bounded and has discovery l
   for (const path of ["/services", "/contact", "https://connectedfrontiers.com/platform/", "/insights/ai-integration-readiness-checklist", "/insights/ai-assistant-action-approval"]) assert.ok(html.includes(`href="${path}"`));
   for (const path of ["/services", "/insights"]) assert.ok((await render(path)).includes(`href="${route}"`));
 });
+
+test("offline inspection guide has verified entry points and bounded synthetic results", async () => {
+  const path = "/insights/offline-field-inspection-sync-checklist";
+  const html = await render(path);
+  const article = schemas(html).find(node => node["@type"] === "Article");
+  assert.equal(article.datePublished, "2026-11-22");
+  assert.equal(article.dateModified, "2026-11-22");
+  assert.equal(article.mainEntityOfPage, `https://randallautomationworks.com${path}`);
+  assert.match(html, /Synthetic worked example/);
+  assert.match(html, /An Outbox entry is not a server receipt/);
+  assert.match(html, /TEST-041/);
+  for (const link of ["/gis-and-field-operations", "/gis-modernization", "/insights/ai-integration-readiness-checklist", "https://doc.arcgis.com/en/field-maps/11.4/prepare-maps/prepare-maps-for-download.htm", "https://doc.esri.com/en/arcgis-survey123/latest/capture/field-app/submitsurveyresults.html"]) assert.ok(html.includes(`href="${link}"`));
+  for (const link of ["/insights", "/gis-and-field-operations"]) assert.ok((await render(link)).includes(`href="${path}"`));
+});
